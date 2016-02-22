@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>XEP-0143 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "XEP-0143", "wgTitle": "XEP-0143", "wgCurRevisionId": 3075, "wgArticleId": 756, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["XMPP扩展", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-html4strict {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-html4strict .de1, .source-html4strict .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-html4strict  {font-family: monospace;}
+.source-html4strict .imp {font-weight: bold; color: red;}
+.source-html4strict li, .source-html4strict li.li1 {font-weight: normal;}
+.source-html4strict li.li2 {font-weight: bold;}
+.source-html4strict .kw1 {color: #b1b100;}
+.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.source-html4strict .kw3 {color: #000066;}
+.source-html4strict .coMULTI {color: #808080; font-style: italic;}
+.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.source-html4strict .br0 {color: #66cc66;}
+.source-html4strict .sy0 {color: #66cc66;}
+.source-html4strict .st0 {color: #ff0000;}
+.source-html4strict .nu0 {color: #cc66cc;}
+.source-html4strict .sc0 {color: #00bbdd;}
+.source-html4strict .sc1 {color: #ddbb00;}
+.source-html4strict .sc2 {color: #009900;}
+.source-html4strict .ln-xtra, .source-html4strict li.ln-xtra, .source-html4strict div.ln-xtra {background-color: #ffc;}
+.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-xml {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-xml .de1, .source-xml .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-xml  {font-family: monospace;}
+.source-xml .imp {font-weight: bold; color: red;}
+.source-xml li, .source-xml li.li1 {font-weight: normal;}
+.source-xml li.li2 {font-weight: bold;}
+.source-xml .co1 {color: #808080; font-style: italic;}
+.source-xml .co2 {color: #404040; font-style: italic;}
+.source-xml .co3 {color: #000000;}
+.source-xml .co4 {color: #400000; font-weight: bold;}
+.source-xml .es0 {color: #000099; font-weight: bold;}
+.source-xml .br0 {color: #66cc66;}
+.source-xml .sy0 {color: #66cc66;}
+.source-xml .st0 {color: #ff0000;}
+.source-xml .nu0 {color: #cc66cc;}
+.source-xml .re0 {color: #000066;}
+.source-xml .re1 {color: #000000; font-weight: bold;}
+.source-xml .re2 {color: #000000; font-weight: bold;}
+.source-xml .ln-xtra, .source-xml li.ln-xtra, .source-xml div.ln-xtra {background-color: #ffc;}
+.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-bash {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-bash li, .source-bash pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: source-bash, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-bash .de1, .source-bash .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-bash  {font-family: monospace;}
+.source-bash .imp {font-weight: bold; color: red;}
+.source-bash li, .source-bash li.li1 {font-weight: normal;}
+.source-bash li.li2 {font-weight: bold;}
+.source-bash .kw1 {color: #000000; font-weight: bold;}
+.source-bash .kw2 {color: #c20cb9; font-weight: bold;}
+.source-bash .kw3 {color: #7a0874; font-weight: bold;}
+.source-bash .co0 {color: #666666; font-style: italic;}
+.source-bash .co1 {color: #800000;}
+.source-bash .co2 {color: #cc0000; font-style: italic;}
+.source-bash .es0 {color: #000099; font-weight: bold;}
+.source-bash .br0 {color: #7a0874; font-weight: bold;}
+.source-bash .sy0 {color: #000000; font-weight: bold;}
+.source-bash .st0 {color: #ff0000;}
+.source-bash .nu0 {color: #000000;}
+.source-bash .re0 {color: #007800;}
+.source-bash .re1 {color: #007800;}
+.source-bash .re2 {color: #007800;}
+.source-bash .re4 {color: #007800;}
+.source-bash .re5 {color: #660033;}
+.source-bash .ln-xtra, .source-bash li.ln-xtra, .source-bash div.ln-xtra {background-color: #ffc;}
+.source-bash span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-XEP-0143 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">XEP-0143</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p><br />
+<b>本文的英文原文来自<a rel="nofollow" class="external text" href="http://www.xmpp.org/extensions/xep-0143.html">XEP-0143</a></b>
+</p><p><b>XEP-0143: XMPP扩展协议写作指南</b>
+</p>
+<table>
+<tr>
+<th>摘要:
+</th>
+<td>本文对XMPP扩展协议的作者提供帮助信息.
+</td></tr>
+<tr>
+<th>作者:
+</th>
+<td>Peter Saint-Andre
+</td></tr>
+<tr>
+<th>版权:
+</th>
+<td>© 1999 - 2013 XMPP标准化基金会(XSF). 参见<a href="/XEP-0143#.E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A" title="XEP-0143">法律通告</a>.
+</td></tr>
+<tr>
+<th>状态:
+</th>
+<td>活跃
+</td></tr>
+<tr>
+<th>类型:
+</th>
+<td>程序
+</td></tr>
+<tr>
+<th>版本:
+</th>
+<td>1.1
+</td></tr>
+<tr>
+<th>最后更新日期:
+</th>
+<td>2011-07-08
+</td></tr></table>
+<hr />
+<p>注意: 这个程序文档定义了一个已经被XMPP委员会和/或XSF董事会批准的XMPP标准基金会(XSF)的流程或活动. XSF目前正是遵循这里定义的流程或活动并且将继续这么做，直到本文档被取消或废除.
+</p>
+<hr />
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E7.AE.80.E4.BB.8B"><span class="tocnumber">1</span> <span class="toctext">简介</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E6.8F.90.E4.BA.A4.E6.8F.90.E6.A1.88.E4.B9.8B.E5.89.8D"><span class="tocnumber">2</span> <span class="toctext">提交提案之前</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E6.8F.90.E4.BA.A4.E6.8F.90.E6.A1.88"><span class="tocnumber">3</span> <span class="toctext">提交提案</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E7.BB.B4.E6.8A.A4XEP"><span class="tocnumber">4</span> <span class="toctext">维护XEP</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#XEP.E7.9A.84XML.E6.A0.BC.E5.BC.8F"><span class="tocnumber">5</span> <span class="toctext">XEP的XML格式</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#.E5.92.8CXEP.E6.96.87.E4.BB.B6.E4.B8.80.E8.B5.B7.E5.B7.A5.E4.BD.9C"><span class="tocnumber">5.1</span> <span class="toctext">和XEP文件一起工作</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.E6.96.87.E4.BB.B6.E5.85.83.E6.95.B0.E6.8D.AE"><span class="tocnumber">5.2</span> <span class="toctext">文件元数据</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.E6.96.87.E4.BB.B6.E5.86.85.E5.AE.B9"><span class="tocnumber">5.3</span> <span class="toctext">文件内容</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#XEP.E6.96.87.E6.A1.A3.E7.9A.84.E7.AB.A0.E8.8A.82"><span class="tocnumber">6</span> <span class="toctext">XEP文档的章节</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#.E7.AE.80.E4.BB.8B_2"><span class="tocnumber">6.1</span> <span class="toctext">简介</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.E9.9C.80.E6.B1.82"><span class="tocnumber">6.2</span> <span class="toctext">需求</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#.E8.AF.8D.E6.B1.87.E8.A1.A8"><span class="tocnumber">6.3</span> <span class="toctext">词汇表</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#.E7.94.A8.E4.BE.8B"><span class="tocnumber">6.4</span> <span class="toctext">用例</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#.E9.94.99.E8.AF.AF.E4.BB.A3.E7.A0.81"><span class="tocnumber">6.5</span> <span class="toctext">错误代码</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#.E5.95.86.E4.B8.9A.E8.A7.84.E5.88.99"><span class="tocnumber">6.6</span> <span class="toctext">商业规则</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#.E5.AE.9E.E7.8E.B0.E5.A4.87.E6.B3.A8"><span class="tocnumber">6.7</span> <span class="toctext">实现备注</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#.E5.9B.BD.E9.99.85.E5.8C.96.E4.BA.8B.E9.A1.B9"><span class="tocnumber">6.8</span> <span class="toctext">国际化事项</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#.E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9"><span class="tocnumber">6.9</span> <span class="toctext">安全事项</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#IANA.E4.BA.8B.E9.A1.B9"><span class="tocnumber">6.10</span> <span class="toctext">IANA事项</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#XMPP.E6.B3.A8.E5.86.8C.E5.A4.84.E4.BA.8B.E9.A1.B9"><span class="tocnumber">6.11</span> <span class="toctext">XMPP注册处事项</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#XML_Schema"><span class="tocnumber">6.12</span> <span class="toctext">XML Schema</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#.E8.87.B4.E8.B0.A2"><span class="tocnumber">6.13</span> <span class="toctext">致谢</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#XEP.E6.A0.B7.E5.BC.8F.E6.8C.87.E5.8D.97"><span class="tocnumber">7</span> <span class="toctext">XEP样式指南</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#.E5.B1.9E.E6.80.A7"><span class="tocnumber">7.1</span> <span class="toctext">属性</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#.E4.BB.A3.E7.A0.81.E7.A4.BA.E4.BE.8B"><span class="tocnumber">7.2</span> <span class="toctext">代码示例</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#.E4.B8.80.E8.87.B4.E6.80.A7.E6.9C.AF.E8.AF.AD"><span class="tocnumber">7.3</span> <span class="toctext">一致性术语</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#.E5.85.83.E7.B4.A0"><span class="tocnumber">7.4</span> <span class="toctext">元素</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#.E9.94.99.E8.AF.AF"><span class="tocnumber">7.5</span> <span class="toctext">错误</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#.E5.91.BD.E5.90.8D.E7.A9.BA.E9.97.B4"><span class="tocnumber">7.6</span> <span class="toctext">命名空间</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#.E5.BC.95.E5.8F.B7"><span class="tocnumber">7.7</span> <span class="toctext">引号</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#.E8.87.B4.E8.B0.A2_2"><span class="tocnumber">8</span> <span class="toctext">致谢</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#.E9.99.84.E5.BD.95"><span class="tocnumber">9</span> <span class="toctext">附录</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="#.E9.99.84.E5.BD.95A:.E6.96.87.E6.A1.A3.E4.BF.A1.E6.81.AF"><span class="tocnumber">9.1</span> <span class="toctext">附录A:文档信息</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#.E9.99.84.E5.BD.95B:.E4.BD.9C.E8.80.85.E4.BF.A1.E6.81.AF"><span class="tocnumber">9.2</span> <span class="toctext">附录B:作者信息</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A"><span class="tocnumber">9.3</span> <span class="toctext">附录C:法律通告</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95D:.E5.92.8CXMPP.E7.9A.84.E5.85.B3.E7.B3.BB"><span class="tocnumber">9.4</span> <span class="toctext">附录D:和XMPP的关系</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95E:.E8.AE.A8.E8.AE.BA.E5.9C.B0.E7.82.B9"><span class="tocnumber">9.5</span> <span class="toctext">附录E:讨论地点</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95F:.E9.9C.80.E6.B1.82.E4.B8.80.E8.87.B4.E6.80.A7"><span class="tocnumber">9.6</span> <span class="toctext">附录F:需求一致性</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8"><span class="tocnumber">9.7</span> <span class="toctext">附录G:备注</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#.E9.99.84.E5.BD.95H:.E4.BF.AE.E8.AE.A2.E5.8E.86.E5.8F.B2"><span class="tocnumber">9.8</span> <span class="toctext">附录H:修订历史</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E7.AE.80.E4.BB.8B">简介</span></h2>
+<p><a rel="nofollow" class="external text" href="http://xmpp.org/xsf/">XMPP标准基金会(XSF)</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">1</a> 收到大量的提案为<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc6120">XMPP Core</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">2</a>中定义的核心XMPP协议定义扩展. 然而, 作者们并不总是清楚怎样最佳地结构化一个提案以让它能作为一个XMPP扩展(XEP)被接受并从而进一步通过XSF的标准流程. 所以, 本文提供指南来帮助作者写出更好的XMPP扩展协议定义.
+</p><p>这些指南假定读者们对<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0001.html">XMPP扩展协议</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">3</a>所定义的XEP系列文档和XSF处理它们的流程很熟悉, .
+</p>
+<h2> <span class="mw-headline" id=".E6.8F.90.E4.BA.A4.E6.8F.90.E6.A1.88.E4.B9.8B.E5.89.8D">提交提案之前</span></h2>
+<p>强烈鼓励一个可能的作者在提交一个提案成为一个XEP之前完成一些研究. 特别是, 该作者应该做以下几件事:
+</p>
+<dl><dd><ul><li> 查看XMPP RFCs和实验性的, 活跃的, 草案, 和最终XEPs以决定是否真的为了填补现有的XMPP技术和协议的空白而需要该建议的协议扩展.
+</li><li> 查看被拒绝的和被延期的XEPs, 以及那些永远不会被接受的提案(见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/inbox/">http://xmpp.org/extensions/inbox/</a>&gt;)来决定是否过去已经有类似的扩展提案但是没有被<a rel="nofollow" class="external text" href="http://xmpp.org/council/">XMPP理事会</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">4</a> 批准.
+</li><li> 查看其他标准开发组织开发的协议, 例如<a rel="nofollow" class="external text" href="http://www.ietf.org/">互联网工程工作组(IETF)</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">5</a>和<a rel="nofollow" class="external text" href="http://www.w3.org/">万维网联盟(W3C)</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">6</a>, 来决定是否它们比在一个新的XMPP扩展里更合适.
+</li><li> 查看<a rel="nofollow" class="external text" href="http://mail.jabber.org/mailman/listinfo/standards/">Standards SIG</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">7</a>中的讨论以决定是否过去已经讨论过或目前正在讨论类似的功能.
+</li></ul>
+</dd></dl>
+<p>在完成这些研究之后, 潜在的作者可以断定是否需要新的协议扩展. 如果需要, 强烈建议该作者做以下事情:
+</p>
+<ol><li> 查看 <b>XEP-0001</b> 和 <a href="/XEP-0134" title="XEP-0134">XMPP设计准则</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">8</a>.
+</li><li> 理解<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0143.html#submit">提交过程</a>.
+</li><li> 熟悉XEP的XML格式.
+</li><li> 然后只写一个提案包含所有适当的<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0143.html#sections">XEP章节</a>.
+</li><li> 查看内容并确保它遵循<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0143.html#styleguide">XEP Styleguide</a>.
+</li></ol>
+<h2> <span class="mw-headline" id=".E6.8F.90.E4.BA.A4.E6.8F.90.E6.A1.88">提交提案</span></h2>
+<p>提交一个提案成为XEP的过程很简单:
+</p>
+<ol><li> 联系<a rel="nofollow" class="external text" href="http://xmpp.org/about-xmpp/xsf/xsf-people/#editor">XMPP Extensions Editor</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">9</a> 让他知道等待你的提案.
+</li><li> 遵循本文描述的指南写下你的提案.
+</li><li> 确保你在提交你的提案之前阅读, 理解, 并同意<a rel="nofollow" class="external text" href="http://xmpp.org/about-xmpp/xsf/xsf-ipr-policy/">XSF IPR Policy</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">10</a>.
+</li><li> 把你的XML文件(或一个指向该文件的URL)发给XMPP扩展编辑.
+</li></ol>
+<h2> <span class="mw-headline" id=".E7.BB.B4.E6.8A.A4XEP">维护XEP</span></h2>
+<p>如果你的提案被接受成为一个XEP, 你可能需要定期更新这个协议以整合反馈以及实现和部署的经验. XMPP扩展编辑将分配一个号码给你的文档并添加到源文件控制中.
+</p><p>XMPP扩展编辑比较喜欢你按以下步骤工作:
+</p>
+<ol><li> 遵循&lt;<a rel="nofollow" class="external free" href="http://xmpp.org/about-xmpp/xsf/xsf-source-control/">http://xmpp.org/about-xmpp/xsf/xsf-source-control/</a>&gt; 的指引从XSF的git仓库检出一份拷贝
+</li><li> 对文档做出你期望的修改, 包括一个如下所属的新 &lt;revision/&gt; 元素.
+</li><li> 使用命令 <b>git format-patch HEAD^</b>生成一个补丁
+</li><li> 使用命令 <b>git send-email --to=editor@xmpp.org NAMEOF.patch</b>发送该补丁
+</li></ol>
+<p>XMPP扩展编辑将应用你的补丁并发布一个你的XEP的更新版本.
+</p><p>注意: 如<b>XEP-0001</b>解释的一样, 实验状态的XEPs的更新版本的发布不需要XMPP理事会的批准. 无论如何, 活跃,草案,或最终状态的XEPs的更新版本必须由XMPP理事会批准以确保对于已批准的协议的正确的变更控制.
+</p>
+<h2> <span class="mw-headline" id="XEP.E7.9A.84XML.E6.A0.BC.E5.BC.8F">XEP的XML格式</span></h2>
+<p>XEP的XML格式实质上类似于XHTML的精简集. 这是有意的: 这使XEPs作者更易使用. 实际上, 如果你使用模版文件以及和它相关的XSLT样式表, 你应该能够在大多数现代浏览器中查看你的提案(见下文). 以下章节解释了如何开始XEP的写作并描述了用于XEPs的XML格式(正式的描述参见 xep.xsd 或 xep.dtd 文件).
+</p>
+<h3> <span class="mw-headline" id=".E5.92.8CXEP.E6.96.87.E4.BB.B6.E4.B8.80.E8.B5.B7.E5.B7.A5.E4.BD.9C">和XEP文件一起工作</span></h3>
+<p>在你的提案上开始工作的最好的办法是从源文件控制获取所有现有的XEP文件和相关的样式表. 这些文件使用git存储，如 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/about-xmpp/xsf/xsf-source-control/">http://xmpp.org/about-xmpp/xsf/xsf-source-control/</a>&gt; 所述. 文档结构同时被DTD和XML schema正式地定义, 但是你不需要为了写一个XEP而理解正规的描述. 此外, 在 'extensions' 目录有一个方便的模版文件 'xep-template.xml' , 提供了XEP写作的快速起点.
+</p><p>为了创建你的提案, 做一次'xmpp' 模块的 git checkout , 变更目录到 'extensions/' 目录, 拷贝模板文件 (例如, 'cp xep-template.xml xep-foo.xml'), 然后开始使用基本编辑器或专业的XML编辑器应用例如 XML Spy 或 XMLmind来编辑文件.
+</p><p>即使你使用一个基本的编辑器, 你也应该能在大多数现代的web浏览器上以XML文件方式查看你的文档，只要在'extensions/'目录有xep.xsl和xep.dtd文件 . 因为浏览器中的XSLT实现不一致, 特定的格式(例如, 表布局和表编号, 示例, 以及脚注)可能不完美. 不用着急; 它在XMPP扩展编辑制作的HTML输出中会看起来不错. 如果你的XML文件根本不能展现(即, 它只是一个大的文本块), 表明你使用的是一个坏的浏览器. 如果你只看到xep.xsl生成的很少几行而没有看到你的文本, 表明你的XML有错误. 你可以 xml.com <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">11</a>检查你的XML语法在.
+</p><p>要用程序来把你的XML文件转成HTML, 我们推荐使用Daniel Veillard的<a rel="nofollow" class="external text" href="http://xmlsoft.org/XSLT/">xsltproc</a>]程序, 它会给出一些关于XML语法问题的有用的错误信息. 无论如何, XMPP扩展编辑将完成最终的把XML转成HTML以及把你的HTML文件投递到 www.xmpp.org, 所以你不需要为了提交个哦XMPP扩展编辑而生成HTML文件(实际上, XMPP扩展编辑要求你以XEP XML格式而不是HTML格式提交提案).
+</p><p>最后, xep.ent 文件包含了方便的 "外部实体" 来提供快捷方式去包含对XMPP扩展协议, RFCs, 和其他通用字符串的参考. 不幸的是, 大部分浏览器不能正确地处理外部实体, 所以如果你需要在一个浏览器中查看你的XML源文件，那么你不能从xep.ent包含实体. 无论如何, XMPP扩展编辑保留把你的标记转换成外部实体的权力, 因为这使他的工作容易一些. 而且, 请不要添加条目到 xep.ent 文件; 反之, 把它们作为inline实体添加到你的文档中然后请XMPP扩展编辑把它们添加到 xep.ent 文件.
+</p>
+<h3> <span class="mw-headline" id=".E6.96.87.E4.BB.B6.E5.85.83.E6.95.B0.E6.8D.AE">文件元数据</span></h3>
+<p>本章描述包含在XEP文件的&lt;header/&gt;元素中的元数据元素(文件内容请见下文).
+</p><p>&lt;title/&gt;元素的XML字符串数据是你的XEP的标题. 选择一个少于十个单词长度的描述性标题. XMPP扩展编辑可能在和作者讨论后修改它.
+</p><p>&lt;abstract/&gt;元素的XML字符串数据应该是一个或两个句子关于你的提案的摘要(通常开始于"本协议定义了一个XMPP协议扩展..."). XMPP扩展编辑将会修改这个摘要以使它准确地描述该提案.
+</p><p>&lt;legal/&gt;元素的XML字符串数据必须如 XSF IPR Policy 中那样定义并且同时反映在xep.ent文件和XEP模板中.
+</p><p>&lt;number/&gt;元素的XML字符串数据应该是"xxxx"; 如果XMPP理事会接受该提案成为一个XMPP扩展协议，它将由XMPP扩展编辑修改成下一个顺序的XEP编号.
+</p><p>&lt;status/&gt;元素的XML字符串数据应该是"ProtoXEP"，因为所有提案开始都是"proto-XEPs"; 如果XMPP理事会接受该提案成为一个XMPP扩展协议，它将被改为"Experimental".
+</p><p>&lt;type/&gt;元素的XML字符串数据应该要么是"Standards Track"要么是"Informational" (也有 Historical, Humorous, 和 Procedural XEPs, 但是那些是不通用并且常见是由XMPP扩展编辑写的). 一个Standards Track XEP 定义一个打算用作XMPP技术的通用部分的XMPP扩展. 一个Informational XEP 定义最佳实践或一个和XMPP或XMPP扩展协议相关的范本的使用(例如, <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0175.html">Best Practices for Use of SASL ANONYMOUS</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">12</a>).
+</p><p>&lt;approver/&gt;元素的XML字符串数据应该是"Council".
+</p><p>&lt;dependencies/&gt;元素用于以一个规范性的方法定义你的提案所依赖的RFCs, XMPP扩展协议, 和其他协议(即, 为了实现你提议的协议，这些协议必须或应该被理解). 每个协议必须由一个唯一的&lt;spec/&gt;子元素来标识(关于文档标识符的线索请参考现有的XEP协议, 或询问XMPP扩展编辑).
+</p><p>&lt;supersedes/&gt;, &lt;supersededby/&gt;, &lt;shortname/&gt;, 和&lt;schemaloc/&gt;元素由XMPP扩展编辑使用; 无论如何, 如果你的文档取代一个现有的XMPP扩展协议, 可以把要取代的那个协议包含在一个定义该文档标识符的&lt;spec/&gt;子元素中(例如, XEP-0093).
+</p><p>为每一个合著者包含一个&lt;author/&gt;元素. 注意，根据XEP-0001的要求&lt;firstname/&gt;和&lt;surname/&gt;元素是必需的, 然后是一些&lt;email/&gt;, &lt;jid/&gt;, 和&lt;uri/&gt;元素的组合， 这样就有了适当的可用的联系人信息.
+</p><p>为你的文档的每一个修订包含一个&lt;revision/&gt;元素.你给XMPP编辑的初始提交文档的&lt;version/&gt;元素的XML字符串数据应该是"0.0.1", 并且&lt;remark/&gt;元素应该是"First draft."; 对每一个修订, 你将包含一个新的&lt;revision/&gt;元素(把它放在现有的&lt;revision/&gt;元素的前面)并且重复&lt;version/&gt;元素(例如, "0.0.2"在"0.0.1"后面或"0.10"在"0.9"后面). &lt;date/&gt;元素的格式为 yyyy-mm-dd.
+</p>
+<h3> <span class="mw-headline" id=".E6.96.87.E4.BB.B6.E5.86.85.E5.AE.B9">文件内容</span></h3>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>除了<span class="sc2">&lt;header<span class="sy0">/</span><span class="kw2">&gt;</span></span>元素（见上文）里的元数据，XEP文件是一系列的章节，以层次结构来排版（<span class="sc2">&lt;section1<span class="sy0">/</span><span class="kw2">&gt;</span></span>是一个顶层章节，您可以在其中嵌套<span class="sc2">&lt;section2<span class="sy0">/</span><span class="kw2">&gt;</span></span>章
+&#160;
+节，一直到<span class="sc2">&lt;section4<span class="sy0">/</span><span class="kw2">&gt;</span></span>）。一个章节的标题是其“topic”属性。你也应该包括一个'anchor'属性，让您可以在您的文档链接到页面中的片段。章节元素内允许
+&#160;
+的元素可能看起来类似XHTML：<span class="sc2"><span class="kw2">&lt;p</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>为段落，<span class="sc2"><span class="kw2">&lt;ol</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>和<span class="sc2"><span class="kw2">&lt;ul</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>为有序和无序列表，依此类推。
+&#160;
+<span class="sc2">&lt;example<span class="sy0">/</span><span class="kw2">&gt;</span></span>和<span class="sc2"><span class="kw2">&lt;code</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元素是用来显示协议片段; <span class="sc2">&lt;example<span class="sy0">/</span><span class="kw2">&gt;</span></span>元素应具备“caption”属性以描述示例，而<span class="sc2"><span class="kw2">&lt;code</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元素没有这个属性。在这些元素内都定义
+&#160;
+了一个XML CDATA章节，这样你就不需要在你的示例XML节中避免“<span class="sc2"><span class="kw2">&lt;</span>”和“<span class="kw2">&gt;</span></span>”字符，因为这使作者和编辑的生活变得更容易（见现有XEP协议的标记）。
+&#160;
+<span class="sc2"><span class="kw2">&lt;p</span>​​<span class="sy0">/</span><span class="kw2">&gt;</span></span>和<span class="sc2"><span class="kw2">&lt;li</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元素，也可以包含多个标记，来自熟悉的XHTML，如<span class="sc2"><span class="kw2">&lt;img</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元素。注意超链接的形式是<span class="sc2"><span class="kw2">&lt;link</span> url<span class="sy0">=</span><span class="st0">'foo'</span><span class="kw2">&gt;</span></span>bar<span class="sc2"><span class="kw2">&lt;/link&gt;</span></span>，而不是
+&#160;
+<span class="sc2"><span class="kw2">&lt;a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">'foo'</span><span class="kw2">&gt;</span></span>bar<span class="sc2"><span class="kw2">&lt;/a&gt;</span></span>的（其中的原因已经迷失在时间的迷雾中，而且现在更改它已经太晚了，所以你不得不调整）。如果需要，您还可以在<span class="sc2"><span class="kw2">&lt;P</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>合<span class="sc2"><span class="kw2">&lt;li</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元
+&#160;
+素内使用内嵌结构和表象的标记，如<span class="sc2"><span class="kw2">&lt;em</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>，<span class="sc2"><span class="kw2">&lt;strong</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>，<span class="sc2"><span class="kw2">&lt;tt</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>，<span class="sc2"><span class="kw2">&lt;cite</span><span class="sy0">/</span><span class="kw2">&gt;</span></span> <span class="sc2"><span class="kw2">&lt;span</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>。
+&#160;
+您可能还包括了表（这些都是有利于罗列错误代码等）。 <span class="sc2"><span class="kw2">&lt;table</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元素应具备的“caption属性说明表的内容。标准的XHTML表结构适用（<span class="sc2"><span class="kw2">&lt;tr</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>定义一行，其
+&#160;
+中包含标题行的<span class="sc2"><span class="kw2">&lt;th</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元素和数据行的<span class="sc2"><span class="kw2">&lt;td</span><span class="sy0">/</span><span class="kw2">&gt;</span></span>元素），而“colspan'和'rowspan的属性也可以用，如果需要他们的话。表格展现由XSLT和CSS样式表
+&#160;
+（如cellpadding和cellspacing）处理。但是记住，这并不意味着表是用来显示了大量文本的。
+&#160;
+xep.xsl文件执行各种魔法，在XML文件转换成HTML，包括前面的问题创建，表的内容，章节编号，备注，和修订历史记录。请随意对此文件提交补丁，但不要向源
+&#160;
+代码控制提交修改后的版本。
+&#160;
+虽然HTML是XEPs的主要发行格式，自2009年以来XMPP扩展编辑也发布XEPs的PDF文件的形式。牢记这一点，尽量避免表中的列太多，这可能需要比正常更宽的纸张。</pre></div></div>
+<h2> <span class="mw-headline" id="XEP.E6.96.87.E6.A1.A3.E7.9A.84.E7.AB.A0.E8.8A.82">XEP文档的章节</span></h2>
+<p>大部分XEP协议有以下大部分章节, 经常以下面所述的顺序排列. 其他章节可以是适当的(例如, <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0071.html">XHTML-IM</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">13</a> 有一个章节是讲W3C事项). 关于为了阐述你的论据而需要的章节你要使用你自己的最佳判断, 或针对你的需要咨询XMPP扩展编辑.
+</p>
+<h3> <span class="mw-headline" id=".E7.AE.80.E4.BB.8B_2">简介</span></h3>
+<p>一个XEP文档的简介是非常重要的，因为它提供了考虑的提案的基本原理. 特别是, 简介应该包含类似如下信息:
+</p>
+<ol><li> 因为缺少你提议的协议而使用户现在不能完成的任务. (注意: 用户不只是IM用户, 而可以是任何人, 系统, 或可以通过XMPP网络和其他实体交互而带来价值的应用.)
+</li><li> 其他项目或协议以及XMPP技术如何因为你提议的协议而与它们交互(例如, XML-RPC, SOAP).
+</li><li> XMPP技术和"竞争者"之间的比较(例如, 其他IM系统或消息协议)，描述为了提供类似功能XMPP协议簇中需要填补的空白.
+</li><li> XMPP社区中思考的相关历史.
+</li><li> 真实世界中该协议能解决的问题的例子.
+</li></ol>
+<h3> <span class="mw-headline" id=".E9.9C.80.E6.B1.82">需求</span></h3>
+<p>每个XEP文档应该包含一个章节来描述该文档所代表的需求. 这个信息是关键和重要的, 因为它清楚地定义本提案的范围以及在协议设计上的任何相关的约束.
+</p>
+<h3> <span class="mw-headline" id=".E8.AF.8D.E6.B1.87.E8.A1.A8">词汇表</span></h3>
+<p>如果你的XEP文档使用读者不熟悉的术语, 请在一个词汇表中定义它们.
+</p><p>推荐的词汇表的布局是一个定义列表，使用HTML的 <dl> 标签(示例见现有的XEPs).
+</p>
+<h3> <span class="mw-headline" id=".E7.94.A8.E4.BE.8B">用例</span></h3>
+<p>建议文档作者根据提案将要阐述的用例来结构化他们的提案. <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">14</a> 我们发现用例强迫作者专注于功能而不是"为了协议而做协议". 它也有助于根据参与者来排列用例, 比如在 <a href="/XEP-0045" title="XEP-0045">Multi-User Chat</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">15</a> 中就是这样做的. 每个用例包含一个子章节.
+</p><p>写用例和相关协议的时候, 确保以下要点:
+</p>
+<ul><li> 清晰地定义成功场景, 候补流程, 和可能的错误.
+</li><li> 描述使用本协议的时候XMPP客户端,服务器,和外部组件的预期行为.
+</li><li> 包含很多协议示例. <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">16</a>
+</li></ul>
+<p>我们重申: 包含很多协议示例. 示例不仅帮助实现者而且也帮助那些在标准SIG和XMPP理事会中审核你的提案的人. 如果你遵循Jabber传统使用莎士比亚戏剧中的角色和情景，你将得到XMPP扩展编辑的额外信任:
+</p><p><b>示例1. 一个来自莎士比亚的例子</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;message</span> 
+    <span class="re0">from</span>=<span class="st0">'juliet@capulet.com/balcony'</span>
+    <span class="re0">to</span>=<span class="st0">'romeo@montague.net/garden'</span>
+    <span class="re0">type</span>=<span class="st0">'chat'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;body<span class="re2">&gt;</span></span><span class="co3">Wherefore art thou, Romeo?</span><span class="re1">&lt;/body<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/message<span class="re2">&gt;</span></span></pre></div></div>
+<h3> <span class="mw-headline" id=".E9.94.99.E8.AF.AF.E4.BB.A3.E7.A0.81">错误代码</span></h3>
+<p>如果你的提案定义了一些错误和状态码(如XEP-0045中做的那样), 包含一个你文档中定义的所有代码的表格是个好主意.
+</p>
+<h3> <span class="mw-headline" id=".E5.95.86.E4.B8.9A.E8.A7.84.E5.88.99">商业规则</span></h3>
+<p>你可能希望包含一个章节来描述各种商业规则(基本上, 是关于应用行为的 MUSTs, SHOULDs, 和 MAYs 的变种). 这不是必需的但有助于实现者.
+</p>
+<h3> <span class="mw-headline" id=".E5.AE.9E.E7.8E.B0.E5.A4.87.E6.B3.A8">实现备注</span></h3>
+<p>你可能希望包含一个实现备注章节. 同样, 这不是必需的但是有助于实现者.
+</p>
+<h3> <span class="mw-headline" id=".E5.9B.BD.E9.99.85.E5.8C.96.E4.BA.8B.E9.A1.B9">国际化事项</span></h3>
+<p>如果有任何和你的提案相关的国际化或本地化的问题(例如, 是否包含'xml:lang'属性), 在这个可选的章节定义它们.
+</p>
+<h3> <span class="mw-headline" id=".E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9">安全事项</span></h3>
+<p>你的提案必须包含一个"安全事项"的章节. 即使没有和你的提案相关的安全特性或关系, 你也必需标注那种情况. 有益的指南请参考<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3552">RFC 3552</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">17</a>; 核心XMPP协议(<b><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6120">RFC 6120</a></b>) 也包含非常全面的安全事项章节，可作为范例来参考.
+</p>
+<h3> <span class="mw-headline" id="IANA.E4.BA.8B.E9.A1.B9">IANA事项</span></h3>
+<p>本章是必需的. IANA即<a rel="nofollow" class="external text" href="http://www.iana.org/">互联网号码分配机构(IANA)</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">18</a>, 互联网协议的唯一性参数值分配的核心协调者, 例如号码和URI schemes. 大部分提案不要求和IANA的互动, 这种情况下本章的文本应为"本文不需要和互联网号码分配机构(IANA)交互." 如果你的提案要求和IANA交互, 和XMPP扩展编辑的XMPP注册处讨论这件事. 不要自己直接联系IANA!
+</p>
+<h3> <span class="mw-headline" id="XMPP.E6.B3.A8.E5.86.8C.E5.A4.84.E4.BA.8B.E9.A1.B9">XMPP注册处事项</span></h3>
+<p>本章是必需的. <a rel="nofollow" class="external text" href="http://xmpp.org/registrar/">XMPP注册处</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">19</a> 维护了保留的XMPP协议命名空间的列表和XMPP标准基金会批准的协议的上下文中使用了的参数的注册项. 如果提案不需要和XMPP注册处交互, 本章的文本应为"本文不需要向XMPP注册处注册命名空间或参数." 其他情况下的适当文本请参考草案或最终XEPs, 或咨询XMPP扩展编辑的XMPP注册处.
+</p>
+<h3> <span class="mw-headline" id="XML_Schema">XML Schema</span></h3>
+<p>为了协议被XMPP委员会批准，一个XML Schema是必需的. XMPP扩展编辑能帮助你为你建议的协议定义一个XML Schemae.
+</p>
+<h3> <span class="mw-headline" id=".E8.87.B4.E8.B0.A2">致谢</span></h3>
+<p>大部分XEP文档在结尾会加上一个章节来感谢那些做出显著贡献或对该协议提供了反馈的非作者.
+</p>
+<h2> <span class="mw-headline" id="XEP.E6.A0.B7.E5.BC.8F.E6.8C.87.E5.8D.97">XEP样式指南</span></h2>
+<p>XMPP扩展协议是用英语写的. 你不一定是一个好的提案撰写者, 但是要尝试以清晰, 易于理解的方式来撰写. XMPP扩展编辑将纠正任何从你的提案中发现的语法,拼写[XEP-0143#附录G:备注|20]], 标点, 以及用法的错误, 但是可能会在你的提案开始排队等待XMPP委员会升级到草案或激活状态时才会这么做. 另外, XMPP扩展编辑保留改善不清晰或不贴切的说法，调整章节，修改示例以使用莎士比亚人物，以及其他改善你的提案的论据和逻辑流程(当然不会改变含义)的权利.
+</p><p>接下来提供的样式指南是用来补充标准的英文样式指南, 类似 <b>样式元素</b> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">21</a> 和 <b>芝加哥样式手册</b> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">22</a>; 通用的英语(特别是美国英语)使用信息请参考那些资源，而这里的样式指南是XEP特有的指南.
+</p>
+<h3> <span class="mw-headline" id=".E5.B1.9E.E6.80.A7">属性</span></h3>
+<p>当我们用名字来谈到属性的时候, 会用单引号来代表它. 例如: 'to' 属性.
+</p><p>当我们谈到属性的值的时候, 会用双引号代表它. 例如: 'subscription' 属性的值为 "both".
+</p><p>元素拥有属性并且包含字符串数据 和/或 子元素; 不要混淆这些术语.
+</p>
+<h3> <span class="mw-headline" id=".E4.BB.A3.E7.A0.81.E7.A4.BA.E4.BE.8B">代码示例</span></h3>
+<p>在示例中, 使用单引号而不是双引号; 它们更易读.
+</p><p>为了展示XML元素的层次, 每一级缩进两个空格.
+</p><p>如果一个元素拥有多个属性, 请以<a rel="nofollow" class="external text" href="http://www.w3.org/TR/xml-c14n">Canonical XML</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">23</a>决定的顺序展示.
+</p><p>如果一个元素拥有大量的属性, 在每个属性前面包含一个换行并且缩进，这样它们就垂直对齐而易读了.
+</p><p>如果一个元素的XML字符数据很长, 包含一个换行并缩进两个空格.
+</p><p>在我们的HTML输出文件中示例是主要的右滚动的来源. 右滚动是有害的. 所以, 要相应调整你的示例的布局(行宽不应超过110个字符之类的).
+</p><p>示例:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'darkcave@macbeth.shakespeare.lit'</span> 
+    <span class="re0">id</span>=<span class="st0">'config1'</span> 
+    <span class="re0">to</span>=<span class="st0">'crone1@shakespeare.lit/desktop'</span> 
+    <span class="re0">type</span>=<span class="st0">'result'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/muc#roomconfig'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;x</span> <span class="re0">xmlns</span>=<span class="st0">'jabber:x:data'</span> <span class="re0">type</span>=<span class="st0">'form'</span><span class="re2">&gt;</span>
+      <span class="re1">&lt;title<span class="re2">&gt;</span></span><span class="co3">Configuration for &quot;darkcave&quot; Room</span><span class="re1">&lt;/title<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;instructions<span class="re2">&gt;</span></span><span class="co3">
+        Please complete this form to make changes to the configuration 
+        of your room; to add room owners and administrators, use the 
+        appropriate room commands rather than this form.
+      </span><span class="re1">&lt;/instructions<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;field</span> <span class="re0">type</span>=<span class="st0">'hidden'</span> <span class="re0">var</span>=<span class="st0">'FORM_TYPE'</span><span class="re2">&gt;</span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">http://jabber.org/protocol/muc#roomconfig</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/field<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p>一些示例包含的字符串是由哈希算法，类似 SHA-1 (见 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3174">RFC 3174</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">24</a>) 或 SHA-256 (见 <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0300.html">在XMPP中使用加密哈希函数</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">25</a>)输出的. 生成这些码的一个简单办法是使用 <a rel="nofollow" class="external text" href="http://www.openssl.org/">OpenSSL</a> 的 "dgst" 指令来生成哈希值. 例如, 以下指令将生成 SHA-1 哈希值 "9f5f9fdab9da7fc12e3c52b258acbcb4bb8e66ac":
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre><span class="kw3">echo</span> <span class="re5">-n</span> <span class="st0">'bard@shakespeare.lit'</span> <span class="sy0">|</span> openssl dgst <span class="re5">-hex</span> <span class="re5">-sha1</span></pre></div></div>    
+<p>一些示例(例如, SASL 示例)包含的字符串是使用 Base64 (见 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc4648">RFC 4648</a> <a href="/XEP-0143#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0143">26</a>)编码的. 生成这些的一个简单办法是使用 <a rel="nofollow" class="external text" href="http://www.openssl.org/">OpenSSL</a> 的 "enc" 指令来生成 base64编码的等价值. 例如, 以下命令将生成base64编码的字符串"YmFyZEBzaGFrZXNwZWFyZS5saXQ=":
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre><span class="kw3">echo</span> <span class="re5">-n</span> <span class="st0">'bard@shakespeare.lit'</span> <span class="sy0">|</span> openssl enc <span class="re5">-nopad</span> <span class="re5">-base64</span></pre></div></div>
+<h3> <span class="mw-headline" id=".E4.B8.80.E8.87.B4.E6.80.A7.E6.9C.AF.E8.AF.AD">一致性术语</span></h3>
+<p>一致性术语(例如, "MUST" and "SHOULD") 定义于 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2119">RFC 2119</a>. 要使用它们. 当这些术语不是全部大写的时候, 则特有的一致性含义则不适用(尽管使用术语'might'替代'may'和以'ought'替代'should'更好).
+</p>
+<h3> <span class="mw-headline" id=".E5.85.83.E7.B4.A0">元素</span></h3>
+<p>当我们用名字谈到一个元素的时候, 所指的是一个空的XML元素. 例如: &lt;query/&gt;元素.
+</p><p>&lt;message/&gt;, &lt;presence/&gt;, 和 &lt;iq/&gt; 元素的最外一层实际上是XML节(参见 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6120">RFC 6120</a>); 请用stanza(节)来指代它们, 而不要用元素(来指代它们).
+</p><p>元素拥有属性并包含字符数据 和/或 子元素; 不要混淆这些术语.
+</p><p>当你想说"element"(元素)的时候不要使用术语"tag"(标签).
+</p><p>不要添加所属关系到元素本身. 反例: &lt;body/&gt;的字符数据. 正例: &lt;body/&gt;元素的字符数据.
+</p><p>注意: 在xep.ent文件里,节名称和一些通用元素名称有缩写.
+</p>
+<h3> <span class="mw-headline" id=".E9.94.99.E8.AF.AF">错误</span></h3>
+<p>当我们谈到一个错误条件时, 使用定义于 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6120">RFC 6120</a> 的XML元素名称e而不是旧的HTTP格式的代码数字. 例如: &lt;feature-not-implemented/&gt;错误.
+</p><p>注意: 在xep.ent文件中节错误有缩写.
+</p>
+<h3> <span class="mw-headline" id=".E5.91.BD.E5.90.8D.E7.A9.BA.E9.97.B4">命名空间</span></h3>
+<p>当以名称谈到一个命名空间的时候, 指的是单引号中的内容. 例如: 'jabber:iq:roster'命名空间.
+</p><p>一个元素或属性由一个特定的命名空间qualified(限定)(而不是"scoped by" or "in").
+</p>
+<h3> <span class="mw-headline" id=".E5.BC.95.E5.8F.B7">引号</span></h3>
+<p>为了准确, XSF把所有标点符号放到引号之外,除非某人引用的文本中包含该标点符号(这就是所谓的"逻辑符号"). 例如: 客户端通讯使用的端口号是"5222".
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id=".E8.87.B4.E8.B0.A2_2">致谢</span></h2>
+<p>感谢 Tobias Markmann 和 Kevin Smith 的输入.
+</p>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95">附录</span></h2>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95A:.E6.96.87.E6.A1.A3.E4.BF.A1.E6.81.AF">附录A:文档信息</span></h3>
+<p>系列：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/">XEP</a>
+</p><p>序号：0143
+</p><p>发布者：<a rel="nofollow" class="external text" href="http://xmpp.org/xsf/">XMPP标准基金会</a>
+</p><p>状态：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0001.html#states-Active">活跃</a>
+</p><p>类型：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0001.html#types-Procedural">程序</a>
+</p><p>版本：1.1
+</p><p>最后更新：2011-07-08
+</p><p>批准机构：<a rel="nofollow" class="external text" href="http://xmpp.org/council/">XMPP理事会</a>
+</p><p>依赖标准：XEP-0001
+</p><p>替代标准：无
+</p><p>被替代标准：无
+</p><p>缩略名：无
+</p><p>原文控制： <a rel="nofollow" class="external text" href="http://gitorious.org/xmpp/xmpp/blobs/master/extensions/xep-0143.xml">HTML</a>
+</p><p>本文的其它格式： <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0143.xml">XML</a> <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0143.pdf">PDF</a>
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95B:.E4.BD.9C.E8.80.85.E4.BF.A1.E6.81.AF">附录B:作者信息</span></h3>
+<p><b>Peter Saint-Andre</b>
+</p>
+<dl><dd>Email: <a rel="nofollow" class="external text" href="mailto:stpeter@jabber.org">stpeter@jabber.org</a>
+</dd></dl>
+<dl><dd>JabberID: stpeter@jabber.org
+</dd></dl>
+<dl><dd>URI: <a rel="nofollow" class="external free" href="https://stpeter.im/">https://stpeter.im/</a>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A">附录C:法律通告</span></h3>
+<p><b>版权</b>
+</p><p>XMPP扩展协议的版权(1999-2008)归XMPP标准化基金会(XSF)所有.
+</p><p><b>权限</b>
+</p><p>特此授权,费用全免,对任何获得本协议副本的人,对使用本协议没有限制,包括不限制在软件程序中实现本协议,不限制在网络服务中布署本协议,不限制拷贝,修改,合并,发行,翻译,分发,转授,或销售本协议的副本,被允许使用本协议做了以上工作的人士,应接受前述的版权声明和本许可通知并且必须包含在所有的副本或实质性部分的规格中.除非单独的许可，被重新分发的修改工作，不得含有关于作者，标题，编号，或出版者的规格的误导性资料，并不得宣称修改工作是由本文的作者，作者所属的任何组织或项目，或XMPP标准基金会签注。
+</p><p><b>免责声明'</b>
+</p><p><b>## 特别注意：本协议是提供的“原样”的基础，没有担保或任何形式的条件，明示或暗示，包括，但不限于任何担保或关于名称，非侵权性，适销性或适合作某一特定目的的条件. ##</b>
+</p><p><b>责任限制</b>
+</p><p>在任何情况下以及没有任何法律规定时，不论是侵权行为（包括疏忽），合同或其它方面，除非根据适用法律的要求（如蓄意和有严重疏忽行为）或以书面形式同意，XMPP标准基金会或任何作者不对本协议所造成的损失承担责任，包括任何直接，间接，特殊，偶发，或任何从本协议出，入，连接的字符产生的或实现，布署或其他对本协议的使用导致的相应的损害赔偿（包括但不限于善意的损失，停止作业，电脑失灵或故障，或任何和所有其他商业损害或损失） ，即使XMPP标准基金会或作者已被告知此类损害的可能性。
+</p><p><b>知识产权的一致性</b>
+</p><p>XMPP扩展协议完全遵守XSF的知识产权策略(可在&lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/ipr-policy.shtml">http://www.xmpp.org/extensions/ipr-policy.shtml</a>&gt;找到副本或写信给XMPP标准基金会, 1899 Wynkoop Street, Suite 600, Denver, CO 80202 USA).
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95D:.E5.92.8CXMPP.E7.9A.84.E5.85.B3.E7.B3.BB">附录D:和XMPP的关系</span></h3>
+<p>可扩展的消息和出席信息协议 (XMPP) 定义于 XMPP Core (<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>) 和 XMPP IM (<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3921">RFC 3921</a>) 规范里，由 XMPP标准基金会贡献到由依据<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2026">RFC 2026</a>成立的互联网工程人物组管理的互联网标准流程 Internet Standards Process. 本文定义的任何协议已在互联网标准流程之外开发，并且被理解为 XMPP 的扩展而不是一个XMPP本身的演化, 开发, 或修改.
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95E:.E8.AE.A8.E8.AE.BA.E5.9C.B0.E7.82.B9">附录E:讨论地点</span></h3>
+<p>主要的XMPP扩展协议讨论地点是 &lt;standards@xmpp.org&gt; 讨论列表.
+</p><p>在 xmpp.org 的其它讨论列表中的讨论可能也有合适的; 所有的列表见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/about/discuss.shtml">http://xmpp.org/about/discuss.shtml</a>&gt; .
+</p><p>勘误表可以发送邮件到 &lt;editor@xmpp.org&gt;.
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95F:.E9.9C.80.E6.B1.82.E4.B8.80.E8.87.B4.E6.80.A7">附录F:需求一致性</span></h3>
+<p>以下用于本文的需求关键字的解释见于 <a rel="nofollow" class="external text" href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>: "MUST", "SHALL", "REQUIRED"; "MUST NOT", "SHALL NOT"; "SHOULD", "RECOMMENDED"; "SHOULD NOT", "NOT RECOMMENDED"; "MAY", "OPTIONAL".
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8">附录G:备注</span></h3>
+<ol><li> XMPP标准基金会(XSF)是一个独立的, 非营利的会员组织，专门给IETF的可扩展消息和出席信息协议(XMPP)开发扩展. 更多信息参见&lt;<a rel="nofollow" class="external free" href="http://xmpp.org/xsf/">http://xmpp.org/xsf/</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6120">RFC 6120</a>: Extensible Messaging and Presence Protocol (XMPP): Core &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc6120">http://tools.ietf.org/html/rfc6120</a>&gt;.
+</li><li> XEP-0001: XMPP Extension Protocols &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0001.html">http://xmpp.org/extensions/xep-0001.html</a>&gt;.
+</li><li> XMPP委员会是一个技术指导委员会, 由XSF董事会授权并从XSF会员选出, 它负责批准新的XMPP扩展协议和监督XSF的标准流程. 更多信息见&lt;<a rel="nofollow" class="external free" href="http://xmpp.org/council/">http://xmpp.org/council/</a>&gt;.
+</li><li> 互联网工程人物组是开发新的互联网相关标准协议的首要组织, 它最著名的标准方面的工作是HTTP和SMTP. 更多信息参见&lt;<a rel="nofollow" class="external free" href="http://www.ietf.org/">http://www.ietf.org/</a>&gt;.
+</li><li> 万维网联盟为互联网上的数据格式和标记语言(例如 HTML 和 XML). 更多信息见&lt;<a rel="nofollow" class="external free" href="http://www.w3.org/">http://www.w3.org/</a>&gt;.
+</li><li> 标准SIG是一个代表特别兴趣的组，致力于XMPP扩展协议开发. 这个标准SIG的讨论组是XMPP协议扩展讨论的主要场所, 同时用于XMPP扩展和XMPP注册项的声明. 要订阅这个列表或查看该列表的归档文件, 请访问 &lt;<a rel="nofollow" class="external free" href="http://mail.jabber.org/mailman/listinfo/standards/">http://mail.jabber.org/mailman/listinfo/standards/</a>&gt;.
+</li><li> XEP-0134: XMPP Design Guidelines &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0134.html">http://xmpp.org/extensions/xep-0134.html</a>&gt;.
+</li><li> XMPP扩展编辑是由XSF理事会指定的处理协议提交和提供XSF的标准流程的日常管理的人. 更多信息参见&lt;<a rel="nofollow" class="external free" href="http://xmpp.org/about-xmpp/xsf/xsf-people/#editor">http://xmpp.org/about-xmpp/xsf/xsf-people/#editor</a>&gt;.
+</li><li> XSF IPR策略定义了XMPP标准基金会关于XMPP扩展协议(XEPs)相关的知识产权(IPR)的官方策略. 更多信息参见&lt;<a rel="nofollow" class="external free" href="http://xmpp.org/about-xmpp/xsf/xsf-ipr-policy/">http://xmpp.org/about-xmpp/xsf/xsf-ipr-policy/</a>&gt;.
+</li><li> &lt;<a rel="nofollow" class="external free" href="http://www.xml.com/pub/a/tools/ruwf/check.html">http://www.xml.com/pub/a/tools/ruwf/check.html</a>&gt;
+</li><li> XEP-0175: Best Practices for Use of SASL ANONYMOUS &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0175.html">http://xmpp.org/extensions/xep-0175.html</a>&gt;.
+</li><li> XEP-0071: XHTML-IM &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0071.html">http://xmpp.org/extensions/xep-0071.html</a>&gt;.
+</li><li> 对用例的一个好的介绍可以去看下&lt;<a rel="nofollow" class="external free" href="http://www.pols.co.uk/usecasezone/">http://www.pols.co.uk/usecasezone/</a>&gt;.
+</li><li> XEP-0045: Multi-User Chat &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0045.html">http://xmpp.org/extensions/xep-0045.html</a>&gt;.
+</li><li> 我们的诀窍是: "我们把例子放到example.com!"
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3552">RFC 3552</a>: Guidelines for Writing RFC Text on Security Considerations &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3552">http://tools.ietf.org/html/rfc3552</a>&gt;.
+</li><li> 互联网号码分配机构(IANA)是一个中央协调者，为互联网协议分配唯一的参数值, 类似端口号和 URI schemes. 更多信息见&lt;<a rel="nofollow" class="external free" href="http://www.iana.org/">http://www.iana.org/</a>&gt;.
+</li><li> XMPP注册处维护保留的协议命名空间以及在XMPP标准基金会已批准的XMPP扩展协议的上下文中已经使用的参数的注册项的列表. 更多信息参见&lt;<a rel="nofollow" class="external free" href="http://xmpp.org/registrar/">http://xmpp.org/registrar/</a>&gt;.
+</li><li> 为了最大程度底方便这个世界的其他部分的作者, XMPP扩展协议遵循美国拼写习惯; 因此 "authorisation" 将被改成 "authorization" ，以此类推.
+</li><li> 见&lt;<a rel="nofollow" class="external free" href="http://en.wikipedia.org/wiki/The_Elements_of_Style">http://en.wikipedia.org/wiki/The_Elements_of_Style</a>&gt;.
+</li><li> 见&lt;<a rel="nofollow" class="external free" href="http://en.wikipedia.org/wiki/The_Chicago_Manual_of_Style">http://en.wikipedia.org/wiki/The_Chicago_Manual_of_Style</a>&gt;.
+</li><li> Canonical XML 1.0 &lt;<a rel="nofollow" class="external free" href="http://www.w3.org/TR/xml-c14n">http://www.w3.org/TR/xml-c14n</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3174">RFC 3174</a>: US Secure Hash Algorithm 1 (SHA1) &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3174">http://tools.ietf.org/html/rfc3174</a>&gt;.
+</li><li> XEP-0300: Use of Cryptographic Hash Functions in XMPP &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0300.html">http://xmpp.org/extensions/xep-0300.html</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4648">RFC 4648</a>: The Base16, Base32, and Base64 Data Encodings &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc4648">http://tools.ietf.org/html/rfc4648</a>&gt;.
+</li></ol>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95H:.E4.BF.AE.E8.AE.A2.E5.8E.86.E5.8F.B2">附录H:修订历史</span></h3>
+<p>注意: 本协议的旧版本可能在 <a rel="nofollow" class="external free" href="http://xmpp.org/extensions/attic/">http://xmpp.org/extensions/attic/</a> 还可用
+</p><p>Version 1.1 (2011-07-08)
+</p><p>Added section about maintaining a XEP; updated the text to reflect migration from Subversion to git for source control; mentioned best practice for table usage and use of PDF for publication.
+</p><p>(psa)
+</p><p>Version 1.0 (2004-12-09)
+</p><p>Per a vote of the XMPP Council, advanced status to Active.
+</p><p>(psa)
+</p><p>Version 0.4 (2004-10-22)
+</p><p>Further clarifications.
+</p><p>(psa)
+</p><p>Version 0.3 (2004-10-12)
+</p><p>Minor clarifications throughout.
+</p><p>(psa)
+</p><p>Version 0.2 (2004-09-16)
+</p><p>Described document metadata elements.
+</p><p>(psa)
+</p><p>Version 0.1 (2004-09-15)
+</p><p>Initial version.
+</p><p>(psa) 
+</p>
+<hr />
+<p>结束</dl>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 196/1000000
+Post-expand include size: 3178/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:756-0!*!0!!zh-cn!*!* and timestamp 20160221190728 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=XEP-0143&amp;oldid=3075">http://wiki.jabbercn.org/index.php?title=XEP-0143&amp;oldid=3075</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">2个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E6%89%A9%E5%B1%95" title="分类:XMPP扩展">XMPP扩展</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/XEP-0143" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:XEP-0143&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=XEP-0143&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=XEP-0143&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=XEP-0143" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/XEP-0143" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/XEP-0143" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=XEP-0143&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=XEP-0143&amp;oldid=3075" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2013年5月14日 (星期二) 17:15。</li>
+		<li id="viewcount">此页面已被浏览过19,993次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("XEP-0143");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.038 secs. --></body></html>

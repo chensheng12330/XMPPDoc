@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>RFC3986 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "RFC3986", "wgTitle": "RFC3986", "wgCurRevisionId": 3568, "wgArticleId": 766, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["其它翻译文档", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-text {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-text li, .source-text pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for text
+ * CSS class: source-text, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-text .de1, .source-text .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-text  {font-family: monospace;}
+.source-text .imp {font-weight: bold; color: red;}
+.source-text li, .source-text li.li1 {font-weight: normal;}
+.source-text li.li2 {font-weight: bold;}
+.source-text .ln-xtra, .source-text li.ln-xtra, .source-text div.ln-xtra {background-color: #ffc;}
+.source-text span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-xml {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-xml .de1, .source-xml .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-xml  {font-family: monospace;}
+.source-xml .imp {font-weight: bold; color: red;}
+.source-xml li, .source-xml li.li1 {font-weight: normal;}
+.source-xml li.li2 {font-weight: bold;}
+.source-xml .co1 {color: #808080; font-style: italic;}
+.source-xml .co2 {color: #404040; font-style: italic;}
+.source-xml .co3 {color: #000000;}
+.source-xml .co4 {color: #400000; font-weight: bold;}
+.source-xml .es0 {color: #000099; font-weight: bold;}
+.source-xml .br0 {color: #66cc66;}
+.source-xml .sy0 {color: #66cc66;}
+.source-xml .st0 {color: #ff0000;}
+.source-xml .nu0 {color: #cc66cc;}
+.source-xml .re0 {color: #000066;}
+.source-xml .re1 {color: #000000; font-weight: bold;}
+.source-xml .re2 {color: #000000; font-weight: bold;}
+.source-xml .ln-xtra, .source-xml li.ln-xtra, .source-xml div.ln-xtra {background-color: #ffc;}
+.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-java {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-java li, .source-java pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for java
+ * CSS class: source-java, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-java .de1, .source-java .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-java  {font-family: monospace;}
+.source-java .imp {font-weight: bold; color: red;}
+.source-java li, .source-java li.li1 {font-weight: normal;}
+.source-java li.li2 {font-weight: bold;}
+.source-java .kw1 {color: #000000; font-weight: bold;}
+.source-java .kw2 {color: #000066; font-weight: bold;}
+.source-java .kw3 {color: #003399;}
+.source-java .kw4 {color: #000066; font-weight: bold;}
+.source-java .co1 {color: #666666; font-style: italic;}
+.source-java .co2 {color: #006699;}
+.source-java .coMULTI {color: #666666; font-style: italic;}
+.source-java .es0 {color: #000099; font-weight: bold;}
+.source-java .br0 {color: #009900;}
+.source-java .sy0 {color: #339933;}
+.source-java .st0 {color: #0000ff;}
+.source-java .nu0 {color: #cc66cc;}
+.source-java .me1 {color: #006633;}
+.source-java .me2 {color: #006633;}
+.source-java .ln-xtra, .source-java li.ln-xtra, .source-java div.ln-xtra {background-color: #ffc;}
+.source-java span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-pascal {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-pascal li, .source-pascal pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for pascal
+ * CSS class: source-pascal, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-pascal .de1, .source-pascal .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-pascal  {font-family: monospace;}
+.source-pascal .imp {font-weight: bold; color: red;}
+.source-pascal li, .source-pascal li.li1 {font-weight: normal;}
+.source-pascal li.li2 {font-weight: bold;}
+.source-pascal .kw1 {color: #000000; font-weight: bold;}
+.source-pascal .kw2 {color: #000000; font-weight: bold;}
+.source-pascal .kw3 {color: #000066;}
+.source-pascal .kw4 {color: #000066; font-weight: bold;}
+.source-pascal .co1 {color: #666666; font-style: italic;}
+.source-pascal .co2 {color: #339933;}
+.source-pascal .coMULTI {color: #666666; font-style: italic;}
+.source-pascal .es0 {color: #000099; font-weight: bold;}
+.source-pascal .br0 {color: #009900;}
+.source-pascal .sy0 {color: #339933;}
+.source-pascal .st0 {color: #ff0000;}
+.source-pascal .nu0 {color: #cc66cc;}
+.source-pascal .me1 {color: #202020;}
+.source-pascal .ln-xtra, .source-pascal li.ln-xtra, .source-pascal div.ln-xtra {background-color: #ffc;}
+.source-pascal span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html4strict {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-html4strict .de1, .source-html4strict .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-html4strict  {font-family: monospace;}
+.source-html4strict .imp {font-weight: bold; color: red;}
+.source-html4strict li, .source-html4strict li.li1 {font-weight: normal;}
+.source-html4strict li.li2 {font-weight: bold;}
+.source-html4strict .kw1 {color: #b1b100;}
+.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.source-html4strict .kw3 {color: #000066;}
+.source-html4strict .coMULTI {color: #808080; font-style: italic;}
+.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.source-html4strict .br0 {color: #66cc66;}
+.source-html4strict .sy0 {color: #66cc66;}
+.source-html4strict .st0 {color: #ff0000;}
+.source-html4strict .nu0 {color: #cc66cc;}
+.source-html4strict .sc0 {color: #00bbdd;}
+.source-html4strict .sc1 {color: #ddbb00;}
+.source-html4strict .sc2 {color: #009900;}
+.source-html4strict .ln-xtra, .source-html4strict li.ln-xtra, .source-html4strict div.ln-xtra {background-color: #ffc;}
+.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-RFC3986 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">RFC3986</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p><b>本文的英文原文来自<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986">Uniform Resource Identifier (URI): Generic Syntax</a></b>
+</p>
+<table>
+<tr>
+<td><b>被更新: <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc6874">6874</a></b> </td>
+<td> <b>标准</b>
+</td></tr>
+<tr>
+<td> </td>
+<td> <b>存在勘误表</b>
+</td></tr>
+<tr>
+<td>网络工作组      </td>
+<td> T. Berners-Lee
+</td></tr>
+<tr>
+<td>申请讨论: 3986  </td>
+<td> W3C/MIT
+</td></tr>
+<tr>
+<td>STD: 66  </td>
+<td> R. Fielding
+</td></tr>
+<tr>
+<td>更新: <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1738">1738</a>  </td>
+<td> Day Software
+</td></tr>
+<tr>
+<td>取代: <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2732">2732</a> <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">2396</a> <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1808">1808</a> </td>
+<td> L. Masinter
+</td></tr>
+<tr>
+<td>类别: 标准跟踪  </td>
+<td> Adobe Systems
+</td></tr>
+<tr>
+<td> </td>
+<td> 2005年1月
+</td></tr></table>
+<dl><dd><dl><dd><dl><dd><dl><dd><b>统一资源标识符（URI）：通用语法</b>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><b>本文的状态</b>
+</p>
+<dl><dd>本文为互联网社区指定了一个互联网标准跟踪协议, 并为改进它而请求讨论和建议. 关于标准化状态和本协议的状态请参考当前版本的 "互联网官方协议标准" (STD 1). 本文不受限制分发.
+</dd></dl>
+<p><br />
+<b>版权声明</b>
+</p>
+<dl><dd>Copyright (C) The Internet Society (2005).
+</dd></dl>
+<p><b>摘要</b>
+</p>
+<dl><dd>一个统一资源标识符(URI)是一个字符的紧凑序列，用来标识一个抽象或物理资源. 本协议定义了通用的URI语法和一个解析相应格式URI引用的过程, 以及在互联网上使用URIs的指南和安全事项. URI语法定义了所有合法的URIs的一个超集的语法, 允许一个实现来解析一个URI引用的常用部件而不需要知道每个可能的标识符的scheme特有的需求. 本协议不为URIs定义现成的语法; 那个任务由每个URI scheme的个体的协议来执行.
+</dd></dl>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E7.BB.AA.E8.AE.BA"><span class="tocnumber">1</span> <span class="toctext">绪论</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#URIs.E6.A6.82.E8.BF.B0"><span class="tocnumber">1.1</span> <span class="toctext">URIs概述</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#.E9.80.9A.E7.94.A8.E8.AF.AD.E6.B3.95"><span class="tocnumber">1.1.1</span> <span class="toctext">通用语法</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#.E7.A4.BA.E4.BE.8B"><span class="tocnumber">1.1.2</span> <span class="toctext">示例</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#URI.2C_URL.2C_.E5.92.8CURN"><span class="tocnumber">1.1.3</span> <span class="toctext">URI, URL, 和URN</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#.E8.AE.BE.E8.AE.A1.E4.BA.8B.E9.A1.B9"><span class="tocnumber">1.2</span> <span class="toctext">设计事项</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#.E8.BD.AC.E5.BD.95"><span class="tocnumber">1.2.1</span> <span class="toctext">转录</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#.E4.BB.8E.E4.BA.A4.E4.BA.92.E5.88.86.E7.A6.BB.E8.BA.AB.E4.BB.BD"><span class="tocnumber">1.2.2</span> <span class="toctext">从交互分离身份</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#.E5.B1.82.E6.AC.A1.E6.A0.87.E8.AF.86.E7.AC.A6"><span class="tocnumber">1.2.3</span> <span class="toctext">层次标识符</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#.E8.AF.AD.E6.B3.95.E7.AC.A6.E5.8F.B7"><span class="tocnumber">1.3</span> <span class="toctext">语法符号</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#.E5.AD.97.E7.AC.A6"><span class="tocnumber">2</span> <span class="toctext">字符</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#.E7.99.BE.E5.88.86.E5.8F.B7.E7.BC.96.E7.A0.81"><span class="tocnumber">2.1</span> <span class="toctext">百分号编码</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#.E4.BF.9D.E7.95.99.E5.AD.97.E7.AC.A6"><span class="tocnumber">2.2</span> <span class="toctext">保留字符</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#.E9.9D.9E.E4.BF.9D.E7.95.99.E5.AD.97.E7.AC.A6"><span class="tocnumber">2.3</span> <span class="toctext">非保留字符</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#.E4.BD.95.E6.97.B6.E7.BC.96.E7.A0.81.E6.88.96.E8.A7.A3.E7.A0.81"><span class="tocnumber">2.4</span> <span class="toctext">何时编码或解码</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#.E8.AF.86.E5.88.AB.E6.95.B0.E6.8D.AE"><span class="tocnumber">2.5</span> <span class="toctext">识别数据</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#.E8.AF.AD.E6.B3.95.E9.83.A8.E4.BB.B6"><span class="tocnumber">3</span> <span class="toctext">语法部件</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#.E6.A0.BC.E5.BC.8F"><span class="tocnumber">3.1</span> <span class="toctext">格式</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#.E6.9C.BA.E6.9E.84"><span class="tocnumber">3.2</span> <span class="toctext">机构</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#.E7.94.A8.E6.88.B7.E4.BF.A1.E6.81.AF"><span class="tocnumber">3.2.1</span> <span class="toctext">用户信息</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#.E4.B8.BB.E6.9C.BA"><span class="tocnumber">3.2.2</span> <span class="toctext">主机</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#.E7.AB.AF.E5.8F.A3"><span class="tocnumber">3.2.3</span> <span class="toctext">端口</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-23"><a href="#.E8.B7.AF.E5.BE.84"><span class="tocnumber">3.3</span> <span class="toctext">路径</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#.E6.9F.A5.E8.AF.A2"><span class="tocnumber">3.4</span> <span class="toctext">查询</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#.E7.89.87.E6.AE.B5"><span class="tocnumber">3.5</span> <span class="toctext">片段</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#.E7.94.A8.E6.B3.95"><span class="tocnumber">4</span> <span class="toctext">用法</span></a>
+<ul>
+<li class="toclevel-2 tocsection-27"><a href="#URI.E5.BC.95.E7.94.A8"><span class="tocnumber">4.1</span> <span class="toctext">URI引用</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#.E7.9B.B8.E5.AF.B9.E5.BC.95.E7.94.A8"><span class="tocnumber">4.2</span> <span class="toctext">相对引用</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#.E7.BB.9D.E5.AF.B9URI"><span class="tocnumber">4.3</span> <span class="toctext">绝对URI</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#.E5.90.8C.E6.96.87.E5.BC.95.E7.94.A8"><span class="tocnumber">4.4</span> <span class="toctext">同文引用</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#.E5.90.8E.E7.BC.80.E5.BC.95.E7.94.A8"><span class="tocnumber">4.5</span> <span class="toctext">后缀引用</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#.E5.BC.95.E7.94.A8.E8.A7.A3.E6.9E.90"><span class="tocnumber">5</span> <span class="toctext">引用解析</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="#.E5.BB.BA.E7.AB.8B.E5.9F.BA.E7.A1.80URI"><span class="tocnumber">5.1</span> <span class="toctext">建立基础URI</span></a>
+<ul>
+<li class="toclevel-3 tocsection-34"><a href="#.E5.B5.8C.E5.85.A5.E5.9C.A8.E5.86.85.E5.AE.B9.E9.87.8C.E7.9A.84.E5.9F.BA.E7.A1.80URI"><span class="tocnumber">5.1.1</span> <span class="toctext">嵌入在内容里的基础URI</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#.E6.9D.A5.E8.87.AA.E5.B0.81.E8.A3.85.E5.AE.9E.E4.BD.93.E7.9A.84.E5.9F.BA.E7.A1.80URI"><span class="tocnumber">5.1.2</span> <span class="toctext">来自封装实体的基础URI</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#.E6.9D.A5.E8.87.AA.E6.A3.80.E7.B4.A2URI.E7.9A.84.E5.9F.BA.E7.A1.80URI"><span class="tocnumber">5.1.3</span> <span class="toctext">来自检索URI的基础URI</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#.E7.BC.BA.E7.9C.81.E5.9F.BA.E7.A1.80URI"><span class="tocnumber">5.1.4</span> <span class="toctext">缺省基础URI</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-38"><a href="#.E7.9B.B8.E5.AF.B9.E8.A7.A3.E6.9E.90"><span class="tocnumber">5.2</span> <span class="toctext">相对解析</span></a>
+<ul>
+<li class="toclevel-3 tocsection-39"><a href="#.E9.A2.84.E8.A7.A3.E6.9E.90.E5.9F.BA.E7.A1.80URI"><span class="tocnumber">5.2.1</span> <span class="toctext">预解析基础URI</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#.E8.BD.AC.E6.8D.A2.E5.BC.95.E7.94.A8"><span class="tocnumber">5.2.2</span> <span class="toctext">转换引用</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#.E5.90.88.E5.B9.B6.E8.B7.AF.E5.BE.84"><span class="tocnumber">5.2.3</span> <span class="toctext">合并路径</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#.E7.A7.BB.E9.99.A4.E7.82.B9.E7.89.87.E6.AE.B5"><span class="tocnumber">5.2.4</span> <span class="toctext">移除点片段</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-43"><a href="#.E9.83.A8.E4.BB.B6.E9.87.8D.E5.86.99"><span class="tocnumber">5.3</span> <span class="toctext">部件重写</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="#.E5.BC.95.E7.94.A8.E8.A7.A3.E6.9E.90.E7.A4.BA.E4.BE.8B"><span class="tocnumber">5.4</span> <span class="toctext">引用解析示例</span></a>
+<ul>
+<li class="toclevel-3 tocsection-45"><a href="#.E5.B8.B8.E8.A7.84.E7.A4.BA.E4.BE.8B"><span class="tocnumber">5.4.1</span> <span class="toctext">常规示例</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="#.E5.8F.8D.E5.B8.B8.E7.A4.BA.E4.BE.8B"><span class="tocnumber">5.4.2</span> <span class="toctext">反常示例</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-47"><a href="#.E6.AD.A3.E8.A7.84.E5.8C.96.E5.92.8C.E6.AF.94.E8.BE.83"><span class="tocnumber">6</span> <span class="toctext">正规化和比较</span></a>
+<ul>
+<li class="toclevel-2 tocsection-48"><a href="#.E7.AD.89.E4.BB.B7"><span class="tocnumber">6.1</span> <span class="toctext">等价</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#.E6.AF.94.E8.BE.83.E9.98.B6.E6.A2.AF"><span class="tocnumber">6.2</span> <span class="toctext">比较阶梯</span></a>
+<ul>
+<li class="toclevel-3 tocsection-50"><a href="#.E7.AE.80.E5.8D.95.E5.AD.97.E7.AC.A6.E4.B8.B2.E6.AF.94.E8.BE.83"><span class="tocnumber">6.2.1</span> <span class="toctext">简单字符串比较</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#.E5.9F.BA.E4.BA.8E.E8.AF.AD.E6.B3.95.E7.9A.84.E5.B8.B8.E8.A7.84.E5.8C.96"><span class="tocnumber">6.2.2</span> <span class="toctext">基于语法的常规化</span></a>
+<ul>
+<li class="toclevel-4 tocsection-52"><a href="#.E5.A4.A7.E5.86.99.E5.B8.B8.E8.A7.84.E5.8C.96"><span class="tocnumber">6.2.2.1</span> <span class="toctext">大写常规化</span></a></li>
+<li class="toclevel-4 tocsection-53"><a href="#.E7.99.BE.E5.88.86.E5.8F.B7.E7.BC.96.E7.A0.81.E5.B8.B8.E8.A7.84.E5.8C.96"><span class="tocnumber">6.2.2.2</span> <span class="toctext">百分号编码常规化</span></a></li>
+<li class="toclevel-4 tocsection-54"><a href="#.E8.B7.AF.E5.BE.84.E7.89.87.E6.AE.B5.E5.B8.B8.E8.A7.84.E5.8C.96"><span class="tocnumber">6.2.2.3</span> <span class="toctext">路径片段常规化</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-55"><a href="#.E5.9F.BA.E4.BA.8E.E6.A0.BC.E5.BC.8F.E7.9A.84.E5.B8.B8.E8.A7.84.E5.8C.96"><span class="tocnumber">6.2.3</span> <span class="toctext">基于格式的常规化</span></a></li>
+<li class="toclevel-3 tocsection-56"><a href="#.E5.9F.BA.E4.BA.8E.E5.8D.8F.E8.AE.AE.E7.9A.84.E5.B8.B8.E8.A7.84.E5.8C.96"><span class="tocnumber">6.2.4</span> <span class="toctext">基于协议的常规化</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-57"><a href="#.E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9"><span class="tocnumber">7</span> <span class="toctext">安全事项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-58"><a href="#.E5.8F.AF.E9.9D.A0.E6.80.A7.E5.92.8C.E4.B8.80.E8.87.B4.E6.80.A7"><span class="tocnumber">7.1</span> <span class="toctext">可靠性和一致性</span></a></li>
+<li class="toclevel-2 tocsection-59"><a href="#.E6.81.B6.E6.84.8F.E6.9E.84.E9.80.A0"><span class="tocnumber">7.2</span> <span class="toctext">恶意构造</span></a></li>
+<li class="toclevel-2 tocsection-60"><a href="#.E5.90.8E.E7.AB.AF.E8.BD.AC.E7.A0.81"><span class="tocnumber">7.3</span> <span class="toctext">后端转码</span></a></li>
+<li class="toclevel-2 tocsection-61"><a href="#.E7.BD.95.E8.A7.81.E7.9A.84IP.E5.9C.B0.E5.9D.80.E6.A0.BC.E5.BC.8F"><span class="tocnumber">7.4</span> <span class="toctext">罕见的IP地址格式</span></a></li>
+<li class="toclevel-2 tocsection-62"><a href="#.E6.95.8F.E6.84.9F.E4.BF.A1.E6.81.AF"><span class="tocnumber">7.5</span> <span class="toctext">敏感信息</span></a></li>
+<li class="toclevel-2 tocsection-63"><a href="#.E8.AF.AD.E4.B9.89.E6.94.BB.E5.87.BB"><span class="tocnumber">7.6</span> <span class="toctext">语义攻击</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-64"><a href="#IANA.E4.BA.8B.E9.A1.B9"><span class="tocnumber">8</span> <span class="toctext">IANA事项</span></a></li>
+<li class="toclevel-1 tocsection-65"><a href="#.E8.87.B4.E8.B0.A2"><span class="tocnumber">9</span> <span class="toctext">致谢</span></a></li>
+<li class="toclevel-1 tocsection-66"><a href="#.E5.8F.82.E8.80.83"><span class="tocnumber">10</span> <span class="toctext">参考</span></a>
+<ul>
+<li class="toclevel-2 tocsection-67"><a href="#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8"><span class="tocnumber">10.1</span> <span class="toctext">规范引用</span></a></li>
+<li class="toclevel-2 tocsection-68"><a href="#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"><span class="tocnumber">10.2</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-69"><a href="#.E9.99.84.E5.BD.95A._.E4.B8.BAURI.E6.94.B6.E9.9B.86.E7.9A.84ABNF"><span class="tocnumber">11</span> <span class="toctext">附录A. 为URI收集的ABNF</span></a></li>
+<li class="toclevel-1 tocsection-70"><a href="#.E9.99.84.E5.BD.95B._.E4.BB.A5.E6.AD.A3.E5.88.99.E8.A1.A8.E8.BE.BE.E5.BC.8F.E8.A7.A3.E6.9E.90.E4.B8.80.E4.B8.AAURI.E5.BC.95.E7.94.A8"><span class="tocnumber">12</span> <span class="toctext">附录B. 以正则表达式解析一个URI引用</span></a></li>
+<li class="toclevel-1 tocsection-71"><a href="#.E9.99.84.E5.BD.95C._.E5.9C.A8.E4.B8.8A.E4.B8.8B.E6.96.87.E4.B8.AD.E9.99.90.E5.AE.9A.E4.B8.80.E4.B8.AAURI"><span class="tocnumber">13</span> <span class="toctext">附录C. 在上下文中限定一个URI</span></a></li>
+<li class="toclevel-1 tocsection-72"><a href="#.E9.99.84.E5.BD.95D._.E5.AF.B9RFC_2396.E7.9A.84.E6.94.B9.E5.8F.98"><span class="tocnumber">14</span> <span class="toctext">附录D. 对RFC 2396的改变</span></a>
+<ul>
+<li class="toclevel-2 tocsection-73"><a href="#D.1._.E6.B7.BB.E5.8A.A0"><span class="tocnumber">14.1</span> <span class="toctext">D.1. 添加</span></a></li>
+<li class="toclevel-2 tocsection-74"><a href="#D.2._.E5.8F.98.E6.9B.B4"><span class="tocnumber">14.2</span> <span class="toctext">D.2. 变更</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-75"><a href="#.E7.B4.A2.E5.BC.95"><span class="tocnumber">15</span> <span class="toctext">索引</span></a></li>
+<li class="toclevel-1 tocsection-76"><a href="#.E4.BD.9C.E8.80.85.E5.9C.B0.E5.9D.80"><span class="tocnumber">16</span> <span class="toctext">作者地址</span></a></li>
+<li class="toclevel-1 tocsection-77"><a href="#.E5.AE.8C.E6.95.B4.E7.89.88.E6.9D.83.E5.A3.B0.E6.98.8E"><span class="tocnumber">17</span> <span class="toctext">完整版权声明</span></a></li>
+<li class="toclevel-1 tocsection-78"><a href="#.E7.9F.A5.E8.AF.86.E4.BA.A7.E6.9D.83"><span class="tocnumber">18</span> <span class="toctext">知识产权</span></a></li>
+<li class="toclevel-1 tocsection-79"><a href="#.E9.B8.A3.E8.B0.A2"><span class="tocnumber">19</span> <span class="toctext">鸣谢</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E7.BB.AA.E8.AE.BA">绪论</span></h2>
+<p>一个统一资源标识符(URI)为识别一个资源而提供一个简单的可扩展含义. 本协议的URI语法和语义衍生于万维网全局信息倡议所引入的概念, 这些标识符的使用从1990年就开始了并且在 "WWW中的统一资源标识符" <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1630">RFC1630</a> 中描述了它们. 语法的设计满足了 "互联网资源定位器功能建议" <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1736">RFC1736</a> 和 "统一资源名称功能需求" <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1737">RFC1737</a> 提出的建议.
+</p><p>本文取代了 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">RFC2396</a>, 它融合了 "统一资源定位器" <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1738">RFC1738</a> 和 "相对统一资源定位器" <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1808">RFC1808</a> 以为所有URIs定义一个单一, 通用的语法. 它取代了 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2732">RFC2732</a>, 该协议引入了用于IPv6地址的语法. 它排除了<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1738">RFC 1738</a>中定义了个别URI schemes的特有语法的部分; 那些部分将被更新到独立的文档中. 新URI schemes的注册过程被独立地定义在 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986#ref-BCP35">BCP35</a>. 给新URI schemes设计者的建议可以在 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2718">RFC2718</a> 找到. 所有从 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">RFC 2396</a> 而来的显著变更都备注在 <a href="/RFC3986#.E9.99.84.E5.BD.95D._RFC_2396.E4.BB.A5.E6.9D.A5.E7.9A.84.E5.8F.98.E6.9B.B4" title="RFC3986">附录D. RFC 2396以来的变更</a>
+</p><p>本协议遵循 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986#ref-BCP19">BCP19</a> 提供的建议使用术语 "character" 和 "coded character set" , 并且以 "character encoding" 来取代 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986#ref-BCP19">BCP19</a> 中所指的 "charset".
+</p>
+<h3> <span class="mw-headline" id="URIs.E6.A6.82.E8.BF.B0">URIs概述</span></h3>
+<p>URIs的特征如下:
+</p><p>统一
+</p>
+<dl><dd>统一性提供了很多好处. 它允许不同类型的资源标识符被用在相同的上下文中, 即使当访问那些资源使用的机制不同的时候. 它允许跨越资源标识符的不同类型的常用语法习惯拥有统一的语义解释. 它允许引入新类型的资源标识符而不妨碍现有标识符的使用. 他允许标识符被重用于不同的上下文, 从而允许新的应用或协议支持一个早已存在的, 大的, 和广泛的资源标识符的集合.
+</dd></dl>
+<p>资源
+</p>
+<dl><dd>本协议不限制能成为一个资源的范围; 相反, 术语 "resource" 被用于一般意义上的任何可以由URI标识的东西. 熟悉的例子包括一个电子文档, 一个图片, 一个包含一致的目的的信息源(例如, "洛杉矶今日天气"), 一个服务(例如, 一个 HTTP 到 短信 的网关), 以及一个其他资源的集合. 通过互联网来访问一个资源不是必需的; 例如, 自然人, 组织, 以及在一个图书馆内的限定的书也可能成为资源. 同样的, 抽象概念能成为资源, 类似一个数学方程式的运算符和操作数, 关系的类型(例如, "父母" 或 "雇员"), 或数值(例如, 0, 1, 以及 无穷大).
+</dd></dl>
+<dl><dd>标识符
+</dd></dl>
+<dl><dd>一个标识符包含如何在身份识别的范围中从其他事物区分出被标识的事物的信息. 我们使用术语 "identify" 和 "identifying" （识别）来指代从其他资源区分出一个资源的行动, 不管那个行为是如何完成的(例如, 通过名称, 地址, 或上下文). 这些术语不应错误地假定一个标识符定义或包含的身份所指的事物, 尽管对某些标识符来会发生这种情况. 不应假定一个使用URIs的系统将成功访问所标识的资源: 在很多情况下, URIs被用于指示资源而没有让任何它们被访问的意图. 同样的, "一个" 资源可能并不自然地标识单数(例如, 一个资源可以是一个被命名的组合或一个随时间变化的映射).
+</dd></dl>
+<p>一个URI是一个标识符，包含了一系列字符，匹配<a href="/RFC3986#.E8.AF.AD.E6.B3.95.E9.83.A8.E4.BB.B6" title="RFC3986">第三章</a>中&lt;URI&gt;命名的语法规则. 它使得通过独立定义命名的Scheme<a href="/RFC3986#scheme" title="RFC3986">3.1</a>的可扩展组合来表达资源的统一身份成为可能. 那个身份如何被实现, 被指定, 或被允许取决于每个scheme协议.
+</p><p>本协议没有对一个资源的性质做任何限制, 原因是一个应用可能专注于一个资源, 其他各种系统可能把URIs用来标识多个资源. 本协议不要求一个URI随着时间变化而坚持标识相同资源, 尽管那是所有URI schemes的一个常见目标. 不过, 本协议没有任何东西阻止一个应用把自己限制到特有的资源类型, 或由那个应用维护的具有其期望特性的URIs的一个子集.
+</p><p>URIs有一个全局范围并且对它的一致性解释和上下文无关, 即使那个解释的结果可能和最终用户的上下文产生关系. 例如, "<a rel="nofollow" class="external free" href="http://localhost/">http://localhost/</a>" 对于涉及的每个用户有相同的解释, 即使相当于 "localhost" 的网络接口对每个最终用户可以是不同的: 解释独立于访问. 无论如何, 在那个引用的基础上所做的一个动作将和该最终用户的上下文发生关系, 这暗示一个旨在涉及一个全局唯一的事物的动作必须使用URI来把那个资源从所有其他事物中区分出来. 识别该最终用户的本地上下文的URIs只应该在该上下文本身是该资源的定义的一部分的时候使用, 类似当一个在线帮助手册指向一个位于该最终用户的文件系统上的一个文件(例如, "file:///etc/hosts").
+</p>
+<h4> <span class="mw-headline" id=".E9.80.9A.E7.94.A8.E8.AF.AD.E6.B3.95">通用语法</span></h4>
+<p>每个URI开始于一个scheme名, 如<a href="/RFC3986#Scheme" title="RFC3986">3.1</a>所定义的, 那代表一个该scheme赋予该标识符的协议. 就其本身而言, URI语法是他一个联合的可扩展的命名系统，每个scheme的协议可以进一步限制使用那个scheme的标识符的语法和语义.
+</p><p>本协议定义了那些所有URI schemes或很多常用的URI schemes需要的URI语法的元素. 为此它定义了需要的语法和语义来实现一个独立于scheme的URI参数解析机制, 由此对一个URI的独立于scheme的处理可以延期到需要该独立于scheme的语义的时候. 同样, 用于URI参数的协议和数据格式可以参考本协议，作为所有URIs都允许的语法的范围的定义, 包括那些已经被定义的schemes. 这把身份schemes的演变从协议,数据格式，和使用URIs的实现的演变中隔离出来.
+</p><p>一个通用URI语法的解析器可以把任何URI参数解析成它的主要部件. 一旦该scheme被确认, 更多scheme特有的解析可以在部件上被执行. 换句话说, URI通用语法是所有URI schemes语法的子集.
+</p>
+<h4> <span class="mw-headline" id=".E7.A4.BA.E4.BE.8B">示例</span></h4>
+<p>以下示例URIs展示了一些它们的常用语法部件中的URI schemes和变量:
+</p>
+<dl><dd> <a rel="nofollow" class="external free" href="ftp://ftp.is.co.za/rfc/rfc1808.txt">ftp://ftp.is.co.za/rfc/rfc1808.txt</a>
+</dd><dd> <a rel="nofollow" class="external free" href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a>
+</dd><dd> ldap://[2001:db8::7]/c=GB?objectClass?one
+</dd><dd> <a rel="nofollow" class="external free" href="mailto:John.Doe@example.com">mailto:John.Doe@example.com</a>
+</dd><dd> <a rel="nofollow" class="external free" href="news:comp.infosystems.www.servers.unix">news:comp.infosystems.www.servers.unix</a>
+</dd><dd> tel:+1-816-555-1212
+</dd><dd> <a rel="nofollow" class="external free" href="telnet://192.0.2.16:80/">telnet://192.0.2.16:80/</a>
+</dd><dd> urn:oasis:names:specification:docbook:dtd:xml:4.1.2
+</dd></dl>
+<h4> <span class="mw-headline" id="URI.2C_URL.2C_.E5.92.8CURN">URI, URL, 和URN</span></h4>
+<p>一个URI可以被进一步归类为一个定位器, 一个名字, 或两者都是. 术语统一资源定位器 "Uniform Resource Locator" (URL) 代表URIs的那个子集, 除了识别一个资源, 通过描述它的主要访问机制(例如, 它的网络位置 "location")来提供一个该定位资源的含义. 术语统一资源名称 "Uniform Resource Name" (URN) 历史上曾被同时用来代表在 "urn" scheme <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2141">RFC2141</a> 下的URIs(即使当资源终止存在或成为不可用的时候要想仍然保持全局唯一和持久化就需要它)和任何其他带有名称属性的URI.
+</p><p>一个独立的scheme不一定要被分类成名称 "name" 或定位器 "locator" 之一. 来自任何给定scheme的URIs的实例可以有名称或定位器的性质或两者都是, 经常取决于命名授权机构分配标识符的持久行和意愿, 而不是该scheme的任何能力. 未来的西医和相关文档应该使用通用术语 "URI" 而不是更加受限制的术语 "URL" 和 "URN" <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3305">RFC3305</a>.
+</p>
+<h3> <span class="mw-headline" id=".E8.AE.BE.E8.AE.A1.E4.BA.8B.E9.A1.B9">设计事项</span></h3>
+<h4> <span class="mw-headline" id=".E8.BD.AC.E5.BD.95">转录</span></h4>
+<p>URI语法已经被设计成把全局转录作为其主要因素. 一个URI是一系列来自有限集合中的字符: 基本拉丁字母表中的字母，数字，以及一些特殊字符. 一个URI可以被以各种方式展现; 例如, 纸上的墨水, 屏幕上的像素, 或一系列八进制编码的字符. 一个URI的解释只依赖于使用的字符而不是那些字符如何在一个网络协议中展现.
+</p><p>转录的目标可以由一个简单长今来描述. 想想两个同事, Sam 和 Kim, 坐在一个国际化会议的酒店并交换研究思路. Sam向Kim请求一个定位器以获得更多信息, 所以Kim在一个餐巾纸上写下了该研究网站的URI. 然后返回到家里, Sam拿出餐巾纸并把该URI输入到一台电脑中, 然后他获取Kim提到的信息.
+</p><p>这个场景揭示了很多设计因素:
+</p>
+<dl><dd>o 一个URI是一系列字符，不总是以一个八进制序列展现的.
+</dd></dl>
+<dl><dd>o 一个URI可以从一个非网络的来源转录并且因此应该包含适合输入到计算机的字符, 同时受到键盘(以及相关的输入设备)从语言到时区的限制的约束.
+</dd></dl>
+<dl><dd>o 一个URI经常不得不被人们记住, 并且当它包含有意义的或熟悉的部件的时候是易于被人们记住的.
+</dd></dl>
+<p>这些设计因素不总是一致的. 例如, 经常会出现这种情况，对于一个URI部件的最有意义的名称将需要一些无法输入到某些系统的字符. 从一个介质转录一个资源标识符到另一个介质的能力被认为比让URI包含最有意义的组件更重要.
+</p><p>在时区或地区上下文中随着技术的提升, 用户可以从能使用更大范围的字符的能力中受益; 这类用法没有在本协议中定义. 百分号编码八位字节(<a href="/RFC3986#.E7.99.BE.E5.88.86.E6.AF.94.E7.BC.96.E7.A0.81" title="RFC3986">2.1</a>)可被用于一个URI以展示超出US-ASCII编码字符集范围的字符，如果这一展示被该URI引用的scheme或协议元素允许的话. 这样一个定义应该指定使用的字符编码以在为该URI执行百分号编码之前把那些字符映射到八位字节.
+</p>
+<h4> <span class="mw-headline" id=".E4.BB.8E.E4.BA.A4.E4.BA.92.E5.88.86.E7.A6.BB.E8.BA.AB.E4.BB.BD">从交互分离身份</span></h4>
+<p>对URIs的一个常见误解是它们只用于代表可访问的资源. URI本身只提供身份识别; 一个URI的出现既不保证也不暗示能访问资源. 反之, 和一个URI参数关联的任何操作是由协议元素，数据格式属性，或它所显现的自然语言文本所定义的.
+</p><p>给定一个URI, 一个系统可以尝试对该资源执行各种操作, 这可以被描述为 "access" (访问), "update" (更新), "replace" (替换), 或 "find attributes" (寻找属性). 这类操作由那个使用URIs的协议定义, 不由本协议定义. 无论如何, 为了描述在URIs上的常用操作，我们确实会使用一些通用术语. URI "resolution" 是确定一个访问机制和适当的参数以解参考一个URI的过程; 这一解读可能需要多次迭代. 要使用那个访问机制以在该URI的资源上执行一个操作，就要 "dereference" (解参考)该URI.
+</p><p>当URIs被用于信息获取系统以识别信息来源, 最常用的URI格式解参考是 "retrieval" (获取): 使用一个URI是为了获取一个和它相关的资源的展现. 一个 "representation" (展现)是一系列八位字节, 同时带有展现元数据以描述那些八位字节, 那指定了但展现被生成的时候的那一刻该资源的状态的一个记录. 获取是由一个过程来实现的，可能包括使用一个URI作为一个缓存键来检查一个本地缓存的展现, 为了应用一个获取的操作, 对该URI的解读决定一个适当的访问机制(如果有的话), 以及解参考该URI. 执行获取取决于协议, 可能提供额外的关于该资源的信息(资源元数据)以及它和其他资源的关系.
+</p><p>信息获取系统中的URI参数被设计成延迟绑定: 一个访问的结果通常在它被访问的时候才决定，并且可能随着时间的过去而不同或取决于交互的其他方面. 这些参数的建立是为了在将来使用: 正在被识别的事物并不是一些过去获得的特定结果, 而不是一些用于将来结果的并被期望为真的特征. 在这种情况下, 由该URI代表的资源实际上是一个随时间消逝而被观察到的特征的同一个东西, 可能由额外的资源提供者做出的注释或声明来解释.
+</p><p>尽管很多URI schemes在协议之后被命名, 这不表示使用这些URIs将导致通过命名的协议来访问该资源. URIs经常被简单的用于身份识别的目的. 甚至当一个URI被用于获取一个资源的一个展现, 那个访问可能是通过网关, 代理, 缓存, 以及独立于该scheme名称相关的协议的名称解析服务. 一些URIs的解析可能需要使用多个协议(例如, DNS和HTTP典型的都被用于访问一个 "http" URI的原始服务器，当未在本地缓存中发现一个展现的时候.
+</p>
+<h4> <span class="mw-headline" id=".E5.B1.82.E6.AC.A1.E6.A0.87.E8.AF.86.E7.AC.A6">层次标识符</span></h4>
+<p>URI语法被组织成多层次的, 列出的部件从左到右重要性逐次降低. 对于某些URI schemes, 可见的层次受限于该scheme本身: 在scheme部件分隔符(":")之后的每个东西被认为对URI处理是不透明的. 其他URI schemes让层次对通用解析算法明确和可见.
+</p><p>通用语法使用斜杠("/"), 问号("?"), 以及数字符号("#") 字符以分隔那些对于通用解析器对一个标识符的分层次解释很重要的部件. 除了通过熟悉的语法的一致性使用有助于这类标识符的可读性, 跨命名scheme的层次统一展示允许独立于scheme的参数被关联到那个层次.
+</p><p>常有的情况是一个文档组或树("tree")被构造出来服务于某个常见的目的, 其中在这些文档中的绝大多数URI参数指向的资源有树在里面而不是在它外面. 类似的, 位于一个特定网站的文档更加类似于代表那个网站的其他资源而不是位于远端网站的资源. URIs的相关参考允许文档树被部分独立于它们的位置和访问scheme. 例如, 单独一组超文本有可能被同时访问和遍历, 通过每个 "file", "http", 和 "ftp" schemes，如果这些文档以相对引用互相参考的话. 而且, 这类文档树可以被移动, 作为一个整体, 不改变任何相对引用.
+</p><p>一个代表一个资源的相对引用(<a href="/RFC3986#.E7.9B.B8.E5.AF.B9.E5.BC.95.E7.94.A8" title="RFC3986">4.2</a>)，就是描述一个层次名字空间中该参数上下文和该目标URI之间的不同. 该参数解析算法, 在<a href="/RFC3986#.E5.8F.82.E6.95.B0.E8.A7.A3.E6.9E.90" title="RFC3986">第5章</a>介绍, 定义了一个参数被转化多少到目标URI. 因为相对引用只能被用于一个层次化URI的上下文, 新URI schemes的设计者应该使用一个和通用语法的层次化部件一致的语法，除非有强迫的原因要禁止对那个scheme做相对引用.
+</p>
+<dl><dd>注意: 之前的协议使用术语局部URI( "partial URI" )和相对URI （ "relative URI" ）以表示一个对URI的相对引用. 因为一些读者误解那些术语，以为它意味着相对URIs是URIs的一个子集而不是一个引用URIs的方法, 本协议简单地以相对引用来代表它们.
+</dd></dl>
+<p>所有URI参数使用的时候由通用语法解析器解析. 然而, 因为层次处理不影响在一个参数中的绝对URI，除非它包含一个或多个点段(完整的 "." 或 ".." 路径段, 如<a href="/RFC3986#.E8.B7.AF.E5.BE.84" title="RFC3986">3.3</a>所述), URI scheme协议可以定义不透明的标识符，通过不允许使用斜杠字符, 问号字符, 和URIs "scheme:." 以及 "scheme:..".
+</p>
+<h3> <span class="mw-headline" id=".E8.AF.AD.E6.B3.95.E7.AC.A6.E5.8F.B7">语法符号</span></h3>
+<p>本协议使用<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2234">RFC2234</a>的增强巴科斯范式(ABNF)符号, 包括由以下协议定义的核心ABNF语法规则: ALPHA (字母), CR (回车), DIGIT (小数位数), DQUOTE (双引号), HEXDIG (十六进制数字), LF (换行), 和 SP (空格). 完整的URI语法收集在<a href="/RFC3986#.E9.99.84.E5.BD.95A._.E7.94.A8.E4.BA.8EURI.E7.9A.84ABNF.E9.9B.86" title="RFC3986">附录A</a>.
+</p>
+<h2> <span class="mw-headline" id=".E5.AD.97.E7.AC.A6">字符</span></h2>
+<p>URI语法提供了一个编码数据的方法, 想必为了识别一个资源的缘故, 如同一系列字符. URI字符顺序和经常性地被编码成八位字节用于传输或展示. 本协议不强制任何特定的在URI字符和用于存储或传输那些字符的八位字节之间的字符编码映射表. 当一个URI出现在一个协议元素中, 字符编码由协议定义; 没有这里定义, 则一个URI被假定其字符编码和周围的文本相同.
+</p><p>ABNF字符定义它的终端值为非负整数(码点)基于US-ASCII编码字符集<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986#ref-ASCII">ASCII</a>. 因为一个URI是一系列字符, 我们必须倒置关系以理解该URI语法. 所以, ABNF使用的整数值必须通过US-ASCII映射回它们的相应字符以完成该语法规则.
+</p><p>一个URI由一个包含数字，字母，和一些图形符号的有限集合的字符组成. 一个那些字符的保留子集可能被用于限定一个URI中的语法部件使用保留字符, 同时包括未保留集合和那些不作为分隔符的字符, 定义每个部件的识别数据.
+</p>
+<h3> <span class="mw-headline" id=".E7.99.BE.E5.88.86.E5.8F.B7.E7.BC.96.E7.A0.81">百分号编码</span></h3>
+<p>一个百分号编码机制被用于在一个部件里展示一个八位字节码数据，当那个八位字节码相应的字符超出了允许的集合或被用作分隔符，或在部件之内的时候. 一个百分号编码的八位字节码被编码成一个三重字符, 包括百分号字符 "%" 和随后的两个十六进制数字展示那个八位字节的数值. 例如, "%20" 是二进制字节 "00100000" (ABNF:&#160;%x20)的百分号编码, 它在US-ASCII中对应空格字符(SP). <a href="/RFC3986#.E4.BD.95.E6.97.B6.E7.BC.96.E7.A0.81.E6.88.96.E8.A7.A3.E7.A0.81" title="RFC3986">2.4</a>描述了何时应用百分号编码和解码.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      pct-encoded = &quot;%&quot; HEXDIG HEXDIG</pre></div></div>
+<p>大写的十六进制数字 'A' 到 'F' 分别等价于小写的数字 'a' 到 'f' . 如果两个URIs在百分号编码字节中使用的十六进制数字的大小写不同, 它们是等价的. 为了了一致性, URI制作造和正规化者应该对所有百分号编码使用大写十六进制数字.
+</p>
+<h3> <span class="mw-headline" id=".E4.BF.9D.E7.95.99.E5.AD.97.E7.AC.A6">保留字符</span></h3>
+<p>包含部件和子部件的的URIs由 "保留" 集合中的字符来分隔. 这些字符被成为保留( "reserved" )是因为它们可能(也可能不)被一个URI的解参考算法的通用语法，每个scheme特有的语法，或实现特有的语法定义成分隔符. 如果用于一个URI的数据和一个保留的作为分隔符的字符发生冲突, 那么该冲突的数据必须在该URI被格式化之前进行百分号编码.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      reserved    = gen-delims / sub-delims
+&#160;
+      gen-delims  = &quot;:&quot; / &quot;/&quot; / &quot;?&quot; / &quot;#&quot; / &quot;[&quot; / &quot;]&quot; / &quot;@&quot;
+&#160;
+      sub-delims  = &quot;!&quot; / &quot;$&quot; / &quot;&amp;&quot; / &quot;'&quot; / &quot;(&quot; / &quot;)&quot;
+                  / &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;;&quot; / &quot;=&quot;</pre></div></div>
+<p>保留字符的目的是提供一组分隔符号来把一个URI从其他数据中区分开. URIs把保留字符替换成相应的百分号编码字节之后就就和原来的URIs不等价了. 百分号编码一个保留字符, 或解码一个对应某个保留字符的百分号编码字节, 将改变该URI如何被大部分应用理解. 因此, 在保留集合中的字符被从标准化中保护并且因而可以安全地用于scheme特有和制作者特有的算法以从一个URI分隔出数据子部件.
+</p><p>一个保留字符的子集(gen-delims)被用作通用URI部件的分割符，如<a href="/RFC3986#.E8.AF.AD.E6.B3.95.E9.83.A8.E4.BB.B6" title="RFC3986">第3章</a>所述. 一个部件的ABNF语法规则将不直接使用保留的或gen-delims规则名; 反之, 每个语法规则列出那个部件允许的字符(即, 不分隔它), 并且那些也在保留集合中的任何字符都会是保留的 "reserved" ，被用作该部件中的子部件分隔符. 只有大多数常用子部件由本协议定义; 其他子部件可以由一个URI scheme的协议, 或由一个URI的解参考算法的实现特有的语法定义, 这样这类子部件就由那个部件中允许的保留集合中字符来分隔了.
+</p><p>制作URI的应用应该对在保留集合中的字符的数据字节做百分号编码以在那个组件展示数据，除非这些字符被URI scheme特别允许. 如果在一个URI部件中发现一个保留字符并且那个字符没有已知的分隔规则, 那么它必须被解释成展示相对应的那个字符的US-ASCII编码的数据字节.
+</p>
+<h3> <span class="mw-headline" id=".E9.9D.9E.E4.BF.9D.E7.95.99.E5.AD.97.E7.AC.A6">非保留字符</span></h3>
+<p>被允许出现在一个URI中的字符但是没有被保留用途，被成为非保留(unreserved). 这包含大写和小写字母, 小数数字, 连字符, 句号, 下划线, 以及波浪号.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      unreserved  = ALPHA / DIGIT / &quot;-&quot; / &quot;.&quot; / &quot;_&quot; / &quot;~&quot;</pre></div></div>
+<p>URIs中的一个非保留字符被替换成相应的百分号编码的US-ASCII字节之后和原来是等价的: 它们标识相同的资源. 无论如何, URI比较的实现不总是在比较之前执行标准化(见<a href="/RFC3986#.E6.A0.87.E5.87.86.E5.8C.96.E5.92.8C.E6.AF.94.E8.BE.83" title="RFC3986">第6章</a>). 为了保持一致性, 在范围 ALPHA (%41-%5A 和&#160;%61-%7A), DIGIT (%30-%39), hyphen (%2D), period (%2E), underscore (%5F), 或 tilde (%7E) 中的百分号编码不应该被URI制作者创建，并且当它们被在一个URI中发现了, 应该由URI标准化把它们解码成相应的非保留字符.
+</p>
+<h3> <span class="mw-headline" id=".E4.BD.95.E6.97.B6.E7.BC.96.E7.A0.81.E6.88.96.E8.A7.A3.E7.A0.81">何时编码或解码</span></h3>
+<p>在正常情况下, 只有在从部件部分生成URI的过程中一个URI内的字节才有机会被百分号编码. 正是在这个时候一个实现会决定哪个保留字符被用作子部件分隔符以及哪个能被安全地用作数据. 一旦生成了, 一个URI总是保持它的百分号格式.
+</p><p>当一个URI被解参考的时候, 对scheme特有的解参考过程(如果有的话)重要的部件和子部件在那些部件中的百分号编码字节能被解码之前必须被解析和分离, 因为否则数据会和部件分隔符搞错. 唯一的例外是百分号编码的字节相应的字符在非保留集合中, 它能在任何时候被解码. 例如, 在旧的URI处理实现中, 对应于波浪号("~")字符的字节经常被编码成 "%7E"&#160;; "%7E" 可以被 "~" 替代而不需要改变它的解释.
+</p><p>因为百分号("%")字符用作百分号编码字节的指针, 它必须被百分号编码成 "%25" 才能把那个字节用作一个URI的数据. 实现不能多次百分号编码或解码相同的字符串, 因为解码一个现有的已解码字符串可能导致把一个百分号数据字节错误地解释成一个百分号编码的开始, 反之亦然，百分号编码一个已做百分号编码的字符串.
+</p>
+<h3> <span class="mw-headline" id=".E8.AF.86.E5.88.AB.E6.95.B0.E6.8D.AE">识别数据</span></h3>
+<p>URI字符为该URI部件的每一部分提供识别数据, 作用看起来像一个用于系统之间识别身份的外部接口. 尽管URI制作接口的出现和类型被使用它的URIs的客户端隐藏了(并且因而超出了本协议定义的互操作性需求的范围), 它经常是对URI字符发表的解释出现混淆和错误的来源. 实现不得不注意到有多重字符编码被卷入到URIs的制作和传输中: 本地名称和数据编码, 公共接口编码, URI字符编码, 数据格式编码, 以及协议编码.
+</p><p>本地名称, 类似文件系统名称, 被以一个本地字符编码存储. URI制作应用(例如, 起源服务器)典型地将使用本地编码作为基础用于制作有意义的名称. 该URI制作者将把本地编码转换成一个适合公共接口的东西，接着把该公共接口编码转换成URI字符的受限集合(保留, 非保留, 以及百分号编码). 那些字符顺序地被编码成八位字节以用于带有一个数据格式的参数(例如, 一个文档字符集), 并且这类数据格式经常随后被编码以在互联网协议上传输.
+</p><p>对大多数系统, 出现在一个URI部件中的非保留字符被视为展示对应于那个字符的US-ASCII编码的数据字节. URIs的消费者假定字符 "X" 对应于字节 "01011000", 并且甚至当那个假定不正确时, 这么对待它也没有害处. 一个内部提供不同的字符编码的标识符的系统, 类似 EBCDIC, 通常将在一个内部接口对原文的标识符执行字符翻译成UTF-8<a href="/RFC3986#.E5.B8.B8.E8.A7.84.E5.BC.95.E7.94.A8" title="RFC3986">STD63</a> (或一些其他的US-ASCII字符编码的超集) , 从而提供更有意义的标识符而不是那些从简单地对原始字节做百分号编码而来的结果.
+</p><p>例如, 考虑一个提供数据的信息服务, 在本地使用基于EBCDIC的文件系统存储, 客户端则在互联网上通过一个HTTP服务器访问它. 当一个作者在那个文件系统上创建一个名为 "Laguna Beach" 的文件, "http" URI对应的那个资源被期望包含有意义的字符串 "Laguna%20Beach". 如果, 无论如何, 那个服务器使用一个过于简单的纯字节映射来制作URIs, 那么该结果将是一个包含 "%D3%81%87%A4%95%81@%C2%85%81%83%88" 的URI. 一个内部转码接口通过在制作该UIR之前把本地名称转码成一个US-ASCII的超集修复了这个问题. 自然的, 一个在这样一个接口上的入站URI的正确解释需要在该反向转换被应用之前把那个百分号编码字节解码(例如, 把 "%20" 解码成 SP)以获得本地名称.
+</p><p>在某些情况下, 在一个URI部件和识别数据之间的已经被手工制作的内部接口展现得还不如一个字符编码翻译直接. 例如, 一个URI的一部分可能反映一个对非ASCII数据的查询, 或一个地图上的数字坐标. 同样的, 一个URI scheme可能定义部件时要求在格式化该部件并制作该URI之前进行编码.
+</p><p>当一个新的URI scheme定义一个展示包含来自统一字符集<a href="/RFC3986#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC3986">UCS</a>的字符的原文数据的部件, 该数据应该首先根据UTF-8字符编码<a href="/RFC3986#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC3986">STD63</a>被编码成字节; 然后只有那些在非保留集合中没有对应字符的字节应该被百分号编码. 例如, 字符 A 将被展示成 "A", 字符 LATIN CAPITAL LETTER A WITH GRAVE 将被展示成 "%C3%80", 而字母 KATAKANA LETTER A 将被展示成 "%E3%82%A2".
+</p>
+<h2> <span class="mw-headline" id=".E8.AF.AD.E6.B3.95.E9.83.A8.E4.BB.B6">语法部件</span></h2>
+<p>通用URI语法包括一系列分层的由 scheme, authority, path, query, 和 fragment 参考的部件.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      URI         = scheme &quot;:&quot; hier-part [ &quot;?&quot; query ] [ &quot;#&quot; fragment ]
+&#160;
+      hier-part   = &quot;//&quot; authority path-abempty
+                  / path-absolute
+                  / path-rootless
+                  / path-empty</pre></div></div>
+<p>部件的scheme和path部件是必需的, 尽管path可能是空的(无字符). 当authority是现成的, path必须要么是空的要么是以一个斜杠("/")开始的字符串. 当authority不是当前的, path不能以两个斜杠("//")开始. 这些约束导致5个用于path的不同ABNF规则(<a href="/RFC3986#Path" title="RFC3986">3.3</a>), 它们中只有一个将匹配任何给定的URI参数.
+</p><p>以下是两个示例URIs以及它们的部件部分:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>         foo://example.com:8042/over/there?name=ferret#nose
+         \_/   \______________/\_________/ \_________/ \__/
+          |           |            |            |        |
+       scheme     authority       path        query   fragment
+          |   _____________________|__
+         / \ /                        \
+         urn:example:animal:ferret:nose</pre></div></div>
+<h3> <span class="mw-headline" id=".E6.A0.BC.E5.BC.8F">格式</span></h3>
+<p>每个URI以一个格式名称开始，它代表分配给带那个格式的标识符的一个协议. 因此, URI语法是一个联合的和可扩展的命名系统，这里每个格式的协议可以进一步约束使用那个格式的标识符的语法和语义.
+</p><p>格式名称包含一系列以一个字母开始的并跟随任意字母，数字，加号("+"), 句号("."), 或连字符("-")的组合. 尽管格式是大小写敏感的, 权威的格式是小写的且那些定义格式的文档必须以小写字符来定义. 为了鲁棒性的目的，一个实现应该接受在格式名称中大写字符等价于小写字符(例如, 除了 "http" 也允许 "HTTP" ) ，但是为了一致性，应该只制作小写格式名称.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      scheme      = ALPHA *( ALPHA / DIGIT / &quot;+&quot; / &quot;-&quot; / &quot;.&quot; )</pre></div></div>
+<p>本文没有定义独立的格式. 注册一个新URI格式的过程被独立地定义于<a href="/RFC3986#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC3986">BCP35</a>. 格式注册表维护了格式名称和它们的协议之间的对应关系. 给新URI格式设计者的建议可以在<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2718">RFC2718</a>找到. URI格式协议必须定义它们自己的语法，这样所有和它们的格式特有的语法匹配的字符串也将和&lt;absolute-URI&gt;语法匹配, 如<a href="/RFC3986#.E7.BB.9D.E5.AF.B9URI" title="RFC3986">4.3</a>所述.
+</p><p>当一个URI发生了违反一个或多个格式特有的约束的情况, 该格式特有的解析过程应该把该参数标记为一个错误而不是忽略未使用的部分; 这样做减少了相当的URIs的数量并有助于检测对通用语法的滥用, 它可以预示构建的URI把用户带入歧途(<a href="/RFC3986#.E8.AF.AD.E4.B9.89.E6.94.BB.E5.87.BB" title="RFC3986">7.6</a>).
+</p>
+<h3> <span class="mw-headline" id=".E6.9C.BA.E6.9E.84">机构</span></h3>
+<p>一些URI schemes包含一个层次元素来描述一个命名的机构,这样由该URI的其他部分定义的命名空间的管理方式就被授予那个机构(它可以相应地进一步授予). 通用语法提供了一个常见方法来基于已注册的名称或服务器地址来区分一个机构, 以及可选的端口和用户信息.
+</p><p>机构部件的前面是一个双斜杠("//")并结束于下一个斜杠("/"), 问号("?"), 或井号("#")字符, 或随着该URI结束.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      authority   = [ userinfo &quot;@&quot; ] host [ &quot;:&quot; port ]</pre></div></div>
+<p>如果端口部件是空的，URI制作者和正规化者应该省略把端口和主机分隔开的 ":" 分隔符. 一些schemes不允许用户信息 和/或 端口子部件.
+</p><p>如果一个URI包含一个机构部件, 那么路径部件必须要么是空的要么以一个斜杠("/")字符开始. 不检查的解析器(那些很少分隔一个URI参数到它的主要部件的解析器)将经常忽略机构的子部件结构, 把从双斜杠到第一个终止分隔符之间的东西当成一个不透明的字符串, 直到该URI被解析的时间.
+</p>
+<h4> <span class="mw-headline" id=".E7.94.A8.E6.88.B7.E4.BF.A1.E6.81.AF">用户信息</span></h4>
+<p>用户信息子部件可以包含一个用户名和, 可选的, 关于如何获得授权访问资源的格式特有的信息. 用户信息, 如果出现, 后面会跟随一个商标("@")以和主机分开.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      userinfo    = *( unreserved / pct-encoded / sub-delims / &quot;:&quot; )</pre></div></div>
+<p>在用户信息字段对格式 "user:password" 的使用已经被废弃了. 应用不应该在一个用户信息子部件中找到的第一个冒号(":")字符后面提出任何明码文本数据，除非在该冒号后面的数据是空字符串(表示没有密码). 当收到作为一个参数的一部分的这样的数据的时候，应用可以选择忽略或拒绝这类数据并且应该拒绝这类数据以未加密方式存储. 以明码方式通过验证信息已经被证明在绝大多数情况使用它是一个安全风险.
+</p><p>为了用户反馈的目的而提供一个URI的应用, 类似图形化的超文本浏览, 应该以某种从一个URI的其他部分区分出来的方式提供用户信息, 在可能的时候. 当发生用户信息已经被手工误导看起来像一个被信任的域名的情况，这类表达可以帮助到用户(<a href="/RFC3986#.E8.AF.AD.E4.B9.89.E6.94.BB.E5.87.BB" title="RFC3986">7.6</a>).
+</p>
+<h4> <span class="mw-headline" id=".E4.B8.BB.E6.9C.BA">主机</span></h4>
+<p>机构的主机子部件是由一个封装在方括号内的IP文字, 一个点分十进制格式的IPv4地址, 或一个注册名称来标识的. 主机子部件是大小写敏感的. 在一个URI中出现了主机子部件不意味着该格式要求访问互联网上的给定主机. 在一些情况下, 主机语法只被用于重用现有的用于DNS的创建和部署的注册流程, 从而获得一个全局唯一的名称而不用费劲部署另一个注册表. 无论如何, 这种用法有它自己的代价: 域名所有者可能因为URI制作者无法预计的原因而随时变更. 在另外一些情况下, 子部件内的数据标识一个注册名称但没有任何事情要在一个互联网主机上去做. 我们使用ABNF规则的名称 "host" 是因为那是它最常用的目的, 不是它仅有的目的.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      host        = IP-literal / IPv4address / reg-name</pre></div></div>
+<p>主机的语法规则是含糊的，因为不能完全区分一个IPv4地址和一个注册名称. 为了澄清语法, 我们应用 "先匹配者赢" 算法: 如果主机匹配IPv4地址规则, 那么它应该被认为是一个IPv4地址文字而不是一个注册名称. 尽管主机是大小写敏感的, 为了统一的目的制作者和正规化者应该对注册名和十六进制地址使用小写, 只在百分号编码使用大写字母.
+</p><p>由版本6<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3513">RFC3513</a>或更晚版本的互联网协议文字地址标识的主机, 是通过方括号("[" 和 "]")围起IP文字来区分的. 这是唯一一个被允许在URI语法中出现方括号字符的地方. 在可预见的将来, 还未定义的IP文字地址格式, 实现可以使用一个可选的版本标记来显式地指示这样一个格式而不是依靠启发式的决定.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      IP-literal = &quot;[&quot; ( IPv6address / IPvFuture  ) &quot;]&quot;
+&#160;
+      IPvFuture  = &quot;v&quot; 1*HEXDIG &quot;.&quot; 1*( unreserved / sub-delims / &quot;:&quot; )</pre></div></div>
+<p>版本标记不指示IP版本; 而是指示该文字格式的未来版本. 同样的, 实现不能为下面描述的现有的IPv4和IPv6文字地址格式提供该版本标记. 如果一个URI包含一个以 "v" (大小写不敏感)开始的IP-文字, 标识那个版本标记是当前的, 当它由一个不理解该版本标记的含义的应用解参考的时候, 那么该应用返回一个适当的错误 "地址机制不支持".
+</p><p>一个由IPv6文字地址标识的主机被展现在不带前述的版本标记的方括号内. 这里的ABNF是对一个<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3513">RFC3513</a>提供的IPv6文字地址的文本定义的翻译. 这个语法不支持IPv6范围地址区域标识.
+</p><p>一个128位的IPv6地址被分为8个16位的片段. 每一片展现为大小写敏感的16进制数字, 使用一到四个十六进制数字(允许以零开头). 这8个编码的片首先是给定的最大有效数, 由冒号分开. 可选的, 最小有效的两个片段可以被替换来展现IPv4地址的文本格式. 地址中的一系列一个或多个连续的零值的16位片段可以被忽略, 省略它们的所有数字并确切地在它们的位置留下两个连续的冒号以标记该省略.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      IPv6address =                            6( h16 &quot;:&quot; ) ls32
+                  /                       &quot;::&quot; 5( h16 &quot;:&quot; ) ls32
+                  / [               h16 ] &quot;::&quot; 4( h16 &quot;:&quot; ) ls32
+                  / [ *1( h16 &quot;:&quot; ) h16 ] &quot;::&quot; 3( h16 &quot;:&quot; ) ls32
+                  / [ *2( h16 &quot;:&quot; ) h16 ] &quot;::&quot; 2( h16 &quot;:&quot; ) ls32
+                  / [ *3( h16 &quot;:&quot; ) h16 ] &quot;::&quot;    h16 &quot;:&quot;   ls32
+                  / [ *4( h16 &quot;:&quot; ) h16 ] &quot;::&quot;              ls32
+                  / [ *5( h16 &quot;:&quot; ) h16 ] &quot;::&quot;              h16
+                  / [ *6( h16 &quot;:&quot; ) h16 ] &quot;::&quot;
+&#160;
+      ls32        = ( h16 &quot;:&quot; h16 ) / IPv4address
+                 &#160;; least-significant 32 bits of address
+&#160;
+      h16         = 1*4HEXDIG
+                 &#160;; 16 bits of address represented in hexadecimal</pre></div></div>
+<p>一个由IPv4文字地址标识的主机被展现为点分十进制表示法(一系列四个范围为0到255的十进制数字, 以 "." 分隔), 如 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1123">RFC1123</a>所述，参考 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc0952">RFC0952</a>. 注意点符号的其他格式可以在一些平台上被解释执行, 如<a href="/RFC3986#.E7.BD.95.E8.A7.81IP.E5.9C.B0.E5.9D.80.E6.A0.BC.E5.BC.8F" title="RFC3986">7.4</a>所述, 但本语法只允许四个八位字节的点分十进制格式.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      IPv4address = dec-octet &quot;.&quot; dec-octet &quot;.&quot; dec-octet &quot;.&quot; dec-octet
+&#160;
+      dec-octet   = DIGIT                &#160;; 0-9
+                  /&#160;%x31-39 DIGIT        &#160;; 10-99
+                  / &quot;1&quot; 2DIGIT           &#160;; 100-199
+                  / &quot;2&quot;&#160;%x30-34 DIGIT    &#160;; 200-249
+                  / &quot;25&quot;&#160;%x30-35         &#160;; 250-255</pre></div></div>
+<p>一个被注册名标识的主机是一系列字符，常常要用它在一个本地定义的主机或服务名称注册表中来查找, 尽管该URI的格式特有的语义可以要求替换成一个特有的注册表(或固定的名称表). 大部分常用名称注册表机制是域名系统(DNS). 在DNS中查询到一个注册名要使用<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1034#section-3.5">RFC1034的3.5节</a>和<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1123#section-2.1">RFC1123的2.1节</a>中定义的语法. 这样一个名称包含了一系列以 "." 分隔的域标签, 每个域标签以一个文字数字字符开始和结束，也可能包含 "-" 字符. 一个在DNS中完全合格的域名的最右边的域标签可以在后面带一个单独的"." ，并且如果有必要把完整域名和一些本地域名去分开的话则必须带它.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      reg-name    = *( unreserved / pct-encoded / sub-delims )</pre></div></div>
+<p>如果URI格式为主机定义了一个缺省值, 那么当该主机子部件未定义或当注册名称为空(零长度)的时候那个缺省值适用. 例如, "file" URI格式被定义成没有机构, 空主机, 且 "localhost" 全都代表最终用户的机器, 反之一个缺少机构或空主机的 "http" 格式被认为是非法的.
+</p><p>本协议不强制一个特定的注册名称查询技术并且因而如果不在互操作性的必要情况之上约束reg-name语法. 反之, 它把注册名称语法一致性问题委托给每个执行URI解析的应用的操作系统, 并且那个and操作系统来决定允许使用哪种技术来确定主机身份. 一个URI解析实现可能使用DNS, 主机表, 黄页, NetInfo, WINS, 或任何其他系统来查询注册名称. 然而, 一个全局范围的命名系统, 类似DNS完全合格的域名, 对打算全局范围使用的URIs是必要的. URI制作者应该按照DNS语法使用名称, 即使当DNS的使用不会立刻被看到的时候, 并且应该限制这些名称的长度不超过255个字符.
+</p><p>reg-name语法允许百分号编码字节，这是为了以一个独立于基本的名称解析技术的统一的方法来展现非ASCII注册名称. 非ASCII字符必须首先被根据UTF-8 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986#ref-STD63">STD63</a>编码, 并且接着每个UTF-8序列相应的八位字节必须被百分号编码以展现成URI字符. URI制作应用不能对主机使用百分号编码，除非它被用于展示一个UTF-8字符序列. 当一个非ASCII注册名称展现了一个打算通过DNS解析的国际化域名, 该名称必须在名称查询之前被转换成IDNA编码<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3490">RFC3490</a>. URI制作者应该以IDNA编码提供这些注册名称, 而不是一个百分号编码, 如果他们希望最大化和外部URI解析者的互操作能力.
+</p>
+<h4> <span class="mw-headline" id=".E7.AB.AF.E5.8F.A3">端口</span></h4>
+<p>机构的端口子部件由一个可选的跟随在主机后面并且从单个的冒号 (":") 字符之后开始的十进制端口号来指定.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      port        = *DIGIT</pre></div></div>
+<p>一个格式可以定义一个缺省端口. 例如, "http" 格式定义了一个缺省端口 "80", 和它的保留TCP端口号码一致. 由端口号指定的端口的类型(例如, TCP, UDP, SCTP)是由该URI格式定义的. URI制作者和正规化者应该省略端口部件和它的 ":" 边界，如果端口是空的或它的值和该格式的缺省值相同的话.
+</p>
+<h3> <span class="mw-headline" id=".E8.B7.AF.E5.BE.84">路径</span></h3>
+<p>路径部件包含数据, 常常组织成层次格式, 它连同非层次化的查询部件(<a href="/RFC3986#.E6.9F.A5.E8.AF.A2" title="RFC3986">3.4</a>)的数据, 服务于识别在该URI的格式和命名机构(如果有)范围内的一个资源. 路径由第一个问号("?")或数字符号("#")字符或该URI的结尾来终止.
+</p><p>如果一个URI包含一个机构部件, 那么该路径部件必须要么是空的要么以一个斜杠("/")字符开始. 如果一个URI不包含一个机构部件, 那么路径不能以双斜杠字符("//")开始. 此外, 一个URI引用(<a href="/RFC3986#URI.E5.BC.95.E7.94.A8" title="RFC3986">4.1</a>)可以是一个和路径相关的引用, 在那种情况下第一个路径片段不能包含一个冒号(":")字符. ABNF要求五个独立的规则来消除这些情况的歧义, 只有其中一种情况将会在一个给定的URI引用中和该路径子字符串匹配. 我们使用通用术语 "路径部件" 来描述由这些规则的解析器匹配的该URI子字符串.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      path          = path-abempty   &#160;; begins with &quot;/&quot; or is empty
+                    / path-absolute  &#160;; begins with &quot;/&quot; but not &quot;//&quot;
+                    / path-noscheme  &#160;; begins with a non-colon segment
+                    / path-rootless  &#160;; begins with a segment
+                    / path-empty     &#160;; zero characters
+&#160;
+      path-abempty  = *( &quot;/&quot; segment )
+      path-absolute = &quot;/&quot; [ segment-nz *( &quot;/&quot; segment ) ]
+      path-noscheme = segment-nz-nc *( &quot;/&quot; segment )
+      path-rootless = segment-nz *( &quot;/&quot; segment )
+      path-empty    = 0&lt;pchar&gt;
+&#160;
+      segment       = *pchar
+      segment-nz    = 1*pchar
+      segment-nz-nc = 1*( unreserved / pct-encoded / sub-delims / &quot;@&quot; )
+                   &#160;; non-zero-length segment without any colon &quot;:&quot;
+&#160;
+      pchar         = unreserved / pct-encoded / sub-delims / &quot;:&quot; / &quot;@&quot;</pre></div></div>
+<p>一个路径包含一系列由斜杠("/")字符分隔的路径片段. 对于一个URI来说总是会定义一个路径, 尽管定义的路径可能是空(零长度). 指示层次用的斜杠字符之在一个URI用作指示相对引用的时候是必需的. 例如, URI &lt;<a rel="nofollow" class="external free" href="mailto:fred@example.com">mailto:fred@example.com</a>&gt; 有一个路径 "fred@example.com", 反之 URI &lt;foo://info.example.com?fred&gt; 有一个空路径.
+</p><p>路径片段 "." 和 "..", 也就是点片段, 被定义用于路径名称层次的相对引用. 它们被用于相对路径引用的开始([<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986#section-4.2">RFCSection 4.2</a>]) 以指示名称的层次树中的相对位置. 这和某些操作系统的文件目录结构分别指示当前目录和父目录的它们的角色类似. 无论如何, 和在一个文件系统中不一样, 这些点片段只在URI层次中被这样理解并且被从解析过程的一部分中移除(<a href="/RFC3986#.E7.9B.B8.E5.AF.B9.E8.A7.A3.E6.9E.90" title="RFC3986">5.2</a>).
+</p><p>除了层次路径中的点片段之外, 一个路径片段被通用语法当成不透明的. URI制作应用经常在一个片段中使用保留字符以界定格式特有的或解参考处理者特有的子部件. 例如, 分号(";")和等号("=")保留字符经常被用于界定适用于那个片段的参数和参数值. 逗号(",")保留字符经常被用于类似的目的. 例如, 一个URI制作者可以使用一个类似 "name;v=1.1" 的片段来指示一个对 "name" 的1.1版的引用, 反之另一个可能使用类似 "name,1.1" 的片段来指示相同的东西. 参数类型可以由格式特有的语义来定义, 但是在大多数情况下一个参数的语法对该URI的解参考算法的实现来说是特有的.
+</p>
+<h3> <span class="mw-headline" id=".E6.9F.A5.E8.AF.A2">查询</span></h3>
+<p>查询部件包含非层次化的数据, 以及路径部件中的数据(<a href="/RFC3986#.E8.B7.AF.E5.BE.84" title="RFC3986">3.3</a>), 用来从该URI的格式和命名机构(如果有)中识别一个资源. 查询部件由第一个问号("?")字符指示并由一个数字符号("#")字符或该URI的结尾终止.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      query       = *( pchar / &quot;/&quot; / &quot;?&quot; )</pre></div></div>
+<p>字符斜杠("/")和问号("?")可以展现该查询部件内的数据. 注意当它被用于相对引用的基础URI的时候<a href="/RFC3986#.E5.BB.BA.E7.AB.8B.E5.9F.BA.E7.A1.80URI" title="RFC3986">5.1</a>，一些旧的, 错误的实现可能没有正确处理这类数据, 显然是因为它们在查找层次分隔符的时候未能把查询部件从路径数据中区分开来. 无论如何, 因为查询部件经常被用于以 "键=值" 对的格式携带识别信息并且一个常被使用的值是对另一个URI的引用, 它经常比百分号编码那些字符有更好的可用性.
+</p>
+<h3> <span class="mw-headline" id=".E7.89.87.E6.AE.B5">片段</span></h3>
+<p>一个URI的片段标识符部件允许对一个主要资源引用的次要资源的非直接身份认证以及额外的识别信息. 被识别的次要资源可以是该主要资源的一部分或子集, 或一些由那些陈述所定义或描述的资源. 一个片段标识符部件是通过一个数字符号("#")字符的出现来指示的并由该URI的结尾来终止.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      fragment    = *( pchar / &quot;/&quot; / &quot;?&quot; )</pre></div></div>
+<p>一个片段标识符的语义可以是由一组从主要资源的获取动作导致的表现来定义的. 所以片段的格式和解析依赖于一个潜在的获取展现的媒体类型<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2046">RFC2046</a>, 即使这样一个获取只在URI被解参考的时候执行. 如果没有这类体现存在, 那么该片段的语义被认为是未知的并且是有效的无限制. 片段标识符语义独立于URI格式并且因而不能被格式协议重新定义.
+</p><p>单独的媒体类型可以在片段标识符语法内定义它们自己的约束或结构用于指定不同类型的子集，视图或对那个媒体类型可识别的次要资源的外部引用. 如果主要资源有多个展现，这中情况常常是资源的展现是该获取请求的属性的可选的基础(又名, 内容协商), 那么无论该片段识别的什么都应该和那些展现一致. 每个展现应该要么定义片段这样它对应相同的次要资源，无论它是如何展现的, 要么应该让该片段未定义(即, 未找到).
+</p><p>对任何URI, 片段标识符部件的使用不代表将执行一个获取动作. 一个带了片段标识符的URI可被用于指向次要资源而不代表任何主要资源是可访问的或永远无法访问.
+</p><p>片段标识符在信息获取系统中有一个特别的作用是作为客户端间接引用的主要格式, 允许一个作者特别地识别一个现有的只由该资源所有者间接提供的资源的样子. 同样, 片段标识符不被用于一个URI的格式特有的处理; 反之, 在解参考之前片段标识符被从URI的其他部分分离出来, 因而该片段本身的识别信息的解参考由用户代理执行, 和该URI格式无关. 尽管这个独立的处理经常被认为缺少信息, 特别是当引用随时间移动的时候引用的准确重定向, 它也用于防止信息提供者禁止引用作者在一个可选的资源中引用信息. 间接引用也为系统使用URIs提供额外的可伸缩性和可扩展性, 因为定义和部署新媒体类型比新身份格式更容易.
+</p><p>斜杠("/")和问号("?")被允许在片段标识符内展示数据. 注意一些旧的, 错误的实现可能未正确处理这个数据，当它被用作相对引用的基础URI的时候(<a href="/RFC3986#.E5.BB.BA.E7.AB.8B.E5.9F.BA.E7.A1.80URI" title="RFC3986">5.1</a>).
+</p>
+<h2> <span class="mw-headline" id=".E7.94.A8.E6.B3.95">用法</span></h2>
+<p>当应用引用一个URI的时候, 它们不总是使用该 "URI" 语法规则定义的引用的完整格式. 为了节省空间和方便层次化区域, 一些互联网协议元素和媒体类型格式允许一个URI的缩写, 反之其他则把语法限制到URI的某个特定格式. 我们在本文定义引用语法的最常见格式，因为它们影响和以来通用语法的设计, 为了解释的一致性而要求一个通用解析算法.
+</p>
+<h3> <span class="mw-headline" id="URI.E5.BC.95.E7.94.A8">URI引用</span></h3>
+<p>URI引用常常代表一个资源标识符的最常见的用法.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      URI-reference = URI / relative-ref</pre></div></div>
+<p>一个URI引用要么是一个URI要么是一个相对引用. 如果该URI引用的前缀和跟随在它的冒号后面的格式的语法不匹配, 那么该URI引用是一个相对引用.
+</p><p>一个URI引用典型地首先被解析成5个URI部件, 以确定什么组件是当前的以及该引用是否是相对的. 接着, 每个部件被解析为子部件和它们的校验. URI引用的ABNF, 遵循 "先匹配者赢" 的消除歧义规则, 足够为通用语法定义一个校验解析器. 对正则表达式熟悉的读者们应该去看<a href="/RFC3986#.E7.94.A8.E6.AD.A3.E5.88.99.E8.A1.A8.E8.BE.BE.E5.BC.8F.E8.A7.A3.E6.9E.90URI.E5.BC.95.E7.94.A8" title="RFC3986">附录B</a>的一个非校验的URI引用解析器的例子，它将使用任何给定的字符串并提取该URI部件.
+</p>
+<h3> <span class="mw-headline" id=".E7.9B.B8.E5.AF.B9.E5.BC.95.E7.94.A8">相对引用</span></h3>
+<p>一个相对引用可以方便地用层次化语法(<a href="/RFC3986#.E5.B1.82.E6.AC.A1.E6.A0.87.E8.AF.86.E7.AC.A6" title="RFC3986">1.2.3</a>) 表达和另一个层次化URI的命名空间相关的一个URI引用.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      relative-ref  = relative-part [ &quot;?&quot; query ] [ &quot;#&quot; fragment ]
+&#160;
+      relative-part = &quot;//&quot; authority path-abempty
+                    / path-absolute
+                    / path-noscheme
+                    / path-empty</pre></div></div>
+<p>由一个相对引用所指向的URI, 也被认为是目标URI, 通过应用<a href="/RFC3986#.E5.BC.95.E7.94.A8.E8.A7.A3.E6.9E.90" title="RFC3986">第5章</a>的引用解析算法来获得.
+</p><p>一个开始于两个斜杠字符的相对引用被称为一个网络路径引用; 这类引用很少被使用. 一个开始于单个斜杠字符的相对引用被称为一个绝对路径引用. 一个不以斜杠字符开始的相对引用被称为一个相对路径引用.
+</p><p>一个包含一个冒号字符的路径段落(例如, "this:that")不能被用作一个相对路径引用的第一个段落, 因为它会被误认为一个格式名称. 这样一个段落必须在它前面放一个点段落(例如, "./this:that")以制作一个相对路径引用.
+</p>
+<h3> <span class="mw-headline" id=".E7.BB.9D.E5.AF.B9URI">绝对URI</span></h3>
+<p>一些协议元素仅被一个不带片段标识符的URI的绝对格式允许. 例如, 定义一个符合不允许片段的绝对URI语法规则的基础URI用于晚些时候供相对引用调用.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="co3">      absolute-URI  = scheme &quot;:&quot; hier-part [ &quot;?&quot; query ]</span></pre></div></div>
+<p>URI格式协议必须定义它们自己的语法，这样所有和它们的格式特有的语法匹配的字符也将和&lt;绝对URI&gt;语法匹配. 格式协议将不定义片段标识符语法或用法, 不管它对来自那个格式的资源标识符的适用性如何, 因为片段标识符直交于格式定义. 无论如何, 鼓励格式协议包含大范围的示例, 包括展示携带了片段标识符的格式的URI如何使用，当这类用法是恰当的时候.
+</p>
+<h3> <span class="mw-headline" id=".E5.90.8C.E6.96.87.E5.BC.95.E7.94.A8">同文引用</span></h3>
+<p>当一个URI引用指向这样一个URI, 除了它的片段部件以外(如果有的话), 和基础URI(<a href="/RFC3986#.E5.BB.BA.E7.AB.8B.E5.9F.BA.E7.A1.80URI" title="RFC3986">5.1</a>)完全一样, 那个引用被称为一个 "同文" 引用. 同文引用的最常用的例子是空的或只包含一个后面跟随着片段标识符的数字标记("#")分隔符的相对引用.
+</p><p>当一个同文引用为了一个获取动作而被解参考, 那个引用的目标被定义成在该引用的同一个实体(展示, 文档, 或消息)中; 所以, 一个解参考不应改导致一个新的获取动作.
+</p><p>在基础的和目标的URIs的比较之前进行正规化, 如<a href="/RFC3986#.E5.9F.BA.E4.BA.8E.E8.AF.AD.E6.B3.95.E7.9A.84.E6.AD.A3.E8.A7.84.E5.8C.96" title="RFC3986">6.2.2</a>和<a href="/RFC3986#.E5.9F.BA.E4.BA.8E.E6.A0.BC.E5.BC.8F.E7.9A.84.E6.AD.A3.E8.A7.84.E5.8C.96" title="RFC3986">6.2.3</a>所述, 是被允许的，但是实践中很少被执行. 正规化可以增加同文引用集合, 这有利于某些缓存引用. 同样, 引用作者不应该假定那是轻微的不同, 甚至等价, 引用URI将(或将不)被任何给定应用理解为一个同文引用.
+</p>
+<h3> <span class="mw-headline" id=".E5.90.8E.E7.BC.80.E5.BC.95.E7.94.A8">后缀引用</span></h3>
+<p>URI语法是为通过URI格式明确地引用资源和可扩展性而定义的. 然而, 因为URI识别和用法以及普及了, 传统媒体(电视, 广播, 报纸, 公告牌, 等等.)已经越来越多地使用一个URI的后缀来作为一个引用, 只包含URI的机构和路径部分, 类似
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="co3">      www.w3.org/Addressing/</span></pre></div></div>
+<p>或简单的一个它自己的DNS注册名称. 这类引用主要是为了自然人而不是机器理解, 同时假定基于上下文的启发对完成该URI是足够的(例如, 大部分以 "www" 开始的注册名似乎有一个URI前缀 "http://"). 尽管没有对一个URI后缀消除歧义的启发的标准集合, 一些客户端实现云讯它们由用户输入并且启发式地理解.
+</p><p>尽管使用后缀引用在实践中很常见, 应该避免任何的可能并且应该永远不在被期望长期使用的引用的情况下使用. 上面提到的启发将随事件改变, 特别是当一个新的URI格式流行的时候, 并且当超出上下文使用的时候经常是不正确的. 进一步的, 按照<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1535">RFC1535</a>的那些描述，它们能导致安全性问题.
+</p><p>因为一个URI后缀和一个相对路径引用有相同的语法, 一个后缀引用不能被用于被期望使用相对引用的上下文中. 结果是, 后缀引用被限制于没有定义基础URI的地方, 类似对话框和离线广告.
+</p>
+<h2> <span class="mw-headline" id=".E5.BC.95.E7.94.A8.E8.A7.A3.E6.9E.90">引用解析</span></h2>
+<p>本章定义解析一个允许相对引用的上下文中的URI引用的过程，结果是一个和<a href="/RFC3986#.E8.AF.AD.E6.B3.95.E9.83.A8.E4.BB.B6" title="RFC3986">第3章</a>的&lt;URI&gt;语法规则匹配的字符串.
+</p>
+<h3> <span class="mw-headline" id=".E5.BB.BA.E7.AB.8B.E5.9F.BA.E7.A1.80URI">建立基础URI</span></h3>
+<p>术语 "相对" 暗示存在一个应用于相对引用的 "基础URI". 除了仅片段引用(<a href="/RFC3986#.E5.90.8C.E6.96.87.E5.BC.95.E7.94.A8" title="RFC3986">4.4</a>), 相对引用只在已知一个基础URI的时候有用. 一个基础URI必须在解析可能被引用的URI之前由解析器建立. 一个基础URI必须遵循&lt;absolute-URI&gt;语法规则(<a href="/RFC3986#.E7.BB.9D.E5.AF.B9URI" title="RFC3986">4.3</a>). 如果该基础是从一个URI引用URI获得的, 那么该引用必须在它被用作一个基础URI之前被转化成绝对格式并剥离任何片段部件.
+</p><p>一个引用的基础URI可以以四种方法之一来建立, 在下面按优先级逐一讨论. 优先级的顺序以术语的层级来考虑, 被定义得最靠近基础URI的就是最高优先级. 图形化显示如下:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>         .----------------------------------------------------------.
+         |  .----------------------------------------------------.  |
+         |  |  .----------------------------------------------.  |  |
+         |  |  |  .----------------------------------------.  |  |  |
+         |  |  |  |  .----------------------------------.  |  |  |  |
+         |  |  |  |  |       &lt;relative-reference&gt;       |  |  |  |  |
+         |  |  |  |  `----------------------------------'  |  |  |  |
+         |  |  |  | (5.1.1) Base URI embedded in content   |  |  |  |
+         |  |  |  `----------------------------------------'  |  |  |
+         |  |  | (5.1.2) Base URI of the encapsulating entity |  |  |
+         |  |  |         (message, representation, or none)   |  |  |
+         |  |  `----------------------------------------------'  |  |
+         |  | (5.1.3) URI used to retrieve the entity            |  |
+         |  `----------------------------------------------------'  |
+         | (5.1.4) Default Base URI (application-dependent)         |
+         `----------------------------------------------------------'</pre></div></div>
+<h4> <span class="mw-headline" id=".E5.B5.8C.E5.85.A5.E5.9C.A8.E5.86.85.E5.AE.B9.E9.87.8C.E7.9A.84.E5.9F.BA.E7.A1.80URI">嵌入在内容里的基础URI</span></h4>
+<p>在特定的媒体类型中, 一个用于相对引用的基础URI可能被封装在内容本身之中，这它能很容易地被一个解析器获得. 这对于描述性文档是很有用的, 类似内容表格等, 它可以通过协议被转换成其他东西而不是它们常常被获取的时候的上下文(例如, email 或 USENET 新闻).
+</p><p>指定一个基础URI如何被每个媒体类型嵌入超出了本协议的范围. 当有适当的语法可用的时候, 它由和每个媒体类型相关的数据格式协议来描述.
+</p>
+<h4> <span class="mw-headline" id=".E6.9D.A5.E8.87.AA.E5.B0.81.E8.A3.85.E5.AE.9E.E4.BD.93.E7.9A.84.E5.9F.BA.E7.A1.80URI">来自封装实体的基础URI</span></h4>
+<p>如果没有基础URI被封装, 则该基础URI由展示的获取上下文来定义. 对一个封闭在另一个实体中的文档来说, 这样一个消息或存档, 获取上下文就是那个实体. 所以, 一个展示的缺省基础URI就是把展现封装在其中的那个实体的基础URI.
+</p><p>在一个MIME容器类型(例如, 消息和多部件类型)中封装一个基础URI的机制由MHTML<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2557">RFC2557</a>定义. 协议不使用MIME消息头语法, 但是的确允许某些标记元数据的格式被包含在消息中, 可能为了定义一个基础URI成为一个消息的一部分来定义它们自己的语法.
+</p>
+<h4> <span class="mw-headline" id=".E6.9D.A5.E8.87.AA.E6.A3.80.E7.B4.A2URI.E7.9A.84.E5.9F.BA.E7.A1.80URI">来自检索URI的基础URI</span></h4>
+<p>如果没有内嵌的基础URI并且表现未封装到一些其他实体中, 那么, 如果一个URI被用来获取表现, 那个URI将被认为是基础URI. 注意如果获取动作是一个重定向请求导致的, 最后被使用URI(即, 导致实际的获取表现的动作的URI)是基础URI.
+</p>
+<h4> <span class="mw-headline" id=".E7.BC.BA.E7.9C.81.E5.9F.BA.E7.A1.80URI">缺省基础URI</span></h4>
+<p>如果没有适用以上描述的条件, 那么基础URI由应用的上下文定义. 因为这个定义需要依赖应用, 如果使用其他方法之一未能定义基础URI可能导致同样的内容在不同类型的应用中有不同的解释.
+</p><p>一个包含相对引用的表现的发送者要负责确保那些应用的一个基础URI能被建立. 除了仅片段的引用, 相对引用只能被用于基础URI被良好定义的可靠情形之下.
+</p>
+<h3> <span class="mw-headline" id=".E7.9B.B8.E5.AF.B9.E8.A7.A3.E6.9E.90">相对解析</span></h3>
+<p>本章描述了把一个和给定基础URI相关的URI引用转换成引用目标的已解析部件的算法. 然后该部件被重写成目标URI的格式, 如<a href="/RFC3986#.E9.83.A8.E4.BB.B6.E9.87.8D.E5.86.99" title="RFC3986">5.3</a>所述. 这个算法提供最后的结果，能被用于测试其他实现的输出. 应用可以使用某些其他算法来实现相对引用解析, 提供的结果将和本算法的结果吻合.
+</p>
+<h4> <span class="mw-headline" id=".E9.A2.84.E8.A7.A3.E6.9E.90.E5.9F.BA.E7.A1.80URI">预解析基础URI</span></h4>
+<p>基础URI (Base) 是根据<a href="/RFC3986#.E5.BB.BA.E7.AB.8B.E5.9F.BA.E7.A1.80URI" title="RFC3986">5.1</a>的步骤建立的并被解析成<a href="/RFC3986#.E8.AF.AD.E6.B3.95.E9.83.A8.E4.BB.B6" title="RFC3986">3</a>描述的五个主要的部件. 注意在一个基础URI中只有格式部件是必需的; 其他部件可以是空的或未定义的. 如果一个部件的相关分割符未出现在该URI引用之中那么该部件是未定义的; 路径部件永远不会是未定义的, 虽然它可以是空的.
+</p><p>基础URI的正规化, 如<a href="/RFC3986#.E5.9F.BA.E4.BA.8E.E8.AF.AD.E6.B3.95.E7.9A.84.E6.AD.A3.E8.A7.84.E5.8C.96" title="RFC3986">6.2.2</a>和<a href="/RFC3986#.E5.9F.BA.E4.BA.8E.E6.A0.BC.E5.BC.8F.E7.9A.84.E6.AD.A3.E8.A7.84.E5.8C.96" title="RFC3986">6.2.3</a>所述, 是可选的. 一个URI引用必须在它能被正规化之前被转换成它的目标URI.
+</p>
+<h4> <span class="mw-headline" id=".E8.BD.AC.E6.8D.A2.E5.BC.95.E7.94.A8">转换引用</span></h4>
+<p>对每个URI引用(R)来说, 以下伪码描述了一个把R转换成它的目标URI(T)的算法:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-java" style="font-family: monospace;"><pre>      <span class="sy0">--</span> URI引用被解析成<span class="nu0">5</span>个URI部件
+      <span class="sy0">--</span>
+      <span class="br0">&#40;</span>R.<span class="me1">scheme</span>, R.<span class="me1">authority</span>, R.<span class="me1">path</span>, R.<span class="me1">query</span>, R.<span class="me1">fragment</span><span class="br0">&#41;</span> <span class="sy0">=</span> parse<span class="br0">&#40;</span>R<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="sy0">--</span> 一个非约束的解析器可以忽略引用中的格式，如果该引用和基础URI的格式是相同的
+      <span class="sy0">--</span>
+&#160;
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>not strict<span class="br0">&#41;</span> and <span class="br0">&#40;</span>R.<span class="me1">scheme</span> <span class="sy0">==</span> Base.<span class="me1">scheme</span><span class="br0">&#41;</span><span class="br0">&#41;</span> then
+         undefine<span class="br0">&#40;</span>R.<span class="me1">scheme</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      endif<span class="sy0">;</span>
+&#160;
+      <span class="kw1">if</span> defined<span class="br0">&#40;</span>R.<span class="me1">scheme</span><span class="br0">&#41;</span> then
+         T.<span class="me1">scheme</span>    <span class="sy0">=</span> R.<span class="me1">scheme</span><span class="sy0">;</span>
+         T.<span class="me1">authority</span> <span class="sy0">=</span> R.<span class="me1">authority</span><span class="sy0">;</span>
+         T.<span class="me1">path</span>      <span class="sy0">=</span> remove_dot_segments<span class="br0">&#40;</span>R.<span class="me1">path</span><span class="br0">&#41;</span><span class="sy0">;</span>
+         T.<span class="me1">query</span>     <span class="sy0">=</span> R.<span class="me1">query</span><span class="sy0">;</span>
+      <span class="kw1">else</span>
+         <span class="kw1">if</span> defined<span class="br0">&#40;</span>R.<span class="me1">authority</span><span class="br0">&#41;</span> then
+            T.<span class="me1">authority</span> <span class="sy0">=</span> R.<span class="me1">authority</span><span class="sy0">;</span>
+            T.<span class="me1">path</span>      <span class="sy0">=</span> remove_dot_segments<span class="br0">&#40;</span>R.<span class="me1">path</span><span class="br0">&#41;</span><span class="sy0">;</span>
+            T.<span class="me1">query</span>     <span class="sy0">=</span> R.<span class="me1">query</span><span class="sy0">;</span>
+         <span class="kw1">else</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>R.<span class="me1">path</span> <span class="sy0">==</span> <span class="st0">&quot;&quot;</span><span class="br0">&#41;</span> then
+               T.<span class="me1">path</span> <span class="sy0">=</span> Base.<span class="me1">path</span><span class="sy0">;</span>
+               <span class="kw1">if</span> defined<span class="br0">&#40;</span>R.<span class="me1">query</span><span class="br0">&#41;</span> then
+                  T.<span class="me1">query</span> <span class="sy0">=</span> R.<span class="me1">query</span><span class="sy0">;</span>
+               <span class="kw1">else</span>
+                  T.<span class="me1">query</span> <span class="sy0">=</span> Base.<span class="me1">query</span><span class="sy0">;</span>
+               endif<span class="sy0">;</span>
+            <span class="kw1">else</span>
+               <span class="kw1">if</span> <span class="br0">&#40;</span>R.<span class="me1">path</span> starts<span class="sy0">-</span>with <span class="st0">&quot;/&quot;</span><span class="br0">&#41;</span> then
+                  T.<span class="me1">path</span> <span class="sy0">=</span> remove_dot_segments<span class="br0">&#40;</span>R.<span class="me1">path</span><span class="br0">&#41;</span><span class="sy0">;</span>
+               <span class="kw1">else</span>
+                  T.<span class="me1">path</span> <span class="sy0">=</span> merge<span class="br0">&#40;</span>Base.<span class="me1">path</span>, R.<span class="me1">path</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                  T.<span class="me1">path</span> <span class="sy0">=</span> remove_dot_segments<span class="br0">&#40;</span>T.<span class="me1">path</span><span class="br0">&#41;</span><span class="sy0">;</span>
+               endif<span class="sy0">;</span>
+               T.<span class="me1">query</span> <span class="sy0">=</span> R.<span class="me1">query</span><span class="sy0">;</span>
+            endif<span class="sy0">;</span>
+            T.<span class="me1">authority</span> <span class="sy0">=</span> Base.<span class="me1">authority</span><span class="sy0">;</span>
+         endif<span class="sy0">;</span>
+         T.<span class="me1">scheme</span> <span class="sy0">=</span> Base.<span class="me1">scheme</span><span class="sy0">;</span>
+      endif<span class="sy0">;</span>
+&#160;
+      T.<span class="me1">fragment</span> <span class="sy0">=</span> R.<span class="me1">fragment</span><span class="sy0">;</span></pre></div></div>
+<h4> <span class="mw-headline" id=".E5.90.88.E5.B9.B6.E8.B7.AF.E5.BE.84">合并路径</span></h4>
+<p>上面的伪码适用于一个 "合并" 程序，用于合并相对路径引用和基础URI路径. 它是如下完成的:
+</p>
+<ul><li> 如果基础URI有一个已定义的机构部件和一个空路径, 则返回一个包含和引用路径一起的 "/" 的字符串; 否则,
+</li><li> 返回一个字符串，包含该引用的路径部件加上除了该基础URI的路径的最后一个片段的所有其他片段(即, 除基础URI路径最右边的 "/" 后面的任何符号, 或除了完整的基础URI路径(如果该基础URI不包含任何 "/" 符号)).
+</li></ul>
+<h4> <span class="mw-headline" id=".E7.A7.BB.E9.99.A4.E7.82.B9.E7.89.87.E6.AE.B5">移除点片段</span></h4>
+<p>该伪码也适用于一个 "移除点片段" 程序，用于从一个被引用路径解释和移除特定的 "." and ".." 完整路径片段. 这要在该路径被从一个引用提取出来之后来做, 无论该路径是否相对的, 目的是在格式化目标URI之前移除任何非法或无关的点片段. 尽管有很多方法可以完成这个移除过程, 我们描述一个使用两个字符串缓冲的简单方法.
+</p><p>1. 输入缓冲以刚加上的路径部件初始化，而输出缓冲被初始化成空字符串.
+</p><p>2. 当输入缓冲是空的时候, 按以下回路:
+</p>
+<dl><dd>A. 如果输入缓冲以前缀 "../" 或 "./" 开始, 那么从输入缓冲移除该前缀; 否则,
+</dd></dl>
+<dl><dd>B. 如果输入缓冲以前缀 "/./" 或 "/." 开始, 这里 "." 是一个完整的路径片段, 那么在输入缓冲中把那个前缀替换成 "/"&#160;; 否则,
+</dd></dl>
+<dl><dd>C. 如果输入缓冲以前缀 "/../" 或 "/.." 开始, 这里 ".." 是一个完整路径片段, 那么在输入缓冲中把该前缀替换成 "/" 并从输出缓冲中移除最后的片段以及它前面的 "/" (如果有的话); 否则,
+</dd></dl>
+<dl><dd>D. 如果输入缓冲仅包含 "." 或 ".." , 那么从输入缓冲移除它; 否则,
+</dd></dl>
+<dl><dd>E. 在输入缓冲中把第一个路径片段移动到输出缓冲的尾部, 包括初始的 "/" 符号(如果有的话)和任何随后的符号, 但不包括下一个 "/" 符号或输入缓冲的结尾.
+</dd></dl>
+<p>3. 最后, 输出缓冲被返回一个 移除了点片段 的结果.
+</p><p>注意点片段的目的是在URI引用中用于在基础URI中表达一个和名称的层次相对的标识符. 移除点片段 算法通过移除额外的点片段来尊重层次而不是把它们当成一个错误或留着它们去被解参考实现误解.
+</p><p>接下来演示上述步骤如何应用于合并路径的两个例子, 展示每个步骤之后两个缓冲的状态.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      STEP   OUTPUT BUFFER         INPUT BUFFER
+&#160;
+       1&#160;:                         /a/b/c/./../../g
+       2E:   /a                    /b/c/./../../g
+       2E:   /a/b                  /c/./../../g
+       2E:   /a/b/c                /./../../g
+       2B:   /a/b/c                /../../g
+       2C:   /a/b                  /../g
+       2C:   /a                    /g
+       2E:   /a/g
+&#160;
+      STEP   OUTPUT BUFFER         INPUT BUFFER
+&#160;
+       1&#160;:                         mid/content=5/../6
+       2E:   mid                   /content=5/../6
+       2E:   mid/content=5         /../6
+       2C:   mid                   /6
+       2E:   mid/6</pre></div></div>
+<p>一些应用可能发现通过使用两个片段栈而不是字符串来实现移除点片段算法更加高效.
+</p>
+<dl><dd>注意: 当心一些旧的, 错误的实现将无法在合并基础和引用路径之前从它的路径部件分离出引用的查询部件, 如果该查询部件包含字符串 "/../" 或 "/./" 会导致互操作性失败.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E9.83.A8.E4.BB.B6.E9.87.8D.E5.86.99">部件重写</span></h3>
+<p>已解析的URI部件可以被重写以获得相应的URI引用字符串. 使用伪码, 如下:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-pascal" style="font-family: monospace;"><pre>      result = <span class="st0">&quot;&quot;</span>
+&#160;
+      <span class="kw1">if</span> defined<span class="br0">&#40;</span>scheme<span class="br0">&#41;</span> <span class="kw1">then</span>
+         append scheme <span class="kw1">to</span> result;
+         append <span class="st0">&quot;:&quot;</span> <span class="kw1">to</span> result;
+      endif;
+&#160;
+      <span class="kw1">if</span> defined<span class="br0">&#40;</span>authority<span class="br0">&#41;</span> <span class="kw1">then</span>
+         append <span class="st0">&quot;//&quot;</span> <span class="kw1">to</span> result;
+         append authority <span class="kw1">to</span> result;
+      endif;
+&#160;
+      append path <span class="kw1">to</span> result;
+&#160;
+      <span class="kw1">if</span> defined<span class="br0">&#40;</span>query<span class="br0">&#41;</span> <span class="kw1">then</span>
+         append <span class="st0">&quot;?&quot;</span> <span class="kw1">to</span> result;
+         append query <span class="kw1">to</span> result;
+      endif;
+&#160;
+      <span class="kw1">if</span> defined<span class="br0">&#40;</span>fragment<span class="br0">&#41;</span> <span class="kw1">then</span>
+         append <span class="st0">&quot;#&quot;</span> <span class="kw1">to</span> result;
+         append fragment <span class="kw1">to</span> result;
+      endif;
+&#160;
+      return result;</pre></div></div>
+<p>注意我们要小心地保持一个未定义的部件和一个空部件之间的区别。未定义的部件, 意味着在当前的引用中它的分隔符不是当前的；空部件, 意味着该分隔符是当前的但是被下一个部件分隔符紧接跟在它后面或者在该引用的尾部.
+</p>
+<h3> <span class="mw-headline" id=".E5.BC.95.E7.94.A8.E8.A7.A3.E6.9E.90.E7.A4.BA.E4.BE.8B">引用解析示例</span></h3>
+<p>对于有良好定义的基础URI的以下URI的陈述中
+</p>
+<pre>     <a rel="nofollow" class="external free" href="http://a/b/c/d;p?q">http://a/b/c/d;p?q</a>
+</pre>
+<p>一个相对引用被转换成它的目标URI如下.
+</p>
+<h4> <span class="mw-headline" id=".E5.B8.B8.E8.A7.84.E7.A4.BA.E4.BE.8B">常规示例</span></h4>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      &quot;g:h&quot;           =  &quot;g:h&quot;
+      &quot;g&quot;             =  &quot;http://a/b/c/g&quot;
+      &quot;./g&quot;           =  &quot;http://a/b/c/g&quot;
+      &quot;g/&quot;            =  &quot;http://a/b/c/g/&quot;
+      &quot;/g&quot;            =  &quot;http://a/g&quot;
+      &quot;//g&quot;           =  &quot;http://g&quot;
+      &quot;?y&quot;            =  &quot;http://a/b/c/d;p?y&quot;
+      &quot;g?y&quot;           =  &quot;http://a/b/c/g?y&quot;
+      &quot;#s&quot;            =  &quot;http://a/b/c/d;p?q#s&quot;
+      &quot;g#s&quot;           =  &quot;http://a/b/c/g#s&quot;
+      &quot;g?y#s&quot;         =  &quot;http://a/b/c/g?y#s&quot;
+      &quot;;x&quot;            =  &quot;http://a/b/c/;x&quot;
+      &quot;g;x&quot;           =  &quot;http://a/b/c/g;x&quot;
+      &quot;g;x?y#s&quot;       =  &quot;http://a/b/c/g;x?y#s&quot;
+      &quot;&quot;              =  &quot;http://a/b/c/d;p?q&quot;
+      &quot;.&quot;             =  &quot;http://a/b/c/&quot;
+      &quot;./&quot;            =  &quot;http://a/b/c/&quot;
+      &quot;..&quot;            =  &quot;http://a/b/&quot;
+      &quot;../&quot;           =  &quot;http://a/b/&quot;
+      &quot;../g&quot;          =  &quot;http://a/b/g&quot;
+      &quot;../..&quot;         =  &quot;http://a/&quot;
+      &quot;../../&quot;        =  &quot;http://a/&quot;
+      &quot;../../g&quot;       =  &quot;http://a/g&quot;</pre></div></div>
+<h4> <span class="mw-headline" id=".E5.8F.8D.E5.B8.B8.E7.A4.BA.E4.BE.8B">反常示例</span></h4>
+<p>尽管以下反常示例未必发生在常规的实践中, 所有URI解析器应该有能力一致性地解析它们. 每个例子使用和上述相同的基础.
+</p><p>比起在基础URI的路径中有多个层次，解析器必须更加小心地处理在一个相对路径引用中有多个 ".." 分段的情况. 注意 ".." 语法不能被用于改变一个URI的机构部件.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      &quot;../../../g&quot;    =  &quot;http://a/g&quot;
+      &quot;../../../../g&quot; =  &quot;http://a/g&quot;</pre></div></div>
+<p>类似的, 解析器必须移除点片段 "." 和 ".." ，当它们是一个路径的完整部件的时候, 但不是当它们是一个片段的仅有的部分的时候.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      &quot;/./g&quot;          =  &quot;http://a/g&quot;
+      &quot;/../g&quot;         =  &quot;http://a/g&quot;
+      &quot;g.&quot;            =  &quot;http://a/b/c/g.&quot;
+      &quot;.g&quot;            =  &quot;http://a/b/c/.g&quot;
+      &quot;g..&quot;           =  &quot;http://a/b/c/g..&quot;
+      &quot;..g&quot;           =  &quot;http://a/b/c/..g&quot;</pre></div></div>
+<p>更罕见的情况是相对引用使用 "." 和 ".." 的不必要或无意义的格式完成路径片段.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      &quot;./../g&quot;        =  &quot;http://a/b/g&quot;
+      &quot;./g/.&quot;         =  &quot;http://a/b/c/g/&quot;
+      &quot;g/./h&quot;         =  &quot;http://a/b/c/g/h&quot;
+      &quot;g/../h&quot;        =  &quot;http://a/b/c/h&quot;
+      &quot;g;x=1/./y&quot;     =  &quot;http://a/b/c/g;x=1/y&quot;
+      &quot;g;x=1/../y&quot;    =  &quot;http://a/b/c/y&quot;</pre></div></div>
+<p>一些应用在合并路径部件和基础路径并移除点片段之前未能从该路径部件分离出该引用的查询 和/或 片段部件. 这个错误很少被注意到, 因为一个片段的典型用法永远不会包含层次("/")符号并且查询部件通常不被用在相对引用中.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      &quot;g?y/./x&quot;       =  &quot;http://a/b/c/g?y/./x&quot;
+      &quot;g?y/../x&quot;      =  &quot;http://a/b/c/g?y/../x&quot;
+      &quot;g#s/./x&quot;       =  &quot;http://a/b/c/g#s/./x&quot;
+      &quot;g#s/../x&quot;      =  &quot;http://a/b/c/g#s/../x&quot;</pre></div></div>
+<p>一些解析器允许格式名在相对引用中使用，如果它和基础URI格式相同. 在之前的部分URI协议[RFC1630 <a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc1630">http://tools.ietf.org/html/rfc1630</a>]中它被认为是一个漏洞. 应该避免它的使用但是允许向后兼容.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      &quot;http:g&quot;        =  &quot;http:g&quot;        &#160;; for strict parsers
+                      /  &quot;http://a/b/c/g&quot;&#160;; for backward compatibility</pre></div></div>
+<h2> <span class="mw-headline" id=".E6.AD.A3.E8.A7.84.E5.8C.96.E5.92.8C.E6.AF.94.E8.BE.83">正规化和比较</span></h2>
+<p>在URIs上最常见的操作之一是简单比较:在不使用URIs访问它们各自的资源的情况下确定两个URIs是否等价. 每次一个应答缓存被访问的时候就执行比较动作, 一个浏览器检查它的历史来给一个链接着色, 或一个XML解析器处理一个命名空间中的标签. 在比较URIs之前进行广泛的正规化经常被用于蜘蛛和索引引擎以精简搜索空间或减少重复的请求动作和应答存储.
+</p><p>URI比较被执行用于一些特别的目的. 为不同目的而比较URIs的协议或实现将经常受限于不同的设计去权衡应该花多少努力去减少别名标识符. 这一章描述可以用于比较URIs的各种方法, 它们之间的权衡, 以及可以使用它们的应用的类型.
+</p>
+<h3> <span class="mw-headline" id=".E7.AD.89.E4.BB.B7">等价</span></h3>
+<p>因为URIs存在识别资源, 当它们标识到相同的资源想必它们应该认为它们是等价的. 无论如何, 等价的这一定义实际上没有用得那么多, 因为对一个实现来说除非有它们的全部只是或控制没办法比较两个资源. 基于这个原因, URIs的等价或不同的确定是基于字符串比较的, 可能被URI格式定义提供的额外规则的引用所增强. 我们使用术语 "不同" 和 "等价" 来描述这以比较的可能的结果, 但是有很多依赖于应用的版本的等价.
+</p><p>即使有可能确定两个URIs是等价的, URI比较不足以确定两个URIs是否标识不同的资源. 例如, 两个不同的域名的同一个所有者可能决定两者同时服务于相同的资源, 导致两个不同的URIs. 所以, 比较方法被定义用来最小化错误的否定从而严格地避免错误的肯定.
+</p><p>对于等价的测试, 应用应该不直接比较相对引用; 引用应该在比较之前被转换成它们各自的目标URIs. 当URIs被比较以选择(或避免)一个网络动作, 类似展示的获取, 片段部件(如果有)应该从比较中排除.
+</p>
+<h3> <span class="mw-headline" id=".E6.AF.94.E8.BE.83.E9.98.B6.E6.A2.AF">比较阶梯</span></h3>
+<p>实践中用来测试URI等价的方法有很多变种. 这些方法落在一个范围里, 需要多少过程来区分和哪种方法更能减少错误的否定. 如上所述, 错误的否定无法避免. 实践中, 它们的可能性能被减少, 但是这个减少要求更多的处理并且不是对所有应用都合算的.
+</p><p>如果比较实践的范围被看作一个阶梯, 接下来的讨论将攀登这个阶梯, 开始的实践是廉价但是有相对高的机会产生错误的否定, 然后去到那些有更高计算成本和更低的错误否定风险的实践.
+</p>
+<h4> <span class="mw-headline" id=".E7.AE.80.E5.8D.95.E5.AD.97.E7.AC.A6.E4.B8.B2.E6.AF.94.E8.BE.83">简单字符串比较</span></h4>
+<p>如果两个URIs, 当被认为是字符串, 并且相同, 那么断定它们等价是安全的. 这类等价的测试的计算成本非常低并且广泛用于各种应用, 特别是在解析域名中.
+</p><p>测试字符串的等价性需要一些基本的注意事项. 这个过程经常被称为 "每比特" 或 "每字节" 比较, 它是潜在的误导. 测试字符串的等价性通常是基于构成该字符串的字符对, 从第一个开始一直到两个字符串结束且发现所有字符都等价, 或直到一对字符比较不等价, 或字符串之一在另一个之前结束.
+</p><p>这一字符比较需要每一对字符是以可比较的格式存放的. 例如, 一个URI应该被存储成一个以EBCDIC编码的字节数组而第二个URI被存储成一个Java字符串对象(UTF-16), 天真地应用每比特比较将产生错误. 等价比较的更好的说法是基于每字符而不是每字节或每比特. 实际上, 每字符比较应该是在转换成通用字符编码之后的每码点比较. 错误的否定是由URI别名的生产和使用造成的. 无关比较方法, 通过在一个已常规化的格式中一致性地提供URI引用(即, 和应用常规化之后被生产的格式相同的一个格式, 如下所述)可以减少不必要的别名.
+</p><p>协议和数据格式经常限制了一些URI比较去简化字符串比较, 基于这个理论人们和应用将出于他们自己的最佳利益, 一致性地提供URI引用, 或至少一致到足够否决任何从更多常规化中获得的效率.
+</p>
+<h4> <span class="mw-headline" id=".E5.9F.BA.E4.BA.8E.E8.AF.AD.E6.B3.95.E7.9A.84.E5.B8.B8.E8.A7.84.E5.8C.96">基于语法的常规化</span></h4>
+<p>实现可以使用基于本协议提供的定义的逻辑来降低错误否定的可能性. 这个过程的开销适度地高于每字符的字符串比较. 例如, 一个使用这个方法的应用可能合理地认为以下两个URIs是等价的:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      example://a/b/c/%7Bfoo%7D
+      eXAMPLE://a/./b/../b/%63/%7bfoo%7d</pre></div></div>
+<p>Web用户代理, 类似浏览器, 当决定是否一个缓存的应答可用的时候典型地应用这类URI常规化. 基于语法的常规化包括这类技术，如案例常规化, 百分号常规化, 以及移除点片段.
+</p>
+<h5> <span class="mw-headline" id=".E5.A4.A7.E5.86.99.E5.B8.B8.E8.A7.84.E5.8C.96">大写常规化</span></h5>
+<p>对于所有URIs来说, 一个百分号编码的三连符中的十六进制数字(例如, "%3a" 和 "%3A")是大小写不敏感的并且因此应该使用大写字母来常规化数字 A-F.
+</p><p>当一个URI使用通用语法部件, 该部件语法语法等价规则总是适用; 亦即, 格式和主机是大小写不敏感的并且因此应该被常规化成小写. 例如, URI &lt;HTTP://www.EXAMPLE.com/&gt; 等价于 &lt;<a rel="nofollow" class="external free" href="http://www.example.com/">http://www.example.com/</a>&gt;. 其他通用语法部件被假定是大小写敏感的，除非由格式特别定义(见 <a href="/RFC3986#.E5.9F.BA.E4.BA.8E.E6.A0.BC.E5.BC.8F.E7.9A.84.E5.B8.B8.E8.A7.84.E5.8C.96" title="RFC3986">6.2.3</a>).
+</p>
+<h5> <span class="mw-headline" id=".E7.99.BE.E5.88.86.E5.8F.B7.E7.BC.96.E7.A0.81.E5.B8.B8.E8.A7.84.E5.8C.96">百分号编码常规化</span></h5>
+<p>百分号编码机制(<a href="/RFC3986#.E7.99.BE.E5.88.86.E5.8F.B7" title="RFC3986">2.1</a>)在其他相同的URIs中是一个频繁出现的来源. 除了上面注意到的大写常规化问题, 一些百分号编码八位字节的URI生产者不必需百分号编码, 结果是那些URIs等价于它们的未编码部分. 这些URIs应该被解码任何百分号编码来常规化以对应一个非保留的字符, 如<a href="/RFC3986#.E9.9D.9E.E4.BF.9D.E7.95.99.E5.AD.97.E7.AC.A6" title="RFC3986">2.3</a>所述.
+</p>
+<h5> <span class="mw-headline" id=".E8.B7.AF.E5.BE.84.E7.89.87.E6.AE.B5.E5.B8.B8.E8.A7.84.E5.8C.96">路径片段常规化</span></h5>
+<p>完整的路径片段 "." 和 ".." 只打算用在相对引用中(<a href="/RFC3986#URI.E5.BC.95.E7.94.A8" title="RFC3986">4.1</a>)并且会作为引用解析过程的一部分被移除(<a href="/RFC3986#.E7.9B.B8.E5.AF.B9.E8.A7.A3.E6.9E.90" title="RFC3986">5.2</a>). 无论如何, 一些已部署的实现不正确地假定当引用已经是一个URI的时候引用解析是不必要的，使得当它们遇到非相对路径时未能移除点片段. URI常规化者应该通过应用 移除点片段 算法来从该路径移除点片段, 如<a href="/RFC3986#.E7.A7.BB.E9.99.A4.E7.82.B9.E7.89.87.E6.AE.B5" title="RFC3986">5.2.4</a>所述.
+</p>
+<h4> <span class="mw-headline" id=".E5.9F.BA.E4.BA.8E.E6.A0.BC.E5.BC.8F.E7.9A.84.E5.B8.B8.E8.A7.84.E5.8C.96">基于格式的常规化</span></h4>
+<p>各个格式的URIs的语法和语义是不同的, 如每个格式的定义协议所述. 实现可以使用格式特有的规则, 以更高的处理成本, 来减少错误否定的可能性. 例如, 因为一个用于授权部件的 "http" 格式, 有一个缺省端口 "80", 并且定义了一个空路径等价于 "/", 以下四个URIs是等价的:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      http://example.com
+      http://example.com/
+      http://example.com:/
+      http://example.com:80/</pre></div></div>
+<p>通常, 一个使用通用语法来授权一个空路径的URI应该被常规化成一个路径 "/". 同样, 一个显式的 ":port", 这里这个端口号是空的或对该格式是缺省的, 等价于该端口和它的 ":" 分隔符被省略了，从而应该被基于格式的常规化移除. 例如, 上述第二个URI对于 "http" 格式来说是常规格式.
+</p><p>另一种由格式导致常规化的不同的情形是空的机构部件或空主机子部件的处理中. 对于某些格式协议, 一个空机构或主机被认为是一个错误; 对于另一些格式协议, 它被认为等价于 "localhost" 或最终用户的主机. 当一个格式为机构定义了一个缺省值并且需要一个URI引用那个缺省值, 为了保证一致性，简洁和国际化,那个引用应被常规化成一个空的机构. 如果, 无论如何, 如果用户信息或端口子部件是非空的, 那么主机应该被明确给出，即使它和缺省值是一样的.
+</p><p>常规化应该不移除分割符，当它们的相关部件是空的时候，除非该格式协议允许这么做. 例如, URI "<a rel="nofollow" class="external free" href="http://example.com/">http://example.com/</a>?" 不能被假定等价于上述的任何例子. 同样的, 在一个用户信息子部件中分割符的出现与否常常是和它的解释有明显的关系. 片段部件不受任何基于格式的常规化; 于是, 两个只是后缀 "#" 不同的URIs被认为是不同的，这和该格式无关.
+</p><p>一些格式定义的额外的子部件包含了大小写不敏感的数据, 把一个隐含的授权给了常规化者来把这个数据转换成一个常用大小写(例如, 全部小写). 例如, 定义了一个路径子部件以包含一个互联网主机名的URI格式, 类似 "mailto" URI格式, 因为那个子部件是大小写不敏感的并且从而遵循大小写格式化(例如, "<a rel="nofollow" class="external free" href="mailto:Joe@Example.COM">mailto:Joe@Example.COM</a>" 等价于 "<a rel="nofollow" class="external free" href="mailto:Joe@example.com">mailto:Joe@example.com</a>", 即使通用语法认为路径部件是大小写敏感的).
+</p><p>其他格式特有的常规化也是可能的.
+</p>
+<h4> <span class="mw-headline" id=".E5.9F.BA.E4.BA.8E.E5.8D.8F.E8.AE.AE.E7.9A.84.E5.B8.B8.E8.A7.84.E5.8C.96">基于协议的常规化</span></h4>
+<p>降低错误否定的发生率的主要工夫常常对web蜘蛛是很合算的. 所以, 它们在URI比较上甚至实现了更具侵略性的技术. 例如, 如果它们观察到一个如下的URI
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      http://example.com/data</pre></div></div>
+<p>重定向到了一个只是多了一个尾随的斜杠的URI
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-html4strict" style="font-family: monospace;"><pre>      http://example.com/data/</pre></div></div>
+<p>它们或许将在未来把这两者视为等价. 这种技术只是在等价同时清楚地被访问该资源的结果和它们的格式的解参考算法的通用惯例表示出来的时候才适合(在这个例子中, 由HTPP源服务器使用的重定向避免了相对引用的问题).
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9">安全事项</span></h2>
+<p>URI本身不会产生安全性的威胁. 然而, 因为URIs经常被用于提供一系列指示用于访问网络资源, 必须小心地适当解释一个URI中的数据, 以防止那个数据被意外地访问, 并且避免包含不应该在纯文本中出现的数据.
+</p>
+<h3> <span class="mw-headline" id=".E5.8F.AF.E9.9D.A0.E6.80.A7.E5.92.8C.E4.B8.80.E8.87.B4.E6.80.A7">可靠性和一致性</span></h3>
+<p>一个URI被用于取回信息, 不保证将来同样的信息可以被那个URI取回. 也不保证未来通过那个URI可取回的数据会和过去取回的数据明显类似. URI语法不约束一个给定的格式或机构如何分配它的命名空间或维护它的超时. 这类保证只能来自控制那个问题中的命名空间和资源的人(们). 一个特定的URI格式可以定义额外的语义, 类似名字持久化, 如果那些语义对于那个格式的所有命名机构都是必需的话.
+</p>
+<h3> <span class="mw-headline" id=".E6.81.B6.E6.84.8F.E6.9E.84.E9.80.A0">恶意构造</span></h3>
+<p>有时可能会有人构造一个URI来尝试执行一个貌似有害的幂等操作, 例如取回一个表示, 将实际导致一个可能有害的远程操作. 不安全的URI典型地是通过指定一个和网络协议的保留端口不同的端口号来构造的. 客户端不知不觉地联系了一个运行了不同协议服务的网站, 以及该URI包含的数据的指示, 当根据另一个协议解释的时候, 导致意外的操作. 一个常见的此类例子是对基于协议的格式因而带有的端口号"25"的滥用, 从而欺骗用户代理软件通过一个SMTP服务器发送一个意想不到的或假冒的消息.
+</p><p>应用应该防止一个URI的解参考指定一个 "广为人知的端口范围"  (0 - 1023) 中的TCP端口，除非用来解参考那个URI的协议和那个端口上预期的协议是兼容的. 尽管IANA维护了一个已知端口号的注册表, 应用应该让这些约束成为用户可配置的以避免妨碍新服务的部署.
+</p><p>当一个URI包含的百分号八位字节和用于给定的解释或解参考协议的分隔符匹配(例如, 用于TELNET协议的 CR 和 LF 符号), 在传输穿过那个协议之前这些百分号编码不能被解码. 百分号编码的传输, 它可能违反协议, 的伤害可能低于允许被解码的八位字节被解释成额外的操作或参数, 可能触发一个意外和可能有害的远程操作.
+</p>
+<h3> <span class="mw-headline" id=".E5.90.8E.E7.AB.AF.E8.BD.AC.E7.A0.81">后端转码</span></h3>
+<p>当一个URI被解参考, 它里面的数据经常同时被用户代理和一个或多个服务器解析. 在HTTP中, 例如, 一个典型的用户代理把一个URI解析成它的五个主要的部件, 访问机构的服务器, 并向它发送机构,路径和查询部件中的数据. 一个典型的服务器将获得那些信息, 把路径解析成片段并查询 键/值 对, 然后调用实现特有的处理程序以应答该请求. 结果是, 对于处理一个作为整体或分离成独立部件的URI的服务器实现来说，一个常见的安全问题是，它是对那个URI中的字符串和百分号编码展示的八位字节数据的适当的解释.
+</p><p>百分号字节在解参考过程中必须在某些点被解码. 应用必须在解码这些字节之前把URI分离成它的部件和子部件, 否则被解码的字节可能被误解为分隔符. 在一个URI中的数据的安全性检查应该在字节被解码之后应用. 记住, 无论如何, "%00" 百分号(空) 可能要求特殊的处理并且如果应用不期望在一个部件里接收原数据则应该被拒绝.
+</p><p>当URI路径解释过程包含了对后端文件系统或相关的系统功能的使用的时候应特别小心. 文件系统典型地把一个可操作的含义赋予给特定的字符, 例如 "/", "\", ":", "[", 和 "]" 字符, 以及特别的设备名类似 ".", "..", "...", "aux", "lpt", 等等. 在某些情况下, 对这类名称的存在很少测试将导致操作系统暂停或请求和系统无关的调用, 导致明显的拒绝服务和意外的数据传输的安全问题.  有可能的话本协议将列出所有这类重要字符和设备名称. 实现应该研究为可能被挂载到它们的应用的存储类型保留名称和字符并从而限制从URI部件获得的数据中使用它们.
+</p>
+<h3> <span class="mw-headline" id=".E7.BD.95.E8.A7.81.E7.9A.84IP.E5.9C.B0.E5.9D.80.E6.A0.BC.E5.BC.8F">罕见的IP地址格式</span></h3>
+<p>尽管用于IPv4address的URI语法只允许常见的IPv4地址文字的 点-十进制 格式, 很多处理URIs的实现使用了独立于平台的系统函数, 例如 gethostbyname() 和 inet_aton(), 来把字符文字翻译成一个确切的IP地址. 不幸的是, 这类系统函数经常允许和处理比<a href="/RFC3986#.E4.B8.BB.E6.9C.BA" title="RFC3986">3.2.2</a>中描述的格式更大的集合.
+</p><p>例如, 很多实现允许三个数字的点格式, 其最后部分被解释为一个16比特的数量并被放到网络地址的最右边的两个字节(例如, 一个B类网络). 同样的, 两个数字的点格式意味着最后部分被解释为一个24比特的数量并被放到地址的最右边的三个字节(A类), 而一个单独的数字(没有点)被解释为一个32比特的数量并被直接存到网络地址. 更多的混乱是, 一些实现允许每个点部分被解释为十进制, 八进制, 或十六进制, 特别是在C语言中(即, 一个打头的 0x 或 0X 暗示一个十六进制; 一个打头的 0 暗示八进制; 否则, 该数字被解释为十进制).
+</p><p>在URi语法中不允许额外的IP地址格式是因为平台实现之间的不同. 无论如何, 如果一个应用尝试基于字符文本格式的IP地址过滤到资源的访问，它们可能成为一个安全问题. 如果这个过滤被执行了, 文字应该被转换成数字格式并基于数字值过滤, 不要基于一个字符格式的前缀或后缀.
+</p>
+<h3> <span class="mw-headline" id=".E6.95.8F.E6.84.9F.E4.BF.A1.E6.81.AF">敏感信息</span></h3>
+<p>URI制作者应该不提供包含了了通常保密的用户名和密码的URI. URIs经常由浏览器显示, 被存储成纯文本书签, 并且被用户代理历史和中介应用(代理)记录了日志. 在用户信息部件中包含密码是被反对的并且应该被视为一个错误(或简单地忽略)，除非在那些罕见的情况下 'password' 参数才会公开出现.
+</p>
+<h3> <span class="mw-headline" id=".E8.AF.AD.E4.B9.89.E6.94.BB.E5.87.BB">语义攻击</span></h3>
+<p>因为在机构部件中用户信息子部件在主机之前很少被使用和出现, 它可能被用于构造一个URI来误导一个自然人用户，看似标识一个(可信的)命名机构，实际上标识一个隐藏在噪音后面的不同的机构. 例如
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      ftp://cnn.example.com&amp;story=breaking_news@10.0.0.1/top_story.htm</pre></div></div>
+<p>可能引导一个自然人用户假定该主机为 'cnn.example.com', 而它实际上是 '10.0.0.1'. 注意一个误导的用户信息子部件可能比上述的例子更长.
+</p><p>一个误导的URI, 类似上面那个, 是对用户对于一个URI的含义的先入为主的概念的攻击而不是对对该软件本身的攻击. 用户代理可能可以通过在呈现该URI的多个部件的时候区别开它们来减少这类攻击的影响, 例如通过使用不同的颜色或声音来呈现用户信息(如果有的话), 尽管没有灵丹妙药. 更多关于基于URI的语义的攻击可以在<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986#ref-Siedzik">Siedzik</a>找到.
+</p>
+<h2> <span class="mw-headline" id="IANA.E4.BA.8B.E9.A1.B9">IANA事项</span></h2>
+<p>URI格式名称, 在<strong class="selflink">Scheme|3.1</strong> 中的 &lt;scheme&gt; 定义, 格式化一个根据<a href="/RFC3986#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC3986">BCP35</a>定义的流程由IANA管理的已注册的命名空间. 本文不需要任何IANA操作.
+</p>
+<h2> <span class="mw-headline" id=".E8.87.B4.E8.B0.A2">致谢</span></h2>
+<p>本协议来源于 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">RFC 2396</a> , <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1808">RFC 1808</a> , 和 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1738">RFC 1738</a>; 那些文档中的致谢在本文仍然适用. 本协议也合并了主机语法中的IPv6文字的更新(及修正), 如 Robert M. Hinden, Brian E. Carpenter, 和 Larry Masinter 在 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2732">RFC2732</a> 中定义的那样. 另外, 非常感谢下列人员的贡献： Gisle Aas, Reese Anschultz, Daniel Barclay, Tim Bray, Mike Brown, Rob Cameron, Jeremy Carroll, Dan Connolly, Adam M. Costello, John Cowan, Jason Diamond, Martin Duerst, Stefan Eissing, Clive D.W. Feather, Al Gilman, Tony Hammond, Elliotte Harold, Pat Hayes, Henry Holtzman, Ian B. Jacobs, Michael Kay, John C. Klensin, Graham Klyne, Dan Kohn, Bruce Lilly, Andrew Main, Dave McAlpin, Ira McDonald, Michael Mealling, Ray Merkert, Stephen Pollei, Julian Reschke, Tomas Rokicki, Miles Sabin, Kai Schaetzl, Mark Thomson, Ronald Tschalaer, Norm Walsh, Marc Warne, Stuart Williams, 和 Henry Zongaro.
+</p>
+<h2> <span class="mw-headline" id=".E5.8F.82.E8.80.83">参考</span></h2>
+<h3> <span class="mw-headline" id=".E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8">规范引用</span></h3>
+<p>[ASCII]    American National Standards Institute, "Coded Character Set -- 7-bit American Standard Code for Information Interchange", ANSI X3.4, 1986.
+</p><p>[RFC2234]  Crocker, D. and P. Overell, "Augmented BNF for Syntax Specifications: ABNF", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2234">RFC 2234</a>, November 1997.
+</p><p>[STD63]    Yergeau, F., "UTF-8, a transformation format of ISO 10646", STD 63, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3629">RFC 3629</a>, November 2003.
+</p><p>[UCS]      International Organization for Standardization, "Information Technology - Universal Multiple-Octet Coded Character Set (UCS)", ISO/IEC 10646:2003, December 2003.
+</p>
+<h3> <span class="mw-headline" id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE">参考文献</span></h3>
+<p>[BCP19]    Freed, N. and J. Postel, "IANA Charset Registration Procedures", BCP 19, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2978">RFC 2978</a>, October 2000.
+</p><p>[BCP35]    Petke, R. and I. King, "Registration Procedures for URL Scheme Names", BCP 35, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2717">RFC 2717</a>, November 1999.
+</p><p>[RFC0952]  Harrenstien, K., Stahl, M., and E. Feinler, "DoD Internet host table specification", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc952">RFC 952</a>, October 1985.
+</p><p>[RFC1034]  Mockapetris, P., "Domain names - concepts and facilities", STD 13, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1034">RFC 1034</a>, November 1987.
+</p><p>[RFC1123]  Braden, R., "Requirements for Internet Hosts - Application and Support", STD 3, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1123">RFC 1123</a>, October 1989.
+</p><p>[RFC1535]  Gavron, E., "A Security Problem and Proposed Correction With Widely Deployed DNS Software", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1535">RFC 1535</a>, October 1993.
+</p><p>[RFC1630]  Berners-Lee, T., "Universal Resource Identifiers in WWW: A Unifying Syntax for the Expression of Names and Addresses of Objects on the Network as used in the World-Wide Web", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1630">RFC 1630</a>, June 1994.
+</p><p>[RFC1736]  Kunze, J., "Functional Recommendations for Internet Resource Locators", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1736">RFC 1736</a>, February 1995.
+</p><p>[RFC1737]  Sollins, K. and L. Masinter, "Functional Requirements for Uniform Resource Names", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1737">RFC 1737</a>, December 1994.
+</p><p>[RFC1738]  Berners-Lee, T., Masinter, L., and M. McCahill, "Uniform Resource Locators (URL)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1738">RFC 1738</a>, December 1994.
+</p><p>[RFC1808]  Fielding, R., "Relative Uniform Resource Locators", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1808">RFC 1808</a>, June 1995.
+</p><p>[RFC2046]  Freed, N. and N. Borenstein, "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2046">RFC 2046</a>, November 1996.
+</p><p>[RFC2141]  Moats, R., "URN Syntax", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2141">RFC 2141</a>, May 1997.
+</p><p>[RFC2396]  Berners-Lee, T., Fielding, R., and L. Masinter, "Uniform Resource Identifiers (URI): Generic Syntax", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2396">RFC 2396</a>, August 1998.
+</p><p>[RFC2518]  Goland, Y., Whitehead, E., Faizi, A., Carter, S., and D. Jensen, "HTTP Extensions for Distributed Authoring -- WEBDAV", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2518">RFC 2518</a>, February 1999.
+</p><p>[RFC2557]  Palme, J., Hopmann, A., and N. Shelness, "MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2557">RFC 2557</a>, March 1999.
+</p><p>[RFC2718]  Masinter, L., Alvestrand, H., Zigmond, D., and R. Petke, "Guidelines for new URL Schemes", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2718">RFC 2718</a>, November 1999.
+</p><p>[RFC2732]  Hinden, R., Carpenter, B., and L. Masinter, "Format for Literal IPv6 Addresses in URL's", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2732">RFC 2732</a>, December 1999.
+</p><p>[RFC3305]  Mealling, M. and R. Denenberg, "Report from the Joint W3C/IETF URI Planning Interest Group: Uniform Resource Identifiers (URIs), URLs, and Uniform Resource Names (URNs): Clarifications and Recommendations", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3305">RFC 3305</a>, August 2002.
+</p><p>[RFC3490]  Faltstrom, P., Hoffman, P., and A. Costello, "Internationalizing Domain Names in Applications (IDNA)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3490">RFC 3490</a>, March 2003.
+</p><p>[RFC3513]  Hinden, R. and S. Deering, "Internet Protocol Version 6 (IPv6) Addressing Architecture", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3513">RFC 3513</a>, April 2003.
+</p><p>[Siedzik]  Siedzik, R., "Semantic Attacks: What's in a URL?", April 2001, &lt;<a rel="nofollow" class="external free" href="http://www.giac.org/practical/gsec/Richard_Siedzik_GSEC.pdf">http://www.giac.org/practical/gsec/Richard_Siedzik_GSEC.pdf</a>&gt;.
+</p>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95A._.E4.B8.BAURI.E6.94.B6.E9.9B.86.E7.9A.84ABNF">附录A. 为URI收集的ABNF</span></h2>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>   URI           = scheme &quot;:&quot; hier-part [ &quot;?&quot; query ] [ &quot;#&quot; fragment ]
+&#160;
+   hier-part     = &quot;//&quot; authority path-abempty
+                 / path-absolute
+                 / path-rootless
+                 / path-empty
+&#160;
+   URI-reference = URI / relative-ref
+&#160;
+   absolute-URI  = scheme &quot;:&quot; hier-part [ &quot;?&quot; query ]
+&#160;
+   relative-ref  = relative-part [ &quot;?&quot; query ] [ &quot;#&quot; fragment ]
+&#160;
+   relative-part = &quot;//&quot; authority path-abempty
+                 / path-absolute
+                 / path-noscheme
+                 / path-empty
+&#160;
+   scheme        = ALPHA *( ALPHA / DIGIT / &quot;+&quot; / &quot;-&quot; / &quot;.&quot; )
+&#160;
+   authority     = [ userinfo &quot;@&quot; ] host [ &quot;:&quot; port ]
+   userinfo      = *( unreserved / pct-encoded / sub-delims / &quot;:&quot; )
+   host          = IP-literal / IPv4address / reg-name
+   port          = *DIGIT
+&#160;
+   IP-literal    = &quot;[&quot; ( IPv6address / IPvFuture  ) &quot;]&quot;
+&#160;
+   IPvFuture     = &quot;v&quot; 1*HEXDIG &quot;.&quot; 1*( unreserved / sub-delims / &quot;:&quot; )
+&#160;
+   IPv6address   =                            6( h16 &quot;:&quot; ) ls32
+                 /                       &quot;::&quot; 5( h16 &quot;:&quot; ) ls32
+                 / [               h16 ] &quot;::&quot; 4( h16 &quot;:&quot; ) ls32
+                 / [ *1( h16 &quot;:&quot; ) h16 ] &quot;::&quot; 3( h16 &quot;:&quot; ) ls32
+                 / [ *2( h16 &quot;:&quot; ) h16 ] &quot;::&quot; 2( h16 &quot;:&quot; ) ls32
+                 / [ *3( h16 &quot;:&quot; ) h16 ] &quot;::&quot;    h16 &quot;:&quot;   ls32
+                 / [ *4( h16 &quot;:&quot; ) h16 ] &quot;::&quot;              ls32
+                 / [ *5( h16 &quot;:&quot; ) h16 ] &quot;::&quot;              h16
+                 / [ *6( h16 &quot;:&quot; ) h16 ] &quot;::&quot;
+&#160;
+   h16           = 1*4HEXDIG
+   ls32          = ( h16 &quot;:&quot; h16 ) / IPv4address
+   IPv4address   = dec-octet &quot;.&quot; dec-octet &quot;.&quot; dec-octet &quot;.&quot; dec-octet
+&#160;
+   dec-octet     = DIGIT                &#160;; 0-9
+                 /&#160;%x31-39 DIGIT        &#160;; 10-99
+                 / &quot;1&quot; 2DIGIT           &#160;; 100-199
+                 / &quot;2&quot;&#160;%x30-34 DIGIT    &#160;; 200-249
+                 / &quot;25&quot;&#160;%x30-35         &#160;; 250-255
+&#160;
+   reg-name      = *( unreserved / pct-encoded / sub-delims )
+&#160;
+   path          = path-abempty   &#160;; begins with &quot;/&quot; or is empty
+                 / path-absolute  &#160;; begins with &quot;/&quot; but not &quot;//&quot;
+                 / path-noscheme  &#160;; begins with a non-colon segment
+                 / path-rootless  &#160;; begins with a segment
+                 / path-empty     &#160;; zero characters
+&#160;
+   path-abempty  = *( &quot;/&quot; segment )
+   path-absolute = &quot;/&quot; [ segment-nz *( &quot;/&quot; segment ) ]
+   path-noscheme = segment-nz-nc *( &quot;/&quot; segment )
+   path-rootless = segment-nz *( &quot;/&quot; segment )
+   path-empty    = 0&lt;pchar&gt;
+&#160;
+   segment       = *pchar
+   segment-nz    = 1*pchar
+   segment-nz-nc = 1*( unreserved / pct-encoded / sub-delims / &quot;@&quot; )
+                &#160;; non-zero-length segment without any colon &quot;:&quot;
+&#160;
+   pchar         = unreserved / pct-encoded / sub-delims / &quot;:&quot; / &quot;@&quot;
+&#160;
+   query         = *( pchar / &quot;/&quot; / &quot;?&quot; )
+&#160;
+   fragment      = *( pchar / &quot;/&quot; / &quot;?&quot; )
+&#160;
+   pct-encoded   = &quot;%&quot; HEXDIG HEXDIG
+&#160;
+   unreserved    = ALPHA / DIGIT / &quot;-&quot; / &quot;.&quot; / &quot;_&quot; / &quot;~&quot;
+   reserved      = gen-delims / sub-delims
+   gen-delims    = &quot;:&quot; / &quot;/&quot; / &quot;?&quot; / &quot;#&quot; / &quot;[&quot; / &quot;]&quot; / &quot;@&quot;
+   sub-delims    = &quot;!&quot; / &quot;$&quot; / &quot;&amp;&quot; / &quot;'&quot; / &quot;(&quot; / &quot;)&quot;
+                 / &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;;&quot; / &quot;=&quot;</pre></div></div>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95B._.E4.BB.A5.E6.AD.A3.E5.88.99.E8.A1.A8.E8.BE.BE.E5.BC.8F.E8.A7.A3.E6.9E.90.E4.B8.80.E4.B8.AAURI.E5.BC.95.E7.94.A8">附录B. 以正则表达式解析一个URI引用</span></h2>
+<p>因为 "首次匹配者赢" 的算法和被POSIX正则表达式使用的 "贪婪的" 消歧方法一致, 它自然而平凡地使用了一个正则表达式来解析一个URI引用的潜在的5个部件.
+</p><p>下面一行是为把一个格式良好的URI引用破开成它的部件们的正则表达式.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      ^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?
+       12            3  4          5       6  7        8 9</pre></div></div>
+<p>以上第二行的数字只是用来提高可读性; 它们为每个字表达式指示引用点(即, 每一对括号). 我们参考匹配子表达式&lt;n&gt;的值$&lt;n&gt;. 例如, 匹配以上表达式到下面一行
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      http://www.ics.uci.edu/pub/ietf/uri/#Related</pre></div></div>
+<p>接下来的子表达式匹配的结果是:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      $1 = http:
+      $2 = http
+      $3 = //www.ics.uci.edu
+      $4 = www.ics.uci.edu
+      $5 = /pub/ietf/uri/
+      $6 = &lt;undefined&gt;
+      $7 = &lt;undefined&gt;
+      $8 = #Related
+      $9 = Related</pre></div></div>
+<p>这里 &lt;undefined&gt; 表示那个部件当前没有, 即上一个例子中的查询部件. 所以, 我们确定的5个部件是
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      scheme    = $2
+      authority = $4
+      path      = $5
+      query     = $7
+      fragment  = $9</pre></div></div>
+<p>从相反的方向, 我们能从一个URI的部件们重建一个URI，通过使用<a href="/RFC3986#.E9.83.A8.E4.BB.B6.E9.87.8D.E5.86.99" title="RFC3986">5.3</a>中的算法.
+</p>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95C._.E5.9C.A8.E4.B8.8A.E4.B8.8B.E6.96.87.E4.B8.AD.E9.99.90.E5.AE.9A.E4.B8.80.E4.B8.AAURI">附录C. 在上下文中限定一个URI</span></h2>
+<p>URIs经常被发送的格式没有提供为它们的解释提供清晰的上下文. 例如, 很多情况下一个URi被包含在纯文本中; 例如包含在email, USENET新闻, 和 打印的纸张的文本中发送. 在每种情况下, 重要的是能限定从文本的其他部分, 特别是对该URi中可能被误解的部分的标点符号来限定该URI.
+</p><p>实践中, URIs被以多种方式来限定, 但是常常包括双引号 "<a rel="nofollow" class="external free" href="http://example.com/">http://example.com/</a>", 尖括号 &lt;<a rel="nofollow" class="external free" href="http://example.com/">http://example.com/</a>&gt;, 或只是用空白:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      http://example.com/</pre></div></div>
+<p>这些封装不是该URI格式的一部分.
+</p><p>在某些情况下, 可能不得不添加额外的空白(空格, 换行符, tabs符, 等等)来打断一个跨行的长URI. 当该URI被提取的时候空白应该被忽略.
+</p><p>空白不应该被放在一个连字符("-")符号后面. 因为一些排版和打印机可能(错误地)在中断它的时候把一个连字符放在行的末尾, 一个URI对于在一个连字符后面立刻包含一个行中断的解释应该忽略所有行中断附近的空白并且应该注意连字符可能或可能不一定是该URI的一部分.
+</p><p>特别推荐在每个URI附近使用 &lt;&gt; 尖括号作为对一个包含了内嵌空白的引用的一个限定样式.
+</p><p>前缀 "URL:" (携带或不带一个尾随的空格) 是以前推荐的一个帮助从其他括号代号中识别出一个URI的方法, 尽管在实践中它不经常被使用并且不再被推荐了.
+</p><p>为了鲁棒性, 接受用户手工输入URI的软件应该尝试识别和剔出分隔符和内嵌的空白.
+</p><p>例如, 文本
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      Yes, Jim, I found it under &quot;http://www.w3.org/Addressing/&quot;,
+      but you can probably pick it up from &lt;ftp://foo.example.
+      com/rfc/&gt;.  Note the warning in &lt;http://www.ics.uci.edu/pub/
+      ietf/uri/historical.html#WARNING&gt;.</pre></div></div>
+<p>包含URI引用
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>      http://www.w3.org/Addressing/
+      ftp://foo.example.com/rfc/
+      http://www.ics.uci.edu/pub/ietf/uri/historical.html#WARNING</pre></div></div>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95D._.E5.AF.B9RFC_2396.E7.9A.84.E6.94.B9.E5.8F.98">附录D. 对<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">RFC 2396</a>的改变</span></h2>
+<h3> <span class="mw-headline" id="D.1._.E6.B7.BB.E5.8A.A0">D.1. 添加</span></h3>
+<p>引入了一个用于URI的ABNF规则来对应该术语的一个常规用途: 一个带有可选的片段的绝对URI.
+</p><p>IPv6 (以及后面的) 文字被加到可能的标识符的列表中，用于一个机构部件的主机部分, 如<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2732">RFC2732</a>所述, 并且在保留设置中留有额外的 "[" 和 "]" ，以及一个版本标记给预期的IP文字的未来版本. 在机构部件中方括号现在被定义成保留的并且不允许把它们用作一个主机的IP文字的分隔符来用. 为了实现这个改变而不用修改路径,查询,和片段部件的技术定义, 那些规则被重定义成直接定义允许的字符集.
+</p><p>因为<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2732">RFC2732</a>为了一个IPv6文字地址而推迟到<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3513">RFC3513</a>, 它很不幸的缺少了一个IPv6地址的ABNF描述, 我们为IPv6地址创建了一个新的ABNF规则来匹配<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3513#section-2.2">RFC3513的2.2章</a>定义的文本展示. 同样的, IPv4地址的定义已经被提升以限制每个十进制字节的范围在0-255.
+</p><p><a href="/RFC3986#.E6.AD.A3.E8.A7.84.E5.8C.96.E5.92.8C.E6.AF.94.E8.BE.83" title="RFC3986">第六章</a>, 在URI正规化和和比较上, 已经完全重写并扩展，使用了来自Tim Bray的输入，以及W3C技术架构组中的讨论.
+</p>
+<h3> <span class="mw-headline" id="D.2._.E5.8F.98.E6.9B.B4">D.2. 变更</span></h3>
+<p><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">RFC 2396</a>的的特定BNF语法已经被替换成<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2234">RFC2234</a>的ABNF. 这个变更要求所有以前包含了下划线字符的规则名称被改名为一个长划. 此外, 一些语法规则已经被淘汰或简化以使整体的语法更容易理解. 参考了过时的语法规则的协议可以根据下表替换掉那些规则从而让人可以理解:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>   +----------------+--------------------------------------------------+
+   | obsolete rule  | translation                                      |
+   +----------------+--------------------------------------------------+
+   | absoluteURI    | absolute-URI                                     |
+   | relativeURI    | relative-part [ &quot;?&quot; query ]                      |
+   | hier_part      | ( &quot;//&quot; authority path-abempty /                  |
+   |                | path-absolute ) [ &quot;?&quot; query ]                    |
+   |                |                                                  |
+   | opaque_part    | path-rootless [ &quot;?&quot; query ]                      |
+   | net_path       | &quot;//&quot; authority path-abempty                      |
+   | abs_path       | path-absolute                                    |
+   | rel_path       | path-rootless                                    |
+   | rel_segment    | segment-nz-nc                                    |
+   | reg_name       | reg-name                                         |
+   | server         | authority                                        |
+   | hostport       | host [ &quot;:&quot; port ]                                |
+   | hostname       | reg-name                                         |
+   | path_segments  | path-abempty                                     |
+   | param          | *&lt;pchar excluding &quot;;&quot;&gt;                           |
+   |                |                                                  |
+   | uric           | unreserved / pct-encoded / &quot;;&quot; / &quot;?&quot; / &quot;:&quot;       |
+   |                |  / &quot;@&quot; / &quot;&amp;&quot; / &quot;=&quot; / &quot;+&quot; / &quot;$&quot; / &quot;,&quot; / &quot;/&quot;       |
+   |                |                                                  |
+   | uric_no_slash  | unreserved / pct-encoded / &quot;;&quot; / &quot;?&quot; / &quot;:&quot;       |
+   |                |  / &quot;@&quot; / &quot;&amp;&quot; / &quot;=&quot; / &quot;+&quot; / &quot;$&quot; / &quot;,&quot;             |
+   |                |                                                  |
+   | mark           | &quot;-&quot; / &quot;_&quot; / &quot;.&quot; / &quot;!&quot; / &quot;~&quot; / &quot;*&quot; / &quot;'&quot;          |
+   |                |  / &quot;(&quot; / &quot;)&quot;                                     |
+   |                |                                                  |
+   | escaped        | pct-encoded                                      |
+   | hex            | HEXDIG                                           |
+   | alphanum       | ALPHA / DIGIT                                    |
+   +----------------+--------------------------------------------------+</pre></div></div>
+<p>以上用于格式特有的语法的定义的过时规则被弃用了.
+</p><p><a href="/RFC3986#.E5.AD.97.E7.AC.A6" title="RFC3986">第二章</a>, 在字符方面, 已经重写以解释什么字符是保留的, 什么时候它们被保留, 以及为什么它们被保留, 甚至什么时候它们不被通用语法用作分隔符. 典型的对于解码不安全的标点符号, 包括感叹号 ("!"), 星号 ("*"), 单引号 ("'"), 以及打开和关闭括号 ("(" 和 ")"), 已经被移到保留集合以澄清保留的和非保留的之间的唯一性, 并期望, 解答格式定义者的大部分常见问题. 同样, 百分号编码字节那一章已经被重写, 且URI常规化现在允许解码任何对应非保留字符的百分号字节. 通常, 术语 "escaped" 和 "unescaped" 已经被 "percent-encoded" 和 "decoded" 分别替换, 来减少和其他格式逃逸机制的混淆.
+</p><p>用于URI和URI引用的ABN已经被重新涉及以使它们对LALR解析器更加友好并减少复杂度. 结果是, 语法描述的布局格式已经被移除, 包括 uric, uric_no_slash, opaque_part, net_path, abs_path, rel_path, path_segments, rel_segment, 以及 mark rules. 所有对 "不透明" URIs的引用已经被替换成一个更好的描述，路径部件如何被隐藏在层次中. 相对URI规则已经被替换成 relative-ref 以避免对它是否一个URI的子集产生不必要的混淆. 关于第一个segment中带有冒号的URI引用是解析成一个URI还是一个相对引用的模糊已经被使用五个分离的路径匹配规则解决了.
+</p><p>片段标识符已经被移回到通用语法部件章节并包括URI和相对引用规则, 尽管它仍被排除在绝对URI之外. 井号 ("#") 字符已经被移回到保留集合从而重返片段语法.
+</p><p>ABNF已经被修正以允许路径部件为空. 这也允许一个绝对URI在 "scheme:" 之后不包含任何东西, 因为目前实践中 "dav:" 命名空间 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2518">RFC2518</a> 和 "about:" 格式被很多WWW浏览器实现内部使用. 关于机构和路径之间的边界的模糊已经通过使用五个分离的路径匹配规则解决了.
+</p><p>使用通用语法的基于注册的命名机构现在被定义在主机规则里. 这一变化允许现有的实现, 无论提供了什么名称，都被简单地馈送到本地名称解析机制, 以和协议保持一致. 它也消除了这里重新指定DNS名称格式的需要. 而且, 它允许主机部件包含百分号编码字节, 它是必要的，它使得国际化域名能被URIs提供, 能在URI处理之上的应用层被处理成它们的本地字符编码, 并被以UTF-8字符编码传递给一个IDNA库作为一个注册名称. server, hostport, hostname, domainlabel, toplabel, 和 alphanum 规则已经被移除.
+</p><p>相对引用解析算法 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">RFC2396</a> 已经在本修订版被以伪码重写以提高澄清和解决以下问题:
+</p><p><br />
+</p>
+<dl><dd><ul><li> <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396#section-5.2">RFC2396第5.2章</a> , 步骤6a, 无法认定一个没有路径的基础URI.
+</li></ul>
+</dd></dl>
+<dl><dd><ul><li> 恢复了<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc1808">RFC1808</a>的行为, 如果引用包含空路径和一个已定义的查询部件, 目标URI继承该基础URI的路径部件.
+</li></ul>
+</dd></dl>
+<dl><dd><ul><li> 确定一个URI引用是不是一个相同文档引用已经被从URI解析中解耦, 简化应用程序的URI处理接口，以和已部署的URI处理实现的内部系统架构一致的方式. 确认行为现在是基于在把引用转换成绝对表格之后的基础URI的比较而不是引用本身的格式比较. 这个变更导致在本协议之下会比在<a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2396">RFC 2396</a>给定的规则下有更多的引用被认为是 "同文" , 特别是当正规化被用于减少别名时. 无论如何, 它不改变现有的同文引用的状态.
+</li></ul>
+</dd></dl>
+<dl><dd><ul><li> 把路径合并程序分成两个程序: 合并, 用于描述带有相对路径引用的基础URI的组合, 并移除点片段, 描述如何从一个组合的路径中移除特定的 "." 和 ".." 片段. 移除点片段算法现在适用于所有 URI引用路径以在实践中匹配通用实现并提升URIs的正规化. 这一变更只影响那些基础URI有一个非层次路径的异常引用和同格式引用.
+</li></ul>
+</dd></dl>
+<h2> <span class="mw-headline" id=".E7.B4.A2.E5.BC.95">索引</span></h2>
+<pre>  A
+     ABNF  11
+     absolute  27
+     absolute-path  26
+     absolute-URI  27
+     access  9
+     authority  17, 18
+</pre>
+<pre>  B
+     base URI  28
+</pre>
+<pre>  C
+     character encoding  4
+     character  4
+     characters  8, 11
+     coded character set  4
+</pre>
+<pre>  D
+     dec-octet  20
+     dereference  9
+     dot-segments  23
+</pre>
+<pre>  F
+     fragment  16, 24
+</pre>
+<pre>  G
+     gen-delims  13
+     generic syntax  6
+</pre>
+<pre>  H
+     h16  20
+     hier-part  16
+     hierarchical  10
+     host  18
+</pre>
+<pre>  I
+     identifier  5
+     IP-literal  19
+     IPv4  20
+     IPv4address  19, 20
+     IPv6  19
+     IPv6address  19, 20
+     IPvFuture  19
+</pre>
+<pre>  L
+     locator  7
+     ls32  20
+</pre>
+<pre>  M
+     merge  32
+</pre>
+<pre>  N
+     name  7
+     network-path  26
+</pre>
+<pre>  P
+     path  16, 22, 26
+        path-abempty  22
+        path-absolute  22
+        path-empty  22
+        path-noscheme  22
+        path-rootless  22
+     path-abempty  16, 22, 26
+     path-absolute  16, 22, 26
+     path-empty  16, 22, 26
+     path-rootless  16, 22
+     pchar  23
+     pct-encoded  12
+     percent-encoding  12
+     port  22
+</pre>
+<pre>  Q
+     query  16, 23
+</pre>
+<pre>  R
+     reg-name  21
+     registered name  20
+     relative  10, 28
+     relative-path  26
+     relative-ref  26
+     remove_dot_segments  33
+     representation  9
+     reserved  12
+     resolution  9, 28
+     resource  5
+     retrieval  9
+</pre>
+<pre>  S
+     same-document  27
+     sameness  9
+     scheme  16, 17
+     segment  22, 23
+        segment-nz  23
+        segment-nz-nc  23
+     sub-delims  13
+     suffix  27
+</pre>
+<pre>  T
+     transcription  8
+</pre>
+<pre>  U
+     uniform  4
+     unreserved  13
+     URI grammar
+        absolute-URI  27
+        ALPHA  11
+        authority  18
+        CR  11
+        dec-octet  20
+        DIGIT  11
+        DQUOTE  11
+        fragment  24
+        gen-delims  13
+        h16  20
+        HEXDIG  11
+        hier-part  16
+        host  19
+        IP-literal  19
+        IPv4address  20
+        IPv6address  20
+        IPvFuture  19
+        LF  11
+        ls32  20
+        OCTET  11
+        path  22
+        path-abempty  22
+        path-absolute  22
+        path-empty  22
+        path-noscheme  22
+        path-rootless  22
+        pchar  23
+        pct-encoded  12
+        port  22
+        query  24
+        reg-name  21
+        relative-ref  26
+        reserved  13
+        scheme  17
+        segment  23
+        segment-nz  23
+        segment-nz-nc  23
+        SP  11
+        sub-delims  13
+        unreserved  13
+        URI  16
+        URI-reference  25
+        userinfo  18
+     URI  16
+     URI-reference  25
+     URL  7
+     URN  7
+     userinfo  18
+</pre>
+<h2> <span class="mw-headline" id=".E4.BD.9C.E8.80.85.E5.9C.B0.E5.9D.80">作者地址</span></h2>
+<pre>  Tim Berners-Lee
+  World Wide Web Consortium
+  Massachusetts Institute of Technology
+  77 Massachusetts Avenue
+  Cambridge, MA  02139
+  USA
+</pre>
+<pre>  Phone: +1-617-253-5702
+  Fax:   +1-617-258-5999
+  EMail: timbl@w3.org
+  URI:   <a rel="nofollow" class="external free" href="http://www.w3.org/People/Berners-Lee/">http://www.w3.org/People/Berners-Lee/</a>
+</pre>
+<p><br />
+</p>
+<pre>  Roy T. Fielding
+  Day Software
+  5251 California Ave., Suite 110
+  Irvine, CA  92617
+  USA
+</pre>
+<pre>  Phone: +1-949-679-2960
+  Fax:   +1-949-679-2972
+  EMail: fielding@gbiv.com
+  URI:   <a rel="nofollow" class="external free" href="http://roy.gbiv.com/">http://roy.gbiv.com/</a>
+</pre>
+<p><br />
+</p>
+<pre>  Larry Masinter
+  Adobe Systems Incorporated
+  345 Park Ave
+  San Jose, CA  95110
+  USA
+</pre>
+<pre>  Phone: +1-408-536-3024
+  EMail: LMM@acm.org
+  URI:   <a rel="nofollow" class="external free" href="http://larry.masinter.net/">http://larry.masinter.net/</a>
+</pre>
+<h2> <span class="mw-headline" id=".E5.AE.8C.E6.95.B4.E7.89.88.E6.9D.83.E5.A3.B0.E6.98.8E">完整版权声明</span></h2>
+<pre>  Copyright (C) The Internet Society (2005).
+</pre>
+<pre>  This document is subject to the rights, licenses and restrictions
+  contained in BCP 78, and except as set forth therein, the authors
+  retain all their rights.
+</pre>
+<pre>  This document and the information contained herein are provided on an
+  "AS IS" basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+  OR IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY AND THE INTERNET
+  ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED,
+  INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+  INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+</pre>
+<h2> <span class="mw-headline" id=".E7.9F.A5.E8.AF.86.E4.BA.A7.E6.9D.83">知识产权</span></h2>
+<pre>  The IETF takes no position regarding the validity or scope of any
+  Intellectual Property Rights or other rights that might be claimed to
+  pertain to the implementation or use of the technology described in
+  this document or the extent to which any license under such rights
+  might or might not be available; nor does it represent that it has
+  made any independent effort to identify any such rights.  Information
+  on the IETF's procedures with respect to rights in IETF Documents can
+  be found in BCP 78 and BCP 79.
+</pre>
+<pre>  Copies of IPR disclosures made to the IETF Secretariat and any
+  assurances of licenses to be made available, or the result of an
+  attempt made to obtain a general license or permission for the use of
+  such proprietary rights by implementers or users of this
+  specification can be obtained from the IETF on-line IPR repository at
+  <a rel="nofollow" class="external free" href="http://www.ietf.org/ipr">http://www.ietf.org/ipr</a>.
+</pre>
+<pre>  The IETF invites any interested party to bring to its attention any
+  copyrights, patents or patent applications, or other proprietary
+  rights that may cover technology that may be required to implement
+  this standard.  Please address the information to the IETF at ietf-
+  ipr@ietf.org.
+</pre>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id=".E9.B8.A3.E8.B0.A2">鸣谢</span></h2>
+<pre>  Funding for the RFC Editor function is currently provided by the
+  Internet Society.
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 720/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:766-0!*!0!!zh-cn!*!* and timestamp 20160221173810 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=RFC3986&amp;oldid=3568">http://wiki.jabbercn.org/index.php?title=RFC3986&amp;oldid=3568</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">2个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:%E5%85%B6%E5%AE%83%E7%BF%BB%E8%AF%91%E6%96%87%E6%A1%A3" title="分类:其它翻译文档">其它翻译文档</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/RFC3986" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:RFC3986&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=RFC3986&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=RFC3986&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=RFC3986" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/RFC3986" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/RFC3986" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=RFC3986&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=RFC3986&amp;oldid=3568" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2014年1月8日 (星期三) 16:49。</li>
+		<li id="viewcount">此页面已被浏览过43,293次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("RFC3986");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.042 secs. --></body></html>

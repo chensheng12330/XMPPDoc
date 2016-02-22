@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>RFC4622 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "RFC4622", "wgTitle": "RFC4622", "wgCurRevisionId": 1332, "wgArticleId": 4, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["XMPP相关RFC", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-RFC4622 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">RFC4622</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p><br />
+<b>本文的英文原文来自<a rel="nofollow" class="external text" href="http://www.ietf.org/rfc/rfc4622.txt">RFC 4622</a></b>
+</p>
+<table>
+<tr>
+<td>网络工作组 </td>
+<td> P. Saint-Andre
+</td></tr>
+<tr>
+<td>申请讨论: 4622  </td>
+<td> Jabber软件基金会
+</td></tr>
+<tr>
+<td>类别: 标准跟踪  </td>
+<td> 2006年7月
+</td></tr></table>
+<dl><dd><dl><dd><dl><dd><dl><dd><b>用于 Extensible Messaging and Presence Protocol (XMPP) 的国际化资源标识符(IRIs)和统一资源标识符(URIs)</b>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><b>关于本文的说明</b>
+</p>
+<dl><dd>本文为互联网社区定义了一个互联网标准跟踪协议，并且申请讨论协议和提出了改进的建议。请参照“互联网官方协议标准”的最新版本（STD 1）获得这个协议的标准化进程和状态。本文可以不受限制的分发。
+</dd></dl>
+<p><b>版权声明</b>
+</p>
+<dl><dd>本文版权属于互联网社区 (C) The Internet Society (2006).
+</dd></dl>
+<p><b>摘要</b>
+</p>
+<dl><dd>本文定义了在XMPP通信的时候,国际化资源标识符(IRIs)和统一资源标识符(URIs)在识别实体或与实体交互中的使用.
+</dd></dl>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E7.AE.80.E4.BB.8B"><span class="tocnumber">1</span> <span class="toctext">简介</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E6.9C.AF.E8.AF.AD"><span class="tocnumber">1.1</span> <span class="toctext">术语</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#XMPP_IRIs_.E5.92.8C_URIs.E7.9A.84.E4.BD.BF.E7.94.A8"><span class="tocnumber">2</span> <span class="toctext">XMPP IRIs 和 URIs的使用</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#.E5.9F.BA.E6.9C.AC.E5.8E.9F.E7.90.86"><span class="tocnumber">2.1</span> <span class="toctext">基本原理</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.E6.A0.BC.E5.BC.8F"><span class="tocnumber">2.2</span> <span class="toctext">格式</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.E6.8E.88.E6.9D.83.E7.BB.84.E4.BB.B6"><span class="tocnumber">2.3</span> <span class="toctext">授权组件</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.E8.B7.AF.E5.BE.84.E7.BB.84.E4.BB.B6"><span class="tocnumber">2.4</span> <span class="toctext">路径组件</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#.3D.E6.9F.A5.E8.AF.A2.E7.BB.84.E4.BB.B6"><span class="tocnumber">3</span> <span class="toctext">=查询组件</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#.E7.A2.8E.E7.89.87.E6.A0.87.E8.AF.86.E7.BB.84.E4.BB.B6"><span class="tocnumber">3.1</span> <span class="toctext">碎片标识组件</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#XMPP_IRIs.2FURIs.E7.9A.84.E7.94.9F.E6.88.90"><span class="tocnumber">3.2</span> <span class="toctext">XMPP IRIs/URIs的生成</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#.E7.94.9F.E6.88.90.E6.96.B9.E6.B3.95"><span class="tocnumber">3.2.1</span> <span class="toctext">生成方法</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#.E7.94.9F.E6.88.90.E5.A4.87.E6.B3.A8"><span class="tocnumber">3.2.2</span> <span class="toctext">生成备注</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#.E7.94.9F.E6.88.90.E4.BE.8B.E5.AD.90"><span class="tocnumber">3.2.3</span> <span class="toctext">生成例子</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#XMPP_IRIs.2FURIs.E7.9A.84.E5.A4.84.E7.90.86"><span class="tocnumber">3.3</span> <span class="toctext">XMPP IRIs/URIs的处理</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#.E5.A4.84.E7.90.86.E6.96.B9.E6.B3.95"><span class="tocnumber">3.3.1</span> <span class="toctext">处理方法</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#.E5.A4.84.E7.90.86.E5.A4.87.E6.B3.A8"><span class="tocnumber">3.3.2</span> <span class="toctext">处理备注</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#.E5.A4.84.E7.90.86.E4.BE.8B.E5.AD.90"><span class="tocnumber">3.3.3</span> <span class="toctext">处理例子</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#.E5.9B.BD.E9.99.85.E5.8C.96"><span class="tocnumber">3.4</span> <span class="toctext">国际化</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#xmpp_URI.E8.A7.84.E5.88.92.E7.9A.84IANA.E6.B3.A8.E5.86.8C.E9.A1.B9"><span class="tocnumber">4</span> <span class="toctext">xmpp URI规划的IANA注册项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#URI.E8.A7.84.E5.88.92.E5.90.8D"><span class="tocnumber">4.1</span> <span class="toctext">URI规划名</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#.E7.8A.B6.E6.80.81"><span class="tocnumber">4.2</span> <span class="toctext">状态</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#URI.E8.A7.84.E5.88.92.E8.AF.AD.E6.B3.95"><span class="tocnumber">4.3</span> <span class="toctext">URI规划语法</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#URI.E8.A7.84.E5.88.92.E8.AF.AD.E4.B9.89"><span class="tocnumber">4.4</span> <span class="toctext">URI规划语义</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#.E7.BC.96.E7.A0.81.E4.BA.8B.E9.A1.B9"><span class="tocnumber">4.5</span> <span class="toctext">编码事项</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#.E4.BD.BF.E7.94.A8.E6.9C.ACURI.E8.A7.84.E5.88.92.E5.90.8D.E7.9A.84.E5.BA.94.E7.94.A8.2F.E5.8D.8F.E8.AE.AE"><span class="tocnumber">4.6</span> <span class="toctext">使用本URI规划名的应用/协议</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#.E4.BA.92.E6.93.8D.E4.BD.9C.E6.80.A7.E4.BA.8B.E9.A1.B9"><span class="tocnumber">4.7</span> <span class="toctext">互操作性事项</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#.E5.AE.89.E5.85.A8.E6.80.A7.E4.BA.8B.E9.A1.B9"><span class="tocnumber">4.8</span> <span class="toctext">安全性事项</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#.E8.81.94.E7.B3.BB.E4.BA.BA"><span class="tocnumber">4.9</span> <span class="toctext">联系人</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#.E4.BD.9C.E8.80.85.2F.E5.8F.98.E6.9B.B4.E7.AE.A1.E7.90.86.E8.80.85"><span class="tocnumber">4.10</span> <span class="toctext">作者/变更管理者</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#.E5.8F.82.E8.80.83"><span class="tocnumber">4.11</span> <span class="toctext">参考</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#IANA.E4.BA.8B.E9.A1.B9"><span class="tocnumber">5</span> <span class="toctext">IANA事项</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#.E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9"><span class="tocnumber">6</span> <span class="toctext">安全事项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="#.E5.8F.AF.E9.9D.A0.E6.80.A7.E5.92.8C.E4.B8.80.E8.87.B4.E6.80.A7"><span class="tocnumber">6.1</span> <span class="toctext">可靠性和一致性</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#.E6.81.B6.E6.84.8F.E7.9A.84.E8.AF.AD.E5.8F.A5"><span class="tocnumber">6.2</span> <span class="toctext">恶意的语句</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#.E5.90.8E.E5.8F.B0.E8.BD.AC.E6.8D.A2"><span class="tocnumber">6.3</span> <span class="toctext">后台转换</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#.E6.95.8F.E6.84.9F.E4.BF.A1.E6.81.AF"><span class="tocnumber">6.4</span> <span class="toctext">敏感信息</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#.E8.AF.AD.E4.B9.89.E6.94.BB.E5.87.BB"><span class="tocnumber">6.5</span> <span class="toctext">语义攻击</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#.E6.AC.BA.E9.AA.97"><span class="tocnumber">6.6</span> <span class="toctext">欺骗</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-39"><a href="#.E5.8F.82.E8.80.83_2"><span class="tocnumber">7</span> <span class="toctext">参考</span></a>
+<ul>
+<li class="toclevel-2 tocsection-40"><a href="#.E6.A0.87.E5.87.86.E5.8F.82.E8.80.83"><span class="tocnumber">7.1</span> <span class="toctext">标准参考</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="#.E4.BF.A1.E6.81.AF.E5.8F.82.E8.80.83"><span class="tocnumber">7.2</span> <span class="toctext">信息参考</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E7.AE.80.E4.BB.8B">简介</span></h2>
+<dl><dd>可扩展的消息和出席信息协议(XMPP)是一个流式的XML技术,允许任何两个网络上的实体准实时地交换XML元素(称为"XML节").
+</dd></dl>
+<dl><dd>如[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]所定义, 在XMPP网络通信中使用的实体地址不能(must not)由一个Uniform Resource Identifier (URI)(定义在[URI])规划预设. 无论如何,一个XMPP网络之外的应用需要通过 URIs 或更时髦的方式,比如国际化资源标识符(IRIs; 见[IRI])来标识XMPP实体. 这些外部应用的例子包括,需要存储XMPP地址的数据库,非本地用户代理例如web浏览器,和提供接口给XMPP服务的日历应用程序.
+</dd></dl>
+<dl><dd>XMPP地址的格式定义在[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]. 这样的一个地址可以包含几乎任何 [UNICODE] 字符并且必须(must)遵从很多[STRINGPREP]的profiles. 这使得XMPP地址完全国际化并且非常接近于一个没有scheme的IRI. 无论如何, 由于在IRS schemes中没有独立的注册项, 所以需要定义的XMPP标识符主要是作为URIs而不是IRIs, 并且注册一个XMPP URI scheme而不是一个IRI scheme. 所以, 本文做以下事情:
+</dd></dl>
+<ul><li>  说明如何标识 XMPP 实体作为 IRIs 或 URIs.
+</li></ul>
+<ul><li>  说明如何与作为 IRIs 或 URIs 的 XMPP 实体交互.
+</li></ul>
+<ul><li>  正式定义 XMPP IRIs and URIs 的语法.
+</li></ul>
+<ul><li>  说明如何转换 XMPP IRIs 成为 URIs ,反之亦然.
+</li></ul>
+<ul><li>  注册 xmpp URI scheme.
+</li></ul>
+<h3> <span class="mw-headline" id=".E6.9C.AF.E8.AF.AD">术语</span></h3>
+<dl><dd>本文继承来自[IRI], [URI], 和 [XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]的术语.
+</dd></dl>
+<dl><dd>关键字 "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", 和 "OPTIONAL" 在本文中的解释描述于 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2119">RFC 2119</a> [TERMS].
+</dd></dl>
+<h2> <span class="mw-headline" id="XMPP_IRIs_.E5.92.8C_URIs.E7.9A.84.E4.BD.BF.E7.94.A8">XMPP IRIs 和 URIs的使用</span></h2>
+<h3> <span class="mw-headline" id=".E5.9F.BA.E6.9C.AC.E5.8E.9F.E7.90.86">基本原理</span></h3>
+<dl><dd>如<a href="/RFC3921" title="RFC3921">XMPP-IM</a>所述, XMPP的即时消息和出席信息应用必须处理 im: 和 pres: URIs (由[CPIM] 和[CPP]定义). 无论如何, 有许多XMPP的其他应用(包括网络管理, 工作流系统, 通用 发行-订阅, 远程过程调用, 内容联合,游戏, 和中间件), 而这些应用没有实现即时消息和出席信息语义. 一个通用的XMPP实体不会实现任何已有的 URI规划的语义, 如 http:, ftp:, 或mailto: 规划. 所以, 需要定义一个新的 URI 规划, 以 IRI 或 URI 来标识或和任何XMPP实体交互 (不仅是即时消息和出席信息实体).
+</dd></dl>
+<dl><dd>XMPP IRIs 和 URIs 定义由非本地接口和应用所使用, 主要目的是为了标识而非交互后者的区别,见 [URI]第一章第二节第二小节).  为了确保在XMPP网络中的互操作性, 当数据被路由到一个 XMPP 实体(例如, 当一个 XMPP 地址包含于一个XML节的'to' 或 'from' 属性中)或一个 XMPP 实体以别的方式为标准XMPP协议元素所标识, 这个实体必须(MUST)被赋予的地址格式为&lt;[node@]domain[/resource]&gt;(换言之, 没有一个预先的规划),这里一个XMPP地址的 "node identifier"部分,"domain identifier"部分, 和 "resource identifier"部分都遵守[XMPP-CORE第三章|XMPP文档列表/XMPP正式RFC标准/RFC3920#地址空间]所定义的规范.
+</dd></dl>
+<dl><dd>(注意: 由于历史原因, XMPP中的术语"resource identifier"表示XMPP地址的可选部分,跟在域名后面并用"/"符号隔开(详细情况, 参照[XMPP-CORE第三章第四节|XMPP文档列表/XMPP正式RFC标准/RFC3920#地址空间]; 术语"resource identifier"的使用不要和[URI]的第一章第一节提供的"resource"和"identifier"弄混了).
+</dd></dl>
+<h3> <span class="mw-headline" id=".E6.A0.BC.E5.BC.8F">格式</span></h3>
+<dl><dd>如<a href="/RFC3920" title="RFC3920">XMPP-CORE</a>所述, 一个生来用于一个XMPP网络的XMPP地址是一个Unicode字符串, (1) 遵循一个特定系列的[STRINGPREP] profiles 和[IDNA] 约束, (2) 允许特定系列的语法规则, 并且 (3) 编码为[UTF-8]. 这样一个地址的格式可以被表示为扩张的巴斯科范式([ABNF])如下:
+</dd></dl>
+<pre>     [ node "@" ] domain [ "/" resource ]
+</pre>
+<dl><dd>在这个上下文中, "node" 和 "resource" 规则依赖于于独特的profiles of [STRINGPREP],而"domain" 规则依赖于[IDNA]说描述的国家化域名概念. (注意: 不需要参考IRI语法本身的punycode, 因为为了展示国际化域名任何punycode表述仅发生在XMPP应用内部. 无论如何, 在为XML节指明XMPP网络实体地址之前, 转换[IRI]语法到[IDNA]语法的工作是应用程序的责任.)
+</dd></dl>
+<dl><dd>很自然, 为了被转化成 IRI 或 URI, 一个XMPP地址必须以一个规划进行预处理(特别的, xmpp规划)并且也可能需要要先进行转化以满足[IRI]和[URI]定义的规则. 更远一点, 为了和一个XMPP实体能有更多高级的交互能力而不只是简单地标识, 可能需要获得附加的URI语法和语义, 例如授权组件,查询组件, 以及碎片标识组件.
+</dd></dl>
+<dl><dd>所以, 以下使用显示了用[ABNF]定义的巴斯科范式格式来用作XMPP IRI 的ABNF语法, 这里"ifragment", "ihost", 和 "iunreserved" 规则定义于[IRI], "pct-encoded"规则定义于[URI], 而 DQUOTE 定义于 [ABNF]:
+</dd></dl>
+<pre>
+     xmppiri    = &quot;xmpp&quot; &quot;:&quot; ihierxmpp
+                  [ &quot;?&quot; iquerycomp ]
+                  [ &quot;#&quot; ifragment ]
+     ihierxmpp  = iauthpath / ipathxmpp
+     iauthpath  = &quot;//&quot; iauthxmpp [ &quot;/&quot; ipathxmpp ]
+     iauthxmpp  = inodeid &quot;@&quot; ihost
+     ipathxmpp  = [ inodeid &quot;@&quot; ] ihost [ &quot;/&quot; iresid ]
+     inodeid    = *( iunreserved / pct-encoded / nodeallow )
+     nodeallow  = &quot;!&quot; / &quot;$&quot; / &quot;(&quot; / &quot;)&quot; / &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;;&quot; /
+                  &quot;=&quot; / &quot;[&quot; / &quot;\&quot; / &quot;]&quot; / &quot;^&quot; / &quot;`&quot; / &quot;{&quot; / &quot;|&quot; /
+                  &quot;}&quot;
+     iresid     = *( iunreserved / pct-encoded / resallow )
+     resallow   = &quot;!&quot; / DQUOTE / &quot;$&quot; / &quot;&amp;&quot; / &quot;'&quot; / &quot;(&quot; / &quot;)&quot; /
+                  &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;:&quot; / &quot;;&quot; / &quot;&lt;&quot; / &quot;=&quot; / &quot;&gt;&quot; /
+                  &quot;[&quot; / &quot;\&quot; / &quot;]&quot; / &quot;^&quot; / &quot;`&quot; / &quot;{&quot; / &quot;|&quot; / &quot;}&quot;
+     iquerycomp = iquerytype [ *ipair ]
+     iquerytype = *iunreserved
+     ipair      = &quot;;&quot; ikey &quot;=&quot; ivalue
+     ikey       = *iunreserved
+     ivalue     = *( iunreserved / pct-encoded )
+</pre>
+<dl><dd>无论如何, 前述的语法不适合包含在xmpp URI规划中的注册项中, 因为IANA只承认URI规划而不承认IRI规划. 所以,ABNF语法用于XMPP URI而不是IRI,定义见本文第三章第三节(见下文"IANA Registration"). 如果有必要把IRI语法转化成URI语法, 一个应用程序必须(MUST)遵守定义于[IRI]第三章第一节的映射过程.
+</dd></dl>
+<dl><dd>以下是一个基本的XMPP IRI/URI例子,用于标识一个和XMPP服务器有关的节点:
+</dd></dl>
+<pre>
+      xmpp:node@example.com
+</pre>
+<dl><dd>以下章节提供各种组件对于XMPP IRI/URI的描述.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E6.8E.88.E6.9D.83.E7.BB.84.E4.BB.B6">授权组件</span></h3>
+<dl><dd>如本文第二章第八节所述, 在缺乏授权组件的时候, 处理程序将作为一个已配置的XMPP服务器的一个已配置的用户来进行验证. 也就是说, 授权组件章节不是必需的, 并且如果处理程序已经被缺省的证书配置好，授权组件将被忽略.
+</dd></dl>
+<dl><dd>和<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3986">RFC 3986</a>第三章第二节一致, 授权组件由一个双斜杠("//")开始,结束于下一个单斜杠("/"), 问号("?"), 或数字符号("#")字符, 或由IRI/URI的结尾结束. 更完整的解释见本文第二章第八节第一小节, 一个授权组件的出席信息通知处理程序在授权组件中验证它是node@domain,而不是作为一个已配置的node@domain. (见本文的 安全性事项章节Security Considerations中关于验证的部分). (虽然授权组件被包含在大部分的XMPP IRIs 或 URIs中是不现实的, 但是如果适当的话规划允许它被包含.) 所以, 以下 XMPP IRI/URI 表明验证为 "guest@example.com":
+</dd></dl>
+<pre>
+      xmpp://guest@example.com
+</pre>
+<dl><dd>严重注意这和接下来的 XMPP IRI/URI是不相同的, 它标识一个节点"guest@example.com"而不是通知处理程序来验证它成为一个节点:
+</dd></dl>
+<pre>
+      xmpp:guest@example.com
+</pre>
+<dl><dd>类似的, 使用可能的查询组件 "?message" 来触发一个接口用于发送一条消息, 以下XMPP IRI/URI通知处理程序来验证为"guest@example.com"并发送一条消息给"support@example.com":
+</dd></dl>
+<pre>
+      xmpp://guest@example.com/support@example.com?message
+</pre>
+<dl><dd>对应的, 以下XMPP IRI/URI通知处理程序验证为它的已配置的缺省帐号并发送一条消息给"support@example.com":
+</dd></dl>
+<pre>
+      xmpp:support@example.com?message
+</pre>
+<h3> <span class="mw-headline" id=".E8.B7.AF.E5.BE.84.E7.BB.84.E4.BB.B6">路径组件</span></h3>
+<dl><dd>一个XMPP IRI/URI的路径组件标识一个XMPP地址或指明IRI/URI处理最终要让一个XML节将去到的XMPP地址.
+</dd></dl>
+<dl><dd>例如, 以下XMPP IRI/URI标识一个和XMPP服务器有关的节点:
+</dd></dl>
+<pre>
+      xmpp:example-node@example.com
+</pre>
+<p><br />
+</p>
+<dl><dd>以下XMPP IRI/URI标识一个和XMPP服务器有关的节点并带上特定的和那个节点相关的XMPP资源标识符:
+</dd></dl>
+<pre>
+      xmpp:example-node@example.com/some-resource
+</pre>
+<dl><dd>在XMPP地址中包含一个节点是可选的, 所以以下XMPP IRI/URI简单的标识了一个XMPP服务器:
+</dd></dl>
+<pre>
+      xmpp:example.com
+</pre>
+<h2> <span class="mw-headline" id=".3D.E6.9F.A5.E8.AF.A2.E7.BB.84.E4.BB.B6">=查询组件</span></h2>
+<dl><dd>有许多可能的用例用于在一个XMPP IRI/URI的查询组件中封装信息; 包含但不仅限于以下例子:
+</dd></dl>
+<ul><li>  发送一个XMPP消息节(见<a href="/RFC3921" title="RFC3921">XMPP-IM</a>),
+</li></ul>
+<ul><li>  添加一个名册条目(见<a href="/RFC3921" title="RFC3921">XMPP-IM</a>),
+</li></ul>
+<ul><li>  发送一个出席信息订阅项(见<a href="/RFC3921" title="RFC3921">XMPP-IM</a>),
+</li></ul>
+<ul><li>  调查当前出席信息(见<a href="/RFC3921" title="RFC3921">XMPP-IM</a>),
+</li></ul>
+<ul><li>  触发一个远程过程调用(见[XEP-0009]),
+</li></ul>
+<ul><li>  查询另一个实体的身份或能力(见<a href="/XEP-0030" title="XEP-0030">XEP-0030</a>),
+</li></ul>
+<ul><li>  加入一个基于XMPP的文本聊天室(见<a href="/XEP-0045" title="XEP-0045">XEP-0045</a>),
+</li></ul>
+<ul><li>  和一个发行-订阅频道交互(见<a href="/XEP-0060" title="XEP-0060">XEP-0060</a>),
+</li></ul>
+<ul><li>  提供一个SOAP接口(见[XEP-0072]), 以及
+</li></ul>
+<ul><li>  注册另一个实体(见<a href="/XEP-0077" title="XEP-0077">XEP-0077</a>).
+</li></ul>
+<dl><dd>许多这些潜在的用例是应用程序特定的并且这类应用的全貌在XMPP的持续扩张发展中无法预知; 无论如何, Jabber/XMPP开发社区一致同意所有想象中的未来应用可能通过"query type"被封装, 通过一个或多个 "键-值"(key-value)对进行可选的补充(这类似于[HTML]中描述的"application/x-www-form-urlencoded" MIME 类型).
+</dd></dl>
+<dl><dd>作为例子, 一个XMPP IRI/URI企图启动一个接口用于发送一条消息给XMPP实体"example-node@example.com", 可以用以下形式表达:
+</dd></dl>
+<pre>
+      xmpp:example-node@example.com?message
+</pre>
+<dl><dd>类似的, 一个XMPP IRI/URI企图启动一个接口用于发送一个有特定标题的消息给XMPP实体"example-node@example.com", 可以以下形式表达:
+</dd></dl>
+<pre>
+      xmpp:example-node@example.com?message;subject=Hello%20World
+</pre>
+<dl><dd>如果处理程序不理解查询组件或特定的查询类型, 它必须(MUST)忽略查询组件并把它当成它的IRI/URI部分, 例如,当成&lt;xmpp:example-node@example.com&gt;而不是   &lt;xmpp:example-node@example.com?query&gt;. 如果处理程序不理解查询组件的一个特定键, 它必须(MUST)忽略那个键以及与它相关的值.
+</dd></dl>
+<dl><dd>大家知道, 存在许多种类的XMPP应用(包括现有的和潜在的), 而这些应用可以定义查询类型和键用于XMPP URIs的查询组件部分. XSF(XMPP Software Foundation)的XMPP Registrar 功能(见[XEP-0053])维护了这些查询类型的一个注册表和键, 网址在&lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/registrar/querytypes.html">http://www.xmpp.org/registrar/querytypes.html</a>&gt;.  为了帮助确保互操作性,任何定义在本文中的应用正在使用的格式应该(SHOULD)按照[XEP-0147]所定义的流程来提交任何相关的查询类型和键到那个注册表.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E7.A2.8E.E7.89.87.E6.A0.87.E8.AF.86.E7.BB.84.E4.BB.B6">碎片标识组件</span></h3>
+<dl><dd>如[URI]第三章第五节指出, "URI的碎片标识组件允许通过参考主要资源和附加标识信息来做二级资源的间接标识". 因为这个被XMPP IRI/URI标识的资源不产生任何可用的媒体类型(见[MIME]),所以(在[URI]术语中)一个XMPP资源不存在任何表述, 在XMPP IRIs/URIs中碎片标识组件的语义是"可能未知的considered unknown 和, 有效地,非强制性的" (ibid.). 典型的XMPP应用可以(MAY)为它们自己的目的来使用碎片标识组件. 无论如何,如果一个处理程序不理解碎片标识组件或XMPP IRI/URI中特定的碎片标识组件的语法, 它必须(MUST)忽略这个碎片标识组件.
+</dd></dl>
+<h3> <span class="mw-headline" id="XMPP_IRIs.2FURIs.E7.9A.84.E7.94.9F.E6.88.90">XMPP IRIs/URIs的生成</span></h3>
+<h4> <span class="mw-headline" id=".E7.94.9F.E6.88.90.E6.96.B9.E6.B3.95">生成方法</span></h4>
+<dl><dd>为了把一个XMPP节点标识符,域标识符,和资源标识符格式化成为一个XMPP IRI, 生成程序必须(MUST)首先确保XMPP地址符合[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]定义的规则, 包括相应的[STRINGPREP]的应用; 然后它必须(MUST)连接以下的东西:
+</dd></dl>
+<dl><dd><ol><li> "xmpp"规划和":"符号
+</li><li> 可选的 (如果在节点标识符之前包含了一个授权组件), 符号"//", 一个格式为node@domain的授权组件, 以及符号"/".
+</li><li> 可选的(如果XMPP地址包含了一个 XMPP "节点标识符"), 一个Unicode字符集的字符串并遵守"inodeid"规则, 跟在"@"符号后面.
+</li><li> 一个Unicode字符集的字符串并遵守"ihost"规则.
+</li><li> 可选的(如果XMPP地址包含一个XMPP "资源标识符"), 符号"/"和一个Unicode字符集的字符串并遵守"iresid"规则.
+</li><li> 可选的(如果一个查询组件被包含), 符号"?"和查询组件.
+</li><li> 可选的(如果一个碎片标识组件被包含), "#"符号和碎片标识组件.
+</li></ol>
+</dd></dl>
+<dl><dd>为了把一个resulting IRI格式化成一个XMPP URI, 一个应用必须(MUST)遵守[IRI]第三章第一节定义的映射过程.
+</dd></dl>
+<h4> <span class="mw-headline" id=".E7.94.9F.E6.88.90.E5.A4.87.E6.B3.A8">生成备注</span></h4>
+<dl><dd>某些特定的符号被允许存在于一个原生的XMPP地址的节点标识符, 域标识符, 和资源标识符部分, 但是被XMPP IRI中的"inodeid", "ihost", 和 "iresid"规则禁止. 具体来说, "#"和"?"符号被允许出现在节点标识符, "/", "?", "#", 和"@"符号被允许在资源标识符, 但是这些符号被用作XMPP IRIs的分隔符. 另外, " "([US-ASCII]空格)符号被允许在资源标识符中但是在IRIs中是禁止的. 所以, 当把一个XMPP地址转化为一个XMPP IRI时, 所有前述的符号必须(MUST)被部分编码.
+</dd></dl>
+<dl><dd>考虑以下的在一个XMPP地址中的nasty节点:
+</dd></dl>
+<pre>
+      nasty!#$%()*+,-.;=?[\]^_`{|}~node@example.com
+</pre>
+<p><br />
+</p>
+<dl><dd>那个地址将被转化成以下的XMPP IRI:
+</dd></dl>
+<pre>
+      xmpp:nasty!%23$%25()*+,-.;=%3F[\]^_`{|}~node@example.com
+</pre>
+<p><br />
+</p>
+<dl><dd>考虑以下的在一个XMPP地址中的repulsive资源(为了看起来方便分成两行):
+</dd></dl>
+<pre>
+      node@example.com
+      /repulsive&#160;!#&quot;$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~resource
+</pre>
+<dl><dd>那个地址将被转化成以下的XMPP IRI(为了看起来方便分成两行):
+</dd></dl>
+<pre>
+      xmpp:node@example.com
+      /repulsive%20!%23&quot;$%25&amp;'()*+,-.%2F:;&lt;=&gt;%3F%40[\]^_`{|}~resource
+</pre>
+<dl><dd>而且, 事实上被允许在一个XMPP地址中出现的任何[US-ASCII]范围之外的符号, 也在XMPP IRI中出现, 但是URI语法禁止这些符号直接显示并指出这样的符号必须(MUST)被部分编码. 为了确定和一个XMPP IRI相关的URI, 一个应用必须(MUST)遵守定义在[IRI]第三章第一节的映射过程.
+</dd></dl>
+<h4> <span class="mw-headline" id=".E7.94.9F.E6.88.90.E4.BE.8B.E5.AD.90">生成例子</span></h4>
+<dl><dd>考虑以下XMPP地址:
+</dd></dl>
+<pre>
+         &lt;ji&#x159;i@&#x10d;echy.example/v Praze&gt;
+</pre>
+<dl><dd>注意: 字符串"&#x159;" 代表Unicode符号LATIN SMALL LETTER R WITH CARON, 并且字符串"&#x10d;" 代表Unicode符号LATIN SMALL LETTER C WITH CARON, 以下用于[IRI]"XML Notation"来表现无法在ASCII-only中表示的字符串(注意这些字符串也被展现在它们的字符准备规范表单中stringprep canonical form). '&lt;'和'&gt;'符号不是地址本身的一部分但为了易于理解而用来设定地址的结束. 对于那些不能读捷克语的人,这个例子可能被英语化为"george@czech-lands.example/In Prague".
+</dd></dl>
+<dl><dd>和以上指定的过程一致, 生成程序将按以下步骤从这个地址生成一个合法的XMPP IRI:
+</dd></dl>
+<dl><dd><ol><li> 确保XMPP地址符合<a href="/RFC3920" title="RFC3920">XMPP-CORE</a>定义的规则, 包括应用相应的[STRINGPREP] profiles和编码成[UTF-8]字符串.
+</li><li> 连接以下:
+<ol><li> "xmpp"规划和":"符号.
+</li><li> 一个"授权组件",如果有的话(本例没有展现).
+</li><li> 一个Unicode字符串展示XMPP地址, 被以"inodeid","ihost",和"iresid"规则转换.
+</li><li> "?"符号被一个"查询组件"跟随, 如果有适当的应用(本例没有展现).
+</li><li> "#"符号被一个"碎片标识组件"跟随, 如果有适当的应用(本例没有展现).
+</li></ol>
+</li></ol>
+</dd></dl>
+<dl><dd>结果是这个XMPP IRI:
+</dd></dl>
+<pre>
+       &lt;xmpp:ji&#x159;i@&#x10d;echy.example/v%20Praze&gt;
+</pre>
+<dl><dd>为了从前述的IRI生成一个合法的XMPP URI, 应用必须(MUST)遵守定义在[IRI]第三章第一节的过程, 结果是以下的URI:
+</dd></dl>
+<pre>
+       &lt;xmpp:ji%C5%99i@%C4%8Dechy.example/v%20Praze&gt;
+</pre>
+<h3> <span class="mw-headline" id="XMPP_IRIs.2FURIs.E7.9A.84.E5.A4.84.E7.90.86">XMPP IRIs/URIs的处理</span></h3>
+<h4> <span class="mw-headline" id=".E5.A4.84.E7.90.86.E6.96.B9.E6.B3.95">处理方法</span></h4>
+<dl><dd>如果一个处理程序被显示为一个XMPP URI而不是一个XMPP IRI, 它必须(MUST)首先按以下定义在[IRI]第三章第二节的过程把这个URI转换成为IRI.
+</dd></dl>
+<dl><dd>为了分解一个XMPP IRI用于和它所标识的实体交互, 一个处理程序必须(MUST)分解为:
+</dd></dl>
+<dl><dd><ol><li> "xmpp"规划和":"符号.
+</li><li> 授权组件, 如果有的话(在"//"符号和下一个"/"符号 "?"符号,"#"符号,或IRI的结尾之间的Unicode字符串,).
+</li><li> 一个展示为XMPP地址的根据"inodeid", "ihost", "iresid"规则转换的Unicode字符串.
+</li><li> 可选的查询组件, 如果有的话, 使用"?"符号作为分隔符.
+</li><li> 可选的碎片标识组件, 如果有的话, 使用"#"符号作为分隔符.
+</li></ol>
+</dd></dl>
+<dl><dd>在这一点上, 处理程序必须(MUST)确保结果的XMPP地址遵守<a href="/RFC3920" title="RFC3920">XMPP-CORE</a>定义的规则, 包括应用相应的[STRINGPREP]. 然后处理程序将 (1) 自行完成更多的XMPP处理, 或(2) 调用一个帮助程序来完成XMPP处理; 这样的XMPP处理很可能包括如下的步骤:
+</dd></dl>
+<dl><dd><ol><li> 如果还未连接到一个XMPP服务器, 作为授权组件中指明的用户连接或作为已配置的XMPP服务器的已配置用户连接, 通常遵守[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]定义的XMPP连接过程.(注意: 处理程序应该(SHOULD)忽略授权组件,如果它已经用缺省的证书设置所配置.)
+</li><li> 可选的, 决定预定接收者的种类(换言之,通过[XEP-0030]).
+</li><li> 可选的, 根据预定接收者的种类展示一个适当的界面以及/或查询组件的内容给用户.
+</li><li> 生成一个XMPP节把任何用户或应用的输入转换成它们相应的XMPP数据.
+</li><li> 通过验证过的服务器连接发送XMPP节用于递送给预定接收者.
+</li></ol>
+</dd></dl>
+<h4> <span class="mw-headline" id=".E5.A4.84.E7.90.86.E5.A4.87.E6.B3.A8">处理备注</span></h4>
+<dl><dd>实施者可能注意到, 在第二章第八节第一小节结尾中描述的"更多的XMPP处理", 前两步类似HTTP 验证([HTTP-AUTH]), 后三步类似处理 mailto: URIs ([MAILTO]).
+</dd></dl>
+<dl><dd>本文的第二章第七节第二小节说过, 特定的字符被允许出现在原生的XMPP地址的节点标识符, 域标识符, 和资源标识符部分, 但被XMPP IRI的"inodeid", "ihost", 和"iresid"规则禁止. 当处理一个XMPP IRI用来和XMPP实体交互的时候, 这些部分编码的符合XMPP IRIs的字节必须(MUST)被转化成在XMPP地址中允许的字符串.
+</dd></dl>
+<dl><dd>考虑以下一个XMPP IRI中的nasty节点:
+</dd></dl>
+<pre>
+      xmpp:nasty!%23$%()*+,-.;=%3F[\]^_`{|}~node@example.com
+</pre>
+<dl><dd>那个IRI将被转化成以下的XMPP address:
+</dd></dl>
+<pre>
+      nasty!#$%()*+,-.;=?[\]^_`{|}~node@example.com
+</pre>
+<dl><dd>考虑以下一个XMPP IRI中的repulsive资源(为便于阅读分成两行):
+</dd></dl>
+<pre>
+      xmpp:node@example.com
+      /repulsive%20!%23&quot;$%25&amp;'()*+,-.%2F:;&lt;=&gt;%3F%40[\]^_`{|}~resource
+</pre>
+<p><br />
+</p>
+<dl><dd>那个IRI将被转化成以下的XMPP地址(为便于阅读分成两行):
+</dd></dl>
+<pre>
+      node@example.com
+      /repulsive&#160;!#&quot;$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~resource
+</pre>
+<h4> <span class="mw-headline" id=".E5.A4.84.E7.90.86.E4.BE.8B.E5.AD.90">处理例子</span></h4>
+<dl><dd>考虑从前一个例子中得到的XMPP URI:
+</dd></dl>
+<pre>
+       &lt;xmpp:ji%C5%99i@%C4%8Dechy.example/v%20Praze&gt;
+</pre>
+<dl><dd>为了从那个URI生成一个合法的XMPP IRI, 应用程序必须(MUST)遵守[IRI]第三章第二节定义的过程, 结果得到以下IRI:
+</dd></dl>
+<pre>
+       &lt;xmpp:ji&#x159;i@&#x10d;echy.example/v%20Praze&gt;
+</pre>
+<dl><dd>和以上指明的处理一致, 处理程序将移除"xmpp"规划和":"符号以从XMPP IRI中揭解开XMPP地址, 转换任何按照"inodeid", "ihost", 和"iresid"规则部分编码的字节成为相应的字符串(例如, "%20" 转化成空格符号).
+</dd></dl>
+<dl><dd>结果是这个XMPP地址:
+</dd></dl>
+<pre>
+       &lt;ji&#x159;i@&#x10d;echy.example/v Praze&gt;
+</pre>
+<h3> <span class="mw-headline" id=".E5.9B.BD.E9.99.85.E5.8C.96">国际化</span></h3>
+<dl><dd>因为XMPP地址是[UTF-8]字符串并且因为在XMPP地址中[US-ASCII]范围之外的字节很容易被转化成部分编码的字节, XMPP地址被设计成能够很好地和Internationalized Resource Identifiers ([IRI])配合工作. 某些情况下, 除了stringprep检查, 语法相关的[US-ASCII]符号(例如, "?")转化, 以及根据"inodeid", "ihost", 和"iresid"规则把部分编码的字节转化为相应字符(例如, "%20"转成[US-ASCII]空格符), 一个XMPP IRI能通过加上"xmpp"规划和":"符号的前缀, 直接被构造成一个XMPP地址. 而且, 一个XMPP IRI遵照[IRI]第三章第一节定义的过程可以被转化成URI语法, 一个XMPP URI遵照[IRI]第三章第二节定义的过程可以被转化成IRI, 因而确保应用的互操作性的是能处理URIs但不能处理IRIs.
+</dd></dl>
+<h2> <span class="mw-headline" id="xmpp_URI.E8.A7.84.E5.88.92.E7.9A.84IANA.E6.B3.A8.E5.86.8C.E9.A1.B9">xmpp URI规划的IANA注册项</span></h2>
+<dl><dd>和[URI-SCHEMES]一致, 本章提供注册xmpp URI规划需要的信息.
+</dd></dl>
+<h3> <span class="mw-headline" id="URI.E8.A7.84.E5.88.92.E5.90.8D">URI规划名</span></h3>
+<pre>  xmpp
+</pre>
+<h3> <span class="mw-headline" id=".E7.8A.B6.E6.80.81">状态</span></h3>
+<pre>  permanent
+</pre>
+<h3> <span class="mw-headline" id="URI.E8.A7.84.E5.88.92.E8.AF.AD.E6.B3.95">URI规划语法</span></h3>
+<dl><dd>一个xmpp URI的语法使用[ABNF]定义的巴斯科范式定义在下文, 这里"fragment","host","pct-encoded",以及"unreserved"规则定义在[URI]而DQUOTE定义在[ABNF]:
+</dd></dl>
+<pre>
+    xmppuri   = &quot;xmpp&quot; &quot;:&quot; hierxmpp [ &quot;?&quot; querycomp ] [ &quot;#&quot; fragment ]
+     hierxmpp  = authpath / pathxmpp
+     authpath  = &quot;//&quot; authxmpp [ &quot;/&quot; pathxmpp ]
+     authxmpp  = nodeid &quot;@&quot; host
+     pathxmpp  = [ nodeid &quot;@&quot; ] host [ &quot;/&quot; resid ]
+     nodeid    = *( unreserved / pct-encoded / nodeallow )
+     nodeallow = &quot;!&quot; / &quot;$&quot; / &quot;(&quot; / &quot;)&quot; / &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;;&quot; /
+                 &quot;=&quot; / &quot;[&quot; / &quot;\&quot; / &quot;]&quot; / &quot;^&quot; / &quot;`&quot; / &quot;{&quot; / &quot;|&quot; /
+                 &quot;}&quot;
+     resid     = *( unreserved / pct-encoded / resallow )
+     resallow   = &quot;!&quot; / DQUOTE / &quot;$&quot; / &quot;&amp;&quot; / &quot;'&quot; / &quot;(&quot; / &quot;)&quot; /
+                  &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;:&quot; / &quot;;&quot; / &quot;&lt;&quot; / &quot;=&quot; / &quot;&gt;&quot; /
+                  &quot;[&quot; / &quot;\&quot; / &quot;]&quot; / &quot;^&quot; / &quot;`&quot; / &quot;{&quot; / &quot;|&quot; / &quot;}&quot;
+     querycomp = querytype [ *pair ]
+     querytype = *( unreserved / pct-encoded )
+     pair      = &quot;;&quot; key &quot;=&quot; value
+     key       = *( unreserved / pct-encoded )
+     value     = *( unreserved / pct-encoded )
+</pre>
+<h3> <span class="mw-headline" id="URI.E8.A7.84.E5.88.92.E8.AF.AD.E4.B9.89">URI规划语义</span></h3>
+<dl><dd>xmpp URI规划标识了使用XMPP进行本地通信的实体, 并且主要用于标识而非资源定位. 无论如何, 如果一个处理xmpp URI的应用能够用URI标识的XMPP地址进行交互, 它必须(MUST)遵从定义在[RFC4622第二章|XMPP文档列表/XMPP正式RFC标准/RFC4622#XMPP_IRIs_和_URIs的使用]的方法论, 来重构被封装的XMPP地址, 连接到适当的XMPP服务器, 并发送一个适当的XMPP"节"(XML碎片)给XMPP地址. (注意: 没有和xmpp URI规划关联的MIME类型.)
+</dd></dl>
+<h3> <span class="mw-headline" id=".E7.BC.96.E7.A0.81.E4.BA.8B.E9.A1.B9">编码事项</span></h3>
+<dl><dd>除了XMPP URIs, 还将有XMPP国际化资源标识符(IRIs).  在转换一个XMPP地址成为一个IRI之前(并且遵守[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]), XMPP地址必须由生成程序展现为[UTF-8](例如, 把应用内部的UTF-16字符串的地址转换为UTF-8字符串), 并且UTF-8字符串必须加上前缀"xmpp"规划和":"符号. 无论如何, 因为一个XMPP URI必须仅包含[US-ASCII]字符, 一个XMPP IRI的UTF-8字符串必须遵照<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3987">RFC 3987</a>定义的过程被转化成URI语法.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E4.BD.BF.E7.94.A8.E6.9C.ACURI.E8.A7.84.E5.88.92.E5.90.8D.E7.9A.84.E5.BA.94.E7.94.A8.2F.E5.8D.8F.E8.AE.AE">使用本URI规划名的应用/协议</span></h3>
+<dl><dd>xmpp URI规划被设计用于从一个非原生的用户代理和一个XMPP网络之间的接口, 例如web浏览器, 以及其他需要标识XMPP实体成为全URIs或IRIs的非原生的应用.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E4.BA.92.E6.93.8D.E4.BD.9C.E6.80.A7.E4.BA.8B.E9.A1.B9">互操作性事项</span></h3>
+<dl><dd>已知还没有和使用xmpp URI规划有关的互操作性问题. 为了帮助确保互操作性, XSF的XMPP Registrar功能维护了一个query类型的注册表,用于那些可能的查询组件和XMPP URIs以及IRIs, 网址在&lt;<a rel="nofollow" class="external free" href="http://www.jabber.org/registrar/querytypes.html">http://www.jabber.org/registrar/querytypes.html</a>&gt;.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E5.AE.89.E5.85.A8.E6.80.A7.E4.BA.8B.E9.A1.B9">安全性事项</span></h3>
+<dl><dd>见[RFC4622第五章安全事项|XMPP文档列表/XMPP正式RFC标准/RFC4622#安全事项].
+</dd></dl>
+<h3> <span class="mw-headline" id=".E8.81.94.E7.B3.BB.E4.BA.BA">联系人</span></h3>
+<dl><dd>Peter Saint-Andre {link:<a rel="nofollow" class="external free" href="mailto:stpeter@jabber.org%7Cmailto:stpeter@jabber.org}">mailto:stpeter@jabber.org%7Cmailto:stpeter@jabber.org}</a>,
+</dd></dl>
+<dl><dd>[xmpp:stpeter@jabber.org xmpp:stpeter@jabber.org]
+</dd></dl>
+<h3> <span class="mw-headline" id=".E4.BD.9C.E8.80.85.2F.E5.8F.98.E6.9B.B4.E7.AE.A1.E7.90.86.E8.80.85">作者/变更管理者</span></h3>
+<dl><dd>这个规划被注册在IETF树下. 同样的, IETF维护变更控制.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E5.8F.82.E8.80.83">参考</span></h3>
+<p><a href="/RFC3920" title="RFC3920">XMPP-CORE</a>
+</p>
+<h2> <span class="mw-headline" id="IANA.E4.BA.8B.E9.A1.B9">IANA事项</span></h2>
+<dl><dd>本文注册了一个URI规划. 注册项模版能在本文第三章找到. 为了帮助确保互操作性, XSF(XMPP Software Foundation)的XMPP注册功能维护了一个查询组件和健的注册项, 用于XMPP URIs和IRIs的查询组件, 网址在&lt;<a rel="nofollow" class="external free" href="http://www.jabber.org/registrar/querytypes.html">http://www.jabber.org/registrar/querytypes.html</a>&gt;.
+</dd></dl>
+<h2> <span class="mw-headline" id=".E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9">安全事项</span></h2>
+<dl><dd>从非原生的应用提供一个接口到XMPP服务器产生了新的安全隐患. 在[IRI], [URI],和[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]中讨论的安全事项适用于XMPP IRIs, 而在[URI],和[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]中讨论的安全事项适用于XMPP URIs. 遵循[URI-SCHEMES]第二章第七节和[URI]第七章, 以下章节定义了具体的安全事项.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E5.8F.AF.E9.9D.A0.E6.80.A7.E5.92.8C.E4.B8.80.E8.87.B4.E6.80.A7">可靠性和一致性</span></h3>
+<dl><dd>假设格式为node@domain.tld的XMPP地址是通过向XMPP服务器注册创建的或由服务器的管理员提供, 这样的地址也可以被取消注册或取消供应. 所以, 标识这样的一个XMPP地址的XMPP IRI/URI可能是不可靠的并且其负责人,帐号拥有者,应用,或递送者是不一致的.
+</dd></dl>
+<dl><dd>格式为node@domain.tld/resource的XMPP地址甚至可能更短暂(因为一个特定的XMPP资源标识符典型地关联于在一个XMPP服务器上的一个XMPP客户端的一个特定的,临时的会话); 所以标识这样一个XMPP地址的XMPP IRI/URI可能将是不可靠的以及和相关的同一会话不一致的. 无论如何, 定义于[XMPP-CORE第十章|XMPP文档列表/XMPP正式RFC标准/RFC3920#服务器处理XML节的规则]的过程有效地排除了任何潜在的由标识XMPP地址的XMPP IRI/URI缺少可靠性和一致性造成的混淆.
+</dd></dl>
+<dl><dd>典型的格式为domain.tld的XMPP地址是长寿命的XMPP服务器或相关的服务; 当然尽管任何时候服务器或服务的管理员都可能让服务器或服务退役, 一般来讲标识这样的服务或服务器的IRIs/URIs是最可靠的以及和XMPP IRIs/URIs最一致的.
+</dd></dl>
+<dl><dd>格式为domain.tld/resource的XMPP地址在XMPP网络还不常见; 无论如何, 标识这样的服务或服务器的IRIs/URIs的可靠性和一致性可能处于格式为domain.tld的XMPP地址和格式为node@domain.tld的XMPP 地址之间.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E6.81.B6.E6.84.8F.E7.9A.84.E8.AF.AD.E5.8F.A5">恶意的语句</span></h3>
+<dl><dd>通过在XMPP IRIs/URIs中对端口号的禁止减少了XMPP IRIs/URIs的恶意的构造(因为端口号是用[DNS-SRV]查询的, 定义在[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]中).
+</dd></dl>
+<h3> <span class="mw-headline" id=".E5.90.8E.E5.8F.B0.E8.BD.AC.E6.8D.A2">后台转换</span></h3>
+<dl><dd>因为基本的XMPP协议被定义用来实现消息和出席信息的交换而不是接收文件或类似的系统功能, 据不可靠消息XMPP IRIs/URIs的使用将导致有害的废弃品. 无论如何, 如果一个XMPP协议扩展定义了方法用于信息接收, 它必须(MUST)定义通过访问那个信息进行适当的控制. 另外, XMPP服务器不应该(SHOULD NOT)在本地解析XMPP IRIs/URIs而应该(SHOULD)只接受定义在[XMPP-CORE|XMPP文档列表/XMPP正式RFC标准/RFC3920]中的XML电信协议和任何期望往那里的扩展.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E6.95.8F.E6.84.9F.E4.BF.A1.E6.81.AF">敏感信息</span></h3>
+<dl><dd>通过web浏览器或其他非原生应用来和XMPP实体交互可能会暴露敏感信息(例如特定XMPP应用协议扩展支持)并且因此使得在原生XMPP网络中不可能发生的攻击在这里成为可能. 在决定XMPP IRIs or URIs中应当展示什么信息的时候必须非常小心.
+</dd></dl>
+<dl><dd>具体来说, 在公众场合(例如,在网站)声明XMPP IRIs/URIs可能使恶意用户能够从XMPP IRIs/URIs的授权和路径组件收集XMPP地址并且从而发送未经请求的大量通信给那些地址所展示的用户或应用. 应该非常小心地平衡公开信息的好处和非自愿通信的潜在成本.
+</dd></dl>
+<dl><dd>为了帮助纺织敏感信息泄露, 密码和其他用户证书被禁止出现在XMPP IRIs/URIs的授权组件中; 实际上它们不需要, 因为在XMPP中的[SASL]验证使得可以用SASL ANONYMOUS机制, 如果想要的话.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E8.AF.AD.E4.B9.89.E6.94.BB.E5.87.BB">语义攻击</span></h3>
+<dl><dd>尽管存在无等级的URI规划如[MAILTO], 通过联合人类用户可能预期所有URIs在规划名和":"符号之后包含"//"符号. 无论如何, 在XMPP IRIs/URIs中, "//"符号处于授权组件之前而不是路径组件之前. 因此,
+</dd></dl>
+<p>xmpp://guest@example.com 表示验证为"guest@example.com", 反之xmpp:guest@example.com 标识节点"guest@example.com". 处理程序必须(MUST)清晰地区分这两种格式, 而用户代理应该(SHOULD)不鼓励人类用户在XMPP IRIs/URIs中包含"//"符号, 因为使用授权组件被认为只在特定的情景中出现, 不是通常的情景.
+</p>
+<h3> <span class="mw-headline" id=".E6.AC.BA.E9.AA.97">欺骗</span></h3>
+<dl><dd>在一个XMPP IRI中有效包含全范围的Unicode字符的能力可能使得进行特定格式的地址模拟(也成为"欺骗")更为容易. 无论如何, 关于这一点XMPP IRIs和其他IRIs没有不同, 为了帮助防止来自欺骗地址的攻击, 显示XMPP IRIs给人类用户的应用必须遵守关于地址模拟的最佳实践(例如, phenomenon被当成"phishing"). 具体的信息, 参考[IRI]的安全性事项.
+</dd></dl>
+<h2> <span class="mw-headline" id=".E5.8F.82.E8.80.83_2">参考</span></h2>
+<h3> <span class="mw-headline" id=".E6.A0.87.E5.87.86.E5.8F.82.E8.80.83">标准参考</span></h3>
+<dl><dd>[ABNF]         Crocker, D. and P. Overell, "Augmented BNF for Syntax Specifications: ABNF", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4234">RFC 4234</a>, October 2005.
+</dd></dl>
+<dl><dd>[IRI]          Duerst, M. and M. Suignard, "Internationalized Resource Identifiers (IRIs)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3987">RFC 3987</a>, January 2005.
+</dd></dl>
+<dl><dd>[TERMS]        Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2119">RFC 2119</a>, March 1997.
+</dd></dl>
+<dl><dd>[URI]          Berners-Lee, T., Fielding, R., and L. Masinter, "Uniform Resource Identifier (URI): Generic Syntax", STD 66, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3986">RFC 3986</a>, January 2005.
+</dd></dl>
+<dl><dd><a href="/RFC3920" title="RFC3920">XMPP-CORE</a>    Saint-Andre, P., "Extensible Messaging and Presence Protocol (XMPP): Core", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>, October 2004.
+</dd></dl>
+<h3> <span class="mw-headline" id=".E4.BF.A1.E6.81.AF.E5.8F.82.E8.80.83">信息参考</span></h3>
+<dl><dd>[CPIM]         Peterson, J., "Common Profile for Instant Messaging (CPIM)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3860">RFC 3860</a>, August 2004.
+</dd></dl>
+<dl><dd>[CPP]          Peterson, J., "Common Profile for Presence (CPP)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3859">RFC 3859</a>, August 2004.
+</dd></dl>
+<dl><dd>[DNS-SRV]      Gulbrandsen, A., Vixie, P., and L. Esibov, "A DNS RR for specifying the location of services (DNS SRV)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2782">RFC 2782</a>, February 2000.
+</dd></dl>
+<dl><dd>[HTML]         Raggett, D., "HTML 4.0 Specification", W3C REC REC-html40-19980424, April 1998.
+</dd></dl>
+<dl><dd>[HTTP-AUTH]    Franks, J., Hallam-Baker, P., Hostetler, J., Lawrence, S., Leach, P., Luotonen, A., and L. Stewart, "HTTP Authentication: Basic and Digest Access Authentication", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2617">RFC 2617</a>, June 1999.
+</dd></dl>
+<dl><dd>[IDNA]         Faltstrom, P., Hoffman, P., and A. Costello, "Internationalizing Domain Names in Applications (IDNA)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3490">RFC 3490</a>, March 2003.
+</dd></dl>
+<dl><dd>[XEP-0009]     Adams, D., "Jabber-RPC", JSF JEP 0009, February 2006.
+</dd></dl>
+<dl><dd><a href="/XEP-0030" title="XEP-0030">XEP-0030</a>     Hildebrand, J., Millard, P., Eatmon, R., and P. Saint-Andre, "Service Discovery", JSF JEP 0030, January 2006.
+</dd></dl>
+<dl><dd><a href="/XEP-0045" title="XEP-0045">XEP-0045</a>     Saint-Andre, P., "Multi-User Chat", JSF JEP 0045, September 2005.
+</dd></dl>
+<dl><dd><a href="/index.php?title=XEP-0053&amp;action=edit&amp;redlink=1" class="new" title="XEP-0053（尚未撰写）">XEP-0053</a>     Saint-Andre, P., "Jabber Registrar", JSF JEP 0053, May 2004.
+</dd></dl>
+<dl><dd><a href="/XEP-0060" title="XEP-0060">XEP-0060</a>     Millard, P., Saint-Andre, P., and R. Meijer, "Publish-Subscribe", JSF JEP 0060, June 2005.
+</dd></dl>
+<dl><dd>[XEP-0072]     Forno, F. and P. Saint-Andre, "SOAP Over XMPP", JSF JEP 0072, December 2005.
+</dd></dl>
+<dl><dd><a href="/XEP-0077" title="XEP-0077">XEP-0077</a>     Saint-Andre, P., "In-Band Registration", JSF JEP 0077, January 2006.
+</dd></dl>
+<dl><dd>[XEP-0147]     Saint-Andre, P., "XMPP IRI/URI Query Components", JSF JEP 0147, March 2006.
+</dd></dl>
+<dl><dd>[MAILTO]       Hoffman, P., Masinter, L., and J. Zawinski, "The mailto URL scheme", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2368">RFC 2368</a>, July 1998.
+</dd></dl>
+<dl><dd>[MIME]         Freed, N. and N. Borenstein, "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2046">RFC 2046</a>, November 1996.
+</dd></dl>
+<dl><dd>[SASL]         Melnikov, A. and K. Zeilenga, "Simple Authentication and Security Layer (SASL)", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4422">RFC 4422</a>, June 2006.
+</dd></dl>
+<dl><dd>[STRINGPREP]   Hoffman, P. and M. Blanchet, "Preparation of Internationalized Strings ("STRINGPREP")", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3454">RFC 3454</a>, December 2002.
+</dd></dl>
+<dl><dd>[UNICODE]      The Unicode Consortium, "The Unicode Standard, Version 3.2.0", 2000. The Unicode Standard, Version 3.2.0 is defined by The Unicode Standard, Version 3.0 (Reading, MA, Addison-Wesley, 2000.  <a href="/%E7%89%B9%E6%AE%8A:%E7%BD%91%E7%BB%9C%E4%B9%A6%E6%BA%90/0201616335" class="internal mw-magiclink-isbn">ISBN 0-201-61633-5</a>), as amended by the Unicode Standard Annex #27: Unicode 3.1(<a rel="nofollow" class="external free" href="http://www.unicode.org/reports/tr27/">http://www.unicode.org/reports/tr27/</a>) and by the Unicode Standard Annex #28: Unicode 3.2 (<a rel="nofollow" class="external free" href="http://www.unicode.org/reports/tr28/">http://www.unicode.org/reports/tr28/</a>).
+</dd></dl>
+<dl><dd>[URI-SCHEMES]  Hansen, T., Hardie, T., and L. Masinter, "Guidelines and Registration Procedures for New URI Schemes", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4395">RFC 4395</a>, February 2006.
+</dd></dl>
+<dl><dd>[US-ASCII]     American National Standards Institute, "Coded Character Set - 7-bit American Standard Code for Information Interchange", ANSI X3.4, 1986.
+</dd></dl>
+<dl><dd>[UTF-8]        Yergeau, F., "UTF-8, a transformation format of ISO 10646", STD 63, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3629">RFC 3629</a>, November 2003.
+</dd></dl>
+<dl><dd><a href="/RFC3921" title="RFC3921">XMPP-IM</a>      Saint-Andre, P., "Extensible Messaging and Presence Protocol (XMPP): Instant Messaging and Presence", <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3921">RFC 3921</a>, October 2004.
+</dd></dl>
+<p><b>作者地址</b>
+</p>
+<dl><dd>Peter Saint-Andre
+</dd></dl>
+<dl><dd>XMPP Software Foundation
+</dd></dl>
+<dl><dd>EMail: <a rel="nofollow" class="external text" href="mailto:stpeter@jabber.org">stpeter@jabber.org</a>
+</dd></dl>
+<dl><dd>URI:   [xmpp:stpeter@jabber.org xmpp:stpeter@jabber.org]
+</dd></dl>
+<p><b>完整版权声明</b>
+</p>
+<pre>
+   Copyright (C) The Internet Society (2006).
+
+   This document is subject to the rights, licenses and restrictions
+   contained in BCP 78, and except as set forth therein, the authors
+   retain all their rights.
+
+   This document and the information contained herein are provided on an
+   &quot;AS IS&quot; basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+   OR IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY AND THE INTERNET
+   ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED,
+   INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+   INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+   WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+</pre>
+<p><b>知识产权</b>
+</p>
+<pre>
+   The IETF takes no position regarding the validity or scope of any
+   Intellectual Property Rights or other rights that might be claimed to
+   pertain to the implementation or use of the technology described in
+   this document or the extent to which any license under such rights
+   might or might not be available; nor does it represent that it has
+   made any independent effort to identify any such rights.  Information
+   on the procedures with respect to rights in RFC documents can be
+   found in BCP 78 and BCP 79.
+
+   Copies of IPR disclosures made to the IETF Secretariat and any
+   assurances of licenses to be made available, or the result of an
+   attempt made to obtain a general license or permission for the use of
+   such proprietary rights by implementers or users of this
+   specification can be obtained from the IETF on-line IPR repository at
+   http://www.ietf.org/ipr.
+
+   The IETF invites any interested party to bring to its attention any
+   copyrights, patents or patent applications, or other proprietary
+   rights that may cover technology that may be required to implement
+   this standard.  Please address the information to the IETF at
+   ietf-ipr@ietf.org.
+</pre>
+<p><b>感谢</b>
+</p>
+<pre>
+   Funding for the RFC Editor function is provided by the IETF
+   Administrative Support Activity (IASA).
+</pre>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 406/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:4-0!*!0!!zh-cn!*!* and timestamp 20160221171438 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=RFC4622&amp;oldid=1332">http://wiki.jabbercn.org/index.php?title=RFC4622&amp;oldid=1332</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">2个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E7%9B%B8%E5%85%B3RFC" title="分类:XMPP相关RFC">XMPP相关RFC</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/RFC4622" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:RFC4622&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=RFC4622&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=RFC4622&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=RFC4622" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/RFC4622" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/RFC4622" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=RFC4622&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=RFC4622&amp;oldid=1332" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2011年6月2日 (星期四) 16:47。</li>
+		<li id="viewcount">此页面已被浏览过11,385次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("RFC4622");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.037 secs. --></body></html>

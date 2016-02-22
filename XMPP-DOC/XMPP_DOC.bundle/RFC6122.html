@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>RFC6122 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "RFC6122", "wgTitle": "RFC6122", "wgCurRevisionId": 2953, "wgArticleId": 71, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["XMPP相关RFC", "XMPP核心RFC", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-text {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-text li, .source-text pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for text
+ * CSS class: source-text, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-text .de1, .source-text .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-text  {font-family: monospace;}
+.source-text .imp {font-weight: bold; color: red;}
+.source-text li, .source-text li.li1 {font-weight: normal;}
+.source-text li.li2 {font-weight: bold;}
+.source-text .ln-xtra, .source-text li.ln-xtra, .source-text div.ln-xtra {background-color: #ffc;}
+.source-text span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-RFC6122 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">RFC6122</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p>"本文的英文原文来自<a rel="nofollow" class="external text" href="http://xmpp.org/rfcs/rfc6122.html">RFC 6122</a>
+</p>
+<table border="1" cellspacing="0" width="65%">
+<tr>
+<td>互联网工程任务组(IETF) </td>
+<td> P. Saint-Andre
+</td></tr>
+<tr>
+<td>申请讨论: 6122 </td>
+<td> Cisco
+</td></tr>
+<tr>
+<td>更新: <a href="/RFC3920" title="RFC3920">3920</a> </td>
+<td> 2011年3月
+</td></tr>
+<tr>
+<td>类别: 标准跟踪 </td>
+<td>
+</td></tr>
+<tr>
+<td>ISSN: 2070-1721 </td>
+<td>
+</td></tr></table>
+<dl><dd><dl><dd><dl><dd><b>可扩展的消息和出席信息协议 (XMPP): 地址格式</b>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><b>摘要</b>
+</p>
+<dl><dd>本文定义了可扩展的消息和出席信息协议(XMPP)中使用的地址的格式, 包括支持非ASCII的字符串. 本文更新了 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>. 
+</dd></dl>
+<p><b>本文的状态</b>
+</p>
+<dl><dd>这是一个互联网标准跟踪文档.
+</dd></dl>
+<dl><dd>本文是互联网工程工作组(IETF)的一个成果. 它代表了IETF社区的一致意见. 它已经公开审核并由互联网工程控制组(IESG)批准发布了. 更多关于互联网标准的信息请参见<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5741">RFC 5741</a>第2章.
+</dd></dl>
+<dl><dd>关于本文当前状态的信息, 任何错误, 以及如何对它提出反馈，请到 <a rel="nofollow" class="external free" href="http://www.rfc-editor.org/info/rfc6122">http://www.rfc-editor.org/info/rfc6122</a> .
+</dd></dl>
+<p><b>版权通知</b>
+</p>
+<dl><dd>Copyright (c) 2011 IETF Trust and the persons identified as the document authors. All rights reserved.
+</dd></dl>
+<dl><dd>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (<a rel="nofollow" class="external free" href="http://trustee.ietf.org/license-info">http://trustee.ietf.org/license-info</a>) in effect on the date of publication of this document. Please review these documents carefully, as they describe your rights and restrictions with respect to this document. Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.
+</dd></dl>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.BA.8F.E8.AE.BA"><span class="tocnumber">1</span> <span class="toctext">序论</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E6.A6.82.E8.BF.B0"><span class="tocnumber">1.1</span> <span class="toctext">概述</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#.E6.9C.AF.E8.AF.AD"><span class="tocnumber">1.2</span> <span class="toctext">术语</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.9C.B0.E5.9D.80"><span class="tocnumber">2</span> <span class="toctext">地址</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#.E5.9F.BA.E7.A1.80"><span class="tocnumber">2.1</span> <span class="toctext">基础</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.E5.9F.9F.E9.83.A8.E5.88.86"><span class="tocnumber">2.2</span> <span class="toctext">域部分</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.E6.9C.AC.E5.9C.B0.E9.83.A8.E5.88.86"><span class="tocnumber">2.3</span> <span class="toctext">本地部分</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.E8.B5.84.E6.BA.90.E9.83.A8.E5.88.86"><span class="tocnumber">2.4</span> <span class="toctext">资源部分</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#.E5.9B.BD.E9.99.85.E5.8C.96.E4.BA.8B.E9.A1.B9"><span class="tocnumber">3</span> <span class="toctext">国际化事项</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#.E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9"><span class="tocnumber">4</span> <span class="toctext">安全事项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Stringprep.E7.9A.84.E9.87.8D.E7.94.A8"><span class="tocnumber">4.1</span> <span class="toctext">Stringprep的重用</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Unicode.E7.9A.84.E9.87.8D.E7.94.A8"><span class="tocnumber">4.2</span> <span class="toctext">Unicode的重用</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#.E5.9C.B0.E5.9D.80.E6.AC.BA.E9.AA.97"><span class="tocnumber">4.3</span> <span class="toctext">地址欺骗</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#.E5.9C.B0.E5.9D.80.E9.94.BB.E9.80.A0"><span class="tocnumber">4.3.1</span> <span class="toctext">地址锻造</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#.E5.9C.B0.E5.9D.80.E6.A8.A1.E4.BB.BF"><span class="tocnumber">4.3.2</span> <span class="toctext">地址模仿</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#IANA.E4.BA.8B.E9.A1.B9"><span class="tocnumber">5</span> <span class="toctext">IANA事项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Stringprep.E7.9A.84Nodeprep.E8.8C.83.E6.9C.AC"><span class="tocnumber">5.1</span> <span class="toctext">Stringprep的Nodeprep范本</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Stringprep.E7.9A.84Resourceprep.E8.8C.83.E6.9C.AC"><span class="tocnumber">5.2</span> <span class="toctext">Stringprep的Resourceprep范本</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#.E4.B8.80.E8.87.B4.E6.80.A7.E9.9C.80.E6.B1.82"><span class="tocnumber">6</span> <span class="toctext">一致性需求</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#.E5.8F.82.E8.80.83"><span class="tocnumber">7</span> <span class="toctext">参考</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8"><span class="tocnumber">7.1</span> <span class="toctext">规范引用</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"><span class="tocnumber">7.2</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#.E9.99.84.E5.BD.95A._Nodeprep"><span class="tocnumber">8</span> <span class="toctext">附录A.  Nodeprep</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#A.1._.E4.BB.8B.E7.BB.8D"><span class="tocnumber">8.1</span> <span class="toctext">A.1. 介绍</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#A.2._.E5.AD.97.E7.AC.A6.E6.9B.B2.E7.9B.AE"><span class="tocnumber">8.2</span> <span class="toctext">A.2. 字符曲目</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#A.3._.E6.98.A0.E5.B0.84"><span class="tocnumber">8.3</span> <span class="toctext">A.3. 映射</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#A.4._.E8.A7.84.E8.8C.83.E5.8C.96"><span class="tocnumber">8.4</span> <span class="toctext">A.4. 规范化</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#A.5._.E7.A6.81.E6.AD.A2.E7.9A.84.E8.BE.93.E5.87.BA"><span class="tocnumber">8.5</span> <span class="toctext">A.5. 禁止的输出</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#A.6._.E5.8F.8C.E5.90.91.E5.AD.97.E7.AC.A6"><span class="tocnumber">8.6</span> <span class="toctext">A.6. 双向字符</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#A.7._.E5.A4.87.E6.B3.A8"><span class="tocnumber">8.7</span> <span class="toctext">A.7. 备注</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#.E9.99.84.E5.BD.95B._Resourceprep"><span class="tocnumber">9</span> <span class="toctext">附录B.  Resourceprep</span></a>
+<ul>
+<li class="toclevel-2 tocsection-32"><a href="#B.1._.E4.BB.8B.E7.BB.8D"><span class="tocnumber">9.1</span> <span class="toctext">B.1. 介绍</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#B.2._.E5.AD.97.E7.AC.A6.E6.9B.B2.E7.9B.AE"><span class="tocnumber">9.2</span> <span class="toctext">B.2. 字符曲目</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#B.3._.E6.98.A0.E5.B0.84"><span class="tocnumber">9.3</span> <span class="toctext">B.3. 映射</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#B.4._.E8.A7.84.E8.8C.83.E5.8C.96"><span class="tocnumber">9.4</span> <span class="toctext">B.4. 规范化</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#B.5._.E7.A6.81.E6.AD.A2.E7.9A.84.E8.BE.93.E5.87.BA"><span class="tocnumber">9.5</span> <span class="toctext">B.5. 禁止的输出</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#B.6._.E5.8F.8C.E5.90.91.E5.AD.97.E7.AC.A6"><span class="tocnumber">9.6</span> <span class="toctext">B.6. 双向字符</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="#.E9.99.84.E5.BD.95C._.E5.92.8CRFC_3920.E7.9A.84.E4.B8.8D.E5.90.8C"><span class="tocnumber">10</span> <span class="toctext">附录C. 和RFC 3920的不同</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="#.E9.99.84.E5.BD.95D._.E8.87.B4.E8.B0.A2"><span class="tocnumber">11</span> <span class="toctext">附录D. 致谢</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E5.BA.8F.E8.AE.BA">序论</span></h2>
+<h3> <span class="mw-headline" id=".E6.A6.82.E8.BF.B0">概述</span></h3>
+<p>可扩展的消息和出席信息协议(XMPP)是一个 <a href="/RFC6122#XML" title="RFC6122">XML</a> 应用规范，用于在任意两个或多个网络实体之间接近实时的传输XML数据流. XMPP实体的地址格式在1999年就已经 由Jabber开源社区开发出来, 第一次出现在 <a href="/RFC6122#XEP.E2.80.910029" title="RFC6122">XEP‑0029</a> 中是2002年, 规范化定义是2004年的 <a href="/RFC6122#RFC3920" title="RFC6122">RFC3920</a> .
+</p><p>正如<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>中所定义的, XMPP地址格式重用了 "stringprep" 技术来预备非ASCII字符串 <a href="/RFC6122#STRINGPREP" title="RFC6122">STRINGPREP</a> , 包括用于国际化域名的名字空间规范，定义于 <a href="/RFC6122#NAMEPREP" title="RFC6122">NAMEPREP</a> 和 <a href="/RFC6122#IDNA2003" title="RFC6122">IDNA2003</a> ，对应于两个XMPP特有的用于 localpart(本地部分) 和resourcepart(资源部分)的规范.
+</p><p>由于<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>的发布, IDNA2003被IDNA2008取代 (见 <a href="/RFC6122#IDNA.E2.80.91PROTO" title="RFC6122">IDNA‑PROTO</a> , 它不是基于stringprep的. 随着IDNA社区的倡导, 其他使用stringprep的技术社区开始讨论从stringprep迁移到更"现代的"方法. XMPP社区(主要是 PRECIS 工作组)为了寻找RFC3920中定义的stringprep中的Nodeprep和Resourceprep的替代品，参与了那些讨论. 因为XMPP修订文档的所有其他问题都合并到 <a href="/RFC6122#XMPP" title="RFC6122">XMPP</a> 了, XMPP工作组决定暂时分离出XMPP地址格式到一个独立的文档，这样不会延迟改进的XMPP文档的发布. 一旦新的国际化地址的预备和比较方法被完成，预期本文将被废弃.
+</p><p>所以, 本协议提供更正过的XMPP地址格式文档，使用2004年可用的国际化技术(当时<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>发布了). 尽管本文主要参考了 <a href="/RFC6122#IDNA2003" title="RFC6122">IDNA2003</a> 和 <a href="/RFC6122#NAMEPREP" title="RFC6122">NAMEPREP</a> , 但是鼓励XMPP软件开发者开始迁移到IDNA2008 (见 <a href="/RFC6122#IDNA.E2.80.91PROTO" title="RFC6122">IDNA‑PROTO</a> 以及相关文档) ，因为将来取代本协议的新协议将使用IDNA2008而不是IDNA2003.
+</p><p>本文更新了<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>.
+</p>
+<h3> <span class="mw-headline" id=".E6.9C.AF.E8.AF.AD">术语</span></h3>
+<p>本文使用的很多重要术语定义于 <a href="/RFC6122#IDNA2003" title="RFC6122">IDNA2003</a> , [RFC6122#STRINGPREP|STRINGPREP]] , <a href="/RFC6122#UNICODE" title="RFC6122">UNICODE</a> , 和<a href="/RFC6122#XMPP" title="RFC6122">XMPP</a> .
+</p><p>本文的关键字 "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", 和 "OPTIONAL" 的解释参见 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2119">RFC 2119</a> <a href="/RFC6122#.E5.85.B3.E9.94.AE.E5.AD.97" title="RFC6122">关键字</a> .
+</p>
+<h2> <span class="mw-headline" id=".E5.9C.B0.E5.9D.80">地址</span></h2>
+<h3> <span class="mw-headline" id=".E5.9F.BA.E7.A1.80">基础</span></h3>
+<p>一个XMPP实体就是任何可网址化并能使用XMPP通讯的东西. 由于历史原因, 一个XMPP实体的本地地址叫Jabber身份或JID. 一个合法的JID就是一个 <a href="/RFC6122#UNICODE" title="RFC6122">UNICODE</a> 代码所代表的字符串, 使用 <a href="/RFC6122#UTF.E2.80.918" title="RFC6122">UTF‑8</a> 编码, 结构顺序是 localpart(本地部分), domainpart(域部分), 和resourcepart (资源部分)(这里前两个部分使用 '@' 字符分割, 而后两个部分使用 '/' 字符分割).
+</p><p>JID的语法定义如下，使用增强巴科斯-诺尔范式(<a href="/RFC6122#ABNF" title="RFC6122">ABNF</a>).
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>   jid           = [ 本地部分 &quot;@&quot; ] 域部分 [ &quot;/&quot; 资源部分 ]
+   本地部分        = 1*(节点)
+                  &#160;;
+                  &#160;; 一个 &quot;节点&quot; 就是一个UTF-8编码的Unicode代码点
+                  &#160;; 这个点满足 stringprep 中的 Nodeprep 范例
+                  &#160;;
+   域部分         = IP文字 / IPv4地址 / 合法域名ifqdn
+                  &#160;;
+                  &#160;; &quot;IPv4地址&quot; 和 &quot;IP文字&quot; 规则 定义于 RFC 3986,
+                  &#160;; 匹配过程应用 RFC 3986 定义的
+                  &#160;; 先到先得匹配(又名 &quot;贪婪的&quot;) 机制
+                  &#160;;
+                  &#160;; 注意从RFC 3986中对于 IP文字规则的重用
+                  &#160;; 意味着 IPv6地址由方括号包住
+                  &#160;; (也就是, 用 '[' 开始用 ']' 结束), 
+                  &#160;; 这个 RFC 3920 不管了
+                  &#160;;
+   ifqdn         = 1*(名字点)
+                  &#160;;
+                  &#160;; 一个 &quot;名字点&quot; 就是一个UTF-8编码的Unicode码点，
+                  &#160;; 符合 stringprep 的 Nameprep 规范
+                  &#160;;
+   resourcepart  = 1*(资源点)
+                  &#160;;
+                  &#160;; 一个 &quot;资源点&quot; 就是一个UTF-8编码的Unicode码,
+                  &#160;; 符合 stringprep 的 Resourceprep 规范
+                  &#160;;</pre></div></div>
+<p>所有JID都是基于上述结构.
+</p><p>一个JID的每个允许的部分 (本地部分, 域部分, 和资源部分) 的字节数必须不(MUST NOT)为零并且必须不(MUST NOT)大于1023, 也就是总的最大字节数 (包含 '@' 和 '/' 分割符) 为3071.
+</p><p>为了达到通过一个XMPP网络(例如, 一个XMPP节的 'to' 或 'from' 地址)来通讯的目的, 实体的地址必须(MUST)展现为一个JID, 而不是统一资源标识符 <a href="/RFC6122#URI" title="RFC6122">URI</a> 或 国际化资源标识符 <a href="/RFC6122#IRI" title="RFC6122">IRI</a> . 一个 <a href="/RFC6122#XMPP.E2.80.91URI" title="RFC6122">XMPP‑URI</a> 本质上是一个JID带上一个 'xmpp:' 前缀; 无论如何, 用于XMPP的本地地址格式仅仅是一个不带URI方案的JID.  <a href="/RFC6122#XMPP.E2.80.91URI" title="RFC6122">XMPP‑URI</a> 仅被用于XMPP自身的上下文在外部的标识和交互, 例如当从一个web页面连接到一个JID. <a href="/RFC6122#XMPP.E2.80.91URI" title="RFC6122">XMPP‑URI</a> 描述了这个如何安全的从一个XMPP URI 或 IRI 提取出一个JID的过程.
+</p>
+<dl><dd>实现备注: 当把一个JID分解成它的各个部分时, 一个应用在使用任何转换机制之前需要匹配分隔符 '@' 和 '/' , 因为转换可能导致把特定的Unicode码点分解成分隔符(例如, U+FE6B SMALL COMMERCIAL AT 可能分解成 U+0040 COMMERCIAL AT).
+</dd></dl>
+<h3> <span class="mw-headline" id=".E5.9F.9F.E9.83.A8.E5.88.86">域部分</span></h3>
+<p>一个JID的域部分就是 '@' 符号(如果有这个符号)后面和 '/' 符号(如果有)前面的部分; 它是一个主要的标识符并且是一个JID唯一必需的(REQUIRED)元素(仅仅是域部分就可以成为一个合法的JID). 一个典型的域部分标识了客户端连接的 "家" 服务器，它用来做XML路由和数据管理功能. 无论如何, 一个XMPP域部分不一定就是标识一个提供核心XMPP服务功能的实体 (例如, 一个域部分可能标识其他实体，例如一个多用户聊天服务, 一个发行-订阅服务, 或一个用户目录).
+</p><p>每个XMPP服务的域部分必须(MUST)是一个完全规范的域名(FQDN; 见 <a href="/RFC6122#DNS" title="RFC6122">DNS</a> ), IPv4地址, IPv6地址, 或自定义的主机名(也就是说, 一个文本标签，可在本地网络解析).
+</p>
+<dl><dd>互操作性备注: 域部分是IP地址，可能无法被其他服务接受来进行服务器到服务器的通讯, 域部分是自定义的主机名不能用于公共网络，因为它只能被本地网络解析.
+</dd></dl>
+<p>如果域部分的最后一个字符被认为是 <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a> 或 <a href="/RFC6122#.E5.B8.B8.E8.A7.84.E5.BC.95.E7.94.A8" title="RFC6122">DNS</a> 中的分隔标签 (点) , 在使用JID的域部分来路由一个XML节,和另一个JID做比较，或构建一个 <a href="/RFC6122#.E6.8F.90.E7.A4.BA.E6.80.A7.E5.BC.95.E7.94.A8" title="RFC6122">XMPP‑URI</a> 之前，必须把这个字符从域部分剥离出来. 特别是, 在进行任何其他规范化步骤 (例如应用 <a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">STRINGPREP</a> 的 <a href="/RFC6122#.E6.8F.90.E7.A4.BA.E6.80.A7.E5.BC.95.E7.94.A8" title="RFC6122">NAMEPREP</a> 范本，或完成 <a href="/RFC6122#.E4.BA.A7.E8.A7.84.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a> 描述的转化成ASCII的操作)之前，这个字符必须剥离出来.
+</p><p>包含完全合格域名的域部分必须是一个<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a>定义的"国际化的域名"; 就是说, 它必须是"一个每个标签都是国际化标签的域名"并且必须遵循<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a>定义的国际化域名构造规则. 当准备一个文本标签(包括一系列的UTF-8编码的Unicode代码点)用于在构造XMPP域部分或比较两个XMPP域部分的过程中展示一个国际化标签, 应用必须确保每个文本标签可能应用于设置UseSTD3ASCIIRules标志(从而禁止除了字母,数字,和连字符的ASCII代码点)而不会出现<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a>定义的失败的ToASCII操作. 如果该ToASCII操作能被应用而不失败, 那么该标签是一个国际化标签. (注意: 该ToASCII操作包括<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">NAMEPREP</a>范本的应用并且编码使用<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">PUNYCODE</a>定义的机制; 详细信息参见<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a>.) 尽管XMPP应用通讯在线上的输出不会超出ToASCII操作(所谓一个"ACE标签"), 它必须有可能应用那个操作而不会导致每个国际化标签的失败. 如果一个XMPP应用接收ACE标签输入, 它应该在把该标签包含进一个将在一个XMPP网络上进行线上通讯的XMPP域部分之前使用ToUnicode操作(见<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a>)把那个ACE标签转化为一个国际化标签(无论如何, 除了转换标签, 有合理的理由一个应用可以拒绝输入并返回一个错误给提供这些唐突数据的实体).
+</p><p>域部分的长度不能(MUST NOT)为零并且不能(MUST NOT)超过1023个字节. 在从stringprep的Nameprep范本的应用得到任何映射或正规结果之后，这个规则是强制的. 很自然, <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">DNS</a>的长度限制也适用, 并且本文中的解释没有覆写更多的根本限制.
+</p><p>在 IDNA2008 <a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IDNA‑DEFS</a>的术语中, JID的域部分是一个"域名插槽".
+</p>
+<h3> <span class="mw-headline" id=".E6.9C.AC.E5.9C.B0.E9.83.A8.E5.88.86">本地部分</span></h3>
+<p>JID的本地部分是一个可选的标识符，放在域部分的前面并且用'@'字符分隔开. 一个典型的本地部分唯一性地标识由服务器提供的请求和使用网络访问的实体(即, 一个本地帐号), 尽管它也代表其他种类的实体(例如, 一个和多用户聊天服务相关的聊天室). 由一个XMPP本地部分代表的实体的寻址则要看具体的域上下文(即, &lt;localpart@domainpart&gt;).
+</p><p>一个本地部分必须被格式化,使得<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的Nodeprep范本能被应用而不失败(见 <a href="/RFC6122#.E9.99.84.E5.BD.95A._Nodeprep" title="RFC6122">附录A</a>). 在比较两个本地部分之前, 应用必须首先确保Nodeprep范本被应用于每一个标识符(该范本不需要每次做比较的时候应用, 因为在比较之前它已经被应用了).
+</p><p>本地部分的长度不能(MUST NOT)为零并且不能(MUST NOT)超过1023个字节. 在从stringprep的Nodeprep范本的应用得到任何映射或正规结果之后，这个规则是强制的. (例如, 在Nodeprep中，一些字符串可能被映射为空, 这可能产生一个长度为零的字符).
+</p>
+<h3> <span class="mw-headline" id=".E8.B5.84.E6.BA.90.E9.83.A8.E5.88.86">资源部分</span></h3>
+<p>JID的资源部分是一个可选的标识符，放在域部分的后面，以'/'符号分隔. 一个资源部分能改变&lt;localpart@domainpart&gt;地址或纯&lt;domainpart&gt;地址. 典型的一个资源部分唯一性地标识一个属于某域的某个本地部分相关实体的特定连接(例如, 一个设备或地点)或对象(例如, 一个多用户聊天室中的某个房客)(即, &lt;localpart@domainpart/resourcepart&gt;).
+</p><p>一个资源部分必须被格式化,使得<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的Resourceprep范本能被应用而不失败(见 <a href="/RFC6122#.E9.99.84.E5.BD.95B._Resourceprep" title="RFC6122">附录B</a>). 在比较两个资源部分之前, 应用必须首先确保Resourceprep范本被应用于每一个标识符(该范本不需要每次做比较的时候应用, 因为在比较之前它已经被应用了).
+</p><p>资源部分的长度不能(MUST NOT)为零并且不能(MUST NOT)超过1023个字节. 在从stringprep的Resourceprep范本的应用得到任何映射或正规结果之后，这个规则是强制的. (例如, 在Resourceprep，一些字符串可能被映射为空, 这可能产生一个长度为零的字符).
+</p>
+<dl><dd>信息备注: 由于历史原因, 术语 "资源标识符" 在XMPP中经常被用于代表一个XMPP地址的可选部分，跟随在域部分之后的"/"分隔符后面; 为了帮助防止混淆XMPP "资源标识符" 和 <a href="/RFC6122#.E5.8F.82.E8.80.83.E8.9A.8A.E9.A6.99" title="RFC6122">URI</a>的的章节1.1中的"资源" 的含义以及 "标识符"的含义, 本协议使用术语"资源部分"来替代之前的"资源标识符" (在<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>中).
+</dd></dl>
+<p>XMPP实体应该把资源部分当成不透明的字符串并且不应该(SHOULD NOT)推诿含义给任何给定的资源部分. 特别是:
+</p>
+<dl><dd><ul><li> 在域部分和资源部分之间使用'/'符号作为分隔符不代表XMPP地址是以那种方式分层的, 也就是说像HTTP地址那样分层; 所以，举例来说，一个格式为&lt;localpart@domainpart/foo/bar&gt;的XMPP地址不代表一个资源"bar"在一个和实体"localpart@domain"相关的资源层级中位于一个资源"foo"之下.
+</li><li> '@'符号被允许出现在资源部分并且经常在XMPP聊天室中被用于显示"昵称". 例如, JID &lt;room@chat.example.com/user@host&gt; 描述了一个实体，它是房间&lt;room@chat.example.com&gt;的房客，(声称的)昵称为&lt;user@host&gt;. 无论如何, 聊天室服务不必要怎对该房客的真实JID来检查这样一个被声称的昵称.
+</li></ul>
+</dd></dl>
+<h2> <span class="mw-headline" id=".E5.9B.BD.E9.99.85.E5.8C.96.E4.BA.8B.E9.A1.B9">国际化事项</span></h2>
+<p>XMPP服务器必须, XMPP客户端应该, 对域部分支持<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">IDNA2003</a>(包括<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">NAMEPREP</a>范本), 对本地部分支持<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的<a href="/RFC6122#.E9.99.84.E5.BD.95A_Nodeprep" title="RFC6122">Nodeprep</a>范本, 以及对资源部分支持<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的<a href="/RFC6122#.E9.99.84.E5.BD.95B._Resourceprep" title="RFC6122">Resourceprep</a>范本; 这使得XMPP地址能包含各种超出US-ASCII范围的字符串. XMPP地址的强制性规则在<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">XMPP</a>中提供.
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9">安全事项</span></h2>
+<h3> <span class="mw-headline" id="Stringprep.E7.9A.84.E9.87.8D.E7.94.A8">Stringprep的重用</span></h3>
+<p><a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>中描述的安全性事项适用于本文中定义的XMPP本地部分和资源部分的<a href="/RFC6122#.E9.99.84.E5.BD.95A_Nodeprep" title="RFC6122">Nodeprep</a>和 <a href="/RFC6122#.E9.99.84.E5.BD.95B._Resourceprep" title="RFC6122">Resourceprep</a>范本. <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>和<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">NAMEPREP</a>中描述的适用于Nameprep范本的安全性事项在这里被重用于XMPP域部分.
+</p>
+<h3> <span class="mw-headline" id="Unicode.E7.9A.84.E9.87.8D.E7.94.A8">Unicode的重用</span></h3>
+<p>在<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">UNICODE‑SEC</a>中描述的安全性事项适用于在XMPP地址中使用Unicode字符串.
+</p>
+<h3> <span class="mw-headline" id=".E5.9C.B0.E5.9D.80.E6.AC.BA.E9.AA.97">地址欺骗</span></h3>
+<p>有两种形式的地址欺骗: 锻造和模仿. 
+</p>
+<h4> <span class="mw-headline" id=".E5.9C.B0.E5.9D.80.E9.94.BB.E9.80.A0">地址锻造</span></h4>
+<p>在XMPP技术的上下文中, 当某个实体能够生成一个XML节，而该节的'from'地址和该实体网络验证的帐号凭证(或在<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">XMPP</a>所述的SASL验证<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">SASL</a>的协商过程中提供的一个授权身份)不符的时候，就发生了地址锻造. 例如, 如果一个被验证为"juliet@im.example.com"的实体能从"nurse@im.example.com"或"romeo@example.net"发送XML节，就发生了地址锻造.
+</p><p>在XMPP系统中地址锻造是很难的, 根据需求，发送的服务器会标记'from'地址，并且对于接收服务器来说是通过服务器-服务器验证(见<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">XMPP</a>)来验证发送的域. 无论如何, 地址锻造在以下情况下可能发生:
+</p>
+<dl><dd><ul><li> 一个实现得差劲的服务器忽略了标记'from'地址需求. 这将使得验证到该服务器的任何实体从任何localpart@domainpart发送节，只要域部分和该服务器的发送域匹配.
+</li><li> 一个活跃的恶意服务器代表任何已注册的帐号生成节.
+</li></ul>
+</dd></dl>
+<p>所以, 一个超出某特定服务器的安全边界的实体不能可靠地辨别那台服务器的格式为&lt;localpart@domainpart&gt;的各个JIDs，从而在任何担保级别上只能验证这些JIDs的域部分. 本协议不定义发现或对抗这类差劲实现或流氓服务器的方法. 无论如何, 端到端的验证或XMPP节的签名有助于减轻这个风险, 因为它将要求该流氓服务器除了修改'from'地址之外生成假凭证.
+</p><p>此外, 如果没有使用DNS安全扩展<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">DNSSEC</a>, 攻击者可能通过所谓DNS污染攻击来锻造其他域的JIDs.
+</p>
+<h4> <span class="mw-headline" id=".E5.9C.B0.E5.9D.80.E6.A8.A1.E4.BB.BF">地址模仿</span></h4>
+<p>当一个实体提供了合法的验证身份并且从一个其JID看起来是一个自然人并和另一个JID相同的帐号发送XML节, 就发生了地址模仿.例如, 在一些XMPP客户端里地址"ju1iet@example.org"(本地部分的第三个字符是数字1)可能看起来和"juliet@example.org (小写的字母"L")相同, 特别是在非正式的目测检查的情况下; 这种现象有时被称为"输入注入". 一个更复杂的地址模仿的例子可能包括使用Unicode代码点的非常用Latin扩展A区的字符串, 比如来自Cherokee区的类似字符串 U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2 来取代看起来类似的 US-ASCII 字符串"STPETER".
+</p><p>在一些地址模仿的例子中, 普通用户不会说得出真实JID和假JID的差别. (实际上, 没有编程的办法来完全肯定地区分哪个是假JID哪个是真JID; 在一些通信上下文中, Cherokee字符串格式的JID可能是真JID而US-ASCII字符串格式的JID可能才是假JID.) 因为JIDs能包含几乎任何正确编码的Unicode代码点, 在XMPP系统中能很容易地模仿某些JIDs. 地址模仿的可能性介绍了这种安全漏洞，它也困扰着国际互联网, 特别是网络钓鱼的现象.
+</p><p>这些问题的出现是因为Unicode和ISO/IEC 10646的条目有很多字符看起来相似(所谓"易混淆的字符"或"易混淆的"). 在很多情景下, XMPP用户可以执行目视匹配, 例如当比较通讯伙伴的JIDs时. 因为没有大量上下文(例如知道使用的字体)不可能映射看起来相似的字符, stringprep和基于stringprep的技术，例如 Nameprep, Nodeprep, 以及 Resourceprep， 对于把看起来相似的字符映射在一起不做任何干涉, 它们也不会因为字符之间相似而禁止一些字符. 结果是, XMPP本地部分和资源部分可能包含易混淆的字符, 使得其JIDs看起来像模仿的其他JIDs并且因而导致安全漏洞如下:
+</p>
+<dl><dd><ul><li> 在XMPP中一个本地部分可以被当成一个实体的地址的一部分. 一个常见的用法是用作一个即时消息用户的用户名; 另一个是用作一个多用户聊天室的名字; 并且很多其他种类的实体可以把本地部分作为它们的地址的一部分. 这类服务的安全性可能基于国际化的本地部分的不同诠释而做出妥协; 例如, 一个进入单一国际化本地部分的用户可以访问另一个用户的帐号信息, 或一个用户可以获得对某个隐藏或受限的聊天室或服务的访问权.
+</li><li> 在XMPP中一个资源部分可以被当成一个实体的地址的一部分. 一个常见的用法是用作一个即时消息的用户的已连接资源的名字; 另一个是在一个多用户聊天室中用作一个用户的昵称; 并且很多其他种类的实体可以把资源部分作为它们的地址的一部分. 这类服务的安全性可能基于国际化的资源部分的不同诠释而做出妥协; 例如, 两个或更多易混淆的资源可能在同一时间同一个帐号上绑定 (在一个使用全JIDs的XMPP应用中导致不符的授权决策), 或在一个多用户聊天中一个用户可以发送消息给非预期的其他人.
+</li></ul>
+</dd></dl>
+<p>尽管事实上在Unicode安全事项 <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">UNICODE‑SEC</a>中提到了关于易混淆字符的识别和处理的一些具体建议, "对于易混淆字符的问题没有全面的解决方案"(如<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IDNA‑DEFS</a>提到的)也是真的. 被模仿的JIDs涉及的字符，仅来自一个脚本, 或来自被特定用户或特定语言用户社区所使用的脚本, 是不容易对抗的(例如, 前述的简单输入注入攻击, 它依赖于字符"1"和"l"在一些展示中表面上的相似). 无论如何, 被模仿的地址设计的字符，来自多个脚本, 或来自一个不是典型地被特定用户或特定语言用户社区所使用的脚本, 能通过在XMPP服务上应用适当的注册策略和在XMPP客户端软件上应用适当的展示策略而有所缓解. 所以, 以下策略是被鼓励的:
+</p>
+<dl><dd><ol><li> 因为一个允许XMPP用户帐号(本地部分)注册的XMPP服务扮演了类似DNS域名注册的角色, 这样一个服务应该建立一个它的服务所允许的本地部分的字符脚本或区域策略. 这样一个策略类似被用于写注册帐号名的语言和脚本的通知; 尤其是, 为减少混淆, 该服务可以禁止包含多个脚本的字符的XMPP本地部分的注册并把把注册的字符限制在非常少的脚本中(例如, 该服务的管理员能很好地理解的脚本). 这些策略对于那些允许XMPP资源部分临时或永久注册的XMPP服务也是合适的, 例如, 在资源绑定<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">XMPP</a>或加入一个基于XMPP的聊天室<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">XEP‑0045</a>期间. 在域名注册的上下文中相关的事项, 参见<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IDNA‑PROTO</a>的章节4.3和<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IDNA‑RATIONALE</a>的章节3.2. 注意强制这类限制的方法超出了本文的范围.
+</li><li> 因为一个XMPP客户端的每个自然人用户想必有一个首选语言(或者, 在一些情况下一小组首选语言), 一个XMPP客户端应该从该用户那里显性收集或通过该用户的设备的操作系统隐性地收集那些信息. 此外, 因为绝大所述语言典型地以单一脚本(或一小组脚本)展示并且大多数脚本典型地包含一个或多个字符区域, 一个XMPP客户端在展示一个从多个脚本或区域混合的字符串组成的JID的时候, 或使用超出用户首选语言的常规范围的字符串的时候，应该警告用户. 这个建议的目的不是阻碍不同语言用户之间的通讯; 而是, 它识别到这写社区的存在并在展示不常见的脚本或字符串给自然人用户的时候鼓励谨慎对待.
+</li></ol>
+</dd></dl>
+<h2> <span class="mw-headline" id="IANA.E4.BA.8B.E9.A1.B9">IANA事项</span></h2>
+<p>以下小节更新了<a href="/RFC3920" title="RFC3920">RFC3920</a>提供的注册项.
+</p>
+<h3> <span class="mw-headline" id="Stringprep.E7.9A.84Nodeprep.E8.8C.83.E6.9C.AC">Stringprep的Nodeprep范本</span></h3>
+<p>stringprep的Nodeprep范本定义在<a href="/RFC6122#.E9.99.84.E5.BD.95A._Nodeprep" title="RFC6122">Nodeprep</a> 下面. IANA已经在"Stringprep Profiles"注册处注册了Nodeprep .
+</p><p>范本名称:
+</p>
+<dl><dd><dl><dd>Nodeprep 
+</dd></dl>
+</dd></dl>
+<p>在哪个RFC中定义了该范本:
+</p>
+<dl><dd><dl><dd><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6122">RFC 6122</a> 
+</dd></dl>
+</dd></dl>
+<p>指出是否这是该范本的最新版本:
+</p>
+<dl><dd><dl><dd>这是Nodeprep的第一个版本
+</dd></dl>
+</dd></dl>
+<h3> <span class="mw-headline" id="Stringprep.E7.9A.84Resourceprep.E8.8C.83.E6.9C.AC">Stringprep的Resourceprep范本</span></h3>
+<p>stringprep的Resourceprep范本定义在<a href="/RFC6122#.E9.99.84.E5.BD.95B._Resourceprep" title="RFC6122">Resourceprep</a> 下面. IANA已经在"Stringprep Profiles"注册处注册了Resourceprep.
+</p><p>范本名称:
+</p>
+<dl><dd><dl><dd>Resourceprep
+</dd></dl>
+</dd></dl>
+<p>在哪个RFC中定义了该范本:
+</p>
+<dl><dd><dl><dd><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6122">RFC 6122</a> 
+</dd></dl>
+</dd></dl>
+<p>指出是否这是该范本的最新版本:
+</p>
+<dl><dd><dl><dd>这是Resourceprep的第一个版本
+</dd></dl>
+</dd></dl>
+<h2> <span class="mw-headline" id=".E4.B8.80.E8.87.B4.E6.80.A7.E9.9C.80.E6.B1.82">一致性需求</span></h2>
+<p>本章描述了一个协议特性集合来概述本协议的一致性需求. 本特性集合适用于软件认证, 互操作性测试, 和实现报告. 对于每个特性, 本章提供了以下信息: 
+</p>
+<dl><dd><ul><li> 自然人可读的名称
+</li><li> 描述信息
+</li><li> 本文特定章节的参考，该章节规范化地定义了该特性
+</li><li> 该特性是否适用于客户端角色，服务器角色，或同时适用于两者(这里 "N/A" 表示该特性不适用于该特定角色)
+</li><li> 该特性是必须(MUST)还是应该(SHOULD)被实现, 这里大写的术语被视为<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">KEYWORDS</a>所描述的含义
+</li></ul>
+</dd></dl>
+<p>这里定义的特性集合尝试坚持Larry Masinter于2005年在IETF的NEWTRK工作组中建议的概念和格式, 摘自<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.80.A7.E6.96.87.E7.8C.AE" title="RFC6122">INTEROP</a>. 尽管该特性集合比<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.80.A7.E6.96.87.E7.8C.AE" title="RFC6122">REPORTS</a>中说的更详细, 它为实现报告的生成提供了一个合适的基础，这些报告将被提交以支持本协议按照<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.80.A7.E6.96.87.E7.8C.AE" title="RFC6122">PROCESS</a>从建议标准发展成草案标准.
+</p><p><br />
+</p>
+<pre>   特性:
+       address-domain-length 
+   描述:
+       确保一个XMPP地址的域部分的长度至少有一个字节最多有1023个字节, 并遵循DNS的相关长度限制. 
+   章节:
+       <a href="/RFC6122#.E5.9F.9F.E9.83.A8.E5.88.86" title="RFC6122">2.2</a>
+   角色:
+       都 必须. 
+</pre>
+<pre>   特性:
+       address-domain-prep 
+   描述:
+       确保一个XMPP地址域部分遵循stringprep的Nameprep范本. 
+   章节:
+       <a href="/RFC6122#.E5.9F.9F.E9.83.A8.E5.88.86" title="RFC6122">2.2</a>
+   角色:
+       客户端 应该, 服务器 必须. 
+</pre>
+<pre>   特性:
+       address-localpart-length 
+   描述:
+       确保一个XMPP地址的本地部分的长度至少有一个字节最多有1023个字节. 
+   章节:
+       <a href="/RFC6122#.E6.9C.AC.E5.9C.B0.E9.83.A8.E5.88.86" title="RFC6122">2.3</a>
+   角色:
+       都 必须. 
+</pre>
+<pre>   特性:
+       address-localpart-prep 
+   描述:
+       确保一个XMPP地址的本地部分遵循stringprep的Nodeprep范本. 
+   章节:
+       <a href="/RFC6122#.E6.9C.AC.E5.9C.B0.E9.83.A8.E5.88.86" title="RFC6122">2.3</a>
+   角色:
+       客户端 应该, 服务器 必须. 
+</pre>
+<pre>   特性:
+       address-resource-length 
+   描述:
+       确保一个XMPP地址的资源部分的长度至少有一个字节最多有1023个字节. 
+   章节:
+       <a href="/RFC6122#.E8.B5.84.E6.BA.90.E9.83.A8.E5.88.86" title="RFC6122">2.4</a>
+   角色:
+       都 必须. 
+</pre>
+<pre>   特性:
+       address-resource-prep 
+   描述:
+       确保一个XMPP地址的资源部分遵循stringprep的Resourceprep范本. 
+   章节:
+       <a href="/RFC6122#.E8.B5.84.E6.BA.90.E9.83.A8.E5.88.86" title="RFC6122">2.4</a>
+   角色:
+       客户端 应该, 服务器 必须.
+</pre>
+<h2> <span class="mw-headline" id=".E5.8F.82.E8.80.83">参考</span></h2>
+<h3> <span class="mw-headline" id=".E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8">规范引用</span></h3>
+<p>[ABNF] 	Crocker, D., Ed. and P. Overell, “Augmented BNF for Syntax Specifications: ABNF,” STD 68, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5234">RFC 5234</a>, January 2008 (TXT).
+</p><p>[DNS] 	Mockapetris, P., “Domain names - implementation and specification,” STD 13, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc1035">RFC 1035</a>, November 1987 (TXT).
+</p><p>[IDNA2003] 	Faltstrom, P., Hoffman, P., and A. Costello, “Internationalizing Domain Names in Applications (IDNA),” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3490">RFC 3490</a>, March 2003 (TXT).
+</p>
+<dl><dd><dl><dd><dl><dd><dl><dd>第一章解释了为什么需要引用已过时的协议.
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p>[KEYWORDS] 	Bradner, S., “Key words for use in RFCs to Indicate Requirement Levels,” BCP 14, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2119">RFC 2119</a>, March 1997 (TXT, HTML, XML).
+</p><p>[NAMEPREP] 	Hoffman, P. and M. Blanchet, “Nameprep: A Stringprep Profile for Internationalized Domain Names (IDN),” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3491">RFC 3491</a>, March 2003 (TXT).
+</p>
+<dl><dd><dl><dd><dl><dd><dl><dd>第一章解释了为什么需要引用已过时的协议.
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p>[STRINGPREP] 	Hoffman, P. and M. Blanchet, “Preparation of Internationalized Strings ("stringprep"),” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3454">RFC 3454</a>, December 2002 (TXT).
+</p><p>[UNICODE] 	The Unicode Consortium, “The Unicode Standard, Version 3.2.0,” 2000.
+</p>
+<dl><dd><dl><dd><dl><dd><dl><dd>Unicode标准3.2.0版是在Unicode标准3.0版中被定义的(Reading, MA, Addison-Wesley, 2000. <a href="/%E7%89%B9%E6%AE%8A:%E7%BD%91%E7%BB%9C%E4%B9%A6%E6%BA%90/0201616335" class="internal mw-magiclink-isbn">ISBN 0-201-61633-5</a>), as amended by the Unicode Standard Annex #27: Unicode 3.1 (<a rel="nofollow" class="external free" href="http://www.unicode.org/reports/tr27/">http://www.unicode.org/reports/tr27/</a>) and by the Unicode Standard Annex #28: Unicode 3.2 (<a rel="nofollow" class="external free" href="http://www.unicode.org/reports/tr28/">http://www.unicode.org/reports/tr28/</a>).
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p>[UNICODE-SEC] 	The Unicode Consortium, “Unicode Technical Report #36: Unicode Security Considerations,” 2008 (HTML).
+</p><p>[UTF-8] 	Yergeau, F., “UTF-8, a transformation format of ISO 10646,” STD 63, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3629">RFC 3629</a>, November 2003 (TXT).
+</p><p>[XMPP] 	Saint-Andre, P., “Extensible Messaging and Presence Protocol (XMPP): Core,” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6120">RFC 6120</a>, March 2011 (TXT).
+</p>
+<h3> <span class="mw-headline" id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE">参考文献</span></h3>
+<p>[DNSSEC] 	Arends, R., Austein, R., Larson, M., Massey, D., and S. Rose, “DNS Security Introduction and Requirements,” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4033">RFC 4033</a>, March 2005 (TXT).
+</p><p>[IDNA-DEFS] 	Klensin, J., “Internationalized Domain Names for Applications (IDNA): Definitions and Document Framework,” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5890">RFC 5890</a>, August 2010 (TXT).
+</p><p>[IDNA-PROTO] 	Klensin, J., “Internationalized Domain Names in Applications (IDNA): Protocol,” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5891">RFC 5891</a>, August 2010 (TXT).
+</p><p>[IDNA-RATIONALE] 	Klensin, J., “Internationalized Domain Names for Applications (IDNA): Background, Explanation, and Rationale,” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5894">RFC 5894</a>, August 2010 (TXT).
+</p><p>[INTEROP] 	Masinter, L., “Formalizing IETF Interoperability Reporting,” Work in Progress, October 2005.
+</p><p>[IRI] 	Duerst, M. and M. Suignard, “Internationalized Resource Identifiers (IRIs),” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3987">RFC 3987</a>, January 2005 (TXT).
+</p><p>[PROCESS] 	Bradner, S., “The Internet Standards Process -- Revision 3,” BCP 9, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2026">RFC 2026</a>, October 1996 (TXT).
+</p><p>[PUNYCODE] 	Costello, A., “Punycode: A Bootstring encoding of Unicode for Internationalized Domain Names in Applications (IDNA),” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3492">RFC 3492</a>, March 2003 (TXT).
+</p><p>[REPORTS] 	Dusseault, L. and R. Sparks, “Guidance on Interoperation and Implementation Reports for Advancement to Draft Standard,” BCP 9, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5657">RFC 5657</a>, September 2009 (TXT).
+</p><p>[RFC3920] 	Saint-Andre, P., Ed., “Extensible Messaging and Presence Protocol (XMPP): Core,” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>, October 2004 (TXT, HTML, XML).
+</p><p>[RFC5952] 	Kawamura, S. and M. Kawashima, “A Recommendation for IPv6 Address Text Representation,” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5952">RFC 5952</a>, August 2010 (TXT).
+</p><p>[SASL] 	Melnikov, A., Ed. and K. Zeilenga, Ed., “Simple Authentication and Security Layer (SASL),” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4422">RFC 4422</a>, June 2006 (TXT).
+</p><p>[URI] 	Berners-Lee, T., Fielding, R., and L. Masinter, “Uniform Resource Identifier (URI): Generic Syntax,” STD 66, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3986">RFC 3986</a>, January 2005 (TXT, HTML, XML).
+</p><p>[XEP-0029] 	Kaes, C., “Definition of Jabber Identifiers (JIDs),” XSF XEP 0029, October 2003.
+</p><p>[XEP-0030] 	Hildebrand, J., Millard, P., Eatmon, R., and P. Saint-Andre, “Service Discovery,” XSF XEP 0030, June 2008.
+</p><p>[XEP-0045] 	Saint-Andre, P., “Multi-User Chat,” XSF XEP 0045, July 2008.
+</p><p>[XEP-0060] 	Millard, P., Saint-Andre, P., and R. Meijer, “Publish-Subscribe,” XSF XEP 0060, July 2010.
+</p><p>[XEP-0165] 	Saint-Andre, P., “Best Practices to Discourage JID Mimicking,” XSF XEP 0045, December 2007.
+</p><p>[XML] 	Paoli, J., Maler, E., Sperberg-McQueen, C., Yergeau, F., and T. Bray, “Extensible Markup Language (XML) 1.0 (Fourth Edition),” World Wide Web Consortium Recommendation REC-xml-20060816, August 2006 (HTML).
+</p><p>[XMPP-URI] 	Saint-Andre, P., “Internationalized Resource Identifiers (IRIs) and Uniform Resource Identifiers (URIs) for the Extensible Messaging and Presence Protocol (XMPP),” <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a>, February 2008 (TXT).
+</p>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95A._Nodeprep">附录A.  Nodeprep</span></h2>
+<h3> <span class="mw-headline" id="A.1._.E4.BB.8B.E7.BB.8D">A.1. 介绍</span></h3>
+<p>本附录定义了stringprep的"Nodeprep"范本. 因此, 它指定的处理规则将允许用户在可扩展的消息和出席信息协议(XMPP)中输入国际化的本地部分并且有很高的机会获得正确的字符串上下文. (XMPP本地部分是一个XMPP的可选部分，位于XMPP域部分和'@'分隔符之前; 它经常但不只是和一个即时消息用户名关联.) 这些处理规则只预期用于XMPP本地部分而不预期用在任意文本或一个XMPP地址的任何其他方面.
+</p><p>本范本定义如下, 是 <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a> 要求的:
+</p>
+<dl><dd><ul><li> 本范本预期的适用性: XMPP的国际化本地部分
+</li><li> stringprep输入和输出的字符曲目: Unicode 3.2, 定义于 A.2
+</li><li> 使用的映射: 定义于 A.3
+</li><li> 使用的Unicode规范化: 定义于 A.4
+</li><li> 禁止输出的字符: 定义于 A.5
+</li><li> 双向字符处理: 定义于 A.6
+</li></ul>
+</dd></dl>
+<h3> <span class="mw-headline" id="A.2._.E5.AD.97.E7.AC.A6.E6.9B.B2.E7.9B.AE">A.2. 字符曲目</span></h3>
+<p>本范本使用Unicode 3.2表A.1中的的未分配代码点列表, <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的附录A也定义了.
+</p>
+<h3> <span class="mw-headline" id="A.3._.E6.98.A0.E5.B0.84">A.3. 映射</span></h3>
+<p>本范本指定了映射使用<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的以下表:
+</p>
+<dl><dd><dl><dd>表 B.1 
+</dd><dd>表 B.2
+</dd></dl>
+</dd></dl>
+<h3> <span class="mw-headline" id="A.4._.E8.A7.84.E8.8C.83.E5.8C.96">A.4. 规范化</span></h3>
+<p>本范本指定使用来自表单KC的Unicode规范化, 如<a href="/RFC6122#.E8.A7.84.E5.BC.95.E7.94.A8" title="RFC6122">用STRINGPREP</a>所述.
+</p>
+<h3> <span class="mw-headline" id="A.5._.E7.A6.81.E6.AD.A2.E7.9A.84.E8.BE.93.E5.87.BA">A.5. 禁止的输出</span></h3>
+<p>本范本指定禁止使用<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的以下表格.
+</p>
+<dl><dd><dl><dd>表 C.1.1 
+</dd><dd>表 C.1.2 
+</dd><dd>表 C.2.1 
+</dd><dd>表 C.2.2 
+</dd><dd>表 C.3 
+</dd><dd>表 C.4 
+</dd><dd>表 C.5 
+</dd><dd>表 C.6 
+</dd><dd>表 C.7 
+</dd><dd>表 C.8 
+</dd><dd>表 C.9
+</dd></dl>
+</dd></dl>
+<p>另外, 以下额外的Unicode字符也是禁止的:
+</p>
+<dl><dd><dl><dd> U+0022 (双引号), 即, " 
+</dd><dd> U+0026 (与符号), 即, &amp; 
+</dd><dd> U+0027 (单引号), 即, ' 
+</dd><dd> U+002F (斜杠), 即, / 
+</dd><dd> U+003A (冒号), 即,&#160;: 
+</dd><dd> U+003C (小于号), 即, &lt; 
+</dd><dd> U+003E (大于号), 即, &gt; 
+</dd><dd> U+0040 (艾特号), 即, @
+</dd></dl>
+</dd></dl>
+<h3> <span class="mw-headline" id="A.6._.E5.8F.8C.E5.90.91.E5.AD.97.E7.AC.A6">A.6. 双向字符</span></h3>
+<p>本范本指定检查双向字符串, 如<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>第六章所述.
+</p>
+<h3> <span class="mw-headline" id="A.7._.E5.A4.87.E6.B3.A8">A.7. 备注</span></h3>
+<p>因为额外的被Nodeprep禁止的字符是在规范化禁止的字符之后, 实现不能(MUST NOT)允许一个自然人用户输入任何分解之后包含那些字符的Unicode代码点; 这类代码点包括但不限于以下这些(参考<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">UNICODE</a>获取全部信息):
+</p>
+<pre>   U+2100 (ACCOUNT OF)
+   U+2101 (ADDRESSED TO THE SUBJECT)
+   U+2105 (CARE OF)
+   U+2106 (CADA UNA)
+   U+226E (NOT LESS-THAN)
+   U+226F (NOT GREATER-THAN)
+   U+2A74 (DOUBLE COLON EQUAL)
+   U+FE13 (PRESENTATION FORM FOR VERTICAL COLON)
+   U+FE60 (SMALL AMPERSAND)
+   U+FE64 (SMALL LESS-THAN SIGN)
+   U+FE65 (SMALL GREATER-THAN SIGN)
+   U+FE6B (SMALL COMMERCIAL AT)
+   U+FF02 (FULLWIDTH QUOTATION MARK)
+   U+FF06 (FULLWIDTH AMPERSAND)
+   U+FF07 (FULLWIDTH APOSTROPHE)
+   U+FF0F (FULLWIDTH SOLIDUS)
+   U+FF1A (FULLWIDTH COLON)
+   U+FF1C (FULLWIDTH LESS-THAN SIGN)
+   U+FF1E (FULLWIDTH GREATER-THAN SIGN)
+   U+FF20 (FULLWIDTH COMMERCIAL AT)
+</pre>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95B._Resourceprep">附录B.  Resourceprep</span></h2>
+<h3> <span class="mw-headline" id="B.1._.E4.BB.8B.E7.BB.8D">B.1. 介绍</span></h3>
+<p>本附录定义了stringprep的"Resourceprep"范本. 因此, 它指定的处理规则将允许用户在可扩展的消息和出席信息协议(XMPP)中输入国际化的资源部分并且有很高的机会获得正确的字符串上下文. (XMPP资源部分是一个XMPP的可选部分，跟随在XMPP域部分和'/'分隔符的后面.) 这些处理规则只预期用于XMPP资源部分而不预期用在任意文本或一个XMPP地址的任何其他方面.
+</p><p>本范本定义如下, 是 <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a> 要求的:
+</p>
+<dl><dd><ul><li> 本范本预期的适用性: XMPP的国际化资源部分
+</li><li> stringprep输入和输出的字符曲目: Unicode 3.2, 定义于 B.2
+</li><li> 使用的映射: 定义于 B.3
+</li><li> 使用的Unicode规范化: 定义于 B.4
+</li><li> 禁止输出的字符: 定义于 B.5
+</li><li> 双向字符处理: 定义于 B.6
+</li></ul>
+</dd></dl>
+<h3> <span class="mw-headline" id="B.2._.E5.AD.97.E7.AC.A6.E6.9B.B2.E7.9B.AE">B.2. 字符曲目</span></h3>
+<p>本范本使用Unicode 3.2表A.1中的的未分配代码点列表, <a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的附录A也定义了.
+</p>
+<h3> <span class="mw-headline" id="B.3._.E6.98.A0.E5.B0.84">B.3. 映射</span></h3>
+<p>本范本指定了映射使用<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的以下表:
+</p>
+<dl><dd><dl><dd>表 B.1 
+</dd><dd>表 B.2
+</dd></dl>
+</dd></dl>
+<h3> <span class="mw-headline" id="B.4._.E8.A7.84.E8.8C.83.E5.8C.96">B.4. 规范化</span></h3>
+<p>本范本指定使用来自表单KC的Unicode规范化, 如<a href="/RFC6122#.E8.A7.84.E5.BC.95.E7.94.A8" title="RFC6122">用STRINGPREP</a>所述.
+</p>
+<h3> <span class="mw-headline" id="B.5._.E7.A6.81.E6.AD.A2.E7.9A.84.E8.BE.93.E5.87.BA">B.5. 禁止的输出</span></h3>
+<p>本范本指定禁止使用<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>的以下表格.
+</p>
+<dl><dd><dl><dd>表 C.1.2 
+</dd><dd>表 C.2.1 
+</dd><dd>表 C.2.2 
+</dd><dd>表 C.3 
+</dd><dd>表 C.4 
+</dd><dd>表 C.5 
+</dd><dd>表 C.6 
+</dd><dd>表 C.7 
+</dd><dd>表 C.8 
+</dd><dd>表 C.9
+</dd></dl>
+</dd></dl>
+<h3> <span class="mw-headline" id="B.6._.E5.8F.8C.E5.90.91.E5.AD.97.E7.AC.A6">B.6. 双向字符</span></h3>
+<p>本范本指定检查双向字符串, 如<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">STRINGPREP</a>第六章所述.
+</p>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95C._.E5.92.8CRFC_3920.E7.9A.84.E4.B8.8D.E5.90.8C">附录C. 和<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>的不同</span></h2>
+<p>基于从实现和部署经验衍生的共识以及正式的互操作性测试, 以下是对 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>的实质性修改.
+</p>
+<dl><dd><ul><li> 纠正ABNF语法以确保<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">URI</a>和<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IRI</a>的一致性, 包括<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3986">RFC 3986</a>和<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">RFC5952</a>关于IPv6地址的一致性(例如, IPv6地址的关闭是方括号'['和']' -- 参见<a href="/RFC6122#.E8.A7.84.E8.8C.83.E5.BC.95.E7.94.A8" title="RFC6122">XMPP</a>的章节4.9.3.19).
+</li><li> 纠正ABNF语法以防止长度为零的本地部分, 域部分, 和资源部分(而且也要注意适用于域部分的DNS的相关长度限制).
+</li><li> 为了避免混淆用于<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">XEP‑0030</a>和<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">XEP‑0060</a>的术语"node", 把术语"node identifier"(节点标识符) 改成"localpart"(本地部分) (但是保留名称"Nodeprep"用于向后兼容).
+</li><li> 为了避免混淆用于<a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">URI</a>的术语"resource"和"identifier", 把术语"resource identifier"(资源不标识符)改成"resourcepart"(资源部分).
+</li><li> 纠正Nameprep处理规则，要求使用 UseSTD3ASCIIRules 标记.
+</li></ul>
+</dd></dl>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95D._.E8.87.B4.E8.B0.A2">附录D. 致谢</span></h2>
+<p>感谢 Ben Campbell, Waqas Hussain, Jehan Pages, 和 Florian Zeitz 的反馈. 也感谢 Richard Barnes 和 Elwyn Davies 分别代表安全方面和全局审核小组的审核.
+</p><p>工作组的主席是 Ben Campbell 和 Joe Hildebrand. 区域责任总监是 Gonzalo Camarillo.
+</p><p>本文中的一些文本是借用或改变自 <a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IDNA‑DEFS</a>, <a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IDNA‑PROTO</a>, <a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">IDNA‑RATIONALE</a>, and <a href="/RFC6122#.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE" title="RFC6122">XEP‑0165</a>. 
+</p>
+<hr />
+<p>作者地址
+</p>
+<pre> 	Peter Saint-Andre
+ 	Cisco
+ 	1899 Wyknoop Street, Suite 600
+ 	Denver, CO 80202
+ 	USA
+ Phone:  	+1-303-308-3282
+ EMail:  	psaintan@cisco.com
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 164/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:71-0!*!0!!zh-cn!*!* and timestamp 20160222043950 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=RFC6122&amp;oldid=2953">http://wiki.jabbercn.org/index.php?title=RFC6122&amp;oldid=2953</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">3个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E7%9B%B8%E5%85%B3RFC" title="分类:XMPP相关RFC">XMPP相关RFC</a></li><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E6%A0%B8%E5%BF%83RFC" title="分类:XMPP核心RFC">XMPP核心RFC</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/RFC6122" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:RFC6122&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=RFC6122&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=RFC6122&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=RFC6122" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/RFC6122" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/RFC6122" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=RFC6122&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=RFC6122&amp;oldid=2953" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2013年2月7日 (星期四) 17:41。</li>
+		<li id="viewcount">此页面已被浏览过30,970次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("RFC6122");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.037 secs. --></body></html>

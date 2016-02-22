@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>Openfire:安装指南 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Openfire:安装指南", "wgTitle": "Openfire:安装指南", "wgCurRevisionId": 3004, "wgArticleId": 52, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["XMPP服务器文档", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-bash {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-bash li, .source-bash pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: source-bash, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-bash .de1, .source-bash .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-bash  {font-family: monospace;}
+.source-bash .imp {font-weight: bold; color: red;}
+.source-bash li, .source-bash li.li1 {font-weight: normal;}
+.source-bash li.li2 {font-weight: bold;}
+.source-bash .kw1 {color: #000000; font-weight: bold;}
+.source-bash .kw2 {color: #c20cb9; font-weight: bold;}
+.source-bash .kw3 {color: #7a0874; font-weight: bold;}
+.source-bash .co0 {color: #666666; font-style: italic;}
+.source-bash .co1 {color: #800000;}
+.source-bash .co2 {color: #cc0000; font-style: italic;}
+.source-bash .es0 {color: #000099; font-weight: bold;}
+.source-bash .br0 {color: #7a0874; font-weight: bold;}
+.source-bash .sy0 {color: #000000; font-weight: bold;}
+.source-bash .st0 {color: #ff0000;}
+.source-bash .nu0 {color: #000000;}
+.source-bash .re0 {color: #007800;}
+.source-bash .re1 {color: #007800;}
+.source-bash .re2 {color: #007800;}
+.source-bash .re4 {color: #007800;}
+.source-bash .re5 {color: #660033;}
+.source-bash .ln-xtra, .source-bash li.ln-xtra, .source-bash div.ln-xtra {background-color: #ffc;}
+.source-bash span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-ini {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-ini li, .source-ini pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for ini
+ * CSS class: source-ini, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-ini .de1, .source-ini .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-ini  {font-family: monospace;}
+.source-ini .imp {font-weight: bold; color: red;}
+.source-ini li, .source-ini li.li1 {font-weight: normal;}
+.source-ini li.li2 {font-weight: bold;}
+.source-ini .co0 {color: #666666; font-style: italic;}
+.source-ini .sy0 {color: #000066; font-weight:bold;}
+.source-ini .st0 {color: #933;}
+.source-ini .re0 {color: #000066; font-weight:bold;}
+.source-ini .re1 {color: #000099;}
+.source-ini .re2 {color: #660066;}
+.source-ini .ln-xtra, .source-ini li.ln-xtra, .source-ini div.ln-xtra {background-color: #ffc;}
+.source-ini span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Openfire_安装指南 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Openfire:安装指南</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p><br />
+<b>本文的英文原文来自 <a rel="nofollow" class="external free" href="http://www.igniterealtime.org/builds/openfire/docs/latest/documentation/install-guide.html">http://www.igniterealtime.org/builds/openfire/docs/latest/documentation/install-guide.html</a> </b>
+</p><p><b>安装指南</b>
+</p><p>Openfire是一个强大的即时消息（IM）和聊天服务器，它实现了XMPP协议。这份文件将引导您通过安装Openfire。对于更多的功能和信息的完整列表，请访问Openfire网站：<a rel="nofollow" class="external free" href="http://www.igniterealtime.org/projects/openfire/">http://www.igniterealtime.org/projects/openfire/</a>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.AE.89.E8.A3.85"><span class="tocnumber">1</span> <span class="toctext">安装</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Windows"><span class="tocnumber">1.1</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Linux.2FUnix"><span class="tocnumber">1.2</span> <span class="toctext">Linux/Unix</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.AE.89.E8.A3.85.E6.A6.82.E8.BF.B0"><span class="tocnumber">2</span> <span class="toctext">安装概述</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E5.88.86.E5.8F.91.E7.89.88.E9.87.8C.E7.9A.84.E6.96.87.E4.BB.B6"><span class="tocnumber">3</span> <span class="toctext">分发版里的文件</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.E5.AE.89.E8.A3.85.E6.95.B0.E6.8D.AE.E5.BA.93"><span class="tocnumber">4</span> <span class="toctext">安装数据库</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#.E5.AE.89.E8.A3.85.E6.9C.8D.E5.8A.A1.E5.99.A8"><span class="tocnumber">5</span> <span class="toctext">安装服务器</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#.E7.AE.A1.E7.90.86.E6.8E.A7.E5.88.B6.E5.8F.B0"><span class="tocnumber">6</span> <span class="toctext">管理控制台</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#.E5.9C.A8Windows.E4.B8.8B.E8.BF.90.E8.A1.8COpenfire"><span class="tocnumber">7</span> <span class="toctext">在Windows下运行Openfire</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Windows.E6.9C.8D.E5.8A.A1"><span class="tocnumber">7.1</span> <span class="toctext">Windows服务</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.E8.87.AA.E5.AE.9A.E4.B9.89.E5.8F.82.E6.95.B0"><span class="tocnumber">7.2</span> <span class="toctext">自定义参数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#.E5.9C.A8Linux.2FUnix.E4.B8.8B.E8.BF.90.E8.A1.8COpenfire"><span class="tocnumber">8</span> <span class="toctext">在Linux/Unix下运行Openfire</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#.E8.87.AA.E5.AE.9A.E4.B9.89.E5.8F.82.E6.95.B0_2"><span class="tocnumber">8.1</span> <span class="toctext">自定义参数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#.E6.8F.92.E4.BB.B6"><span class="tocnumber">9</span> <span class="toctext">插件</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#.E5.AE.89.E8.A3.85.E6.8F.92.E4.BB.B6"><span class="tocnumber">9.1</span> <span class="toctext">安装插件</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#.E7.AE.A1.E7.90.86.E6.8F.92.E4.BB.B6"><span class="tocnumber">9.2</span> <span class="toctext">管理插件</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E5.AE.89.E8.A3.85">安装</span></h2>
+<h3> <span class="mw-headline" id="Windows">Windows</span></h3>
+<p>运行Openfire 安装包. 应用缺省将被安装于目录 c:\Program Files\Openfire .
+</p>
+<h3> <span class="mw-headline" id="Linux.2FUnix">Linux/Unix</span></h3>
+<p>可选择RPM包或tar.gz包. 如果使用RPM包, 用你的包管理器运行把它Openfire安装到目录 /opt/openfire:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre>rpm <span class="re5">-ivh</span> openfire_3_0_0.rpm</pre></div></div>
+<p>如果使用.tar.gz包, 解压到目录 /opt 或 /usr/bin:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre><span class="kw2">tar</span> <span class="re5">-xzvf</span> openfire_3_0_0.tar.gz
+<span class="kw2">mv</span> openfire <span class="sy0">/</span>opt</pre></div></div>
+<p><b>注意</b>: .tar.gz包不一定包含Java虚拟机(JRE). 所以, 你必须之前就有 JDK 或 JRE 1.5.0 (Java 5) 或之后安装到你的系统里. 你可以在命令行键入 "java -version" 来检查你的java版本，然后 (如果必要) 访问 <a rel="nofollow" class="external free" href="http://java.sun.com">http://java.sun.com</a> 更新你的Java安装.
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.89.E8.A3.85.E6.A6.82.E8.BF.B0">安装概述</span></h2>
+<p>为了完成Openfire的安装, 你需要执行以下步骤:
+</p>
+<ol><li> <a href="/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97#.E5.AE.89.E8.A3.85.E6.95.B0.E6.8D.AE.E5.BA.93" title="Openfire:安装指南">数据库</a> - 如果你选择使用一个外部数据库, 你必须准备为Openfire准备好你的数据库.
+</li><li> <a href="/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97#.E5.AE.89.E8.A3.85.E6.9C.8D.E5.8A.A1.E5.99.A8" title="Openfire:安装指南">安装</a> - 使用内置的基于web的安装工具来安装和验证服务器的配置.
+</li><li> <a href="/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97#.E7.AE.A1.E7.90.86.E6.8E.A7.E5.88.B6.E5.8F.B0" title="Openfire:安装指南">管理控制台</a> - 使用基于web的管理工具来管理服务器.
+</li></ol>
+<p>本文也包括以下信息:
+</p>
+<ul><li> <a href="/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97#.E5.9C.A8Windows.E4.B8.8B.E8.BF.90.E8.A1.8COpenfire" title="Openfire:安装指南">在Windows下运行</a>
+</li><li> <a href="/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97#.E5.9C.A8Linux.2FUnix.E4.B8.8B.E8.BF.90.E8.A1.8COpenfire" title="Openfire:安装指南">在Unix/Linux下运行</a>
+</li><li> <a href="/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97#.E6.8F.92.E4.BB.B6" title="Openfire:安装指南">安装和使用插件</a>
+</li></ul>
+<h2> <span class="mw-headline" id=".E5.88.86.E5.8F.91.E7.89.88.E9.87.8C.E7.9A.84.E6.96.87.E4.BB.B6">分发版里的文件</span></h2>
+<p>你的分发版里的文件应该像下面这样 (为了简短一点，一些子目录被忽略了):
+</p>
+<pre>
+openfire/
+ |- readme.html
+ |- license.html
+ |- conf/
+ |- bin/
+ |- jre/
+ |- lib/
+ |- plugins/
+     |- admin/
+ |- resources/
+     |-database/
+     |-security/
+ |- documentation/
+</pre>
+<ul><li> <b>conf</b> 目录Openfire用来存放配置文件.
+</li><li> <b>bin</b> 目录包含了服务器的可执行文件. 根据你安装的不同分发版, 可用的执行文件也不同.
+</li><li> <b>jre</b> 目录包含了一个 Java 5 虚拟机，打包在Windows和RPM版本Openfire里面的.
+</li><li> <b>lib</b> 目录包含了运行Openfire所需要的库.
+</li><li> <b>plugins</b> 目录包含了服务器插件. 缺省地, Openfire带了一个基于web的管理控制台插件.
+</li><li> <b>resources/database</b> 目录包含 SQL 架构文件，用来新建Openfire数据库, 以及已有安装的更新脚本.
+</li><li> <b>resources/security</b> 目录是Openfire维护keystores的地方，用来支持SSL连接安全性.
+</li><li> <b>documentation</b> 目录包含了服务器文档.
+</li></ul>
+<h2> <span class="mw-headline" id=".E5.AE.89.E8.A3.85.E6.95.B0.E6.8D.AE.E5.BA.93">安装数据库</span></h2>
+<p>Openfire能把它的数据存储在一个嵌入式的数据库里，你也能选择使用一个外部数据库,例如MySQL或Oracle. 如果你喜欢使用外部数据库, 你必须在开始安装之前准备好它. 更多信息见<a rel="nofollow" class="external text" href="http://www.igniterealtime.org/builds/openfire/docs/latest/documentation/database.html">数据库安装</a>.
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.89.E8.A3.85.E6.9C.8D.E5.8A.A1.E5.99.A8">安装服务器</span></h2>
+<p>Openfire內建了一个基于web的, "向导"驱动的安装和配置工具. 简单地启动Openfire(分平台的指引如下) 并使用浏览器连接到管理控制台. 基于web的管理控制台的缺省端口是9090. 如果你和Openfire在同一台机器, 以下URL通常会起作用: <a rel="nofollow" class="external free" href="http://127.0.0.1:9090">http://127.0.0.1:9090</a>.
+</p>
+<h2> <span class="mw-headline" id=".E7.AE.A1.E7.90.86.E6.8E.A7.E5.88.B6.E5.8F.B0">管理控制台</span></h2>
+<p>在完成上述步骤之后, Openfire将被配置，你可以用基于web的管理控制台管理服务器. URL应该和你用来安装服务器用的那个一样，除非你在安装期间修改了那个端口.
+</p>
+<h2> <span class="mw-headline" id=".E5.9C.A8Windows.E4.B8.8B.E8.BF.90.E8.A1.8COpenfire">在Windows下运行Openfire</span></h2>
+<p>如果你使用了Openfire安装包, 在你的开始菜单里会有一个快捷方式来启动图形化启动器. 否则, 在你的 Openfire 安装位置的 bin/ 目录运行 openfire.exe . 在启动界面上有一个按钮，允许你自动打开你的web浏览器连接正确的URL来完成服务器的安装
+</p><p><img src="http://www.igniterealtime.org/builds/openfire/docs/latest/documentation/images/launcher.png" alt="launcher.png" />
+</p>
+<h3> <span class="mw-headline" id="Windows.E6.9C.8D.E5.8A.A1">Windows服务</span></h3>
+<p>如果你正在Windows下运行Openfire, 你或许想在初始化安装之后把Openfire作为一个标准的Windows来运行. 如果你使用Windows安装包, 一个 openfire-service.exe 文件将会出现在安装目录下的 bin 目录. 你可以使用这个可执行文件来安装和控制Openfire服务.
+</p><p>从控制台窗口, 你可以运行以下命令:
+</p>
+<ul><li> <b>openfire-service /install</b> -- 安装服务.
+</li><li> <b>openfire-service /uninstall</b> -- 卸载服务.
+</li><li> <b>openfire-service /start</b> -- 启动服务.
+</li><li> <b>openfire-service /stop</b> -- 停止服务. 
+</li></ul>
+<p><img src="http://www.igniterealtime.org/builds/openfire/docs/latest/documentation/images/windows_service.png" alt="windows_service.png" />
+</p><p>你也可以在Windows控制面板使用服务工具来启动和停止服务.
+</p><p>注意: 那个图形化的启动器目前和Windows服务还不兼容. 如果你安装了服务, 你应该使用上述的服务控制台来控制服务而不是这个图形启动器.
+</p>
+<h3> <span class="mw-headline" id=".E8.87.AA.E5.AE.9A.E4.B9.89.E5.8F.82.E6.95.B0">自定义参数</span></h3>
+<p>高级用户可能希望传递参数到Java虚拟机(VM)来定制Openfire的运行时环境. 你可以在你的Openfire安装目录下的 bin/ 目录建立 vmoptions 文件来做到这一点. 对于 Windows服务, 你要建一个新文本文件，名为 openfire-service.vmoptions. 每个给VM的参数应该独立占用文件中的一行. 例如, 设置最小堆栈大小为 512 MB 和最大 VM 堆栈为 1024 MB, 你可以用:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-ini" style="font-family: monospace;"><pre>-Xms512m
+-Xmx1024m</pre></div></div>
+<p>要新建参数给普通的启动器, 新建一个文件，名为 openfired.vmoptions (因为 openfire.exe 启动器会调用 openfired.exe 可执行文件来实际地启动服务器).
+</p>
+<h2> <span class="mw-headline" id=".E5.9C.A8Linux.2FUnix.E4.B8.8B.E8.BF.90.E8.A1.8COpenfire">在Linux/Unix下运行Openfire</span></h2>
+<p>如果你正在一个 Red Hat 或类 Red Hat 的系统上运行 (CentOS, Fedora, 等等), 我们建议使用RPM，因为它包含一些标准的类Red Hat环境的自定义处理. 假设你使用了RPM, 你可以使用 <b>/etc/init.d/openfire</b> 脚本启动和停止Openfire.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre><span class="co0"># /etc/init.d/openfire</span>
+Usage <span class="sy0">/</span>etc<span class="sy0">/</span>init.d<span class="sy0">/</span>openfire <span class="br0">&#123;</span>start<span class="sy0">|</span>stop<span class="sy0">|</span>restart<span class="sy0">|</span>status<span class="sy0">|</span>condrestart<span class="sy0">|</span>reload<span class="br0">&#125;</span>
+<span class="co0"># /etc/init.d/openfire start</span>
+Starting openfire:</pre></div></div>
+<p>如果你正在一个不同的Linux/Unix变种下运行, 并且/或你使用了tar.gz '安装包', 你可以使用你的Openfire安装目录下的 bin/openfire 脚本启动和停止Openfire:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre><span class="co0"># ./openfire</span>
+Usage: .<span class="sy0">/</span>openfire <span class="br0">&#123;</span>start<span class="sy0">|</span>stop<span class="br0">&#125;</span>
+<span class="co0"># ./openfire start</span>
+Starting openfire</pre></div></div>
+<p>如果你想把Openfire安装成一个服务, 在 bin/extra 目录提供了两个脚本:
+</p>
+<ul><li> redhat-postinstall.sh -- 自动把Openfire安装为Red Hat的服务. 它会新建一个"jive"用户，然后拷贝 openfired 脚本到你的 init.d 目录. 这个脚本必须以root身份来运行. 更多信息请看脚本里的注释.
+</li><li> openfired -- 把Openfire当成服务运行的脚本. 你必须手工配置这个脚本. 更多信息请看脚本里的注释.
+</li></ul>
+<p><b>如果你通过RPM安装，不推荐你使用这些脚本. RPM已经把这些脚本照顾得很好了.</b>
+</p>
+<h3> <span class="mw-headline" id=".E8.87.AA.E5.AE.9A.E4.B9.89.E5.8F.82.E6.95.B0_2">自定义参数</span></h3>
+<p>你可以在你的Openfire安装目录下的 bin/ 目录建立 vmoptions 文件来做到这一点. 对于 Windows服务, 你要建一个新文本文件，名为 openfire-service.vmoptions. 每个给VM的参数应该独立占用文件中的一行. 例如, 设置最小堆栈大小为 512 MB 和最大 VM 堆栈为 1024 MB, 你可以用:
+</p><p>高级用户可能希望传递参数到Java虚拟机(VM)来定制Openfire的运行时环境. 如果你是通过RPM安装的, 你可以编辑 /etc/sysconfig/openfire 文件并找到 OPENFIRE_OPTS 选项来定制它. 如果你通过.tar.gz安装的, 你要调整你的启动脚本来满足你的需要.
+</p>
+<h2> <span class="mw-headline" id=".E6.8F.92.E4.BB.B6">插件</span></h2>
+<p>插件给Openfire增加了额外的特性和协议支持. 在安装完你的Openfire之后, 你可能想下载并安装插件以增进你的服务器. 插件可从 igniterealtime.org 的 plugins 页面下载或直接从内部的管理控制台直接下载.
+</p>
+<h3> <span class="mw-headline" id=".E5.AE.89.E8.A3.85.E6.8F.92.E4.BB.B6">安装插件</span></h3>
+<p>如果你从Openfire内部的管理控制台下载了一个插件, 它将被自动安装. 如果你手工下载这个插件(打包成一个.jar文件), 你可以通过把插件文件拷贝到Openfire安装目录下的 plugins/ 目录来布署它. 一个插件监控器将自动解包这个插件到一个目录并安装这个插件到Openfire. 你也可以在管理控制台使用"上传插件"功能(在 插件 标签页) 来从本地文件系统装入一个插件到服务器.
+</p>
+<h3> <span class="mw-headline" id=".E7.AE.A1.E7.90.86.E6.8F.92.E4.BB.B6">管理插件</span></h3>
+<p>插件可通过内部的Openfire管理控制台来管理. 你也可以在任何时候通过删除插件的JAR文件来手工删除一个插件(当你这么干了，Openfire将从内存自动移除这个插件并删除它的目录).
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 117/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:52-0!*!0!!zh-cn!*!* and timestamp 20160221163251 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97&amp;oldid=3004">http://wiki.jabbercn.org/index.php?title=Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97&amp;oldid=3004</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">2个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E6%A1%A3" title="分类:XMPP服务器文档">XMPP服务器文档</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Openfire%3A%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=Openfire:%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97&amp;oldid=3004" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2013年3月22日 (星期五) 18:10。</li>
+		<li id="viewcount">此页面已被浏览过40,593次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("Openfire:安装指南");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.038 secs. --></body></html>

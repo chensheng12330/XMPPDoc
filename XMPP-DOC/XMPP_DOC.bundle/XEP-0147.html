@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>XEP-0147 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "XEP-0147", "wgTitle": "XEP-0147", "wgCurRevisionId": 2863, "wgArticleId": 749, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["XMPP扩展", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-text {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-text li, .source-text pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for text
+ * CSS class: source-text, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-text .de1, .source-text .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-text  {font-family: monospace;}
+.source-text .imp {font-weight: bold; color: red;}
+.source-text li, .source-text li.li1 {font-weight: normal;}
+.source-text li.li2 {font-weight: bold;}
+.source-text .ln-xtra, .source-text li.ln-xtra, .source-text div.ln-xtra {background-color: #ffc;}
+.source-text span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-xml {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-xml .de1, .source-xml .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-xml  {font-family: monospace;}
+.source-xml .imp {font-weight: bold; color: red;}
+.source-xml li, .source-xml li.li1 {font-weight: normal;}
+.source-xml li.li2 {font-weight: bold;}
+.source-xml .co1 {color: #808080; font-style: italic;}
+.source-xml .co2 {color: #404040; font-style: italic;}
+.source-xml .co3 {color: #000000;}
+.source-xml .co4 {color: #400000; font-weight: bold;}
+.source-xml .es0 {color: #000099; font-weight: bold;}
+.source-xml .br0 {color: #66cc66;}
+.source-xml .sy0 {color: #66cc66;}
+.source-xml .st0 {color: #ff0000;}
+.source-xml .nu0 {color: #cc66cc;}
+.source-xml .re0 {color: #000066;}
+.source-xml .re1 {color: #000000; font-weight: bold;}
+.source-xml .re2 {color: #000000; font-weight: bold;}
+.source-xml .ln-xtra, .source-xml li.ln-xtra, .source-xml div.ln-xtra {background-color: #ffc;}
+.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-XEP-0147 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">XEP-0147</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p><br />
+<b>本文的英文原文来自<a rel="nofollow" class="external text" href="http://www.xmpp.org/extensions/xep-0147.html">XEP-0147</a></b>
+</p><p><b>XEP-0147: XMPP URI Scheme查询组件</b>
+</p>
+<table>
+<tr>
+<th>摘要:
+</th>
+<td>本文定义了一个查询组件的注册项用于XMPP IRIs/URIs的上下文，也指定了注册项的值的首次提交步骤.
+</td></tr>
+<tr>
+<th>作者:
+</th>
+<td>Peter Saint-Andre
+</td></tr>
+<tr>
+<th>版权:
+</th>
+<td>© 1999 - 2012 XMPP标准化基金会(XSF). 参见<a href="/XEP-0147#.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A" title="XEP-0147">法律通告</a>.
+</td></tr>
+<tr>
+<th>状态:
+</th>
+<td>活跃
+</td></tr>
+<tr>
+<th>类型:
+</th>
+<td>信息
+</td></tr>
+<tr>
+<th>版本:
+</th>
+<td>1.2
+</td></tr>
+<tr>
+<th>最后更新日期:
+</th>
+<td>2006-09-13
+</td></tr></table>
+<hr />
+<p>注意: 这个信息性的协议定义了一个已经被XMPP评议会 和/或 XSF董事会批准的最佳实践或协议范本. 该协议被鼓励实现并且这一最佳实践或或协议范本适于部署到生产环境.
+</p>
+<hr />
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E7.AE.80.E4.BB.8B"><span class="tocnumber">1</span> <span class="toctext">简介</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E6.9C.AF.E8.AF.AD"><span class="tocnumber">2</span> <span class="toctext">术语</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E6.9F.A5.E8.AF.A2.E6.93.8D.E4.BD.9C"><span class="tocnumber">3</span> <span class="toctext">查询操作</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#.E6.B6.88.E6.81.AF.E6.93.8D.E4.BD.9C"><span class="tocnumber">3.1</span> <span class="toctext">消息操作</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.E5.90.8D.E5.86.8C.E7.AE.A1.E7.90.86.E6.93.8D.E4.BD.9C"><span class="tocnumber">3.2</span> <span class="toctext">名册管理操作</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#.E6.B7.BB.E5.8A.A0.E5.90.8D.E5.86.8C.E6.9D.A1.E7.9B.AE"><span class="tocnumber">3.2.1</span> <span class="toctext">添加名册条目</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#.E5.88.A0.E9.99.A4.E5.90.8D.E5.86.8C.E6.9D.A1.E7.9B.AE"><span class="tocnumber">3.2.2</span> <span class="toctext">删除名册条目</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#.E8.AE.A2.E9.98.85.E7.AE.A1.E7.90.86.E6.93.8D.E4.BD.9C"><span class="tocnumber">3.3</span> <span class="toctext">订阅管理操作</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#.E8.AE.A2.E9.98.85"><span class="tocnumber">3.3.1</span> <span class="toctext">订阅</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#.E5.8F.96.E6.B6.88.E8.AE.A2.E9.98.85"><span class="tocnumber">3.3.2</span> <span class="toctext">取消订阅</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#.E5.9B.BD.E9.99.85.E5.8C.96.E4.BA.8B.E9.A1.B9"><span class="tocnumber">4</span> <span class="toctext">国际化事项</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#.E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9"><span class="tocnumber">5</span> <span class="toctext">安全事项</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#IANA.E4.BA.8B.E9.A1.B9"><span class="tocnumber">6</span> <span class="toctext">IANA事项</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#XMPP.E6.B3.A8.E5.86.8C.E5.A4.84.E4.BA.8B.E9.A1.B9"><span class="tocnumber">7</span> <span class="toctext">XMPP注册处事项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#XMPP_IRI.2FURI.E6.9F.A5.E8.AF.A2.E7.B1.BB.E5.9E.8B.E6.B3.A8.E5.86.8C.E9.A1.B9"><span class="tocnumber">7.1</span> <span class="toctext">XMPP IRI/URI查询类型注册项</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#.E6.B3.A8.E5.86.8C.E8.BF.87.E7.A8.8B"><span class="tocnumber">7.1.1</span> <span class="toctext">注册过程</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#.E6.B3.A8.E5.86.8C.E9.A1.B9"><span class="tocnumber">7.1.2</span> <span class="toctext">注册项</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#.E9.99.84.E5.BD.95"><span class="tocnumber">8</span> <span class="toctext">附录</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#.E9.99.84.E5.BD.95A:.E6.96.87.E6.A1.A3.E4.BF.A1.E6.81.AF"><span class="tocnumber">8.1</span> <span class="toctext">附录A:文档信息</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#.E9.99.84.E5.BD.95B:.E4.BD.9C.E8.80.85.E4.BF.A1.E6.81.AF"><span class="tocnumber">8.2</span> <span class="toctext">附录B:作者信息</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A"><span class="tocnumber">8.3</span> <span class="toctext">附录C:法律通告</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95D:.E5.92.8CXMPP.E7.9A.84.E5.85.B3.E7.B3.BB"><span class="tocnumber">8.4</span> <span class="toctext">附录D:和XMPP的关系</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95E:.E8.AE.A8.E8.AE.BA.E5.9C.B0.E7.82.B9"><span class="tocnumber">8.5</span> <span class="toctext">附录E:讨论地点</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95F:.E9.9C.80.E6.B1.82.E4.B8.80.E8.87.B4.E6.80.A7"><span class="tocnumber">8.6</span> <span class="toctext">附录F:需求一致性</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8"><span class="tocnumber">8.7</span> <span class="toctext">附录G:备注</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#.E9.99.84.E5.BD.95H:.E4.BF.AE.E8.AE.A2.E5.8E.86.E5.8F.B2"><span class="tocnumber">8.8</span> <span class="toctext">附录H:修订历史</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E7.AE.80.E4.BB.8B">简介</span></h2>
+<p><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc5122">RFC 5122</a> <a href="/XEP-0147#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0147">1</a> 定义了一个统一资源标识符(URI)方案用于把用可扩展的消息和出席信息协议(参见 <a href="/RFC6120" title="RFC6120">XMPP核心</a> <a href="/XEP-0147#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0147">3</a>)来通讯的实体的地址格式化成 URIs 和互联网资源标识符(IRIs) <a href="/XEP-0147#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0147">2</a>. 这些标识符使得非类似数据库和web浏览器的本地应用能对XMPP实体进行鉴定和与之交互.
+</p><p>无论如何, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a> 故意在查询组件留下开放式的潜在值, 未对查询提供一个常用"操作"列表(例如, 发送小西或加入聊天室), 并且未指定推荐的"键-值" 对来用于这类操作作的上下文. 所以, 本文定义了这类操作的注册项和 键－值 对(由 <a rel="nofollow" class="external text" href="http://xmpp.org/registrar/">XMPP注册项</a> <a href="/XEP-0147#.E5.A4.87.E6.B3.A8" title="XEP-0147">4</a>) 维护并为那个注册项指定一组初始值.
+</p><p>本文组织如下:
+</p>
+<dl><dd><ul><li> 注册项定义于 <a href="/XEP-0147#XMPP_IRI.2FURI.E6.9F.A5.E8.AF.A2.E7.B1.BB.E5.9E.8B.E6.B3.A8.E5.86.8C.E9.A1.B9" title="XEP-0147">XMPP IRI/URI查询类型注册项</a> 章节.
+</li><li> 操作和 键-值 对一组初始值在 <a href="/XEP-0147#.E6.9F.A5.E8.AF.A2.E6.93.8D.E4.BD.9C" title="XEP-0147">查询操作</a> 章节中描述.
+</li><li> 该注册项相应的初始提交定义于<a href="/XEP-0147#.E6.B3.A8.E5.86.8C.E9.A1.B9" title="XEP-0147">初始注册项</a>章节.
+</li><li> 提交额外值到注册项的过程定义于<a href="/XEP-0147#.E6.B3.A8.E5.86.8C.E8.BF.87.E7.A8.8B" title="XEP-0147">注册过程</a>章节.
+</li></ul>
+</dd></dl>
+<p>注意: XMPP URI scheme 的格式, 包括查询组件的格式, 完全被指定并正式地被定义是在 <b><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a></b>&#160;; 本文未以任何方式修改 xmpp URI scheme 并假定读者对 <b><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a></b> 各方面很熟悉.
+</p>
+<h2> <span class="mw-headline" id=".E6.9C.AF.E8.AF.AD">术语</span></h2>
+<p>本文从 <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a> <a href="/XEP-0147#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0147">5</a>, <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc3987">RFC 3987</a> <a href="/XEP-0147#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0147">6</a>, 和 <b><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a></b> 继承术语.
+</p>
+<h2> <span class="mw-headline" id=".E6.9F.A5.E8.AF.A2.E6.93.8D.E4.BD.9C">查询操作</span></h2>
+<p>通过XMPP IRI/URI和XMPP实体的交互来触发的操作的范围，接本上和XMPP扩展的范围一样广泛. 本文不专注于详尽地定义所有这类潜在的操作. 然而, 以下操作可能一般人都会感兴趣的:
+</p>
+<dl><dd><ol><li> 发送一条消息.
+</li><li> 添加或删除一个名册条目.
+</li><li> 订阅或取消订阅一个实体的出席信息.
+</li><li> 确定一个实体的<a href="/XEP-0030" title="XEP-0030">服务发现</a> <a href="/index.php?title=%E9%99%84%E5%BD%95G:%E5%A4%87%E6%B3%A8&amp;action=edit&amp;redlink=1" class="new" title="附录G:备注（尚未撰写）">7</a> 信息.
+</li><li> 加入一个群聊房间(见<a href="/XEP-0045" title="XEP-0045">多用户聊天</a> <a href="/index.php?title=%E9%99%84%E5%BD%95G:%E5%A4%87%E6%B3%A8&amp;action=edit&amp;redlink=1" class="new" title="附录G:备注（尚未撰写）">8</a>).
+</li><li> 请求对一个实体执行<a href="/index.php?title=XEP-0050&amp;action=edit&amp;redlink=1" class="new" title="XEP-0050（尚未撰写）">特定的命令</a> <a href="/index.php?title=%E9%99%84%E5%BD%95G:%E5%A4%87%E6%B3%A8&amp;action=edit&amp;redlink=1" class="new" title="附录G:备注（尚未撰写）">9</a>.
+</li><li> 接收和一个实体相关的<a href="/XEP-0054" title="XEP-0054">电子名片</a> <a href="/index.php?title=%E9%99%84%E5%BD%95G:%E5%A4%87%E6%B3%A8&amp;action=edit&amp;redlink=1" class="new" title="附录G:备注（尚未撰写）">10</a> 数据.
+</li><li> 订阅或取消订阅一个<a href="/XEP-0060" title="XEP-0060">发布-订阅</a> <a href="/index.php?title=%E9%99%84%E5%BD%95G:%E5%A4%87%E6%B3%A8&amp;action=edit&amp;redlink=1" class="new" title="附录G:备注（尚未撰写）">11</a> 节点.
+</li><li> 通过<a href="/XEP-0077" title="XEP-0077">带内注册</a> <a href="/index.php?title=%E9%99%84%E5%BD%95G:%E5%A4%87%E6%B3%A8&amp;action=edit&amp;redlink=1" class="new" title="附录G:备注（尚未撰写）">12</a>来注册另一个实体.
+</li><li> 发起和另一个实体的文件传输 (见 <a href="/XEP-0096" title="XEP-0096">文件传输</a> <a href="/index.php?title=%E9%99%84%E5%BD%95G:%E5%A4%87%E6%B3%A8&amp;action=edit&amp;redlink=1" class="new" title="附录G:备注（尚未撰写）">12</a>13]]).
+</li></ol>
+</dd></dl>
+<p>对于每个这类操作, XMPP注册项维护一个推荐的(RECOMMENDED) "查询类型" (这可以被认为是操作的名称或 "动词"; 语法和语义参见 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a>) 以及如果必要的话，可选的(OPTIONAL)用于 键-值 对的键列表.
+</p><p>和<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>及<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3921">RFC 3921</a>相关的查询类型和 键-值 对定义于此; 和XMPP标准基金会的XEP系列定义的协议相关的查询类型和 键-值 对定义于相应的XMPP扩展协议规范中.
+</p>
+<h3> <span class="mw-headline" id=".E6.B6.88.E6.81.AF.E6.93.8D.E4.BD.9C">消息操作</span></h3>
+<p>对于XMPP IRI/URI来说触发特定的接口用来发送一个XMPP消息节可能是最受欢迎的. 对于这个操作，建议的查询类型是"message". 如果没有提供 键－值 对, 和包含了查询类型"message"的 XMPP IRI/URI交互应该触发一个接口允许用户输入一个XMPP消息文本和其他相关的参数(例如, 一个消息标题或 <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0071.html">XHTML-IM</a> [[XEP-0147#附录G:备注|14] 加成).
+</p><p><b>示例1. 基本消息操作</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?message</pre></div></div>
+<p>一个查询类型为"message"的查询组件可以指定各种 键－值 对. 以下三个键和<a href="/RFC6121" title="RFC6121">XMPP IM</a> <a href="/XEP-0147#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0147">15</a> 中的'jabber:client'命名空间的XML schema定义的&lt;message/&gt;节的子元素相关:
+</p>
+<dl><dd><ol><li> subject
+</li><li> body
+</li><li> thread
+</li></ol>
+</dd></dl>
+<p>另外, 以下三个键和'jabber:client'命名空间的XML schema定义的&lt;message/&gt;节的属性相关('to'属性是不必要的, 因为它由 IRI/URI中包含的XMPP Address提供):
+</p>
+<dl><dd><ol><li> from
+</li><li> id
+</li><li> type
+</li></ol>
+</dd></dl>
+<p>其他键可以在XMPP注册处去注册但是没有在这里定义.
+</p><p><b>示例2. 带键的消息操作: IRI/URI</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?message;subject=Test%20Message;body=Here%27s%20a%20test%20message</pre></div></div>
+<p><b>示例3. M带键的操作: 结果节</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;message</span> <span class="re0">to</span>=<span class="st0">'romeo@montague.net'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;subject<span class="re2">&gt;</span></span><span class="co3">Test Message</span><span class="re1">&lt;/subject<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;body<span class="re2">&gt;</span></span><span class="co3">Here</span><span class="co4">&amp;apos;</span><span class="co3">s a test message.</span><span class="re1">&lt;/body<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/message<span class="re2">&gt;</span></span></pre></div></div>
+<h3> <span class="mw-headline" id=".E5.90.8D.E5.86.8C.E7.AE.A1.E7.90.86.E6.93.8D.E4.BD.9C">名册管理操作</span></h3>
+<p>'jabber:iq:roster' 命名空间提供一个机制来管理XMPP名册(也称为"联系人列表"). 这个命名空间定义于<a href="/RFC3921" title="RFC3921">RFC3921</a>. 定义了以下操作.
+</p>
+<h4> <span class="mw-headline" id=".E6.B7.BB.E5.8A.A0.E5.90.8D.E5.86.8C.E6.9D.A1.E7.9B.AE">添加名册条目</span></h4>
+<p>用于添加条目到名册或在名册里修改条目的已注册的查询类型是 "roster" (实际上添加和修改是没区别的). 一个包含了 "roster" 查询类型的 XMPP IRI/URI 可以也包含至少一个 "name" 键，它的值映射到'jabber:iq:roster'命名空间的&lt;item/&gt;元素的 'name' 属性, 而且可以包含一个 "group" 键，它的值映射为&lt;item/&gt;元素的&lt;group/&gt;子元素的字符串数据.
+</p><p><b>示例4. 名册操作: IRI/URI</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?roster</pre></div></div>
+<p><b>示例5. 名册操作: 结果节</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">type</span>=<span class="st0">'set'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'jabber:iq:roster'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;item</span> <span class="re0">jid</span>=<span class="st0">'romeo@montague.net'</span><span class="re2">/&gt;</span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p><b>示例6. 对名册的Name操作: IRI/URI</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?roster;name=Romeo%20Montague</pre></div></div>      
+<p><b>示例7. 对名册的Name操作: 结果节’‘’</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">type</span>=<span class="st0">'set'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'jabber:iq:roster'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;item</span> <span class="re0">jid</span>=<span class="st0">'romeo@montague.net'</span> <span class="re0">name</span>=<span class="st0">'Romeo Montague'</span><span class="re2">/&gt;</span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>      
+<p><b>示例8. 对名册的Name和Group操作: IRI/URI</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?roster;name=Romeo%20Montague;group=Friends</pre></div></div>      
+<p><b>示例9. 对名册的Name和Group操作: 结果节</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">type</span>=<span class="st0">'set'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'jabber:iq:roster'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;item</span> <span class="re0">jid</span>=<span class="st0">'romeo@montague.net'</span> <span class="re0">name</span>=<span class="st0">'Romeo Montague'</span><span class="re2">&gt;</span>
+      <span class="re1">&lt;group<span class="re2">&gt;</span></span><span class="co3">Friends</span><span class="re1">&lt;/group<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/item<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>      
+<p>注意: 还未确定包含多个group的方法(如果有的话).
+</p>
+<h4> <span class="mw-headline" id=".E5.88.A0.E9.99.A4.E5.90.8D.E5.86.8C.E6.9D.A1.E7.9B.AE">删除名册条目</span></h4>
+<p>'jabber:iq:roster'命名空间包含了一个机制用来移除XMPP名册条目. 用来从名册中移除一个条目的已注册查询类型是"remove".
+</p><p><b>示例10. 名册移除操作: IRI/URI</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?remove</pre></div></div>      
+<p><b>示例11. 名册移除操作: 结果节</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">type</span>=<span class="st0">'set'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'jabber:iq:roster'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;item</span> <span class="re0">jid</span>=<span class="st0">'romeo@montague.net'</span> <span class="re0">subscription</span>=<span class="st0">'remove'</span><span class="re2">/&gt;</span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<h3> <span class="mw-headline" id=".E8.AE.A2.E9.98.85.E7.AE.A1.E7.90.86.E6.93.8D.E4.BD.9C">订阅管理操作</span></h3>
+<p>和名册管理紧密相关的是出席信息订阅管理. 在XMPP中, 订阅管理是通过&lt;presence/&gt;节的特定值来处理的, 如<a href="/RFC3921" title="RFC3921">RFC3921</a>所述. 定义了以下操作
+</p>
+<h4> <span class="mw-headline" id=".E8.AE.A2.E9.98.85">订阅</span></h4>
+<p>当一个实体通过一个XMPP IRI/URI订阅了另一个实体的出席信息, 被调用的XMPP应用应该首先发送一个下面展示的添加名册的节(这和<a href="/RFC3921" title="RFC3921">RFC3921</a>中的建议是一致的).
+</p><p><b>示例12. 订阅操作: IRI/URI</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?subscribe</pre></div></div>      
+<p><b>示例13. 订阅操作: 结果节</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">type</span>=<span class="st0">'set'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'jabber:iq:roster'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;item</span> <span class="re0">jid</span>=<span class="st0">'romeo@montague.net'</span><span class="re2">/&gt;</span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span>
+&#160;
+<span class="re1">&lt;presence</span> <span class="re0">to</span>=<span class="st0">'romeo@montague.net'</span> <span class="re0">type</span>=<span class="st0">'subscribe'</span><span class="re2">/&gt;</span></pre></div></div>
+<h4> <span class="mw-headline" id=".E5.8F.96.E6.B6.88.E8.AE.A2.E9.98.85">取消订阅</span></h4>
+<p>XMPP包含了一个机制用于从一个实体取消订阅. 这种行为的已注册查询类型是"unsubscribe".
+</p><p><b>示例14. 取消订阅操作: IRI/URI</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-text" style="font-family: monospace;"><pre>xmpp:romeo@montague.net?unsubscribe</pre></div></div>      
+<p><b>示例15. 取消订阅操作: 结果节</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;presence</span> <span class="re0">to</span>=<span class="st0">'romeo@montague.net'</span> <span class="re0">type</span>=<span class="st0">'unsubscribe'</span><span class="re2">/&gt;</span></pre></div></div>
+<h2> <span class="mw-headline" id=".E5.9B.BD.E9.99.85.E5.8C.96.E4.BA.8B.E9.A1.B9">国际化事项</span></h2>
+<p>对于XMPP IRIs/URIs的国际化事项定义于 <b><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a></b>&#160;; 读者可以参考那个文档来了解相关问题的全部讨论.
+</p><p>展示给自然人用户的应用程序特有的数据的本地化(例如, 封装在 键-值 对中的) 是"使用协议"的责任.
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9">安全事项</span></h2>
+<p>对于XMPP IRIs/URIs的安全事项定义于 <b><a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a></b> .
+</p><p>完成一些定义于此的操作将导致对一个实体的帐户的修改, 对信息的订阅, 注册到服务, 和其他实体通讯, 完成特定的命令, 类似的等等. 自然的, 这些修改, 信息, 服务, 以及通讯是潜在的不受欢迎的(例如, 加入一个你对其主题没兴趣或甚至有冒犯加入的用户的行为的聊天室). 被调用的应用应该适当地对一个自然人用户警告该操作完成后的潜在后果.
+</p>
+<h2> <span class="mw-headline" id="IANA.E4.BA.8B.E9.A1.B9">IANA事项</span></h2>
+<p>本文不要求和 <a rel="nofollow" class="external text" href="http://www.iana.org/">互联网号码分配机构(IANA)</a> <a href="/XEP-0147#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8" title="XEP-0147">16</a>交互. 如果将来 IANA 应该希望维护一个XMPP URI/IRI 查询组件的注册项, 那么XMPP注册处将努力协作把注册项从XMPP注册处中迁移到IANA.
+</p>
+<h2> <span class="mw-headline" id="XMPP.E6.B3.A8.E5.86.8C.E5.A4.84.E4.BA.8B.E9.A1.B9">XMPP注册处事项</span></h2>
+<h3> <span class="mw-headline" id="XMPP_IRI.2FURI.E6.9F.A5.E8.AF.A2.E7.B1.BB.E5.9E.8B.E6.B3.A8.E5.86.8C.E9.A1.B9">XMPP IRI/URI查询类型注册项</span></h3>
+<p>XMPP注册处维护一个查询类型值的注册项(见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/registrar/querytypes.html">http://xmpp.org/registrar/querytypes.html</a>&gt;).
+</p>
+<h4> <span class="mw-headline" id=".E6.B3.A8.E5.86.8C.E8.BF.87.E7.A8.8B">注册过程</span></h4>
+<p>为了提交新值到该注册项, 注册者应该按下述的表格定义一个XML片段并且把它包含在相关的XMPP扩展协议中或把它发送到email地址 &lt;registrar@xmpp.org&gt;:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;querytype<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">the name of the querytype (e.g., &quot;pubsub&quot;)</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;proto<span class="re2">&gt;</span></span><span class="co3">
+    the namespace of associated protocol output 
+    (e.g., &quot;http://jabber.org/protocol/pubsub&quot;)
+  </span><span class="re1">&lt;/proto<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a natural-language description of the querytype</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;doc<span class="re2">&gt;</span></span><span class="co3">the document in which the querytype is specified</span><span class="re1">&lt;/doc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;keys<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">the name of the key (e.g., &quot;action&quot;)</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a natural-language description of the key</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;values<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">the name of a value (e.g., &quot;subscribe&quot;)</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a natural-language description of the value</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/values<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/keys<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/querytype<span class="re2">&gt;</span></span></pre></div></div>      
+<p>注意: 在&lt;querytype/&gt;元素中, &lt;keys/&gt;子元素是可选的; 在任何给定的&lt;key/&gt;元素中, &lt;values/&gt;子元素也是可选的.
+</p><p>注册者可以同时注册多个查询类型, 每个包含一个独立的&lt;querytype/&gt;元素.
+</p>
+<h4> <span class="mw-headline" id=".E6.B3.A8.E5.86.8C.E9.A1.B9">注册项</span></h4>
+<p>以下提交项注册了和XMPP RFCs相关的参数. 对于和XMPP扩展相关的提交项, 参考相关的XMPP扩展协议规范.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;querytype<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">message</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;proto<span class="re2">&gt;</span></span><span class="co3">jabber:client</span><span class="re1">&lt;/proto<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">enables sending of an XMPP message stanza</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;doc<span class="re2">&gt;</span></span><span class="co3">XEP-0147</span><span class="re1">&lt;/doc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;keys<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">subject</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a subject for the message per the &quot;jabber:client&quot; schema</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">body</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a body for the message per the &quot;jabber:client&quot; schema</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">thread</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a Thread ID for the message per the &quot;jabber:client&quot; schema</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">from</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a from address for the message per the &quot;jabber:client&quot; schema</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">id</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">an ID for the message per the &quot;jabber:client&quot; schema</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">type</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">the message type per the &quot;jabber:client&quot; schema</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;values<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">chat</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a message of type &quot;chat&quot;</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">groupchat</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a message of type &quot;groupchat&quot;</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">headline</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a message of type &quot;headline&quot;</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">normal</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+          <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">a message of type &quot;normal&quot;</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/values<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/keys<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/querytype<span class="re2">&gt;</span></span>
+&#160;
+<span class="re1">&lt;querytype<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">remove</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;proto<span class="re2">&gt;</span></span><span class="co3">jabber:iq:roster</span><span class="re1">&lt;/proto<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">enables removing a roster item</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;doc<span class="re2">&gt;</span></span><span class="co3">XEP-0147</span><span class="re1">&lt;/doc<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/querytype<span class="re2">&gt;</span></span>
+&#160;
+<span class="re1">&lt;querytype<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">roster</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;proto<span class="re2">&gt;</span></span><span class="co3">jabber:iq:roster</span><span class="re1">&lt;/proto<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">enables adding or editing a roster item</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;doc<span class="re2">&gt;</span></span><span class="co3">XEP-0147</span><span class="re1">&lt;/doc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;keys<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">group</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">the user-assigned group for the roster item</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;key<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">name</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">the user-assigned name for the roster item</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/key<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/keys<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/querytype<span class="re2">&gt;</span></span>
+&#160;
+<span class="re1">&lt;querytype<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">subscribe</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;proto<span class="re2">&gt;</span></span><span class="co3">jabber:client</span><span class="re1">&lt;/proto<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">enables sending a presence subscription request</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;doc<span class="re2">&gt;</span></span><span class="co3">XEP-0147</span><span class="re1">&lt;/doc<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/querytype<span class="re2">&gt;</span></span>
+&#160;
+<span class="re1">&lt;querytype<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;name<span class="re2">&gt;</span></span><span class="co3">unsubscribe</span><span class="re1">&lt;/name<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;proto<span class="re2">&gt;</span></span><span class="co3">jabber:client</span><span class="re1">&lt;/proto<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;desc<span class="re2">&gt;</span></span><span class="co3">enables unsubscribing from an entity's presence</span><span class="re1">&lt;/desc<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;doc<span class="re2">&gt;</span></span><span class="co3">XEP-0147</span><span class="re1">&lt;/doc<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/querytype<span class="re2">&gt;</span></span></pre></div></div>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95">附录</span></h2>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95A:.E6.96.87.E6.A1.A3.E4.BF.A1.E6.81.AF">附录A:文档信息</span></h3>
+<p>系列：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/">XEP</a>
+</p><p>序号：0147
+</p><p>发布者：<a rel="nofollow" class="external text" href="http://xmpp.org/xsf/">XMPP标准基金会</a>
+</p><p>状态：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0001.html#states-Active">活跃</a>
+</p><p>类型：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0001.html#types-Informational">信息</a>
+</p><p>版本：1.2
+</p><p>最后更新：2006-09-13
+</p><p>批准机构：<a rel="nofollow" class="external text" href="http://xmpp.org/council/">XMPP理事会</a>
+</p><p>依赖标准：XMPP Core, <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a>, XEP-0053 
+</p><p>取代: 无
+</p><p>被替代标准：无
+</p><p>缩略名：querytypes
+</p><p>注册项: &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/registrar/querytypes.html">http://xmpp.org/registrar/querytypes.html</a>&gt;
+</p><p>原文控制： <a rel="nofollow" class="external text" href="http://gitorious.org/xmpp/xmpp/blobs/master/extensions/xep-0147.xml">HTML</a> 
+</p><p>本文的其它格式： <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0147.xml">XML</a> <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0147.pdf">PDF</a>
+</p>
+<hr />
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95B:.E4.BD.9C.E8.80.85.E4.BF.A1.E6.81.AF">附录B:作者信息</span></h3>
+<dl><dd><b>Peter Saint-Andre</b>
+</dd></dl>
+<dl><dd><dl><dd>Email: stpeter@jabber.org
+</dd></dl>
+</dd></dl>
+<dl><dd><dl><dd>JabberID: stpeter@jabber.org
+</dd></dl>
+</dd></dl>
+<dl><dd><dl><dd>URI: <a rel="nofollow" class="external free" href="https://stpeter.im/">https://stpeter.im/</a>
+</dd></dl>
+</dd></dl>
+<hr />
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A">附录C:法律通告</span></h3>
+<p><b>版权</b>
+</p><p>XMPP扩展协议的版权(1999-2008)归XMPP标准化基金会(XSF)所有.
+</p><p><b>权限</b>
+</p><p>特此授权,费用全免,对任何获得本协议副本的人,对使用本协议没有限制,包括不限制在软件程序中实现本协议,不限制在网络服务中布署本协议,不限制拷贝,修改,合并,发行,翻译,分发,转授,或销售本协议的副本,被允许使用本协议做了以上工作的人士,应接受前述的版权声明和本许可通知并且必须包含在所有的副本或实质性部分的规格中.除非单独的许可，被重新分发的修改工作，不得含有关于作者，标题，编号，或出版者的规格的误导性资料，并不得宣称修改工作是由本文的作者，作者所属的任何组织或项目，或XMPP标准基金会签注。
+</p><p><b>免责声明'</b>
+</p><p><b>## 特别注意：本协议是提供的“原样”的基础，没有担保或任何形式的条件，明示或暗示，包括，但不限于任何担保或关于名称，非侵权性，适销性或适合作某一特定目的的条件. ##</b>
+</p><p><b>责任限制</b>
+</p><p>在任何情况下以及没有任何法律规定时，不论是侵权行为（包括疏忽），合同或其它方面，除非根据适用法律的要求（如蓄意和有严重疏忽行为）或以书面形式同意，XMPP标准基金会或任何作者不对本协议所造成的损失承担责任，包括任何直接，间接，特殊，偶发，或任何从本协议出，入，连接的字符产生的或实现，布署或其他对本协议的使用导致的相应的损害赔偿（包括但不限于善意的损失，停止作业，电脑失灵或故障，或任何和所有其他商业损害或损失） ，即使XMPP标准基金会或作者已被告知此类损害的可能性。
+</p><p><b>知识产权的一致性</b>
+</p><p>XMPP扩展协议完全遵守XSF的知识产权策略(可在&lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/ipr-policy.shtml">http://www.xmpp.org/extensions/ipr-policy.shtml</a>&gt;找到副本或写信给XMPP标准基金会, 1899 Wynkoop Street, Suite 600, Denver, CO 80202 USA).
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95D:.E5.92.8CXMPP.E7.9A.84.E5.85.B3.E7.B3.BB">附录D:和XMPP的关系</span></h3>
+<p>可扩展的消息和出席信息协议 (XMPP) 定义于 XMPP Core (<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>) 和 XMPP IM (<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3921">RFC 3921</a>) 规范里，由 XMPP标准基金会贡献到由依据<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2026">RFC 2026</a>成立的互联网工程人物组管理的互联网标准流程 Internet Standards Process. 本文定义的任何协议已在互联网标准流程之外开发，并且被理解为 XMPP 的扩展而不是一个XMPP本身的演化, 开发, 或修改.
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95E:.E8.AE.A8.E8.AE.BA.E5.9C.B0.E7.82.B9">附录E:讨论地点</span></h3>
+<p>主要的XMPP扩展协议讨论地点是 &lt;standards@xmpp.org&gt; 讨论列表.
+</p><p>在 xmpp.org 的其它讨论列表中的讨论可能也有合适的; 所有的列表见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/about/discuss.shtml">http://xmpp.org/about/discuss.shtml</a>&gt; .
+</p><p>勘误表可以发送邮件到 &lt;editor@xmpp.org&gt;.
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95F:.E9.9C.80.E6.B1.82.E4.B8.80.E8.87.B4.E6.80.A7">附录F:需求一致性</span></h3>
+<p>以下用于本文的需求关键字的解释见于 <a rel="nofollow" class="external text" href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>: "MUST", "SHALL", "REQUIRED"; "MUST NOT", "SHALL NOT"; "SHOULD", "RECOMMENDED"; "SHOULD NOT", "NOT RECOMMENDED"; "MAY", "OPTIONAL".
+</p><p><br />
+</p>
+<hr />
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8">附录G:备注</span></h3>
+<ol><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc5122">RFC 5122</a>: 用于可扩展的消息和出席信息协议(XMPP)的国际化资源标识符(IRIs)和统一资源标识符(URIs) &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc5122">http://tools.ietf.org/html/rfc5122</a>&gt;.
+</li><li> IRIs和URIs之间的不同, 参见 <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3987">RFC 3987</a>.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6120">RFC 6120</a>: 可扩展的消息和出席信息协议(XMPP): 核心 &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc6120">http://tools.ietf.org/html/rfc6120</a>&gt;.
+</li><li> XMPP注册处维护一个保留的协议命名空间的列表和在XMPP标准基金会批准的XMPP扩展协议的上下文中使用的参数的注册项的列表. 更多信息见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/registrar/">http://xmpp.org/registrar/</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3986">RFC 3986</a>: 统一资源标识符(URI): 通用语法 &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3986">http://tools.ietf.org/html/rfc3986</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3987">RFC 3987</a>: 国际化资源标识符(IRIs) &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3987">http://tools.ietf.org/html/rfc3987</a>&gt;.
+</li><li> XEP-0030: 服务发现 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0030.html">http://xmpp.org/extensions/xep-0030.html</a>&gt;.
+</li><li> XEP-0045: 多用户聊天 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0045.html">http://xmpp.org/extensions/xep-0045.html</a>&gt;.
+</li><li> XEP-0050: 特定命令 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0050.html">http://xmpp.org/extensions/xep-0050.html</a>&gt;.
+</li><li> XEP-0054: 电子名片 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0054.html">http://xmpp.org/extensions/xep-0054.html</a>&gt;.
+</li><li> XEP-0060: 发布-订阅 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0060.html">http://xmpp.org/extensions/xep-0060.html</a>&gt;.
+</li><li> XEP-0077: 带内注册 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0077.html">http://xmpp.org/extensions/xep-0077.html</a>&gt;.
+</li><li> XEP-0096: 文件传输 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0096.html">http://xmpp.org/extensions/xep-0096.html</a>&gt;.
+</li><li> XEP-0071: XHTML-IM &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/extensions/xep-0071.html">http://xmpp.org/extensions/xep-0071.html</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc6121">RFC 6121</a>: 可扩展的消息和出席信息协议(XMPP): 即时消息和出席信息 &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc6121">http://tools.ietf.org/html/rfc6121</a>&gt;.
+</li><li> 互联网号码分配机构(IANA)是为互联网协议分配唯一性的参数值的中间协调者, 类似端口号码和 URI schemes. 更多信息参见 &lt;<a rel="nofollow" class="external free" href="http://www.iana.org/">http://www.iana.org/</a>&gt;.
+</li></ol>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95H:.E4.BF.AE.E8.AE.A2.E5.8E.86.E5.8F.B2">附录H:修订历史</span></h3>
+<p>注意: 本协议的旧版本可能在 <a rel="nofollow" class="external free" href="http://xmpp.org/extensions/attic/">http://xmpp.org/extensions/attic/</a> 还可用
+</p>
+<dl><dd><b>Version 1.2 (2006-09-13)</b>
+</dd></dl>
+<dl><dd><dl><dd>Removed probe action.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 1.1 (2006-06-19)</b>
+</dd></dl>
+<dl><dd><dl><dd>Added actions for roster removal, presence unsubscription, and cancellation of registration; moved querytypes related to XMPP extensions from this document to the relevant XMPP Extension Protocol specifications.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 1.0 (2006-03-23)</b>
+</dd></dl>
+<dl><dd><dl><dd>Per a vote of the Jabber Council, advanced to Active.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 0.7 (2006-03-16)</b>
+</dd></dl>
+<dl><dd><dl><dd>Added actions for ad-hoc commands and vCard retrieval; clarified some explanatory text.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 0.6 (2005-12-01)</b>
+</dd></dl>
+<dl><dd><dl><dd>Updated to reflect draft-saintandre-xmpp-iri-03; modified file transfer query operations to handle both send and receive use cases.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 0.5 (2005-09-05)</b>
+</dd></dl>
+<dl><dd><dl><dd>Updated to reflect draft-saintandre-xmpp-iri-01; added file querytype for file transfer.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 0.4 (2005-06-06)</b>
+</dd></dl>
+<dl><dd><dl><dd>Updated to reflect draft-saintandre-xmpp-iri-00.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 0.3 (2005-02-28)</b>
+</dd></dl>
+<dl><dd><dl><dd>Updated to reflect draft-saintandre-xmpp-uri-08 and subsequent XMPP WG discussion; removed use cases for editing roster items, removing roster items, leaving chatrooms, unsubscribing, and unregistering (these make more sense from within a dedicated client); added use case for simultaneously joining a room and inviting other participants; further specified security considerations.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 0.2 (2004-11-17)</b>
+</dd></dl>
+<dl><dd><dl><dd>Updated to reflect draft-saintandre-xmpp-uri-07; specified Service Discovery usage.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<dl><dd><b>Version 0.1 (2004-11-12)</b>
+</dd></dl>
+<dl><dd><dl><dd>Initial version.
+</dd><dd>(psa)
+</dd></dl>
+</dd></dl>
+<hr />
+<p>结束
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 248/1000000
+Post-expand include size: 3178/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:749-0!*!0!!zh-cn!*!* and timestamp 20160221191051 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=XEP-0147&amp;oldid=2863">http://wiki.jabbercn.org/index.php?title=XEP-0147&amp;oldid=2863</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">2个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E6%89%A9%E5%B1%95" title="分类:XMPP扩展">XMPP扩展</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/XEP-0147" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:XEP-0147&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=XEP-0147&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=XEP-0147&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=XEP-0147" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/XEP-0147" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/XEP-0147" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=XEP-0147&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=XEP-0147&amp;oldid=2863" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2012年12月20日 (星期四) 13:27。</li>
+		<li id="viewcount">此页面已被浏览过16,610次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("XEP-0147");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.036 secs. --></body></html>

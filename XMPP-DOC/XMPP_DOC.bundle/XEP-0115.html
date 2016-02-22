@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>XEP-0115 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "XEP-0115", "wgTitle": "XEP-0115", "wgCurRevisionId": 993, "wgArticleId": 15, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["XMPP扩展", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-xml {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-xml .de1, .source-xml .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-xml  {font-family: monospace;}
+.source-xml .imp {font-weight: bold; color: red;}
+.source-xml li, .source-xml li.li1 {font-weight: normal;}
+.source-xml li.li2 {font-weight: bold;}
+.source-xml .co1 {color: #808080; font-style: italic;}
+.source-xml .co2 {color: #404040; font-style: italic;}
+.source-xml .co3 {color: #000000;}
+.source-xml .co4 {color: #400000; font-weight: bold;}
+.source-xml .es0 {color: #000099; font-weight: bold;}
+.source-xml .br0 {color: #66cc66;}
+.source-xml .sy0 {color: #66cc66;}
+.source-xml .st0 {color: #ff0000;}
+.source-xml .nu0 {color: #cc66cc;}
+.source-xml .re0 {color: #000066;}
+.source-xml .re1 {color: #000000; font-weight: bold;}
+.source-xml .re2 {color: #000000; font-weight: bold;}
+.source-xml .ln-xtra, .source-xml li.ln-xtra, .source-xml div.ln-xtra {background-color: #ffc;}
+.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-XEP-0115 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">XEP-0115</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p><br />
+<b>本文的英文原文来自<a rel="nofollow" class="external text" href="http://www.xmpp.org/extensions/xep-0115.html">XEP-0115</a></b>
+</p><p><b>XEP-0115: 实体能力</b>
+</p><p>摘要: 本文定义了一个XMPP协议扩展, 用于广播和动态查询客户端,设备,或通用实体的能力. 为了最小化网络冲击, 传输机制采用标准的XMPP出席信息广播(从而防止和服务发现数据相关的数据轮询的需要), 能力信息可被缓存在单个会话中也可以贯穿多个会话,并且格式已经尽可能保持最小.
+</p><p>作者: Joe Hildebrand, Peter Saint-Andre, Remko Tronçon, Jacek Konieczny
+</p><p>版权: © 1999 - 2010 XMPP标准化基金会(XSF). 参见<a href="/XEP-0115#.E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A" title="XEP-0115">法律通告</a>.
+</p><p>状态: 草案
+</p><p>类型: 标准跟踪
+</p><p>版本: 1.5
+</p><p>最后更新日期: 2008-02-26
+</p><p>注意: 这里定义的协议是XMPP标准化基金会的一个<b>草案标准</b>.对本协议的执行是被鼓励的,也适于布署到生产系统,但是在它成为最终标准之前可能还会有一些变动.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E7.BB.AA.E8.AE.BA"><span class="tocnumber">1</span> <span class="toctext">绪论</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E5.8A.A8.E6.9C.BA"><span class="tocnumber">1.1</span> <span class="toctext">动机</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#.E5.A6.82.E4.BD.95.E5.B7.A5.E4.BD.9C"><span class="tocnumber">1.2</span> <span class="toctext">如何工作</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.81.87.E8.AE.BE"><span class="tocnumber">2</span> <span class="toctext">假设</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E8.A6.81.E6.B1.82"><span class="tocnumber">3</span> <span class="toctext">要求</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.E5.8D.8F.E8.AE.AE"><span class="tocnumber">4</span> <span class="toctext">协议</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#.E8.AE.A4.E8.AF.81.E5.AD.97.E7.AC.A6.E4.B8.B2"><span class="tocnumber">5</span> <span class="toctext">认证字符串</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#.E7.94.9F.E6.88.90.E6.96.B9.E6.B3.95"><span class="tocnumber">5.1</span> <span class="toctext">生成方法</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.E7.AE.80.E5.8D.95.E7.9A.84.E7.94.9F.E6.88.90.E7.A4.BA.E4.BE.8B"><span class="tocnumber">5.2</span> <span class="toctext">简单的生成示例</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#.E5.A4.8D.E6.9D.82.E7.9A.84.E7.94.9F.E6.88.90.E7.A4.BA.E4.BE.8B"><span class="tocnumber">5.3</span> <span class="toctext">复杂的生成示例</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.E5.A4.84.E7.90.86.E6.96.B9.E6.B3.95"><span class="tocnumber">5.4</span> <span class="toctext">处理方法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#.E7.94.A8.E4.BE.8B"><span class="tocnumber">6</span> <span class="toctext">用例</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#.E5.A3.B0.E6.98.8E.E8.83.BD.E5.8A.9B"><span class="tocnumber">6.1</span> <span class="toctext">声明能力</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#.E5.8F.91.E7.8E.B0.E6.9C.8D.E5.8A.A1"><span class="tocnumber">6.2</span> <span class="toctext">发现服务</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#.E6.B5.81.E7.89.B9.E6.80.A7"><span class="tocnumber">6.3</span> <span class="toctext">流特性</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#.E7.A1.AE.E5.AE.9A.E6.98.AF.E5.90.A6.E6.94.AF.E6.8C.81"><span class="tocnumber">7</span> <span class="toctext">确定是否支持</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#.E5.AE.9E.E7.8E.B0.E6.B3.A8.E6.84.8F"><span class="tocnumber">8</span> <span class="toctext">实现注意</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#.E5.93.88.E5.B8.8C.E7.AE.97.E6.B3.95.E6.94.AF.E6.8C.81"><span class="tocnumber">8.1</span> <span class="toctext">哈希算法支持</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#.E7.BC.93.E5.AD.98"><span class="tocnumber">8.2</span> <span class="toctext">缓存</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#.E7.9B.B4.E6.8E.A5.E5.87.BA.E5.B8.AD.E4.BF.A1.E6.81.AF"><span class="tocnumber">8.3</span> <span class="toctext">直接出席信息</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#.E8.83.BD.E5.8A.9B.E4.BC.98.E5.8C.96"><span class="tocnumber">8.4</span> <span class="toctext">能力优化</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#.E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9"><span class="tocnumber">9</span> <span class="toctext">安全事项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#.E5.BC.BA.E5.88.B6.E5.AE.9E.E7.8E.B0.E7.9A.84.E6.8A.80.E6.9C.AF"><span class="tocnumber">9.1</span> <span class="toctext">强制实现的技术</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#.E5.8E.9F.E5.83.8F.E6.94.BB.E5.87.BB"><span class="tocnumber">9.2</span> <span class="toctext">原像攻击</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#.E8.83.BD.E5.8A.9B.E6.AF.92.E8.8D.AF"><span class="tocnumber">9.3</span> <span class="toctext">能力毒药</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#.E4.BF.A1.E6.81.AF.E6.9A.B4.E9.9C.B2"><span class="tocnumber">9.4</span> <span class="toctext">信息暴露</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#IANA.E4.BA.8B.E9.A1.B9"><span class="tocnumber">10</span> <span class="toctext">IANA事项</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#XMPP.E6.B3.A8.E5.86.8C.E4.BA.8B.E9.A1.B9"><span class="tocnumber">11</span> <span class="toctext">XMPP注册事项</span></a>
+<ul>
+<li class="toclevel-2 tocsection-29"><a href="#.E5.8D.8F.E8.AE.AE.E5.91.BD.E5.90.8D.E7.A9.BA.E9.97.B4"><span class="tocnumber">11.1</span> <span class="toctext">协议命名空间</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#.E6.9C.8D.E5.8A.A1.E5.8F.91.E7.8E.B0.E7.89.B9.E6.80.A7"><span class="tocnumber">11.2</span> <span class="toctext">服务发现特性</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#XML_Schema"><span class="tocnumber">12</span> <span class="toctext">XML Schema</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#.E9.81.97.E7.95.99.E6.A0.BC.E5.BC.8F"><span class="tocnumber">13</span> <span class="toctext">遗留格式</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#.E8.87.B4.E8.B0.A2"><span class="tocnumber">14</span> <span class="toctext">致谢</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#.E9.99.84.E5.BD.95"><span class="tocnumber">15</span> <span class="toctext">附录</span></a>
+<ul>
+<li class="toclevel-2 tocsection-35"><a href="#.E9.99.84.E5.BD.95A:.E6.96.87.E6.A1.A3.E4.BF.A1.E6.81.AF"><span class="tocnumber">15.1</span> <span class="toctext">附录A:文档信息</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#.E9.99.84.E5.BD.95B:.E4.BD.9C.E8.80.85.E4.BF.A1.E6.81.AF"><span class="tocnumber">15.2</span> <span class="toctext">附录B:作者信息</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A"><span class="tocnumber">15.3</span> <span class="toctext">附录C:法律通告</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95D:.E5.92.8CXMPP.E7.9A.84.E5.85.B3.E7.B3.BB"><span class="tocnumber">15.4</span> <span class="toctext">附录D:和XMPP的关系</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95E:.E8.AE.A8.E8.AE.BA.E5.9C.B0.E7.82.B9"><span class="tocnumber">15.5</span> <span class="toctext">附录E:讨论地点</span></a></li>
+<li class="toclevel-2"><a href="#.E9.99.84.E5.BD.95F:.E9.9C.80.E6.B1.82.E4.B8.80.E8.87.B4.E6.80.A7"><span class="tocnumber">15.6</span> <span class="toctext">附录F:需求一致性</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#.E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8"><span class="tocnumber">15.7</span> <span class="toctext">附录G:备注</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#.E9.99.84.E5.BD.95H:.E4.BF.AE.E8.AE.A2.E5.8E.86.E5.8F.B2"><span class="tocnumber">15.8</span> <span class="toctext">附录H:修订历史</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E7.BB.AA.E8.AE.BA">绪论</span></h2>
+<h3> <span class="mw-headline" id=".E5.8A.A8.E6.9C.BA">动机</span></h3>
+<p>对于一个XMPP应用程序，经常需要(通常但不一定是一个客户端)根据从另一个应用收到的出席信息所了解到的能力采取不同的动作。例如：
+</p>
+<ul><li> 根据其他实体的能力显示不同系列的图标。
+</li></ul>
+<ul><li> 不发送XHTML-IM[1]或者其他富文本给只支持纯文本的客户端比如手机。
+</li></ul>
+<ul><li> 只有当客户端支持Jingle[2] 和Jingle RTP Sessions [3]时，才允许VoIP的初始化
+</li></ul>
+<ul><li> 如果另一个用户客户端不支持SI File Transfer,那么不显示“发送文件”按钮。
+</li></ul>
+<ul><li> 基于声明的订阅者兴趣，过滤Publish-Subscribe [5] 通知。
+</li></ul>
+<p>过去，对于一些Jabber客户端，在登录了之后会发送服务发现\[6\]和软件版本\[7\]请求给每个收到出席信息的实体。disco/version流信息会过度的使用带宽在大规模情况下，不实用，特别是对于有很多联系人的用户。因此本文档定义了一个健壮的、可实现的解决方案：即，基于出席信息机制\[8\]交换实体能力信息。客户端不应该遵循旧的“disco/version流”行为，而应该使用在此处定义的实体能力。
+</p>
+<h3> <span class="mw-headline" id=".E5.A6.82.E4.BD.95.E5.B7.A5.E4.BD.9C">如何工作</span></h3>
+<p>这一节提供了关于实体能力(“caps”)的友好介绍。
+</p><p>想象你就是莎士比亚作品中的朱丽叶，你的一个联系人，一个帅小伙罗密欧，现在上线了。他的客户端想要发布他的能力，通过在出席信息中加入含有指定属性的&lt;c/&gt;元素来发布能力。结果，你的客户端受到如下出席信息：
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;presence</span> <span class="re0">from</span>=<span class="st0">'romeo@montague.lit/orchard'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;c</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span> 
+     <span class="re0">hash</span>=<span class="st0">'sha-1'</span>
+     <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus'</span>
+     <span class="re0">ver</span>=<span class="st0">'QgayPKawpkPSDYmwT/WM94uAlu0='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/presence<span class="re2">&gt;</span></span></pre></div></div>
+<p>“node”属性代表了罗密欧正使用的客户端软件。“ver”属性是一个指定的构造的字符串(被称为“验证”字符串)，代表了实体服务发现的标识(目录和类型在&lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/registrar/disco-categories.html">http://www.xmpp.org/registrar/disco-categories.html</a>&gt;注册，同样，xml:lang和name是可选的)以及支持的特性(在&lt;http://www.xmpp.org/registrar/disco-features.html&gt;中注册，同样，可选的，扩展服务发现信息在&lt;http://www.xmpp.org/registrar/formtypes.html&gt;注册)。
+</p><p>此时，你的客户端根据'QgayPKawpkPSDYmwT/WM94uAlu0='字符串还不知道对方的能力。因此你的客户端发送服务发现来查询罗密欧，询问他的客户端能做什么。
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'juliet@capulet.lit/chamber'</span> 
+    <span class="re0">id</span>=<span class="st0">'disco1'</span>
+    <span class="re0">to</span>=<span class="st0">'romeo@montague.lit/orchard'</span> 
+    <span class="re0">type</span>=<span class="st0">'get'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span>
+         <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus#QgayPKawpkPSDYmwT/WM94uAlu0='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p>应答是:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'romeo@montague.lit/orchard'</span> 
+    <span class="re0">id</span>=<span class="st0">'disco1'</span>
+    <span class="re0">to</span>=<span class="st0">'juliet@capulet.lit/chamber'</span> 
+    <span class="re0">type</span>=<span class="st0">'result'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span>
+         <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus#QgayPKawpkPSDYmwT/WM94uAlu0='</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;identity</span> <span class="re0">category</span>=<span class="st0">'client'</span> <span class="re0">name</span>=<span class="st0">'Exodus 0.9.1'</span> <span class="re0">type</span>=<span class="st0">'pc'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/caps'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/disco#items'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/muc'</span><span class="re2">/&gt;</span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p>此时，你的客户端知道声明版本字符串'QgayPKawpkPSDYmwT/WM94uAlu0='的联系人支持Multi-User Chat\[9\]以及其他罗密欧返回的特性，因为联系人事实上使用了和罗密欧同一个客户端的相同版本，相同的特性，插件，以及现在的客户端名称，就像(比如，相同的验证字符串的生成方法的输入)。你的客户端记录这些信息，所以不需要再显式地使用相同版本的字符串来查询联系人能力。例如:你的护士可以使用和罗密欧相同的客户端:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;presence</span> <span class="re0">from</span>=<span class="st0">'nurse@capulet.lit/chamber'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;c</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span> 
+     <span class="re0">hash</span>=<span class="st0">'sha-1'</span>
+     <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus'</span>
+     <span class="re0">ver</span>=<span class="st0">'QgayPKawpkPSDYmwT/WM94uAlu0='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/presence<span class="re2">&gt;</span></span></pre></div></div>
+<p>因此你了解到她也支持和罗密欧相同的特性。
+</p><p>另一方面,对于一个以下出席信息的人 ...
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;presence</span> <span class="re0">from</span>=<span class="st0">'benvolio@capulet.lit/230193'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;c</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span> 
+     <span class="re0">hash</span>=<span class="st0">'sha-1'</span>
+     <span class="re0">node</span>=<span class="st0">'http://psi-im.org'</span>
+     <span class="re0">ver</span>=<span class="st0">'q07IKJEyjvHSyhy//CH0CxmKi8w='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/presence<span class="re2">&gt;</span></span></pre></div></div>
+<p>... 或者如下出席信息 ...
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;presence</span> <span class="re0">from</span>=<span class="st0">'bard@shakespeare.lit/globe'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;c</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span> 
+     <span class="re0">hash</span>=<span class="st0">'sha-1'</span>
+     <span class="re0">node</span>=<span class="st0">'http://www.chatopus.com'</span>
+     <span class="re0">ver</span>=<span class="st0">'zHyEOgxTrkpSdGcQKH8EFPLsriY='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/presence<span class="re2">&gt;</span></span></pre></div></div>
+<p>... 你不知道联系人的客户端的能力除非你缓存了先前的实体能力信息；因此你需要再次通过服务发现查询能力。
+</p>
+<h2> <span class="mw-headline" id=".E5.81.87.E8.AE.BE">假设</span></h2>
+<p>本文档做了几个假设：
+</p>
+<ul><li> 花名册的联系人对于我正使用的客户端标识感兴趣。
+</li></ul>
+<ul><li> 我花名册上的联系人的客户端可能需要基于我的能力来构建用户界面。
+</li></ul>
+<ul><li> 社区的成员趋向集中使用少部分的客户端并使用少部分的实体能力。更特殊的，在花名册里多人使用相同客户端，他们相对地升级版本较慢(通常一年好几次，可能大部分一星期一次，肯定不是每分钟一次)。
+</li></ul>
+<ul><li> 一些客户端在不需要服务器与服务器连接的网络上运行，并且不需要通过HTTP访问Internet。
+</li></ul>
+<ul><li> 2个互相都不在对方花名册里的人互相聊天是有可能的。
+</li></ul>
+<ul><li> 客户端能力可能在交换出席信息的过程中改变，比如特性被允许或禁止。
+</li></ul>
+<h2> <span class="mw-headline" id=".E8.A6.81.E6.B1.82">要求</span></h2>
+<p>此处定义的协议满足以下要求：
+</p>
+<ol><li> 客户端必须支持即使他们只支持XMPP Core \[11\], XMPP IM \[12\]和XEP-0030
+</li><li> 客户端必须参与,即使他们所在的网络无法连接其他XMPP服务器，提供特定XMPP扩展的服务，或者HTTP服务器\[13\]。
+</li><li> 客户端必有能力接收信息,即使没有查询他们通讯的每一个实体。
+</li><li> 由于出席信息通常会广播给很多联系人，建议的扩展信息的字节数必须尽可能小。
+</li><li> 必须能够编写一个XEP-0045服务实现用来单独传递给定的信息。
+</li><li> 必须能够使用一个单独的出席信息会话来发布能力的变化。
+</li><li> 为了完成以上工作而超过XMPP Core和XMPP IM定义的服务器基础架构不是必需的，尽管附加的服务器架构可以被用来出于优化目标。
+</li><li> 在此定义的机制不仅限于客户端,但是对于服务器,组件或其他网络实体也必须是有用的。
+</li></ol>
+<h2> <span class="mw-headline" id=".E5.8D.8F.E8.AE.AE">协议</span></h2>
+<p>实体能力封装在&lt;c/&gt;元素中并且被'<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps'限定。">http://jabber.org/protocol/caps'限定。</a>&lt;c/&gt;元素的属性如下。
+</p><p><b>表格 1: 属性</b>
+</p>
+<table border="1" cellspacing="0">
+<tr>
+<th>名称 </th>
+<th> 定义 </th>
+<th> 是否包含
+</th></tr>
+<tr>
+<td>ext </td>
+<td> nametaokens集合制定了附加的特性；该属性是不鼓励的(参考本文档的“合法的格式”部分) </td>
+<td> 不鼓励的
+</td></tr>
+<tr>
+<td>hash </td>
+<td> 该哈希算法被用来生成验证字符串；参考关于哈希算法的“强制实现的技术”部分。</td>
+<td> 必需的
+</td></tr>
+<tr>
+<td>node </td>
+<td> 标识了软件的唯一的URI，典型的，URL可以是生产该软件的项目主页或者公司主页。* </td>
+<td> 必需的
+</td></tr>
+<tr>
+<td>ver </td>
+<td> 一个字符串,用于核查身份以及实体支持的特性. ** </td>
+<td> 必需的
+</td></tr></table>
+<ul><li>注意：'node'属性的值是推荐的，可以是找到软件产品的更多信息的HTTP URL，比如Psi客户端的URL"<a rel="nofollow" class="external free" href="http://psi-im.org">http://psi-im.org</a>"；这允许应用程序为了该程序生成一个唯一字符串，它能够维护一个已知的实现的软件的列表(比如，通过disco#info接收到的URL的名称
+</li></ul>
+<ul><li><ul><li>注意：在这份说明的1.4版本之前，'ver'属性用来指出软件的发布版本；'ver'属性的值取决于在这里使用的向后兼容的算法，应用程序应该(SHOULD)适当的处理遗留格式。
+</li></ul>
+</li></ul>
+<h2> <span class="mw-headline" id=".E8.AE.A4.E8.AF.81.E5.AD.97.E7.AC.A6.E4.B8.B2">认证字符串</span></h2>
+<h3> <span class="mw-headline" id=".E7.94.9F.E6.88.90.E6.96.B9.E6.B3.95">生成方法</span></h3>
+<p>为了帮助防止实体信息的损坏，认证字符串的值必须(MUST)根据以下方法生成。
+</p><p>注意：所有排序操作必须(MUST)使用在9.3部分的<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4790">RFC 4790</a>\[14\]指定的"i;octet"集合来排序。
+</p><p>1. 初始化一个空的字符串 S 。
+</p><p>2. 先根据目录再根据类型来排序服务发现标识，然后再根据xml:lang(如果存在)，根据CATEGORY '/' [TYPE] '/' [LANG] '/' [NAME]格式化。注意每条斜杠都必须包含，即使TYPE, LANG,或者NAM没有被包含。
+</p><p>3. 对于每个标识，在'&lt;'字符后添加'category/type/lang/name'到字符串S。
+</p><p>4. 排序支持的服务发现特性\[17\]。
+</p><p>5. 对于每个特性，在'&lt;'字符后添加特性到字符串S。
+</p><p>6. 如果服务发现信息响应中包含XEP-0128数据表单，那么根据FORM_TYPE排序表单(换言之，根据&lt;value/&gt;元素的字符数据)。
+</p><p>7. 对于每个扩展的服务发现信息表单：
+</p>
+<ol><li> 在'&lt;'字符后面，添加FORM_TYPE字段&lt;value/&gt;元素的XML字符。
+</li><li> 根据"var"属性的值排序字段
+</li><li> 对于每个字段：
+</li></ol>
+<dl><dd><ul><li> 在'&lt;'字符之后添加"var"属性的值。
+</li></ul>
+</dd></dl>
+<dl><dd><ul><li> 根据&lt;value/&gt;元素的xml字符排序。
+</li></ul>
+</dd></dl>
+<dl><dd><ul><li> 对于每个&lt;value/&gt;元素，在'&lt;'字符后，添加XML字符。
+</li></ul>
+</dd></dl>
+<p>8. 确保S是使用UTF-8编码的(<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3269">RFC 3269</a>\[18\])。
+</p><p>9. 使用'hash'属性指定的算法计算S的认证字符串(比如，<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3174">RFC 3174</a>\[19\]定义的SHA-1)。哈希值必须(MUST)根据二进制输出和<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4648">RFC 4648</a>\[20\]第四部分指定的Base64编码生成(注意：Base64输出不许(MUST NOT)包含空白字符和必须(MUST)设置填充字符为0)。\[21\]
+</p>
+<h3> <span class="mw-headline" id=".E7.AE.80.E5.8D.95.E7.9A.84.E7.94.9F.E6.88.90.E7.A4.BA.E4.BE.8B">简单的生成示例</span></h3>
+<p>考虑一个实体，它的目录是"client"，服务发现类型是"pc"，服务发现名称是"Exodus 0.9.1"，支持的特性是"<a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#info">http://jabber.org/protocol/disco#info</a>","<a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>", 和"<a rel="nofollow" class="external free" href="http://jabber.org/protocol/muc">http://jabber.org/protocol/muc</a>"。使用SHA-1算法，认证字符串就会按如下步骤生成(注意：在认证字符串的换行符是用来提高可读性)：
+</p>
+<ol><li> S = 
+</li><li> 只有一个标识："client/pc"
+</li><li> S = 'client/pc//Exodus 0.9.1&lt;'
+</li><li> 排序特性："<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps">http://jabber.org/protocol/caps</a>", "<a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#info">http://jabber.org/protocol/disco#info</a>", "<a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>", "<a rel="nofollow" class="external free" href="http://jabber.org/protocol/muc">http://jabber.org/protocol/muc</a>"。
+</li><li> S = 'client/pc//Exodus 0.9.1&lt;<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps">http://jabber.org/protocol/caps</a>&lt;http://jabber.org/protocol/disco#info&lt; <a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>&lt;http://jabber.org/protocol/muc&lt;'
+</li><li> S = 'client/pc//Exodus 0.9.1&lt;<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps">http://jabber.org/protocol/caps</a>&lt;http://jabber.org/protocol/disco#info&lt; <a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>&lt;http://jabber.org/protocol/muc&lt;’
+</li><li> ver = QgayPKawpkPSDYmwT/WM94uAlu0=
+</li></ol>
+<h3> <span class="mw-headline" id=".E5.A4.8D.E6.9D.82.E7.9A.84.E7.94.9F.E6.88.90.E7.A4.BA.E4.BE.8B">复杂的生成示例</span></h3>
+<p>考虑一个复杂的例子，实体包含了几个标识(用不同的语言表示的服务发现)，同样是根据XEP-0128格式的扩展信息。
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'benvolio@capulet.lit/230193'</span><span class="re2">&gt;</span><span class="co3">
+    id='disco1'
+    to='juliet@capulet.lit/chamber' 
+    type='result'&gt;
+  </span><span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span>
+         <span class="re0">node</span>=<span class="st0">'http://psi-im.org#q07IKJEyjvHSyhy//CH0CxmKi8w='</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;identity</span> <span class="re0">xml:lang</span>=<span class="st0">'en'</span> <span class="re0">category</span>=<span class="st0">'client'</span> <span class="re0">name</span>=<span class="st0">'Psi 0.11'</span> <span class="re0">type</span>=<span class="st0">'pc'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;identity</span> <span class="re0">xml:lang</span>=<span class="st0">'el'</span> <span class="re0">category</span>=<span class="st0">'client'</span> <span class="re0">name</span>=<span class="st0">'Ψ 0.11'</span> <span class="re0">type</span>=<span class="st0">'pc'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/caps'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/disco#items'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/muc'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;x</span> <span class="re0">xmlns</span>=<span class="st0">'jabber:x:data'</span> <span class="re0">type</span>=<span class="st0">'result'</span><span class="re2">&gt;</span>
+      <span class="re1">&lt;field</span> <span class="re0">var</span>=<span class="st0">'FORM_TYPE'</span> <span class="re0">type</span>=<span class="st0">'hidden'</span><span class="re2">&gt;</span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">urn:xmpp:dataforms:softwareinfo</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/field<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;field</span> <span class="re0">var</span>=<span class="st0">'ip_version'</span><span class="re2">&gt;</span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">ipv4</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">ipv6</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/field<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;field</span> <span class="re0">var</span>=<span class="st0">'os'</span><span class="re2">&gt;</span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">Mac</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/field<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;field</span> <span class="re0">var</span>=<span class="st0">'os_version'</span><span class="re2">&gt;</span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">10.5.1</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/field<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;field</span> <span class="re0">var</span>=<span class="st0">'software'</span><span class="re2">&gt;</span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">Psi</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/field<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;field</span> <span class="re0">var</span>=<span class="st0">'software_version'</span><span class="re2">&gt;</span>
+        <span class="re1">&lt;value<span class="re2">&gt;</span></span><span class="co3">0.11</span><span class="re1">&lt;/value<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/field<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/x<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p>使用SHA-1算法，认证字符串将会按如下步骤生成(注意：认证字符串中的换行符只是为了提高可读性)：
+</p>
+<ol><li> S = 
+</li><li> 2个标识符："client/pc/Psi"和"client/pc/Ψ"
+</li><li> S = 'client/pc/el/Ψ 0.11&lt;client/pc/en/Psi 0.11&lt;’
+</li><li> 排序特性："<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps">http://jabber.org/protocol/caps</a>", <a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#info">http://jabber.org/protocol/disco#info</a>", "<a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>", "<a rel="nofollow" class="external free" href="http://jabber.org/protocol/muc">http://jabber.org/protocol/muc</a>"。
+</li><li> S = 'client/pc/el/Ψ 0.11&lt;client/pc/en/Psi 0.11&lt;<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps">http://jabber.org/protocol/caps</a>&lt;http://jabber.org/protocol/disco#info&lt; 
+</li></ol>
+<p><a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>&lt;http://jabber.org/protocol/muc&lt;'.
+</p>
+<ol><li> 根据FORM_TYPE对扩展服务发现表单排序(这里只有一个："urn:xmpp:dataforms:softwareinfo")。
+</li><li> S = 'client/pc/el/Ψ 0.11&lt;client/pc/en/Psi 0.11&lt;<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps">http://jabber.org/protocol/caps</a>&lt;http://jabber.org/protocol/disco#info&lt; 
+</li></ol>
+<p><a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>&lt;http://jabber.org/protocol/muc&lt;urn:xmpp:dataforms:softwareinfo&lt;’
+</p>
+<ol><li> 根据var对字段排序并且添加值："ip_version&lt;ipv4&lt;ipv6", "os&lt;Mac", "os_version&lt;10.5.1", "software&lt;Psi", "software_version&lt;0.11"。
+</li><li> S = 'client/pc/el/Ψ 0.11&lt;client/pc/en/Psi 0.11&lt;<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps">http://jabber.org/protocol/caps</a>&lt;http://jabber.org/protocol/disco#info&lt; 
+</li></ol>
+<p><a rel="nofollow" class="external free" href="http://jabber.org/protocol/disco#items">http://jabber.org/protocol/disco#items</a>&lt;http://jabber.org/protocol/muc&lt;urn:xmpp:dataforms:softwareinfo&lt; 
+ip_version&lt;ipv4&lt;ipv6&lt;os&lt;Mac&lt;os_version&lt;10.5.1&lt;software&lt;Psi&lt;software_version&lt;0.11&lt;’
+</p>
+<ol><li> ver = q07IKJEyjvHSyhy//CH0CxmKi8w=
+</li></ol>
+<h3> <span class="mw-headline" id=".E5.A4.84.E7.90.86.E6.96.B9.E6.B3.95">处理方法</span></h3>
+<p>当实体收到根据本文档定义的生成方法生成的认证字符串中的'ver'属性值时，他必须(MUST)根据如下方法处理'ver'：
+</p><p>1. 验证&lt;c/&gt;元素包含的hash属性。如果没有包含，忽略'ver'或者将其视作遗留格式生成的(如果支持的话)。
+</p><p>2. 如果'hash'属性的值不匹配应用程序的支持的功能，那么按如下步骤处理：
+</p>
+<ol><li> 发送服务发现请求给生成该哈希的实体。
+</li><li> 从生成该哈希的实体接收服务发现信息。
+</li><li> 不要按上面提到的进行验证或者在全局范围内缓存验证字符串；相反的，应用程序应该(SHOULD)仅将发现的标识+特性和生成实体的JabberID关联
+</li></ol>
+<p>3. 如果'hash'值与应用程序的支持的哈希函数匹配，那么根据如下步骤验证该认证字符串：
+</p>
+<ol><li> 发送服务发现请求给生成字符串的实体。
+</li><li> 从生成字符串的实体那接收服务发现信息。
+</li><li> 如果响应中在同一个category/type/lang/name中包含了超过一个服务发现标识，那么考虑该完整的响应的格式是不正确的。
+</li><li> 如果响应格式是正确的，根据服务发现信息和Generation Method重新构建本地的哈希值
+</li><li> 如果收到的值和重新构建的哈希值匹配，那么对于和其交流的所有的JabberID的应用程序必须(MUST)视其已被验证并且应该(SHOULD)全局缓存。
+</li><li> 如果收到的值和重新构建的哈希值不匹配，那么应用程序必须(MUST)将结果是为验证失败的并且不能(MUST NOT)全局缓存该验证字符串；然而，它应该(SHOULD)检查生成和发送该值的实体的服务发现标识和支持的特性。
+</li></ol>
+<h2> <span class="mw-headline" id=".E7.94.A8.E4.BE.8B">用例</span></h2>
+<h3> <span class="mw-headline" id=".E5.A3.B0.E6.98.8E.E8.83.BD.E5.8A.9B">声明能力</span></h3>
+<p>生成字符串的实体每次发送出席信息时，该出席信息包含了一个实体标识符('node'属性)和identity和feature标识符('ver'属性)。所以服务器会记录最后一次出席信息以应答探测，客户端应该(SHOULD)在其发送的每个出席通知中包含实体能力。
+</p><p><b>例子1. 带有能力的出席信息</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;presence<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;c</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span>
+     <span class="re0">hash</span>=<span class="st0">'sha-1'</span>
+     <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus'</span>
+     <span class="re0">ver</span>=<span class="st0">'QgayPKawpkPSDYmwT/WM94uAlu0='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/presence<span class="re2">&gt;</span></span></pre></div></div>
+<p>如果在生成实体的出席信息会话期间，支持的特性改变了(例如，用户安装了一个插件的更新版本)，应用程序必须(MUST)重新计算认证字符串并且应该(SHOULD)发送新的出席信息广播。
+</p><p><b>例子2. 重新计算ver属性出席信息</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;presence<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;c</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span>
+     <span class="re0">hash</span>=<span class="st0">'sha-1'</span>
+     <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus'</span>
+     <span class="re0">ver</span>=<span class="st0">'66/0NaeaBKkwk85efJTGmU47vXI='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/presence<span class="re2">&gt;</span></span></pre></div></div>
+<h3> <span class="mw-headline" id=".E5.8F.91.E7.8E.B0.E6.9C.8D.E5.8A.A1">发现服务</span></h3>
+<p>应用程序(请求的实体)可以通过发送disco#info请求(参考XEP-0030)给生成能力信息的实体(生成的实体)来了解实体支持的特征。
+</p><p><b>例子3. Disco#info请求</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'juliet@capulet.lit/balcony'</span> 
+    <span class="re0">id</span>=<span class="st0">'disco1'</span>
+    <span class="re0">to</span>=<span class="st0">'romeo@montague.lit/orchard'</span> 
+    <span class="re0">type</span>=<span class="st0">'get'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span>
+         <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus#QgayPKawpkPSDYmwT/WM94uAlu0='</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p>disco#info请求是由请求实体发送到生成实体。'to'属性的值必须(MUST)是生成实体的精确JID，对于客户端是全JID&lt;localpart@domain.tld/resource&gt;。
+</p><p>注意：生成实体不应该(SHOULD NOT)在disco#items响应中的实体列表中包"caps node"；换言之，是一种虚拟的能力节点，不是一个为了服务发现目的的实体有关的确实的节点。
+</p><p>disco的'node'属性必须(MUST)包含了向后兼容的特性。'node'属性的值应该(SHOULD)是将实体提供的'node'属性的值(比如，"<a rel="nofollow" class="external free" href="http://code.google.com/p/exodus">http://code.google.com/p/exodus</a>")和"#"字符和生成实体提供的'ver'属性的值(比如，"QgayPKawpkPSDYmwT/WM94uAlu0=")连接后生成的。
+</p><p>生成实体返回它所支持的所有能力。
+</p><p><b>例子4. Disco#info响应</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'romeo@montague.lit/orchard'</span> 
+    <span class="re0">id</span>=<span class="st0">'disco1'</span>
+    <span class="re0">to</span>=<span class="st0">'juliet@capulet.lit/balcony'</span> 
+    <span class="re0">type</span>=<span class="st0">'result'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span>
+         <span class="re0">node</span>=<span class="st0">'http://code.google.com/p/exodus#QgayPKawpkPSDYmwT/WM94uAlu0='</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;identity</span> <span class="re0">category</span>=<span class="st0">'client'</span> <span class="re0">type</span>=<span class="st0">'pc'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/disco#items'</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/muc'</span><span class="re2">/&gt;</span>
+  <span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p>注意：如果生成字串的实体结合了不同xml:lang的标识符在它的认证字符串中，它必须(MUST)返回所有标识符，即使请求中指定了xml:lang。
+</p>
+<h3> <span class="mw-headline" id=".E6.B5.81.E7.89.B9.E6.80.A7">流特性</span></h3>
+<p>服务器可能(MAY)在流特性中包含实体能力，所以连接客户端和对等点服务器的时候不需要在每次连接时发送服务发现请求
+</p><p><b>例子5. 包含了能力的流特性</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;stream:features<span class="re2">&gt;</span></span>
+&#160;
+  <span class="re1">&lt;c</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span>
+     <span class="re0">hash</span>=<span class="st0">'sha-1'</span>
+     <span class="re0">node</span>=<span class="st0">'http://jabberd.org'</span>
+     <span class="re0">ver</span>=<span class="st0">'ItBTI0XLDFvVxZ72NQElAzKS9sU='</span><span class="re2">&gt;</span>
+&#160;
+<span class="re1">&lt;/stream:features<span class="re2">&gt;</span></span></pre></div></div>
+<p>当一个已连接的客户端或者对等服务器发送一个服务发现信息请求以确定那个通过流特性来发布能力的服务器的实体能力时，请求实体必须(MUST)发送disco#info请求给流响应的'from'属性的提供的服务器JID('from'属性在<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>推荐，在rfc3920bis中被要求)。为了允许这样功能，发布支持实体能力的服务器必须(MUST)根据rfc3920bis，在初始流响应中提供一个'from'地址。
+</p>
+<h2> <span class="mw-headline" id=".E7.A1.AE.E5.AE.9A.E6.98.AF.E5.90.A6.E6.94.AF.E6.8C.81">确定是否支持</span></h2>
+<p>如果一个实体支持实体能力协议，它必须(MUST)在服务发现请求中返回一个'<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps'的特性来反映该事实。">http://jabber.org/protocol/caps'的特性来反映该事实。</a>
+</p><p><b>例子6. 服务发现请求</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'romeo@montague.lit/orchard'</span>
+    <span class="re0">id</span>=<span class="st0">'disco2'</span>
+    <span class="re0">to</span>=<span class="st0">'juliet@capulet.lit/balcony'</span>
+    <span class="re0">type</span>=<span class="st0">'get'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p><b>例子7. 服务发现响应</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'juliet@capulet.lit/balcony'</span>
+    <span class="re0">id</span>=<span class="st0">'disco2'</span>
+    <span class="re0">to</span>=<span class="st0">'romeo@montague.lit/orchard'</span>
+    <span class="re0">type</span>=<span class="st0">'result'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span><span class="re2">&gt;</span><span class="co3">
+    ...
+    </span><span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/caps'</span><span class="re2">/&gt;</span><span class="co3">
+    ...
+  </span><span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p>如果服务器支持Caps Optimization功能，它还必须(MUST)在服务发现请求中返回'<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps#optimize'特性。">http://jabber.org/protocol/caps#optimize'特性。</a>
+</p><p><b>例子8. 服务发现请求</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'juliet@capulet.lit/balcony'</span>
+    <span class="re0">id</span>=<span class="st0">'disco3'</span>
+    <span class="re0">to</span>=<span class="st0">'capulet.lit'</span>
+    <span class="re0">type</span>=<span class="st0">'get'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span><span class="re2">/&gt;</span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<p><b>例子9. 服务发现响应</b>
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;iq</span> <span class="re0">from</span>=<span class="st0">'capulet.lit'</span>
+    <span class="re0">id</span>=<span class="st0">'disco3'</span>
+    <span class="re0">to</span>=<span class="st0">'juliet@capulet.lit/balcony'</span>
+    <span class="re0">type</span>=<span class="st0">'result'</span><span class="re2">&gt;</span>
+  <span class="re1">&lt;query</span> <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/disco#info'</span><span class="re2">&gt;</span><span class="co3">
+    ...
+    </span><span class="re1">&lt;feature</span> <span class="re0">var</span>=<span class="st0">'http://jabber.org/protocol/caps#optimize'</span><span class="re2">/&gt;</span><span class="co3">
+    ...
+  </span><span class="re1">&lt;/query<span class="re2">&gt;</span></span>
+<span class="re1">&lt;/iq<span class="re2">&gt;</span></span></pre></div></div>
+<h2> <span class="mw-headline" id=".E5.AE.9E.E7.8E.B0.E6.B3.A8.E6.84.8F">实现注意</span></h2>
+<h3> <span class="mw-headline" id=".E5.93.88.E5.B8.8C.E7.AE.97.E6.B3.95.E6.94.AF.E6.8C.81">哈希算法支持</span></h3>
+<p>应用程序应该(SHOULD)维护它支持的哈希算法列表，必须(MUST)包含文本档强制实现的技术中的算法或者算法列表。
+</p>
+<h3> <span class="mw-headline" id=".E7.BC.93.E5.AD.98">缓存</span></h3>
+<p>对于一个能处理实体能力的应用程序,在单次出席信息会话中缓存认证字符串和发现的identity+features之间的关联关系是被推荐的(RECOMMENDED)。这可以在一次会话中省去不必要的服务发现请求。
+</p><p>对于一个应用程序，在跨越多个出席会话中缓存关联是被推荐的(RECOMMENDED)，因为可以在会话开始时避免不必要的服务发现请求。
+</p>
+<h3> <span class="mw-headline" id=".E7.9B.B4.E6.8E.A5.E5.87.BA.E5.B8.AD.E4.BF.A1.E6.81.AF">直接出席信息</span></h3>
+<p>如果2个实体交换消息，但是没有正常的交换出席出席消息(即，出席消息的订阅)，实体可能(MAY)选择直接发送出席消息给对方，出席消息应该(SHOULD)标注同样的实体能力的信息就如广播的出席消息一样。除非收到对方的实体能力的消息，否则应用程序必须(MUST)假设对方不支持实体能力。
+</p>
+<h3> <span class="mw-headline" id=".E8.83.BD.E5.8A.9B.E4.BC.98.E5.8C.96">能力优化</span></h3>
+<p>管理已连接的客户端的出席会话的服务器可能(MAY)优化出席通知，去除冗余的能力标注。因此，出席通知的接收者不能(MUST NOT)期望在每个收到的出席通知中收到标注。如果服务器优化了实体能力，它必须(MUST)确保订阅了出席信息的双方收到的第一条出席信息中包含标注(比如，带有'ver'属性的更新出席信息发送给所有订阅者)。
+</p><p>如果一个已连接的客户端确定它的客户端支持能力优化，它可能(MAY)选择只在第一次出席消息中发送能力信息，同样在能力变化时也会发送。
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.89.E5.85.A8.E4.BA.8B.E9.A1.B9">安全事项</span></h2>
+<h3> <span class="mw-headline" id=".E5.BC.BA.E5.88.B6.E5.AE.9E.E7.8E.B0.E7.9A.84.E6.8A.80.E6.9C.AF">强制实现的技术</span></h3>
+<p>SHA-1哈希算法是强制实现的。所有协议的实现都必须(MUST)支持SHA-1。
+</p><p>具体的实现可能(MAY)支持其他算法。任何其他的算法都应该(SHOULD)在IANA Hash Function Textual Names Registry 中注册。
+</p><p>在未来，XMPP理事会可能出于谨慎考虑，如果SHA-1被确认为容易受到原像攻击，会修改强制实现的哈希算法。
+</p>
+<h3> <span class="mw-headline" id=".E5.8E.9F.E5.83.8F.E6.94.BB.E5.87.BB">原像攻击</span></h3>
+<p>就如<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4270">RFC 4270</a>描述的，使用如MD5或者SHA-1算法输出的协议容易受到碰撞攻击或者原像攻击或者同时受到2种攻击。因为只是在实体能力中使用哈希输出，本协议将不会受到碰撞攻击，即使使用的算法容易受到碰撞攻击。然而，如果使用的哈希函数受到了原像攻击，那么协议就可能受到原像攻击。
+</p><p>理论上，原像攻击将会采用以下其中的一种方式：
+</p><p>对于已知的'ver'属性的值V，那么攻击者就能找到一个输入消息，比如哈希值X而不是V(这就是第一次原像攻击)
+</p><p>对于已知的输入消息S,攻击者就能够找到S’而不是V（这就是“第二次原像攻击”）。
+</p><p>在实践中，原像攻击为了能在实体能力协议中起到作用，会采用以下方法：
+</p>
+<ol><li> 被使用的哈希算法以后不仅是理论上，在实际中也是容易遭到第一次或者第二次原像攻击(比如，对现在来说MD5或者SHA-1算法还不容易遭到攻击，但是以后可能会容易遭到攻击)。
+</li><li> 攻击者可能找到匹配V或者S的哈希值的输入消息X或者S’，该值可能不是根据实体能力计算出的哈希值，该值相对较短并且容易破解，这也暗示了现存的函数不太容易受到原像攻击除了相对较长的输入消息(255顺序块)。
+</li><li> 输入讯息 X 或 S' 将需要符合S的结构, 如认证字符串中定义的，包括服务发现标识的排序，以及服务发现特性标识的排序，由'&lt;'分隔的字符以及使用"i;octet"集合的排序规则。
+</li><li> 输入的信息X 或 S'将需要让它们看起来象不支持一个理想的特性(例如,点对点加密),即使其他实体和它的hash 同样是V，但是实际上是支持这个特性的(也就是说,攻击者需要返回一组吻合X或S‘ 的服务发现标识和特性,并且用这个似是而非的冬冬通过XMPP联系实体),或看起来它支持某个特性,即使其他和它的hash同为V的实体实际上不支持.
+</li><li> 攻击者将需要宣传这个哈希V, 在其他一些拥有真正的输入讯息S的实体广播包含有关实体能力数据的出席信息并提供真正的服务发现应答之前（因此，攻击者可能需要颠覆特定软件的开发过程或颠覆名字空间的XMPP注册项的发行过程 ，或两者）。
+</li></ol>
+<p>在可预见的将来，攻击者可满足所有前述条件，似乎极不可能。不过， XMPP理事会会继续监察强制实现的哈希函数的密码的状态，以及那个函数可能的任何漏洞，以及可能会导致对实体能力协议的实际威胁。如果并且当它能现实的（或甚至可能的）开展有效的原像攻击实体能力协议， XMPP理事会将考虑更新此规格把强制实现的哈希算法改成一个更安全的技术。
+</p>
+<h3> <span class="mw-headline" id=".E8.83.BD.E5.8A.9B.E6.AF.92.E8.8D.AF">能力毒药</span></h3>
+<p>坚持以本文的"认证字符串"章节所定义的方法来生成和处理'ver'属性，有助于防范恶意或不当实施实体所导致的实体能力信息毒药。
+</p><p>如果'ver'属性的值是一个这里所定义的认证字符串（即，如果'ver'属性不是根据遗留格式生成的），列入'hash'属性是必需的。明确知道'ver'属性的值是一个认证字符串，使得接收者避免无效或中毒的哈希的杂散通知。
+</p>
+<h3> <span class="mw-headline" id=".E4.BF.A1.E6.81.AF.E6.9A.B4.E9.9C.B2">信息暴露</span></h3>
+<p>利用实体的能力，攻击者可能更容易发起针对某些特定应用的攻击，因为攻击者就可以更容易确定客户端的类型以及其能力。不过，由于大多数客户端回应服务发现和软件版本的请求都不需要进行访问控制检查，所以并没有增加新的威胁。实体想限制访问能力信息，应使用基于服务器的隐私规则\[28\] ，以确定适当的通信阻断（例如，一个实体可能会选择只允许从“受信任”的实体发送的IQ请求，如那些与他们互相订阅了了出席信息的实体 ）; 不过，请注意，这样的限制可能不兼容直接的出席信息。
+</p>
+<h2> <span class="mw-headline" id="IANA.E4.BA.8B.E9.A1.B9">IANA事项</span></h2>
+<p>本文和(IANA)没有交互. 
+</p>
+<h2> <span class="mw-headline" id="XMPP.E6.B3.A8.E5.86.8C.E4.BA.8B.E9.A1.B9">XMPP注册事项</span></h2>
+<h3> <span class="mw-headline" id=".E5.8D.8F.E8.AE.AE.E5.91.BD.E5.90.8D.E7.A9.BA.E9.97.B4">协议命名空间</span></h3>
+<p>The XMPP Registrar [30] includes '<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps'">http://jabber.org/protocol/caps'</a> in its registry of protocol namespaces (see &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/registrar/namespaces.html">http://www.xmpp.org/registrar/namespaces.html</a>&gt;).
+</p>
+<h3> <span class="mw-headline" id=".E6.9C.8D.E5.8A.A1.E5.8F.91.E7.8E.B0.E7.89.B9.E6.80.A7">服务发现特性</span></h3>
+<p>The XMPP Registrar shall include "<a rel="nofollow" class="external free" href="http://jabber.org/protocol/caps#optimize">http://jabber.org/protocol/caps#optimize</a>" in its registry of service discovery features (see &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/registrar/disco-features.html">http://www.xmpp.org/registrar/disco-features.html</a>&gt;).
+</p>
+<h2> <span class="mw-headline" id="XML_Schema">XML Schema</span></h2>
+<div dir="ltr" style="text-align: left;"><div class="source-xml" style="font-family: monospace;"><pre><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">'1.0'</span> <span class="re0">encoding</span>=<span class="st0">'UTF-8'</span><span class="re2">?&gt;</span>
+&#160;
+<span class="re1">&lt;xs:schema</span>
+    <span class="re0">xmlns:xs</span>=<span class="st0">'http://www.w3.org/2001/XMLSchema'</span>
+    <span class="re0">targetNamespace</span>=<span class="st0">'http://jabber.org/protocol/caps'</span>
+    <span class="re0">xmlns</span>=<span class="st0">'http://jabber.org/protocol/caps'</span>
+    <span class="re0">elementFormDefault</span>=<span class="st0">'qualified'</span><span class="re2">&gt;</span>
+&#160;
+  <span class="re1">&lt;xs:annotation<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;xs:documentation<span class="re2">&gt;</span></span><span class="co3">
+      The protocol documented by this schema is defined in
+      XEP-0115: http://www.xmpp.org/extensions/xep-0115.html
+    </span><span class="re1">&lt;/xs:documentation<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/xs:annotation<span class="re2">&gt;</span></span>
+&#160;
+  <span class="re1">&lt;xs:element</span> <span class="re0">name</span>=<span class="st0">'c'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;xs:complexType<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;xs:simpleContent<span class="re2">&gt;</span></span>
+        <span class="re1">&lt;xs:extension</span> <span class="re0">base</span>=<span class="st0">'empty'</span><span class="re2">&gt;</span>
+          <span class="re1">&lt;xs:attribute</span> <span class="re0">name</span>=<span class="st0">'ext'</span> <span class="re0">type</span>=<span class="st0">'xs:NMTOKENS'</span> <span class="re0">use</span>=<span class="st0">'optional'</span><span class="re2">/&gt;</span>
+          <span class="re1">&lt;xs:attribute</span> <span class="re0">name</span>=<span class="st0">'hash'</span> <span class="re0">type</span>=<span class="st0">'xs:NMTOKEN'</span> <span class="re0">use</span>=<span class="st0">'required'</span><span class="re2">/&gt;</span>
+          <span class="re1">&lt;xs:attribute</span> <span class="re0">name</span>=<span class="st0">'node'</span> <span class="re0">type</span>=<span class="st0">'xs:string'</span> <span class="re0">use</span>=<span class="st0">'required'</span><span class="re2">/&gt;</span>
+          <span class="re1">&lt;xs:attribute</span> <span class="re0">name</span>=<span class="st0">'ver'</span> <span class="re0">type</span>=<span class="st0">'xs:string'</span> <span class="re0">use</span>=<span class="st0">'required'</span><span class="re2">/&gt;</span>
+        <span class="re1">&lt;/xs:extension<span class="re2">&gt;</span></span>
+      <span class="re1">&lt;/xs:simpleContent<span class="re2">&gt;</span></span>
+    <span class="re1">&lt;/xs:complexType<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/xs:element<span class="re2">&gt;</span></span>
+&#160;
+  <span class="re1">&lt;xs:simpleType</span> <span class="re0">name</span>=<span class="st0">'empty'</span><span class="re2">&gt;</span>
+    <span class="re1">&lt;xs:restriction</span> <span class="re0">base</span>=<span class="st0">'xs:string'</span><span class="re2">&gt;</span>
+      <span class="re1">&lt;xs:enumeration</span> <span class="re0">value</span>=<span class="st0">''</span><span class="re2">/&gt;</span>
+    <span class="re1">&lt;/xs:restriction<span class="re2">&gt;</span></span>
+  <span class="re1">&lt;/xs:simpleType<span class="re2">&gt;</span></span>
+&#160;
+<span class="re1">&lt;/xs:schema<span class="re2">&gt;</span></span></pre></div></div>
+<h2> <span class="mw-headline" id=".E9.81.97.E7.95.99.E6.A0.BC.E5.BC.8F">遗留格式</span></h2>
+<p>在本协议的1.4版之前, 'ver'属性的生成方法是不同的, 'ext'属性的使用更广泛, 'hash'属性则没有. 为了保护历史, 本协议的 1.3版收藏在&lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/attic/xep-0115-1.3.html">http://www.xmpp.org/extensions/attic/xep-0115-1.3.html</a>&gt;. 为了遗留格式的向后兼容,  'node'属性是必需的(REQUIRED)并且'ext'属性可以(MAY)被包括. 
+</p><p>一个应用可以通过检查出席信息的'hash'属性(它在当前格式中是必需的)来确定是否使用遗留格式. 
+</p><p>如果一个可处理实体能力的应用支持遗留格式,它应该(SHOULD)检查 'node', 'ver', 和 'ext' 综合起来是否和本协议的1.3版相符, 并且可以(MAY)缓存结果.
+</p><p>如果一个可处理实体能力的应用不支持遗留格式, 它应该完全忽略'ver'值(因为这个值无法认证) 并且不应该(SHOULD NOT)缓存它, 因为应用无法通过检查哈希值来验证其标识和特性.
+</p>
+<h2> <span class="mw-headline" id=".E8.87.B4.E8.B0.A2">致谢</span></h2>
+<p>感谢 Rachel Blackman, Dave Cridland, Richard Dobson, Olivier Goffart, Sergei Golovan, Justin Karneges, Ralph Meijer, Ian Paterson, Kevin Smith, Tomasz Sterna, Michal Vaner, and Matt Yacobucci for comments and suggestions.
+</p>
+<h2> <span class="mw-headline" id=".E9.99.84.E5.BD.95">附录</span></h2>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95A:.E6.96.87.E6.A1.A3.E4.BF.A1.E6.81.AF">附录A:文档信息</span></h3>
+<p>系列：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/">XEP</a>
+</p><p>序号：0115
+</p><p>发布者：<a rel="nofollow" class="external text" href="http://xmpp.org/xsf/">XMPP标准基金会</a>
+</p><p>状态：<a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0001.html#states-Draft">草案</a>
+</p><p>类型：<a rel="nofollow" class="external text" href="http://www.xmpp.org/extensions/xep-0001.html#types-Standards%20Track">标准跟踪</a>
+</p><p>版本：1.5
+</p><p>最后更新：2008-02-26
+</p><p>批准机构：<a rel="nofollow" class="external text" href="http://xmpp.org/council/">XMPP理事会</a>
+</p><p>依赖标准：XMPP Core, XMPP IM, XEP-0030
+</p><p>替代标准：无
+</p><p>被替代标准：无
+</p><p>缩略名：caps
+</p><p>XML架构(Schema): &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/schemas/caps.xsd">http://www.xmpp.org/schemas/caps.xsd</a>&gt;
+</p><p>原文控制： <a rel="nofollow" class="external text" href="http://svn.xmpp.org:18080/browse/XMPP/trunk/extensions/xep-0115.xml">HTML</a> <a rel="nofollow" class="external text" href="http://svn.xmpp.org:18080//changelog/~rss/XMPP/trunk/extensions/xep-0115.xml/rss.xml">RSS</a>
+</p><p>本文的其它格式： <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0115.xml">XML</a> <a rel="nofollow" class="external text" href="http://xmpp.org/extensions/xep-0115.pdf">PDF</a>
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95B:.E4.BD.9C.E8.80.85.E4.BF.A1.E6.81.AF">附录B:作者信息</span></h3>
+<p><b>Joe Hildebrand</b>
+</p>
+<dl><dd>Email: <a rel="nofollow" class="external text" href="mailto:jhildebrand@jabber.com">jhildebrand@jabber.com</a>
+</dd></dl>
+<dl><dd>JabberID: hildjj@jabber.org
+</dd></dl>
+<p><b>Peter Saint-Andre</b>
+</p>
+<dl><dd>Email: <a rel="nofollow" class="external text" href="mailto:stpeter@jabber.org">stpeter@jabber.org</a>
+</dd></dl>
+<dl><dd>JabberID: stpeter@jabber.org
+</dd></dl>
+<dl><dd>URI: &lt;<a rel="nofollow" class="external free" href="https://stpeter.im/">https://stpeter.im/</a>&gt;
+</dd></dl>
+<p><b>Remko Tronçon</b>
+</p>
+<dl><dd>URI: &lt;<a rel="nofollow" class="external free" href="http://el-tramo.be/">http://el-tramo.be/</a>&gt;
+</dd></dl>
+<p><b>Jacek Konieczny</b>
+</p>
+<dl><dd>Email: <a rel="nofollow" class="external text" href="mailto:jajcus@jajcus.net">jajcus@jajcus.net</a>
+</dd></dl>
+<dl><dd>JabberID: jajcus@jabber.bnet.pl
+</dd></dl>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95C:.E6.B3.95.E5.BE.8B.E9.80.9A.E5.91.8A">附录C:法律通告</span></h3>
+<p><b>版权</b>
+</p><p>XMPP扩展协议的版权(1999-2008)归XMPP标准化基金会(XSF)所有.
+</p><p><b>权限</b>
+</p><p>特此授权,费用全免,对任何获得本协议副本的人,对使用本协议没有限制,包括不限制在软件程序中实现本协议,不限制在网络服务中布署本协议,不限制拷贝,修改,合并,发行,翻译,分发,转授,或销售本协议的副本,被允许使用本协议做了以上工作的人士,应接受前述的版权声明和本许可通知并且必须包含在所有的副本或实质性部分的规格中.除非单独的许可，被重新分发的修改工作，不得含有关于作者，标题，编号，或出版者的规格的误导性资料，并不得宣称修改工作是由本文的作者，作者所属的任何组织或项目，或XMPP标准基金会签注。
+</p><p><b>免责声明'</b>
+</p><p><b>## 特别注意：本协议是提供的“原样”的基础，没有担保或任何形式的条件，明示或暗示，包括，但不限于任何担保或关于名称，非侵权性，适销性或适合作某一特定目的的条件. ##</b>
+</p><p><b>责任限制</b>
+</p><p>在任何情况下以及没有任何法律规定时，不论是侵权行为（包括疏忽），合同或其它方面，除非根据适用法律的要求（如蓄意和有严重疏忽行为）或以书面形式同意，XMPP标准基金会或任何作者不对本协议所造成的损失承担责任，包括任何直接，间接，特殊，偶发，或任何从本协议出，入，连接的字符产生的或实现，布署或其他对本协议的使用导致的相应的损害赔偿（包括但不限于善意的损失，停止作业，电脑失灵或故障，或任何和所有其他商业损害或损失） ，即使XMPP标准基金会或作者已被告知此类损害的可能性。
+</p><p><b>知识产权的一致性</b>
+</p><p>XMPP扩展协议完全遵守XSF的知识产权策略(可在&lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/ipr-policy.shtml">http://www.xmpp.org/extensions/ipr-policy.shtml</a>&gt;找到副本或写信给XMPP标准基金会, 1899 Wynkoop Street, Suite 600, Denver, CO 80202 USA).
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95D:.E5.92.8CXMPP.E7.9A.84.E5.85.B3.E7.B3.BB">附录D:和XMPP的关系</span></h3>
+<p>可扩展的消息和出席信息协议 (XMPP) 定义于 XMPP Core (<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>) 和 XMPP IM (<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3921">RFC 3921</a>) 规范里，由 XMPP标准基金会贡献到由依据<a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc2026">RFC 2026</a>成立的互联网工程人物组管理的互联网标准流程 Internet Standards Process. 本文定义的任何协议已在互联网标准流程之外开发，并且被理解为 XMPP 的扩展而不是一个XMPP本身的演化, 开发, 或修改.
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95E:.E8.AE.A8.E8.AE.BA.E5.9C.B0.E7.82.B9">附录E:讨论地点</span></h3>
+<p>主要的XMPP扩展协议讨论地点是 &lt;standards@xmpp.org&gt; 讨论列表.
+</p><p>在 xmpp.org 的其它讨论列表中的讨论可能也有合适的; 所有的列表见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/about/discuss.shtml">http://xmpp.org/about/discuss.shtml</a>&gt; .
+</p><p>勘误表可以发送邮件到 &lt;editor@xmpp.org&gt;.
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95F:.E9.9C.80.E6.B1.82.E4.B8.80.E8.87.B4.E6.80.A7">附录F:需求一致性</span></h3>
+<p>以下用于本文的需求关键字的解释见于 <a rel="nofollow" class="external text" href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>: "MUST", "SHALL", "REQUIRED"; "MUST NOT", "SHALL NOT"; "SHOULD", "RECOMMENDED"; "SHOULD NOT", "NOT RECOMMENDED"; "MAY", "OPTIONAL".
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95G:.E5.A4.87.E6.B3.A8">附录G:备注</span></h3>
+<ol><li> XEP-0071: XHTML-IM &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0071.html">http://www.xmpp.org/extensions/xep-0071.html</a>&gt;.
+</li><li> XEP-0166: Jingle &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0166.html">http://www.xmpp.org/extensions/xep-0166.html</a>&gt;.
+</li><li> XEP-0167: Jingle RTP Sessions &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0167.html">http://www.xmpp.org/extensions/xep-0167.html</a>&gt;.
+</li><li> XEP-0096: SI File Transfer &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0096.html">http://www.xmpp.org/extensions/xep-0096.html</a>&gt;.
+</li><li> XEP-0060: Publish-Subscribe &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0060.html">http://www.xmpp.org/extensions/xep-0060.html</a>&gt;.
+</li><li> XEP-0030: Service Discovery &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0030.html">http://www.xmpp.org/extensions/xep-0030.html</a>&gt;.
+</li><li> XEP-0092: Software Version &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0092.html">http://www.xmpp.org/extensions/xep-0092.html</a>&gt;.
+</li><li> 实体能力不限于客户端，也能被任何实体用来和另一个实体交换出席信息, 例如, 一个网关. 无论如何, 这个协议主要使用了客户端的例子.
+</li><li> XEP-0045: Multi-User Chat &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0045.html">http://www.xmpp.org/extensions/xep-0045.html</a>&gt;.
+</li><li> 该字符串能被依靠，因为它被如何生成和检查在本文后面有解释.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>: 可扩展的消息和出席信息协议 (XMPP): Core &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3920">http://tools.ietf.org/html/rfc3920</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3921">RFC 3921</a>: 可扩展的消息和出席信息协议 (XMPP): Instant Messaging and Presence &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3921">http://tools.ietf.org/html/rfc3921</a>&gt;.
+</li><li> 这首要的两个需求有效地淘汰了 XEP-0060 作为实体能力实现的可能性.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4790">RFC 4790</a>: Internet Application Protocol Collation Registry &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc4790">http://tools.ietf.org/html/rfc4790</a>&gt;.
+</li><li> 一个服务发现身份的注册项位于 &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/registrar/disco-categories.html">http://www.xmpp.org/registrar/disco-categories.html</a>&gt;.
+</li><li> category, type, 和 xml:lang 的组合行成一个唯一的组合项, 所以不需要也用name来排序 (name 只是提供和一个 category/type/lang 组合相关的一些自然语言文本 ).
+</li><li> 一个服务发现特性的注册项位于 &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/registrar/disco-features.html">http://www.xmpp.org/registrar/disco-features.html</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3269">RFC 3269</a>: UTF-8, a transformation format of ISO 10646 &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3269">http://tools.ietf.org/html/rfc3269</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3174">RFC 3174</a>: US Secure Hash Algorithm 1 (SHA1) &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3174">http://tools.ietf.org/html/rfc3174</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4648">RFC 4648</a>: The Base16, Base32, and Base64 Data Encodings &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc4648">http://tools.ietf.org/html/rfc4648</a>&gt;.
+</li><li> 这个OpenSSL命令用于产生这样的 SHA-1 输出， "echo -n 'S' | openssl dgst -binary -sha1 | openssl enc -nopad -base64".
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc3920">RFC 3920</a>: 可扩展的消息和出席信息协议 (XMPP): Core &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc3920">http://tools.ietf.org/html/rfc3920</a>&gt;.
+</li><li> rfc3920bis: proposed revisions to Extensible Messaging and Presence Protocol (XMPP): Core &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/draft-saintandre-rfc3920bis">http://tools.ietf.org/html/draft-saintandre-rfc3920bis</a>&gt;. (work in progress)
+</li><li> IANA的注册表中的哈希函数的文本名称 &lt;<a rel="nofollow" class="external free" href="http://www.iana.org/assignments/hash-function-text-names">http://www.iana.org/assignments/hash-function-text-names</a>&gt;.
+</li><li> XMPP理事会是一个技术指导委员会, 由XSF成员选举的XSF董事会授权, 负责批准新的XMPP扩展协议和监督XSF的标准进程. 更多信息见 &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/council/">http://www.xmpp.org/council/</a>&gt;.
+</li><li> <a class="external mw-magiclink-rfc" href="//tools.ietf.org/html/rfc4270">RFC 4270</a>: Attacks on Cryptographic Hashes in Internet Protocols &lt;<a rel="nofollow" class="external free" href="http://tools.ietf.org/html/rfc4270">http://tools.ietf.org/html/rfc4270</a>&gt;.
+</li><li> XMPP登记员XMPP Registrar 维护着一个保留的协议名字空间以及用于由XMPP标准基金会批准的XMPP扩展协议的上下文参数的注册项的列表. 更多信息, 见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/registrar/">http://xmpp.org/registrar/</a>&gt;.
+</li><li> XEP-0016: Server-Based Privacy Rules &lt;<a rel="nofollow" class="external free" href="http://www.xmpp.org/extensions/xep-0016.html">http://www.xmpp.org/extensions/xep-0016.html</a>&gt;.
+</li><li> 互联网编号分配机构(IANA) 是用于互联网协议的唯一性参数值分配的核心协调者, 例如号码和URI计划. 更多信息, 见 &lt;<a rel="nofollow" class="external free" href="http://www.iana.org/">http://www.iana.org/</a>&gt;.
+</li><li> XMPP登记员XMPP Registrar 维护着一个保留的协议名字空间以及用于由XMPP标准基金会批准的XMPP扩展协议的上下文参数的注册项的列表. 更多信息, 见 &lt;<a rel="nofollow" class="external free" href="http://xmpp.org/registrar/">http://xmpp.org/registrar/</a>&gt;.
+</li></ol>
+<h3> <span class="mw-headline" id=".E9.99.84.E5.BD.95H:.E4.BF.AE.E8.AE.A2.E5.8E.86.E5.8F.B2">附录H:修订历史</span></h3>
+<p>注意: 本协议的旧版本可能在 <a rel="nofollow" class="external free" href="http://xmpp.org/extensions/attic/">http://xmpp.org/extensions/attic/</a> 还可用
+</p><p>Version 1.5 (2008-02-26)
+</p><p>Defined SHA-1 as mandatory to implement
+</p><p>Specified that inclusion of hash attribute is required
+</p><p>Defined the nature of possible preimage attacks
+</p><p>More clearly specified security considerations
+</p><p>More clearly specified implementation notes
+</p><p>Modified generation method to incorporate service discovery extensions
+</p><p>More clearly specified processing method
+</p><p>Clarified meaning and construction of caps node attribute and disco node attribute
+</p><p>Specified that node attribute shall be included in disco#info request for backwards-compatibility
+</p><p>Clarified handling of the legacy format to assist developers
+</p><p>Added service discovery feature for caps optimization to prevent confusion regarding server support of caps vs. caps optimization
+</p><p>(jjh/psa) 
+</p><p>Version 1.4 (2007-08-13)
+</p><p>In response to persistent security concerns over caps poisoning, redefined ver attribute to be a hash of the service discovery identity and features in a way that is backwards-compatible with the legacy format.
+</p><p>(psa/jk/jjh) 
+</p><p>Version 1.3 (2007-04-10)
+</p><p>Added developer-friendly introduction; specified that ext names must be stable across application versions; further clarified examples; added stream feature 
+</p><p>use case; removed message example (send directed presence instead).
+</p><p>(psa/rt/jjh) 
+</p><p>Version 1.2 (2007-02-15)
+</p><p>Clarified motivation and handling of service discovery requests.
+</p><p>(psa) 
+</p><p>Version 1.1 (2004-10-29)
+</p><p>Clarified meaning of service discovery results for client#ver and client#ext.
+</p><p>(psa) 
+</p><p>Version 1.0 (2004-08-01)
+</p><p>Per a vote of the Jabber Council, advanced status to Draft.
+</p><p>(psa) 
+</p><p>Version 0.7 (2004-06-29)
+</p><p>Added several items to the Security Considerations; clarified naming requirements regarding 'node', 'ver', and 'ext' attributes.
+</p><p>(jjh/psa) 
+</p><p>Version 0.6 (2004-04-25)
+</p><p>Made a number of editorial adjustments.
+</p><p>(psa) 
+</p><p>Version 0.5 (2004-01-05)
+</p><p>Specified that the protocol can be used whenever presence is used (e.g., by gateways); improved the XML schema; made several editorial adjustments.
+</p><p>(psa) 
+</p><p>Version 0.4 (2003-09-04)
+</p><p>IQ eets must be to a resource, since they are intended to go to a particular session.
+</p><p>(jjh) 
+</p><p>Version 0.3 (2003-09-02)
+</p><p>Servers MUST strip extras changed to MAY, due to implementer feedback.
+</p><p>(jjh) 
+</p><p>Version 0.2 (2003-08-28)
+</p><p>Add more clarifying assumptions and requirements, make it clear that clients don't have to send capabilities every time if the server is optimizing.
+</p><p>(jjh) 
+</p><p>Version 0.1 (2003-08-27)
+</p><p>Initial version.
+</p><p>(jjh) 
+</p>
+<hr />
+<p>结束
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 312/1000000
+Post-expand include size: 3174/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:15-0!*!0!!zh-cn!*!* and timestamp 20160221180035 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=XEP-0115&amp;oldid=993">http://wiki.jabbercn.org/index.php?title=XEP-0115&amp;oldid=993</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">2个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E6%89%A9%E5%B1%95" title="分类:XMPP扩展">XMPP扩展</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/XEP-0115" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:XEP-0115&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=XEP-0115&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=XEP-0115&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=XEP-0115" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/XEP-0115" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/XEP-0115" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=XEP-0115&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=XEP-0115&amp;oldid=993" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2010年6月23日 (星期三) 15:00。</li>
+		<li id="viewcount">此页面已被浏览过13,752次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("XEP-0115");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.037 secs. --></body></html>

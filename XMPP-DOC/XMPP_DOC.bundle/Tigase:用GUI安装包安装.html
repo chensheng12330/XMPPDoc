@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="client-nojs">
+<head>
+<title>Tigase:用GUI安装包安装 - Jabber/XMPP中文翻译计划</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Jabber/XMPP中文翻译计划 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.jabbercn.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Jabber/XMPP中文翻译计划的Atom" href="/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=zh-cn&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="/load.php?debug=false&amp;lang=zh-cn&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Tigase:用GUI安装包安装", "wgTitle": "Tigase:用GUI安装包安装", "wgCurRevisionId": 3330, "wgArticleId": 759, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["XMPP服务器文档", "已翻译"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0]});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-bash {border: 1px dashed #2f6fab; color: black; background-color: #f9f9f9;}
+.source-bash li, .source-bash pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: source-bash, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.source-bash .de1, .source-bash .de2 {font-family: monospace; font-weight: normal; font-style: normal; margin:0; padding:0; background:inherit;}
+.source-bash  {font-family: monospace;}
+.source-bash .imp {font-weight: bold; color: red;}
+.source-bash li, .source-bash li.li1 {font-weight: normal;}
+.source-bash li.li2 {font-weight: bold;}
+.source-bash .kw1 {color: #000000; font-weight: bold;}
+.source-bash .kw2 {color: #c20cb9; font-weight: bold;}
+.source-bash .kw3 {color: #7a0874; font-weight: bold;}
+.source-bash .co0 {color: #666666; font-style: italic;}
+.source-bash .co1 {color: #800000;}
+.source-bash .co2 {color: #cc0000; font-style: italic;}
+.source-bash .es0 {color: #000099; font-weight: bold;}
+.source-bash .br0 {color: #7a0874; font-weight: bold;}
+.source-bash .sy0 {color: #000000; font-weight: bold;}
+.source-bash .st0 {color: #ff0000;}
+.source-bash .nu0 {color: #000000;}
+.source-bash .re0 {color: #007800;}
+.source-bash .re1 {color: #007800;}
+.source-bash .re2 {color: #007800;}
+.source-bash .re4 {color: #007800;}
+.source-bash .re5 {color: #660033;}
+.source-bash .ln-xtra, .source-bash li.ln-xtra, .source-bash div.ln-xtra {background-color: #ffc;}
+.source-bash span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Tigase_用GUI安装包安装 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Tigase:用GUI安装包安装</h1>
+	<div id="bodyContent">
+		<div id="siteSub">来自Jabber/XMPP中文翻译计划</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<div lang="zh-cn" dir="ltr" class="mw-content-ltr"><p><br />
+<b>本文的英文原文来自 <a rel="nofollow" class="external free" href="http://www.tigase.org/content/installation-using-gui-installer">http://www.tigase.org/content/installation-using-gui-installer</a> </b>
+</p><p>如果你不想使用手动方式来安装Tigase, 你可以使用GUI安装包. 它不只拷贝服务器文件到首选的位置, 而且辅助配置大部分参数和数据库设置. 所以它安装Tigase的首选方式.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.89.8D.E6.8F.90.E6.9D.A1.E4.BB.B6"><span class="tocnumber">1</span> <span class="toctext">前提条件</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E4.B8.8B.E8.BD.BD.E5.AE.89.E8.A3.85.E5.8C.85"><span class="tocnumber">2</span> <span class="toctext">下载安装包</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E8.BF.90.E8.A1.8Cjar.E6.96.87.E4.BB.B6"><span class="tocnumber">3</span> <span class="toctext">运行jar文件</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.BC.80.E5.A7.8B.E5.AE.89.E8.A3.85"><span class="tocnumber">4</span> <span class="toctext">开始安装</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#JDK.E9.80.89.E6.8B.A9"><span class="tocnumber">4.1</span> <span class="toctext">JDK选择</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.E5.AE.89.E8.A3.85.E7.B1.BB.E5.9E.8B.E9.80.89.E6.8B.A9"><span class="tocnumber">4.2</span> <span class="toctext">安装类型选择</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.E4.BB.8B.E7.BB.8D.E6.9C.8D.E5.8A.A1.E5.99.A8"><span class="tocnumber">4.3</span> <span class="toctext">介绍服务器</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.E9.80.89.E6.8B.A9.E7.A8.8B.E5.BA.8F.E6.A0.B9.E7.9B.AE.E5.BD.95"><span class="tocnumber">4.4</span> <span class="toctext">选择程序根目录</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.E5.8C.85.E9.80.89.E6.8B.A9"><span class="tocnumber">4.5</span> <span class="toctext">包选择</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#.E5.9F.BA.E6.9C.AC.E7.9A.84.E6.9C.8D.E5.8A.A1.E5.99.A8.E9.85.8D.E7.BD.AE"><span class="tocnumber">4.6</span> <span class="toctext">基本的服务器配置</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.E6.95.B0.E6.8D.AE.E5.BA.93.E8.BF.9E.E6.8E.A5.E6.A3.80.E6.9F.A5.E5.92.8C.E6.89.A7.E8.A1.8CDB.E4.BB.BB.E5.8A.A1"><span class="tocnumber">4.7</span> <span class="toctext">数据库连接检查和执行DB任务</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#.E5.AE.8C.E6.88.90.E5.AE.89.E8.A3.85"><span class="tocnumber">5</span> <span class="toctext">完成安装</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#.E8.BF.90.E8.A1.8C.E6.9C.8D.E5.8A.A1.E5.99.A8"><span class="tocnumber">6</span> <span class="toctext">运行服务器</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#.E5.AE.89.E8.A3.85.E6.88.90.E4.B8.80.E4.B8.AA.E6.9C.8D.E5.8A.A1"><span class="tocnumber">7</span> <span class="toctext">安装成一个服务</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#.E5.A6.82.E4.BD.95.E6.A3.80.E6.9F.A5.E6.9C.8D.E5.8A.A1.E5.99.A8.E6.98.AF.E5.90.A6.E6.AD.A3.E5.9C.A8.E8.BF.90.E8.A1.8C"><span class="tocnumber">8</span> <span class="toctext">如何检查服务器是否正在运行</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id=".E5.89.8D.E6.8F.90.E6.9D.A1.E4.BB.B6">前提条件</span></h2>
+<p>在你能够启动GUI安装包之前，你将需要一个Java工作环境. 尽管安装包只要求 <b>JRE</b> (Java运行时环境), 服务器需要 <b>JDK</b> (Java开发包). 请注意目前 <b>Tigase可以运行的的最低JDK版本是1.6</b> . 如果你还没有安装JDK，现在该装上它了. 访问 <a rel="nofollow" class="external text" href="http://java.sun.com/javase/downloads/index.jsp">Java下载网站</a>, 从可用的包列表中选择最新的JDK版本(如果你没有使用J2EE的特别需求，那么选择一个不带它的包). 在配置了JDK之后你可以下载 Tigase GUI安装包并开始服务器安装过程. 把 <b>JAVA_HOME</b> 环境设置正确也是非常重要的.
+</p>
+<h2> <span class="mw-headline" id=".E4.B8.8B.E8.BD.BD.E5.AE.89.E8.A3.85.E5.8C.85">下载安装包</span></h2>
+<p>你总是能在<a rel="nofollow" class="external text" href="http://www.tigase.org/content/tigase-downloads?fid=1624">下载章节</a>找到最新的Tigase包. 当你进入该页面, 你将看到一个可选的文件列表. 开始你可能很疑惑有太多选择, 但是你不需要担心. 所有Tigase二进制包都有约定的名称, 这帮助你很容易地区分它们. 它们的格式是 <b>tigase-server-x.y.z-bv.ext</b> ，这里 'x', 'y', 'z' 和 'v' 是版本号并且它们的变更是从每一次发布. Ext 是文件扩展名，这里我们的GUI安装包程序是 <b>.jar</b> . 我们推荐你下载该服务器的最新版本(最高的版本号)，因为它包含了最新的功能和提升.
+</p>
+<h2> <span class="mw-headline" id=".E8.BF.90.E8.A1.8Cjar.E6.96.87.E4.BB.B6">运行jar文件</span></h2>
+<p>在大部分系统中安装了JRE或JDK之后会创建缺省的文件关联以允许运行 <b>.jar</b> 文件，通过 点击/双击 它. 无论如何如果当你点的时候什么都没发生你可以手工执行它. 按顺序执行以下步骤:
+</p><p>1. 如果你在Windows系统上你可以使用命令行提示方式来使用java命令直接运行安装包.
+</p>
+<dl><dd><ol><li> 点击 <b>开始</b> 菜单并选择 <b>运行</b> 操作(你也可以使用 <b>Win</b> + <b>R</b> 快捷方式).
+</li><li> 你将看到一个对话框，这里你可以输入一条命令. 键入 <b>"cmd"</b> (或 "command" ，在某些2000之前的老的windows版本中) 并提交该窗口.
+</li></ol>
+</dd><dd>如果你在Linux系统, 你可以使用一个终端. 在这个平台上它是一个标准工具并且很容易找. 找到并运行它.
+</dd></dl>
+<p>2. 命令提示 / 终端 将出现. 你将能检查是否你的Java环境在正常工作. 键入以下命令然后回车.
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre>java <span class="re5">-version</span></pre></div></div>
+<dl><dd>如果返回的消息说无法识别该命令那么你的 <b>Java</b> 安装可能是错误的或配置不正确. 为了正确设置 <b>JRE/JDK</b> 包括设定 <b>JAVA_HOME</b> 环境变量，请检查JDK下载网站提供的文档. 如果命令成功了请检查列出来的版本号码满足Tigase的要求. 当一台机器上装了多个版本的 <b>JDK/JRE</b> ，<b>java</b> 命令将需要使用它所在的全路径来调用.
+</dd></dl>
+<p>3. 当你毫无疑问你能运行正确的java命令, 你可以启动该安装包. 即被下载到 <b>c:\download</b> 目录的文件 <b>tigase-server-4.1.0-b1315.jar</b> ， 键入以下命令:
+</p>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre>java <span class="re5">-jar</span> c:\download\tigase-server<span class="nu0">-4.1</span><span class="nu0">.0</span>-b1315.jar</pre></div></div>
+<dl><dd>这个命令应该启动该安装包或列出一个错误消息来解释出现了什么问题.
+</dd></dl>
+<h2> <span class="mw-headline" id=".E5.BC.80.E5.A7.8B.E5.AE.89.E8.A3.85">开始安装</span></h2>
+<p>请注意本教程只涉及基本的安装模式. 一些屏幕被忽略了，因为它们包含在简单安装模式中没有的高级选项. 另一方面其他比如文件拷贝过程和总结信息等自解释的过程也没有描述.
+</p>
+<h3> <span class="mw-headline" id="JDK.E9.80.89.E6.8B.A9">JDK选择</span></h3>
+<p><img src="http://www.tigase.org/files/image/gui-install/winInstall2Mini.gif" alt="winInstall2Mini.gif" />
+</p><p>这个屏幕只在JDK没有被自动选择的时候出现. 当你的 JAVA_HOME path 正确的设置了, 它将被自动探测到以节省你的配置时间. 如果你读到这一步而仍然未安装JDK, 那么返回<a href="/index.php?title=Tigase:%E7%94%A8%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;action=edit&amp;redlink=1" class="new" title="Tigase:用安装包安装（尚未撰写）">前提条件</a>， 那里你能找到一些关于如何为Tigase安装准备你的系统的信息. 有时你的系统将被配置成阻止探测JDK路径. 这经常发生你在安装了JDK之后再安装JRE的情况下. 你将不得不自己去找JDK目录. 它的缺省安装位置在你的系统驱动盘的 <b>Program Files\Java</b> 目录.
+</p>
+<h3> <span class="mw-headline" id=".E5.AE.89.E8.A3.85.E7.B1.BB.E5.9E.8B.E9.80.89.E6.8B.A9">安装类型选择</span></h3>
+<p><img src="http://www.tigase.org/files/image/gui-install/winInstall3Mini.gif" alt="winInstall3Mini.gif" />
+</p><p>推荐的实践是同时选择安装和配置服务器，因为手动配置服务器比较复杂，耗时且易于出错.
+</p>
+<h3> <span class="mw-headline" id=".E4.BB.8B.E7.BB.8D.E6.9C.8D.E5.8A.A1.E5.99.A8">介绍服务器</span></h3>
+<p><img src="http://www.tigase.org/files/image/gui-install/winInstall4Mini.gif" alt="winInstall4Mini.gif" />
+</p><p>这个屏幕显示一些关于Tigase的信息，帮助你理解它是什么以及如何帮你获得XMPP协议的好处. 阅读安装包上出现的所有信息是很重要的, 因为它们包含了有价值的建议和大部分最近的信息.
+</p>
+<h3> <span class="mw-headline" id=".E9.80.89.E6.8B.A9.E7.A8.8B.E5.BA.8F.E6.A0.B9.E7.9B.AE.E5.BD.95">选择程序根目录</span></h3>
+<p><img src="http://www.tigase.org/files/image/gui-install/winInstall6Mini.gif" alt="winInstall6Mini.gif" />
+</p><p>在这个点你选择你希望你的服务器装到哪. 推荐的路径应该不包含空格, 因为它可能导致一些未知的路径问题. 在Windows的安装场景下它应该被安装到一个短路径，因为路径长度有限制. 也要注意在Windows Vista下安装到 Program Files 目录可能会使得服务器的工作发生一些问题, 和UAC机制相关的工作, 所以最好不要安装到那. 如果你拿不定主意想把服务器装到哪, 你总是可以留着缺省值.
+</p>
+<h3> <span class="mw-headline" id=".E5.8C.85.E9.80.89.E6.8B.A9">包选择</span></h3>
+<p><img src="http://www.tigase.org/files/image/gui-install/winInstall7Mini.gif" alt="winInstall7Mini.gif" />
+</p><p>下一个重要步骤是包选择. 一些选择是灰的并且你不能选择它们，因为它们是最基本的. 所有其他的包都是可选的. 它包括 文档, 数据库驱动, 服务器源码 和一些附属项. 当你选择一个条目, 你将看到关于它的内容的简短描述.
+</p><p>我们推荐你安装文档. 它包含了有价值的资源，非常有助于服务器的管理和常规使用.
+</p><p>如果你有一个工作着的数据库平台，你想用它来存储所有重要用户信息, 就选择适当的db驱动. 如果你没有一个数据库引擎, 你可以使用内置的derby，它的驱动也已经内置了.
+</p><p>如果你是一个开发者并且你想能检查该服务器如何工作或你想帮助开发, 你也可以安装被包含的源码.
+</p>
+<h3> <span class="mw-headline" id=".E5.9F.BA.E6.9C.AC.E7.9A.84.E6.9C.8D.E5.8A.A1.E5.99.A8.E9.85.8D.E7.BD.AE">基本的服务器配置</span></h3>
+<p><img src="http://www.tigase.org/files/image/gui-install/winInstall13Mini(3).gif" alt="winInstall13Mini(3).gif" />
+</p><p>在这个屏幕你将找到重要的基本配置选项. 本指南只涉及非高级的设置 - 禁止高级配置选项.
+</p><p>你可以选择安装哪些组件. 对于大部分安装来说缺省的选择是最适合的. 你可以展开这个列表来检查是否有任何其他选项更加满足你的需要.
+</p><p>对你来说在这正确地输入你的域名是非常重要的.
+</p>
+<dl><dd><ul><li> 在类 <b>Linux</b> 系统中你可以使用 <b>hostname</b> 命令并从输出结果中提取出域部分. 如果你使用 <b>-f</b> 参数，那么你将获得完整的合格域名.
+</li><li> 在 <b>Windows</b> 中使用标准 <b>系统</b> 控制台applet. 你将在 <b>电脑名</b> tab找到你的域名(电脑名).
+</li></ul>
+</dd></dl>
+<p>另一方面如果你想使用Tigase的虚拟域支持，你要正确地配置你的 <b>DNS</b> 系统, 接着你可以在这里放你的虚拟域列表. 就用逗号把它们分开. 例如如果你的服务器从外部看是 <b>veloci.tigase.org, mammoth.tigase.org</b> 和 <b>tigase.org</b> ,然后你可以如同有三个分开的实例那样使用Tigase实例. 实际上它是一台服务器, 无论如何 <b>admin@veloci.tigase.org</b> 和 <b>admin@tigase.org</b> 将是不同的用户. 这个特性允许使用一个服务器用于分开的用户群体, 例如不同的组织.
+</p><p>现在你要把域名填到 域 文本框里. 下一个参数是服务器管理员的JID. 标准做法是给把它的名字设为 <b>admin</b> , 无论如何你可以选择任何你喜欢的名字. 例如对于域 <b>tigase.org</b> 完整的 admin 名称将是 <b>admin@tigase.org</b> . 把你选择的名称和域名连在一起，使用 @ 符号做分隔符.
+</p><p>从这个版本开始你的 XMPP admin 将被自动添加到数据库, 所以在安装之后你可以不用手工注册admin就登陆到服务器了.
+</p><p>你也应该选择一个数据库用于存储你的用户信息. 缺省的是 <b>Derby</b> 数据库, 如果你不需要任何特别的东西就保持那个配置. 选择一个新密码，因为缺省的密码可能很容易被黑客猜到.
+</p><p><b>重要通知: Tigase安装包不包含实际的数据库, 只有允许db访问的驱动. 一个例外是Derby数据库, 它被包含在JDK中. 这是由安装包自动配置的, 在使用其他数据库的情况下你将需要自己配置它们</b> .
+</p>
+<h3> <span class="mw-headline" id=".E6.95.B0.E6.8D.AE.E5.BA.93.E8.BF.9E.E6.8E.A5.E6.A3.80.E6.9F.A5.E5.92.8C.E6.89.A7.E8.A1.8CDB.E4.BB.BB.E5.8A.A1">数据库连接检查和执行DB任务</span></h3>
+<p><img src="http://www.tigase.org/files/image/gui-install/winInstall20Mini(1).gif" alt="winInstall20Mini(1).gif" />
+</p><p>当你切换到这个屏幕的时候将启动一个数据库配置的自动测试. 它包括几个顺序执行的步骤. 在测试连接和配置schema之后, admin 用户将被添加.
+</p><p>如果测试失败该干什么?
+</p>
+<dl><dd><ul><li> 如果你决定使用你自己的数据库, 检查是否你输入了正确的密码和是否你的数据库在运行中.
+</li><li> 如果你使用内置的 <b>Derby</b> 数据库，那么可能你的问题更加复杂. 安装包的一个错误可能指出一个bug. 你可以把它汇报给Tigase开发者之一.
+</li></ul>
+</dd></dl>
+<p>如果在解决了数据库问题之后你还不能度过这一步，你可以尝试手工安装模式.
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.8C.E6.88.90.E5.AE.89.E8.A3.85">完成安装</span></h2>
+<p>当你执行了所有那些步骤包括选择开始菜单位置以及其他基本动作，你将被通知安装过程已经完成了. 现在你可以使用你的Tigase服务器了. 可能有一些安装之后的动作你想去做. 它们主要如下所示.
+</p>
+<h2> <span class="mw-headline" id=".E8.BF.90.E8.A1.8C.E6.9C.8D.E5.8A.A1.E5.99.A8">运行服务器</span></h2>
+<p>安装过程的一部分是Tigase根目录的选择. 在这里你能找到所有重要的服务器文件. 安装包将在 <b>开始</b> 菜单创建一些可配置的快捷方式. 你可以在菜单中浏览并使用它来启动服务器. 如果要手工运行服务器:
+</p>
+<dl><dd><ul><li> 在一个 <b>Linux</b> 系统你可以使用Tigase服务器根目录下的 <b>scripts</b> 子目录里的 <b>tigase.sh</b> 文件启动服务器. 在根服务器目录输入以下命令:
+</li></ul>
+</dd></dl>
+<div dir="ltr" style="text-align: left;"><div class="source-bash" style="font-family: monospace;"><pre>.<span class="sy0">/</span>scripts<span class="sy0">/</span>tigase.sh start etc<span class="sy0">/</span>tigase.conf</pre></div></div>
+<dl><dd><ul><li> 当然如果你有定制的配置文件，那么可以适当修改上一个命令.
+</li><li> 在一个 <b>Windows</b> 平台你可以使用一个 <b>bat</b> 文件来运行服务器. 在Tigase根目录有一个 <b>run.bat</b> 文件. 只要在 <b>文件浏览器</b>双击它或从命令行运行它来启动服务器. 一个服务器日志输出的窗口将弹出来.
+</li></ul>
+</dd></dl>
+<p><img src="http://www.tigase.org/files/image/gui-install/winRunMini.gif" alt="winRunMini.gif" />
+</p>
+<h2> <span class="mw-headline" id=".E5.AE.89.E8.A3.85.E6.88.90.E4.B8.80.E4.B8.AA.E6.9C.8D.E5.8A.A1">安装成一个服务</span></h2>
+<p>在 <b>Windows</b> 下你可以把Tigase安装成一个服务. 要做到这一点，使用在服务器根目录找到的 <b>InstallTigaseService.bat</b> 批处理文件.
+</p><p>在这个模式下服务将被运行在后台并且将可以从 <b>服务</b> 管理控制台来控制. 要打开这个工具，右击桌面上 <b>我的电脑</b> 图标. 选择 <b>管理</b> 动作. 这将运行 <b>计算机管理</b> 图形化配置程序. 在左边选择 <b>服务</b> 条目. 你将看大一个服务列表. 这里你可以找到Tigase服务，如果它已经装好的话.
+</p><p>要卸载Tigase服务，使用Tigase服务器根目录的 <b>UninstallTigaseService.bat</b> .
+</p>
+<h2> <span class="mw-headline" id=".E5.A6.82.E4.BD.95.E6.A3.80.E6.9F.A5.E6.9C.8D.E5.8A.A1.E5.99.A8.E6.98.AF.E5.90.A6.E6.AD.A3.E5.9C.A8.E8.BF.90.E8.A1.8C">如何检查服务器是否正在运行</span></h2>
+<p>检查服务器是否正在运行是很容易的. 只要使用可用的XMPP客户端之一尝试连接它就可以了.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 86/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:759-0!*!0!!zh-cn!*!* and timestamp 20160221194625 -->
+</div><div class="printfooter">
+来自“<a href="http://wiki.jabbercn.org/index.php?title=Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;oldid=3330">http://wiki.jabbercn.org/index.php?title=Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;oldid=3330</a>”</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">2个分类</a>: <ul><li><a href="/%E5%88%86%E7%B1%BB:XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E6%A1%A3" title="分类:XMPP服务器文档">XMPP服务器文档</a></li><li><a href="/%E5%88%86%E7%B1%BB:%E5%B7%B2%E7%BF%BB%E8%AF%91" title="分类:已翻译">已翻译</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85" title="查看内容页面 [c]" accesskey="c">页面</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=%E8%AE%A8%E8%AE%BA:Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;action=edit&amp;redlink=1" title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;action=edit" title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				<li id="ca-history"><a href="/index.php?title=Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;action=history" title="本页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Tigase%3A%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="访问首页" style="background-image: url(/skins/common/images/xmppcn.png);" href="/%E9%A6%96%E9%A1%B5"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E7%A4%BE%E5%8C%BA%E4%B8%93%E9%A1%B5" title="关于本项目，你可以做什么，在哪里找到你需要的事物">社区专页</a></li>
+				<li id="n-currentevents"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81" title="查看当前事件的背景信息">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="本wiki的最近更改列表 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机进入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="/%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助的地方">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-XMPP.E8.B5.84.E6.BA.90">
+		<h5>XMPP资源</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-XMPP.E5.85.AC.E5.85.B1.E6.9C.8D.E5.8A.A1"><a href="/XMPP%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1">XMPP公共服务</a></li>
+				<li id="n-XMPP.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AF%E4%BB%B6">XMPP客户端软件</a></li>
+				<li id="n-XMPP.E6.9C.8D.E5.8A.A1.E5.99.A8.E8.BD.AF.E4.BB.B6"><a href="/XMPP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">XMPP服务器软件</a></li>
+				<li id="n-.E5.8F.8B.E6.83.85.E9.93.BE.E6.8E.A5"><a href="/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input type="search" name="search" title="在Jabber/XMPP中文翻译计划中搜索 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+
+
+
+
+<script src="http://yacy.jabbercn.org:8090/yacy/ui/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function() {
+      yconf = {
+         url : 'http://yacy.jabbercn.org:8090/',
+         theme : 'smoothness',
+         title : 'XMPP搜索大全',
+         logo     : 'http://yacy.jabbercn.org:8090/env/grafics/50-xmpp_logo.jpg',
+         link     : 'http://wiki.jabbercn.org',
+         urlmaskfilter : '.*',
+         width : 500,
+         height : 500
+      };
+      $.getScript(yconf.url+'/yacy/ui/js/yacyui-portalsearch.js', function(){});
+   });
+</script>
+        <div id="p-search" class="portlet">
+<h5>站外搜索</h5>
+<div id="yacylivesearch" class="pBody">
+   <form id="ysearch" method="get" accept-charset="UTF-8" action="http://yacy.jabbercn.org:8090/yacysearch.html">
+      <input name="search" id="yquery" type="text" size="8" maxlength="80" value=""/>
+      <input type="hidden" name="verify" value="false" />
+      <input type="hidden" name="maximumRecords" value="10" />
+      <input type="hidden" name="resource" value="local" />
+      <input type="hidden" name="urlmaskfilter" value=".*" />
+      <input type="hidden" name="prefermaskfilter" value="" />
+      <input type="hidden" name="former" value="" />
+      <input type="hidden" name="display" value="2" />
+      <input type="hidden" name="nav" value="all" />
+      <input type="submit" name="Enter" value="搜索" class="searchButton" />
+   </form>
+</div>
+</div>
+
+
+
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+				<li id="t-specialpages"><a href="/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li><a href="/index.php?title=Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;printable=yes" rel="alternate">可打印版</a></li>
+				<li id="t-permalink"><a href="/index.php?title=Tigase:%E7%94%A8GUI%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85&amp;oldid=3330" title="本页面该修订版本的永久链接">永久链接</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Attribution-Noncommercial-Share Alike 3.0 Unported" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> 本页面最后修订于2013年7月31日 (星期三) 14:07。</li>
+		<li id="viewcount">此页面已被浏览过9,228次。</li>
+		<li id="copyright">本站全部文字内容使用<a class="external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-Noncommercial-Share Alike 3.0 Unported</a>授权。</li>
+		<li id="privacy"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E9%9A%90%E7%A7%81%E6%9D%83%E6%94%BF%E7%AD%96" title="Jabber/XMPP中文翻译计划:隐私权政策">隐私权政策</a></li>
+		<li id="about"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%B3%E4%BA%8E" title="Jabber/XMPP中文翻译计划:关于">关于Jabber/XMPP中文翻译计划</a></li>
+		<li id="disclaimer"><a href="/Jabber/XMPP%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Jabber/XMPP中文翻译计划:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: mediawiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Piwik -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://rtp.rooyee.im/piwik/" : "http://rtp.rooyee.im/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.setDocumentTitle("Tigase:用GUI安装包安装");
+piwikTracker.setIgnoreClasses("image");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://rtp.rooyee.im/piwik/piwik.php?idsite=5" style="border:0" alt=""/></p></noscript>
+<!-- /Piwik --><!-- Served in 0.039 secs. --></body></html>
